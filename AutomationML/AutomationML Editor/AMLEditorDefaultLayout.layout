@@ -1,0 +1,56 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<xamDockManager version="14.2.20142.2024">
+  <contentPanes>
+    <contentPane name="PropertiesAttributesView" location="DockedRight" lastActivatedTime="2015-02-27T10:43:49.1306357Z" />
+    <contentPane name="SystemUnitClassLibView" location="Document" lastActivatedTime="2015-02-27T10:43:09.8807111Z" />
+    <contentPane name="InstanceHierarchyView" location="Document" lastActivatedTime="2015-02-27T10:36:57.1094377Z" />
+    <contentPane name="HeaderInformationView" location="DockedRight" lastActivatedTime="2015-02-27T10:35:23.193047Z" />
+    <contentPane name="PropertiesInternalLinksView" location="DockedRight" lastActivatedTime="2015-02-27T10:35:22.2859563Z" />
+    <contentPane name="InterfaceClassLibView" location="Document" lastActivatedTime="2015-02-27T10:34:58.840612Z" />
+    <contentPane name="ConsistencyCheckView" location="Unpinned" lastDockableState="Docked" lastActivatedTime="2015-02-27T10:34:07.3944679Z" unpinnedOrder="1" flyoutExtent="328" />
+    <contentPane name="RoleClassLibView" location="Document" lastActivatedTime="2015-02-24T13:42:25.211516Z" />
+    <contentPane name="PropertiesView" location="Unpinned" lastDockableState="Docked" lastActivatedTime="2015-02-24T11:01:10.7839524Z" unpinnedOrder="0" flyoutExtent="328" />
+    <contentPane name="InternalLinksListView" location="Unpinned" lastDockableState="Docked" lastActivatedTime="2015-02-23T17:21:15.692769Z" unpinnedOrder="2" flyoutExtent="328" />
+  </contentPanes>
+  <panes>
+    <splitPane name="AttributesGroup" splitterOrientation="Vertical" location="DockedRight" extent="300" />
+    <splitPane name="PropertiesGroup" splitterOrientation="Vertical" location="DockedLeft" extent="300" />
+    <splitPane name="Ze98bfbe67a71478fb13ac51a7e10350b" splitterOrientation="Vertical" location="DockedRight" extent="299">
+      <tabGroup name="HeaderGroupView" selectedIndex="1">
+        <contentPane name="HeaderInformationView" />
+        <contentPane name="PropertiesAttributesView" />
+        <contentPane name="PropertiesInternalLinksView" />
+      </tabGroup>
+    </splitPane>
+    <splitPane name="Z0977671b867d43d5a97e462c0f92da35" splitterOrientation="Vertical" location="DockedLeft" extent="324">
+      <tabGroup name="ConsistencyCheckWindowGroup" selectedIndex="-1">
+        <contentPane name="PropertiesView" />
+        <contentPane name="ConsistencyCheckView" />
+        <contentPane name="InternalLinksListView" />
+      </tabGroup>
+    </splitPane>
+  </panes>
+  <documents splitterOrientation="Vertical">
+    <splitPane name="WindowGroupsSplitContainer" splitterOrientation="Vertical">
+      <splitPane name="AmlTreesLeftSide" splitterOrientation="Horizontal" relativeSize="106.193558698953,100">
+        <tabGroup name="DocGroup1" selectedIndex="0">
+          <contentPane name="InstanceHierarchyView" />
+        </tabGroup>
+        <tabGroup name="DocGroup2" selectedIndex="0">
+          <contentPane name="RoleClassLibView" />
+        </tabGroup>
+      </splitPane>
+      <splitPane name="WebViews" splitterOrientation="Horizontal">
+        <tabGroup name="ExternalViews" selectedIndex="-1" />
+      </splitPane>
+      <splitPane name="AmlTreesRightSide" splitterOrientation="Horizontal" relativeSize="93.8064413010469,100">
+        <tabGroup name="DocGroup3" selectedIndex="0">
+          <contentPane name="SystemUnitClassLibView" />
+        </tabGroup>
+        <tabGroup name="DocGroup4" selectedIndex="0">
+          <contentPane name="InterfaceClassLibView" />
+        </tabGroup>
+      </splitPane>
+    </splitPane>
+  </documents>
+</xamDockManager>
