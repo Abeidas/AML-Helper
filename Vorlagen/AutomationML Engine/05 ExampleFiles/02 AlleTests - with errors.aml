@@ -1,0 +1,296 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Mit XMLSpy v2006 sp1 U bearbeitet (http://www.altova.com) von ABB User (ABB Forschungszentrum) -->
+<!-- Mit XMLSpy v2006 sp1 U bearbeitet (http://www.altova.com) von ABB User (ABB Forschungszentrum) -->
+<!-- Mit XMLSpy v2006 sp1 U bearbeitet (http://www.altova.com) von ABB User (ABB Forschungszentrum) -->
+<!-- Mit XMLSpy v2006 sp1 U bearbeitet (http://www.altova.com) von ABB User (ABB Forschungszentrum) -->
+<!-- Mit XMLSpy v2006 sp1 U bearbeitet (http://www.altova.com) von ABB User (ABB Forschungszentrum) -->
+<!-- Mit XMLSpy v2006 sp1 U bearbeitet (http://www.altova.com) von ABB User (ABB Forschungszentrum) -->
+<!-- Mit XMLSpy v2006 sp1 U bearbeitet (http://www.altova.com) von ABB User (ABB Forschungszentrum) -->
+<!-- Mit XMLSpy v2006 sp1 U bearbeitet (http://www.altova.com) von ABB User (ABB Forschungszentrum) -->
+<!-- Mit XMLSpy v2006 sp1 U bearbeitet (http://www.altova.com) von ABB User (ABB Forschungszentrum) -->
+<CAEXFile FileName="xxx.aml" SchemaVersion="2.15_notExists" xsi:noNamespaceSchemaLocation="CAEX_ClassModel_notExists.xsd" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+	<AdditionalInformation AutomationMLVersion="2.0notExists"/>
+	<InstanceHierarchy Name="TestFile for Splitting" ChangeMode="state">
+		<InternalElement Name="A_noID_wrongReference" RefBaseSystemUnitPath="MySUC_notexists/TA">
+			<Attribute Name="Attr1" Unit="m" AttributeDataType="xs:string">
+				<Value>12</Value>
+			</Attribute>
+			<Attribute Name="Attr1" Unit="m" AttributeDataType="xs:string">
+				<Value>12</Value>
+				<Attribute Name="SubAtt2" Unit="m" AttributeDataType="xs:string">
+					<Value>12</Value>
+				</Attribute>
+				<Attribute Name="SubAtt2" Unit="m" AttributeDataType="xs:string">
+					<Value>12</Value>
+				</Attribute>
+			</Attribute>
+			<ExternalInterface Name="newDocumentInterface" RefBaseClassPath="AutomationMLInterfaceClassLib/AutomationMLBaseInterface/ExternalDataConnector/DocumentInterface" ID="{8df3b948-4aaa-4d1e-9b72-d4cd387ed93b}">
+				<Attribute Name="refURI" AttributeDataType="xs:anyURI">
+					<Value>test.pdf</Value>
+				</Attribute>
+			</ExternalInterface>
+			<ExternalInterface Name="newPLCopenXMLInterface" RefBaseClassPath="AutomationMLInterfaceClassLib/AutomationMLBaseInterface/ExternalDataConnector/PLCopenXMLInterface" ID="{31af323c-9619-4021-938b-f6913d88649e}">
+				<Attribute Name="refURI" AttributeDataType="xs:anyURI">
+					<Value>testPLCOpenXML.xml</Value>
+				</Attribute>
+			</ExternalInterface>
+			<ExternalInterface Name="newCOLLADAInterface" RefBaseClassPath="AutomationMLInterfaceClassLib/AutomationMLBaseInterface/ExternalDataConnector/COLLADAInterface" ID="{41f1aba5-b11f-4cdf-b551-71922fce4f91}">
+				<Attribute Name="refType" AttributeDataType="xs:string"/>
+				<Attribute Name="refURI" AttributeDataType="xs:anyURI">
+					<Value>testCollada.xml</Value>
+				</Attribute>
+			</ExternalInterface>
+			<ExternalInterface Name="newExternalDataConnector" RefBaseClassPath="AutomationMLInterfaceClassLib/AutomationMLBaseInterface/ExternalDataConnector" ID="{070a858b-d970-4fa8-8faa-146670dfbd95}">
+				<Attribute Name="refURI" AttributeDataType="xs:anyURI">
+					<Value>testExternalDataConnector.aml</Value>
+				</Attribute>
+			</ExternalInterface>
+			<ExternalInterface Name="newTI1">
+				<Attribute Name="Attr3" Unit="m" AttributeDataType="xs:string">
+					<Value>12</Value>
+				</Attribute>
+				<Attribute Name="Attr1" Unit="m" AttributeDataType="xs:string">
+					<Value>12</Value>
+				</Attribute>
+			</ExternalInterface>
+			<ExternalInterface Name="newTI1" RefBaseClassPath="ICL/TI1" ID="{18227-1627-408c-a311-70dc9e23ffd7}"/>
+			<InternalElement Name="B" ID="{1fe18227-1627-408c-a311-70dc9e23ffd7}" RefBaseSystemUnitPath="MySUC/TB">
+				<Attribute Name="Durchmesser" AttributeDataType="xs:string">
+					<Value>20</Value>
+				</Attribute>
+				<ExternalInterface Name="newTI2_noID" RefBaseClassPath="ICL/TI2" ID=""/>
+				<InternalElement Name="C" ID="{340836b6-24d7-4cf9-9fd4-7d0797688dd4}" RefBaseSystemUnitPath="MySUC/TB/TC">
+					<ExternalInterface Name="newTI3" RefBaseClassPath="ICL_notexists/TI2/TI3" ID="{ab9d1d0c-5c5a-4305-8b6d-d10236f6ac4a}"/>
+					<RoleRequirements RefBaseRoleClassPath="RCL_notexists/RB/RC"/>
+				</InternalElement>
+				<InternalLink Name="new link" RefPartnerSideA="{1cc21261-c47c-4f1b-b4e5-19d2bbffb0cc_notexist}:newTI2" RefPartnerSideB="{340836b6-24d7-4cf9-9fd4-7d0797688dd4}:newTI3" ID=""/>
+				<RoleRequirements RefBaseRoleClassPath="RCL/RB"/>
+			</InternalElement>
+			<SupportedRoleClass RefRoleClassPath="RCL/RA"/>
+			<SupportedRoleClass RefRoleClassPath="RCL_notExist/RA"/>
+			<InternalLink Name="new link" RefPartnerSideA="TestFile for Splitting/A:newTI1" RefPartnerSideB="{340836b6-24d7-4cf9-9fd4-7d0797688dd4}:newTI3"/>
+			<InternalLink Name="new link" RefPartnerSideA="{f9bceecd-d602-493b-a1ea-d6ae3018bbf5_notexist}:newTI1" RefPartnerSideB="{1cc21261-c47c-4f1b-b4e5-19d2bbffb0cc}:newTI2_notExists"/>
+			<InternalLink Name="new link"/>
+			<RoleRequirements RefBaseRoleClassPath="RCL/RA">
+				<Attribute Name="Attr5" Unit="m" AttributeDataType="xs:string">
+					<Value>12</Value>
+				</Attribute>
+				<Attribute Name="Attr5" Unit="m" AttributeDataType="xs:string">
+					<Value>12</Value>
+				</Attribute>
+			</RoleRequirements>
+		</InternalElement>
+		<InternalElement Name="D" ID="{5029c0de-66d2-42ee-be90-5af8262f9dbf}" RefBaseSystemUnitPath="MySUC/TA">
+			<InternalElement Name="E" ID="{eea4b308-73f7-4873-956a-74e7b244a8ea}" RefBaseSystemUnitPath="MySUC/TB">
+				<InternalElement Name="C_Mirror_noID_CorrectRef" ID="" RefBaseSystemUnitPath="{340836b6-24d7-4cf9-9fd4-7d0797688dd4}"/>
+				<RoleRequirements RefBaseRoleClassPath="RCL/RB"/>
+			</InternalElement>
+			<RoleRequirements RefBaseRoleClassPath="RCL/RA"/>
+		</InternalElement>
+		<InternalElement Name="D_Double" ID="{5029c0de-66d2-42ee-be90-5af8262f9dbf}"/>
+		<InternalElement Name="E_wrongNameWith." ID="{5029c0de-66d2-42ee-bes90-5af8262f9dbf}" RefBaseSystemUnitPath="MySUC/TA">
+			<Attribute Name="attr_wrongNameWith@" Unit="m" AttributeDataType="xs:string">
+				<Value>12</Value>
+			</Attribute>
+			<ExternalInterface Name="Interface_wrongNameWith:" RefBaseClassPath="ICL/TI1" ID="{18227-1627-408c-a311-70dc9ae23ffd7}"/>
+			<ExternalInterface Name="Interface_wrongNameWith/" RefBaseClassPath="ICL/TI1" ID="{18227-1627-408c-a31b1-70dc9e23ffd7}"/>
+			<ExternalInterface Name="Interface_wrongNameWith\" RefBaseClassPath="ICL/TI1" ID="{18227-1627-408c-a311-70dcc9e23ffd7}"/>
+		</InternalElement>
+	</InstanceHierarchy>
+	<InterfaceClassLib Name="AutomationMLInterfaceClassLib">
+		<Description>Standard AutomationML Interface Class Library</Description>
+		<Version>2.0</Version>
+		<InterfaceClass Name="AutomationMLBaseInterface">
+			<InterfaceClass Name="Order" RefBaseClassPath="AutomationMLBaseInterface">
+				<!-- check this, please. -->
+				<Attribute Name="Direction" AttributeDataType="xs:complex">
+					<Description>The attribute “Direction” shall be used in order to specify the direction. Permitted values are “In”, “Out” or “InOut”.</Description>
+					<Constraint Name="DirectionConstraint">
+						<NominalScaledType>
+							<RequiredValue>In</RequiredValue>
+							<RequiredValue>Out</RequiredValue>
+							<RequiredValue>InOut</RequiredValue>
+						</NominalScaledType>
+					</Constraint>
+				</Attribute>
+			</InterfaceClass>
+			<InterfaceClass Name="PortConnector" RefBaseClassPath="AutomationMLBaseInterface"/>
+			<InterfaceClass Name="InterlockingConnector" RefBaseClassPath="AutomationMLBaseInterface"/>
+			<InterfaceClass Name="PPRConnector" RefBaseClassPath="AutomationMLBaseInterface"/>
+			<InterfaceClass Name="ExternalDataConnector" RefBaseClassPath="AutomationMLBaseInterface">
+				<Attribute Name="refURI" AttributeDataType="xs:anyURI"/>
+				<InterfaceClass Name="COLLADAInterface" RefBaseClassPath="ExternalDataConnector">
+					<Attribute Name="refType" AttributeDataType="xs:string"/>
+					<InterfaceClass Name="AttachmentPointInterface" RefBaseClassPath="COLLADAInterface"/>
+					<InterfaceClass Name="RepresentationInterface" RefBaseClassPath="COLLADAInterface"/>
+				</InterfaceClass>
+				<InterfaceClass Name="PLCopenXMLInterface" RefBaseClassPath="ExternalDataConnector">
+					<InterfaceClass Name="LogicInterface" RefBaseClassPath="PLCopenXMLInterface"/>
+					<InterfaceClass Name="VariableInterface" RefBaseClassPath="PLCopenXMLInterface"/>
+				</InterfaceClass>
+				<InterfaceClass Name="DocumentInterface" RefBaseClassPath="ExternalDataConnector"/>
+			</InterfaceClass>
+			<InterfaceClass Name="Communication" RefBaseClassPath="AutomationMLBaseInterface">
+				<InterfaceClass Name="SignalInterface" RefBaseClassPath="Communication">
+					<Attribute Name="Type" AttributeDataType="xs:string">
+						<Description>The attribute “Type” specifies the type of the signal. Permitted values are "analog" and "digital". </Description>
+					</Attribute>
+					<!-- check this, please (see above interfaceClass Order). -->
+					<Attribute Name="Direction" AttributeDataType="xs:complex">
+						<Description>The attribute “Direction” shall be used in order to specify the direction. Permitted values are “In”, “Out” or “InOut”.</Description>
+						<Constraint Name="DirectionConstraint">
+							<NominalScaledType>
+								<RequiredValue>In</RequiredValue>
+								<RequiredValue>Out</RequiredValue>
+								<RequiredValue>InOut</RequiredValue>
+							</NominalScaledType>
+						</Constraint>
+					</Attribute>
+					<Attribute Name="BitCount" AttributeDataType="xs:uint">
+						<Description>The attribute “BitCount” describes the number of bits in the digital signal. If BitCount=1, the digital signal is a binary signal. A higher BitCount allows the digital description of an analog signal with a resolution of 2n. If this attribute is not given, the default value is 1.</Description>
+					</Attribute>
+					<Attribute Name="Orientation" AttributeDataType="xs:string">
+						<Description>If multiple binary signals are bundled, the attribute “Orientation” describes in which order the bits are delivered. Permitted values are “HighFirst” or “LowFirst”.</Description>
+					</Attribute>
+					<Attribute Name="Range" AttributeDataType="xs:complex">
+						<Description>The attribute “Range” is a complex attribute comprising the sub attributes “min” and “max”. If required, a unit shall be defined using the CAEX attribute "Unit". With the Range attribute, signals value ranges as 4-20mA, 5-10V etc. can be described.</Description>
+						<Attribute Name="min" AttributeDataType="xs:float"/>
+						<Attribute Name="max" AttributeDataType="xs:float"/>
+					</Attribute>
+					<InterfaceClass Name="SignalSource" RefBaseClassPath="SignalInterface">
+						<InterfaceClass Name="Switch" RefBaseClassPath="SignalSource">
+							<Attribute Name="LVAL" AttributeDataType="xs:float">
+								<Description>The attribute “LVAL” specifies the limit value, e.g. to operate a switch.</Description>
+							</Attribute>
+							<Attribute Name="HYS" AttributeDataType="xs:float">
+								<Description>The attribute “HYS” specifies the hysteresis of “LVAL”.</Description>
+							</Attribute>
+						</InterfaceClass>
+					</InterfaceClass>
+					<InterfaceClass Name="SignalSink" RefBaseClassPath="SignalInterface"/>
+					<InterfaceClass Name="AlarmSource" RefBaseClassPath="SignalInterface"/>
+					<InterfaceClass Name="Physical_SignalInterface" RefBaseClassPath="SignalInterface"/>
+					<InterfaceClass Name="Logical_SignalInterface" RefBaseClassPath="SignalInterface"/>
+					<InterfaceClass Name="Human_Machine_SignalInterface" RefBaseClassPath="SignalInterface"/>
+				</InterfaceClass>
+				<InterfaceClass Name="OPCTag" RefBaseClassPath="Communication">
+					<Attribute Name="TagName" AttributeDataType="xs:string">
+						<Description>The attribute “TagName” shall provide the name of the OPC tag.	</Description>
+					</Attribute>
+					<Attribute Name="DataType" AttributeDataType="xs:string">
+						<Description>The attribute „Type“ specifies the type of the OPCTag. Permitted values are the known XML data types, e.g. “xs:int”, “xs:bool” or “xs:float”. </Description>
+					</Attribute>
+					<Attribute Name="OPCDataType" AttributeDataType="xs:string"/>
+					<Attribute Name="SignalPath" AttributeDataType="xs:string">
+						<Description>The attribute “SignalPath” describes the path to the OPC source. </Description>
+					</Attribute>
+					<Attribute Name="AccessRights" AttributeDataType="xs:string">
+						<Description>The attribute “AccessPermissions” describes the possible access directions. Permitted values are “Read”, “Write”, “ReadWrite”. </Description>
+					</Attribute>
+				</InterfaceClass>
+			</InterfaceClass>
+			<InterfaceClass Name="Mechanical" RefBaseClassPath="AutomationMLBaseInterface"/>
+			<InterfaceClass Name="Electrical" RefBaseClassPath="AutomationMLBaseInterface"/>
+			<InterfaceClass Name="Pneumatical" RefBaseClassPath="AutomationMLBaseInterface"/>
+			<InterfaceClass Name="Hydraulical" RefBaseClassPath="AutomationMLBaseInterface"/>
+			<InterfaceClass Name="Logical" RefBaseClassPath="AutomationMLBaseInterface">
+				<InterfaceClass Name="Invocation" RefBaseClassPath="AutomationMLInterfaceClassLib/AutomationMLBaseInterface/Logical">
+					<Attribute Name="invocation_parameter" AttributeDataType="String"/>
+				</InterfaceClass>
+				<InterfaceClass Name="Human_Machine" RefBaseClassPath="AutomationMLInterfaceClassLib/AutomationMLBaseInterface/Logical"/>
+			</InterfaceClass>
+		</InterfaceClass>
+	</InterfaceClassLib>
+	<InterfaceClassLib Name="ICL">
+		<InterfaceClass Name="TI1">
+			<Attribute Name="Attr7" Unit="m" AttributeDataType="xs:string">
+				<Value>12</Value>
+			</Attribute>
+			<Attribute Name="Attr7" Unit="m" AttributeDataType="xs:string">
+				<Value>12</Value>
+			</Attribute>
+		</InterfaceClass>
+		<InterfaceClass Name="TI2" RefBaseClassPath="ICL_notexists/TI1">
+			<Attribute Name="Attr9" Unit="m" AttributeDataType="xs:string">
+				<Value>12</Value>
+			</Attribute>
+			<Attribute Name="Attr10" Unit="m" AttributeDataType="xs:string">
+				<Value>12</Value>
+			</Attribute>
+			<InterfaceClass Name="TI3" RefBaseClassPath="ICL/TI2">
+				<Attribute Name="Attr12" Unit="m" AttributeDataType="xs:string">
+					<Value>12</Value>
+				</Attribute>
+				<Attribute Name="Attr12" Unit="m" AttributeDataType="xs:string">
+					<Value>12</Value>
+				</Attribute>
+			</InterfaceClass>
+		</InterfaceClass>
+	</InterfaceClassLib>
+	<RoleClassLib Name="RCL">
+		<RoleClass Name="RA">
+			<Attribute Name="Attr13" Unit="m" AttributeDataType="xs:string">
+				<Value>12</Value>
+			</Attribute>
+			<Attribute Name="Attr13" Unit="m" AttributeDataType="xs:string">
+				<Value>12</Value>
+			</Attribute>
+			<ExternalInterface Name="Interface_NoID" RefBaseClassPath="ICL/TI1"/>
+			<ExternalInterface Name="Interface2_wrongRef" RefBaseClassPath="ICL/TI1notExist"/>
+		</RoleClass>
+		<RoleClass Name="RB" RefBaseClassPath="RCL_notExists/RA">
+			<Attribute Name="Attr15" Unit="m" AttributeDataType="xs:string">
+				<Value>12</Value>
+			</Attribute>
+			<Attribute Name="Attr11" Unit="m" AttributeDataType="xs:string">
+				<Value>12</Value>
+			</Attribute>
+			<RoleClass Name="RC" RefBaseClassPath="RCL/RA"/>
+		</RoleClass>
+	</RoleClassLib>
+	<SystemUnitClassLib Name="MySUC">
+		<SystemUnitClass Name="TA" RefBaseClassPath="MySUC/notExists">
+			<Attribute Name="Attr17" Unit="m" AttributeDataType="xs:string">
+				<Value>12</Value>
+			</Attribute>
+			<Attribute Name="Attr1" Unit="m" AttributeDataType="xs:string">
+				<Value>12</Value>
+			</Attribute>
+		</SystemUnitClass>
+		<SystemUnitClass Name="TB" RefBaseClassPath="MySUC/TA">
+			<Attribute Name="Attr19" Unit="m" AttributeDataType="xs:string">
+				<Value>12</Value>
+			</Attribute>
+			<Attribute Name="Attr19" Unit="m" AttributeDataType="xs:string">
+				<Value>12</Value>
+			</Attribute>
+			<ExternalInterface Name="Interface1" RefBaseClassPath="ICL/TI1" ID="123"/>
+			<ExternalInterface Name="Interface2" RefBaseClassPath="ICL_notexist/TI1"/>
+			<SupportedRoleClass RefRoleClassPath="RCL/RB"/>
+			<InternalLink Name="link" RefPartnerSideB="notExists" RefPartnerSideA="notExists"/>
+			<SystemUnitClass Name="TC" RefBaseClassPath="MySUC/TB">
+				<Attribute Name="Attr21" Unit="m" AttributeDataType="xs:string">
+					<Value>12</Value>
+				</Attribute>
+				<Attribute Name="Attr21" Unit="m" AttributeDataType="xs:string">
+					<Value>12</Value>
+				</Attribute>
+				<ExternalInterface Name="TC-Interface"/>
+				<InternalElement Name="TC-Part1" RefBaseSystemUnitPath="MySUC/TA" ID="{8fa13de9-9949-499c-a22b-5fdfe1018bc3}">
+					<InternalElement Name="TC-Part1-Sub1" RefBaseSystemUnitPath="MySUC/TA" ID="{06381fab-eea0-4fca-a9dc-76bd8c736891}">
+						<ExternalInterface Name="TC-Part1-Sub-Interface_noID" RefBaseClassPath="ICL/TI1"/>
+						<SupportedRoleClass RefRoleClassPath="RCL/RB"/>
+						<RoleRequirements RefBaseRoleClassPath="RCL/RA"/>
+					</InternalElement>
+					<InternalElement Name="TC-Part1-Sub2_noID" RefBaseSystemUnitPath="MySUC/TA" ID=""/>
+					<InternalElement Name="TC-Part1-Sub3" RefBaseSystemUnitPath="MySUC/TA_noID"/>
+					<InternalElement Name="TC-Part1-Sub4_doubleID" RefBaseSystemUnitPath="MySUC/TA_doubleID" ID="{06381fab-eea0-4fca-a9dc-76bd8c736891}"/>
+					<SupportedRoleClass RefRoleClassPath="RCL/RB"/>
+					<InternalLink Name="New InternalLink" ID="" RefPartnerSideA="links" RefPartnerSideB="rechts"/>
+					<RoleRequirements RefBaseRoleClassPath="RCL/RA"/>
+				</InternalElement>
+				<SupportedRoleClass RefRoleClassPath="RCL/RB"/>
+			</SystemUnitClass>
+		</SystemUnitClass>
+	</SystemUnitClassLib>
+</CAEXFile>

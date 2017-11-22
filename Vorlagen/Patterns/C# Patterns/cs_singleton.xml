@@ -1,0 +1,166 @@
+<?xml version="1.0"  encoding="windows-1252"?>
+<XMI xmi.version="1.1" xmlns:UML="omg.org/UML1.3" timestamp="2005-02-04 16:54:35">
+	<XMI.header>
+		<XMI.documentation>
+			<XMI.exporter>Enterprise Architect</XMI.exporter>
+			<XMI.exporterVersion>2.5</XMI.exporterVersion>
+		</XMI.documentation>
+	</XMI.header>
+	<XMI.content>
+		<UML:Model name="EA Model" xmi.id="MX_EAID_4DA7D4E4_E9C4_4962_8AC8_6CD770E404B8">
+			<UML:Namespace.ownedElement>
+				<UML:Class name="Singleton" xmi.id="EAID_6E43F331_B334_4bc1_BE53_F2C9B82BE63A" visibility="public" namespace="EAPK_4DA7D4E4_E9C4_4962_8AC8_6CD770E404B8" isRoot="false" isLeaf="false" isAbstract="false" isActive="false">
+					<UML:ModelElement.taggedValue>
+						<UML:TaggedValue tag="documentation" value="This class (a) defines an Instance operation that lets clients access its unique instance, and (b) may be responsible for creating its own unique instance."/>
+						<UML:TaggedValue tag="isSpecification" value="false"/>
+						<UML:TaggedValue tag="ea_stype" value="Class"/>
+						<UML:TaggedValue tag="ea_ntype" value="0"/>
+						<UML:TaggedValue tag="version" value="1.0"/>
+						<UML:TaggedValue tag="package" value="EAPK_4DA7D4E4_E9C4_4962_8AC8_6CD770E404B8"/>
+						<UML:TaggedValue tag="date_created" value="2003-09-06 21:47:37"/>
+						<UML:TaggedValue tag="date_modified" value="2005-02-01 15:50:11"/>
+						<UML:TaggedValue tag="gentype" value="C#"/>
+						<UML:TaggedValue tag="tagged" value="0"/>
+						<UML:TaggedValue tag="package_name" value="Singleton"/>
+						<UML:TaggedValue tag="phase" value="1.0"/>
+						<UML:TaggedValue tag="complexity" value="1"/>
+						<UML:TaggedValue tag="status" value="Proposed"/>
+						<UML:TaggedValue tag="$ea_attsclassified" value="{D3A90588-F450-46c2-A795-A2C910121A5C}"/>
+						<UML:TaggedValue tag="style" value="BackColor=-1;BorderColor=-1;BorderWidth=-1;FontColor=-1;VSwimLanes=0;HSwimLanes=0;BorderStyle=0;"/>
+					</UML:ModelElement.taggedValue>
+					<UML:Classifier.feature>
+						<UML:Attribute name="instance" changeable="none" visibility="private" ownerScope="instance" targetScope="instance">
+							<UML:Attribute.initialValue>
+								<UML:Expression/>
+							</UML:Attribute.initialValue>
+							<UML:StructuralFeature.type>
+								<UML:Classifier xmi.idref="EAID_6E43F331_B334_4bc1_BE53_F2C9B82BE63A"/>
+							</UML:StructuralFeature.type>
+							<UML:ModelElement.taggedValue>
+								<UML:TaggedValue tag="type" value="Singleton"/>
+								<UML:TaggedValue tag="derived" value="0"/>
+								<UML:TaggedValue tag="containment" value="Not Specified"/>
+								<UML:TaggedValue tag="length" value="0"/>
+								<UML:TaggedValue tag="ordered" value="0"/>
+								<UML:TaggedValue tag="precision" value="0"/>
+								<UML:TaggedValue tag="scale" value="0"/>
+								<UML:TaggedValue tag="static" value="1"/>
+								<UML:TaggedValue tag="collection" value="false"/>
+								<UML:TaggedValue tag="position" value="0"/>
+								<UML:TaggedValue tag="lowerBound" value="1"/>
+								<UML:TaggedValue tag="upperBound" value="1"/>
+								<UML:TaggedValue tag="duplicates" value="0"/>
+								<UML:TaggedValue tag="ea_guid" value="{D3A90588-F450-46c2-A795-A2C910121A5C}"/>
+								<UML:TaggedValue tag="styleex" value="volatile=0;"/>
+							</UML:ModelElement.taggedValue>
+						</UML:Attribute>
+						<UML:Operation name="Singleton" visibility="protected" ownerScope="instance" isQuery="false" concurrency="sequential">
+							<UML:ModelElement.taggedValue>
+								<UML:TaggedValue tag="const" value="false"/>
+								<UML:TaggedValue tag="synchronised" value="0"/>
+								<UML:TaggedValue tag="concurrency" value="Sequential"/>
+								<UML:TaggedValue tag="position" value="0"/>
+								<UML:TaggedValue tag="returnarray" value="0"/>
+								<UML:TaggedValue tag="pure" value="0"/>
+								<UML:TaggedValue tag="ea_guid" value="{96111978-F2F8-410c-8CA7-CC267ADD4D0E}"/>
+							</UML:ModelElement.taggedValue>
+						</UML:Operation>
+						<UML:Operation name="Instance" visibility="public" ownerScope="instance" isQuery="false" concurrency="sequential">
+							<UML:ModelElement.taggedValue>
+								<UML:TaggedValue tag="type" value="Singleton"/>
+								<UML:TaggedValue tag="const" value="false"/>
+								<UML:TaggedValue tag="static" value="1"/>
+								<UML:TaggedValue tag="code" value="if( instance == null )
+      instance = new Singleton();
+
+return instance;"/>
+								<UML:TaggedValue tag="synchronised" value="0"/>
+								<UML:TaggedValue tag="concurrency" value="Sequential"/>
+								<UML:TaggedValue tag="position" value="1"/>
+								<UML:TaggedValue tag="returnarray" value="0"/>
+								<UML:TaggedValue tag="pure" value="0"/>
+								<UML:TaggedValue tag="ea_guid" value="{77D697A8-1B5D-48e7-94F5-388BAA813472}"/>
+								<UML:TaggedValue tag="styleex" value="ShowBeh=0;"/>
+							</UML:ModelElement.taggedValue>
+							<UML:BehavioralFeature.parameter>
+								<UML:Parameter kind="return" visibility="public">
+									<UML:Parameter.type>
+										<UML:Classifier xmi.idref="EAID_6E43F331_B334_4bc1_BE53_F2C9B82BE63A"/>
+									</UML:Parameter.type>
+									<UML:ModelElement.taggedValue>
+										<UML:TaggedValue tag="pos" value="0"/>
+										<UML:TaggedValue tag="type" value="Singleton"/>
+										<UML:TaggedValue tag="const" value="0"/>
+										<UML:TaggedValue tag="classifier" value="EAID_6E43F331_B334_4bc1_BE53_F2C9B82BE63A"/>
+										<UML:TaggedValue tag="ea_guid" value="{RETURNID-1B5D-48e7-94F5-388BAA813472}"/>
+									</UML:ModelElement.taggedValue>
+									<UML:Parameter.defaultValue>
+										<UML:Expression/>
+									</UML:Parameter.defaultValue>
+								</UML:Parameter>
+							</UML:BehavioralFeature.parameter>
+						</UML:Operation>
+					</UML:Classifier.feature>
+				</UML:Class>
+				<UML:Association xmi.id="EAID_75D97C1B_D051_4f30_825B_F6E6F8410F16" visibility="public" isRoot="false" isLeaf="false" isAbstract="false">
+					<UML:ModelElement.taggedValue>
+						<UML:TaggedValue tag="style" value="2"/>
+						<UML:TaggedValue tag="ea_type" value="Association"/>
+						<UML:TaggedValue tag="direction" value="Source -&gt; Destination"/>
+						<UML:TaggedValue tag="linemode" value="2"/>
+						<UML:TaggedValue tag="linecolor" value="-1"/>
+						<UML:TaggedValue tag="linewidth" value="0"/>
+						<UML:TaggedValue tag="seqno" value="0"/>
+						<UML:TaggedValue tag="headStyle" value="0"/>
+						<UML:TaggedValue tag="lineStyle" value="0"/>
+						<UML:TaggedValue tag="privatedata5" value="SCME=1;SX=143;SY=-26;EX=143;EY=-26;"/>
+						<UML:TaggedValue tag="virtualInheritance" value="0"/>
+					</UML:ModelElement.taggedValue>
+					<UML:Association.connection>
+						<UML:AssociationEnd visibility="public" aggregation="none" isOrdered="false" isNavigable="false" type="EAID_6E43F331_B334_4bc1_BE53_F2C9B82BE63A">
+							<UML:ModelElement.taggedValue>
+								<UML:TaggedValue tag="containment" value="Unspecified"/>
+							</UML:ModelElement.taggedValue>
+						</UML:AssociationEnd>
+						<UML:AssociationEnd visibility="private" name="instance" aggregation="none" isOrdered="false" isNavigable="true" type="EAID_6E43F331_B334_4bc1_BE53_F2C9B82BE63A">
+							<UML:ModelElement.taggedValue>
+								<UML:TaggedValue tag="containment" value="Unspecified"/>
+							</UML:ModelElement.taggedValue>
+						</UML:AssociationEnd>
+					</UML:Association.connection>
+				</UML:Association>
+			</UML:Namespace.ownedElement>
+		</UML:Model>
+		<UML:Diagram name="Singleton" xmi.id="EAID_A9277E63_8FDE_4a90_A2E9_DF2DF361506D" diagramType="ClassDiagram" owner="EAPK_A9277E63_8FDE_4a90_A2E9_DF2DF361506D" toolName="Enterprise Architect 2.5">
+			<UML:ModelElement.taggedValue>
+				<UML:TaggedValue tag="documentation" value="This pattern ensures a class only has one instance, and provides a global point of access to it."/>
+				<UML:TaggedValue tag="version" value="1.0"/>
+				<UML:TaggedValue tag="created_date" value="2004-12-14 13:31:45"/>
+				<UML:TaggedValue tag="modified_date" value="2005-02-01 12:58:31"/>
+				<UML:TaggedValue tag="package" value="EAPK_4DA7D4E4_E9C4_4962_8AC8_6CD770E404B8"/>
+				<UML:TaggedValue tag="type" value="Logical"/>
+				<UML:TaggedValue tag="swimlanes" value="locked=false;orientation=0;width=0;inbar=false;names=false;color=0;bold=false;fcol=0;;cls=0;"/>
+				<UML:TaggedValue tag="EAStyle" value="ShowPrivate=1;ShowProtected=1;ShowPublic=1;HideRelationships=0;Locked=0;Border=1;HighlightForeign=1;PackageContents=1;SequenceNotes=0;ScalePrintImage=0;PPgs.cx=0;PPgs.cy=0;DocSize.cx=780;DocSize.cy=1138;ShowDetails=0;Orientation=P;Zoom=100;ShowTags=0;OpParams=1;ShowIcons=1;CollabNums=0;HideProps=0;ShowReqs=0;ShowCons=0;PaperSize=9;HideParents=0;UseAlias=0;HideAtts=0;HideOps=0;HideStereo=0;HideElemStereo=0;ShowTests=0;ShowMaint=0;"/>
+				<UML:TaggedValue tag="styleex" value="ExcludeRTF=0;DocAll=0;HideQuals=0;AttPkg=1;ShowTests=0;ShowMaint=0;SuppressFOC=0;TDurLow=0;TDurHigh=100;TDurUnit=;TDurHide=0;"/>
+			</UML:ModelElement.taggedValue>
+			<UML:Diagram.element>
+				<UML:DiagramElement geometry="Left=129;Top=69;Right=295;Bottom=168;imgL=10;imgT=10;imgR=176;imgB=109;" subject="EAID_6E43F331_B334_4bc1_BE53_F2C9B82BE63A" seqno="1" style="DUID=4E353F1D;LBL=;"/>
+				<UML:DiagramElement geometry="SCME=1;SX=143;SY=-26;EX=143;EY=-26;EDGE=2;$LLB=;LLT=;LMT=;LMB=;LRT=CX=52:CY=15:OX=18:OY=3:HDN=0:BLD=0:ITA=0:UND=0:CLR=-1:ALN=0:DIR=0:ROT=0;LRB=;Path=;" subject="EAID_75D97C1B_D051_4f30_825B_F6E6F8410F16" style="Mode=2;EOID=4E353F1D;SOID=4E353F1D;Hidden=0;"/>
+			</UML:Diagram.element>
+		</UML:Diagram>
+	</XMI.content>
+	<XMI.difference/>
+	<XMI.extensions xmi.extender="Enterprise Architect 2.5">
+		<EAStub xmi.id="EAID_6E43F331_B334_4bc1_BE53_F2C9B82BE63A" name="Singleton" UMLType="Class"/>
+		<UMLPattern name="Singleton" category="GoF Creational Patterns (C#)" version="1.0" notes="This pattern ensures a class only has one instance, and provides a global point of access to it.">
+			<UMLPattern.PromptList>
+				<Element name="Singleton:Class" guid="EAID_6E43F331_B334_4bc1_BE53_F2C9B82BE63A" id="781" prompt="yes" link="yes" classifier="no" type="no">
+					<Comment comment="This class (a) defines an Instance operation that lets clients access its unique instance, and (b) may be responsible for creating its own unique instance.">
+						<![CDATA[This class (a) defines an Instance operation that lets clients access its unique instance, and (b) may be responsible for creating its own unique instance.]]>
+					</Comment>
+				</Element>
+			</UMLPattern.PromptList>
+			<UMLPattern.PreviewImage xmlns:dt="urn:schemas-microsoft-com:datatypes" dt:dt="bin.base64" cx="6862" cy="3370">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 BAAAABsAAAAQAAAAlwAAAJD///82AAAAEAAAAPUAAACQ////JQAAAAwAAAADAAAAKAAAAAwA AAAEAAAAGAAAAAwAAAAAAAAAGwAAABAAAACBAAAAhv///zYAAAAQAAAAJgEAAIb///8YAAAA DAAAAABAQABUAAAAWAAAAA8AAABDAAAAGAAAAE8AAAABAAAAAADhQQCQ4sGGAAAAgv///wIA AABMAAAAAAAAAAAAAAAAAAAA//////////9QAAAAIwAgAAYAAAADAAAAVAAAAJAAAAAgAAAA QwAAAFQAAABPAAAAAQAAAAAA4UEAkOLBlwAAAIL///8LAAAATAAAAAAAAAAAAAAAAAAAAP// ////////ZAAAAFMAaQBuAGcAbABlAHQAbwBuACgAKQCtugcAAAADAAAABgAAAAYAAAADAAAA BgAAAAMAAAAGAAAABgAAAAMAAAADAAAAVAAAAFgAAAAPAAAAUAAAABgAAABcAAAAAQAAAAAA 4UEAkOLBhgAAAHX///8CAAAATAAAAAAAAAAAAAAAAAAAAP//////////UAAAACsAIAAGAAAA AwAAAFQAAADQAAAAIAAAAFAAAACEAAAAXAAAAAEAAAAAAOFBAJDiwZcAAAB1////FgAAAEwA AAAAAAAAAAAAAAAAAAD//////////3gAAABJAG4AcwB0AGEAbgBjAGUAKAApACAAOgAgAFMA aQBuAGcAbABlAHQAbwBuAAMAAAAGAAAABAAAAAMAAAAGAAAABgAAAAUAAAAGAAAAAwAAAAMA AAADAAAAAwAAAAMAAAAHAAAAAwAAAAYAAAAGAAAAAwAAAAYAAAADAAAABgAAAAYAAAAmAAAA HAAAAAQAAAAAAAAAAQAAAAAAAAAAQEAAJQAAAAwAAAAEAAAAGwAAABAAAACXAAAAaf///zYA AAAQAAAA+wAAAGn///8lAAAADAAAAAMAAAAoAAAADAAAAAQAAAAYAAAADAAAAAAAAAAmAAAA HAAAAAQAAAAAAAAAAQAAAAAAAAAAAAAAJQAAAAwAAAAEAAAAGwAAABAAAAAnAQAAof///zYA AAAQAAAARQEAAKH///82AAAAEAAAAEUBAACS////NgAAABAAAAAnAQAAkv///xsAAAAQAAAA JwEAAJL///8bAAAAEAAAACcBAACS////NgAAABAAAAA2AQAAmP///xsAAAAQAAAAJwEAAJL/ //82AAAAEAAAADYBAACM////EgAAAAwAAAACAAAAGQAAAAwAAAD///8AUgAAAHABAAAGAAAA 9v///wAAAAAAAAAAAAAAAAAAAAAAAAABAAAAAEEAUgBJAEEATAAAAAAAAAAAAAAAAAAAAAAA AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAJJ8AABbAmAAAEBtBZF8 COsSANjmEgAAAAAArN4SAPgnIRAwcSUQ//////jcEgDvKSEQHQAAAAAAAAABAAAAUAAAAJiP zQlc25V8AABbAqzblXwIAAAAAABbAgAAWwKYj80JJN0AABHNlnwAABIAAAAAAPDdEgAY7pB8 yGqSfAAA//++apJ8rWiSfAAAWwJgAABAbQWRfAjrEgDY5hIAAAAAAETdEgCR1kJfAAABAAjr EgC83BIAAAAAALDdEgAAAJB8cAWRfEAAAADIqMMJXNuVfBCpwwms25V8AAAAAAAAAAAAAFsC yKjDCWR2AAgAAAAA2OYSAAAAAABiVKgBZHYACAAAAAAlAAAADAAAAAYAAABUAAAAhAAAALYA AAA5AAAA4AAAAEUAAAABAAAAAADhQQCQ4sEtAQAAjP///wkAAABMAAAAAAAAAAAAAAAAAAAA //////////9gAAAALQBpAG4AcwB0AGEAbgBjAGUArboDAAAAAwAAAAYAAAAEAAAAAwAAAAYA AAAGAAAABQAAAAYAAAAlAAAADAAAAAEAAAAoAAAADAAAAAYAAAASAAAADAAAAAEAAAAZAAAA DAAAAP///wAlAAAADAAAAAMAAAAoAAAADAAAAAQAAAAlAAAADAAAAA0AAIAoAAAADAAAAAEA AAAoAAAADAAAAAUAAAAlAAAADAAAAAAAAIAoAAAADAAAAAIAAAAlAAAADAAAAAcAAIAoAAAA DAAAAAMAAAAOAAAAFAAAAAAAAAAQAAAAFAAAAA==</UMLPattern.PreviewImage>
+		</UMLPattern>
+	</XMI.extensions>
+</XMI>

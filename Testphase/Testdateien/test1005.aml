@@ -1,0 +1,43 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<CAEXFile FileName="test1005.aml" SchemaVersion="2.15" xsi:noNamespaceSchemaLocation="CAEX_ClassModel_V2.15.xsd" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+	<AdditionalInformation>
+		<WriterHeader>
+			<WriterName>AutomationML Editor</WriterName>
+			<WriterID>916578CA-FE0D-474E-A4FC-9E1719892369</WriterID>
+			<WriterVendor>AutomationML e.V.</WriterVendor>
+			<WriterVendorURL>www.AutomationML.org</WriterVendorURL>
+			<WriterVersion>4.1.6</WriterVersion>
+			<WriterRelease>4.1.6.0</WriterRelease>
+			<LastWritingDateTime>2016-03-25T20:08:02.664801+01:00</LastWritingDateTime>
+			<WriterProjectTitle>unspecified</WriterProjectTitle>
+			<WriterProjectID>unspecified</WriterProjectID>
+		</WriterHeader>
+	</AdditionalInformation>
+	<AdditionalInformation AutomationMLVersion="2.0" />
+	<InstanceHierarchy Name="Hierarchy">
+		<Version>1.0.0</Version>
+		<InternalElement Name="InternalElement1" ID="e69f4a9a-7534-4dfa-9ce9-6356685bf6a7">
+			<ExternalInterface Name="Interface1" ID="d840b05b-f8c5-4d16-9e1f-579bfd5cf4f1">
+				<Attribute Name="Attribute1" AttributeDataType="xs:string" />
+			</ExternalInterface>
+			<InternalElement Name="InternalElement1" ID="3eb78596-05e8-43c3-90e2-5250949ecb51" />
+			<SupportedRoleClass RefRoleClassPath="RoleClassLib1/RoleClass1" />
+		</InternalElement>
+		<InternalElement Name="InternalElement2" ID="e26a3fdf-264e-43fc-beb8-8735ccebf1ad">
+			<ExternalInterface Name="Interface1" ID="bf118c18-295d-41db-bcf3-58b5f0180c55" />
+			<InternalLink Name="Link1" RefPartnerSideA="e26a3fdf-264e-43fc-beb8-8735ccebf1ad:Interface1" RefPartnerSideB="e69f4a9a-7534-4dfa-9ce9-6356685bf6a7:Interface1" />
+		</InternalElement>
+		<InternalElement Name="InternalElement3" ID="db34fb1b-66ad-4c4f-8ed1-9a5f631ffc6c" />
+		<InternalElement Name="InternalElement4" ID="a1e1d5d7-7f42-4a73-ad61-9b1b7bb513ad" />
+	</InstanceHierarchy>
+	<InterfaceClassLib Name="InterfaceClassLib1">
+		<Version>1.0.0</Version>
+	</InterfaceClassLib>
+	<RoleClassLib Name="RoleClassLib1">
+		<Version>1.0.0</Version>
+		<RoleClass Name="RoleClass1" />
+	</RoleClassLib>
+	<SystemUnitClassLib Name="SystemUnitClassLib1">
+		<Version>1.0.0</Version>
+	</SystemUnitClassLib>
+</CAEXFile>

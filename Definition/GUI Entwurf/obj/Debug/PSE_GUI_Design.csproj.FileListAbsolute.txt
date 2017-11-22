@@ -1,0 +1,9 @@
+C:\Users\kelln\Desktop\PSEWindowDesign\WindowsFormsApplication1\bin\Debug\WindowsFormsApplication1.exe.config
+C:\Users\kelln\Desktop\PSEWindowDesign\WindowsFormsApplication1\bin\Debug\WindowsFormsApplication1.exe
+C:\Users\kelln\Desktop\PSEWindowDesign\WindowsFormsApplication1\bin\Debug\WindowsFormsApplication1.pdb
+C:\Users\kelln\Desktop\PSEWindowDesign\WindowsFormsApplication1\obj\Debug\PSE_GUI_Design.csprojResolveAssemblyReference.cache
+C:\Users\kelln\Desktop\PSEWindowDesign\WindowsFormsApplication1\obj\Debug\WindowsFormsApplication1.Form1.resources
+C:\Users\kelln\Desktop\PSEWindowDesign\WindowsFormsApplication1\obj\Debug\WindowsFormsApplication1.Properties.Resources.resources
+C:\Users\kelln\Desktop\PSEWindowDesign\WindowsFormsApplication1\obj\Debug\PSE_GUI_Design.csproj.GenerateResource.Cache
+C:\Users\kelln\Desktop\PSEWindowDesign\WindowsFormsApplication1\obj\Debug\WindowsFormsApplication1.exe
+C:\Users\kelln\Desktop\PSEWindowDesign\WindowsFormsApplication1\obj\Debug\WindowsFormsApplication1.pdb

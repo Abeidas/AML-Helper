@@ -1,0 +1,426 @@
+<?xml version="1.0"  encoding="windows-1252"?>
+<XMI xmi.version="1.1" xmlns:UML="omg.org/UML1.3" timestamp="2005-02-07 16:42:28">
+	<XMI.header>
+		<XMI.documentation>
+			<XMI.exporter>Enterprise Architect</XMI.exporter>
+			<XMI.exporterVersion>2.5</XMI.exporterVersion>
+		</XMI.documentation>
+	</XMI.header>
+	<XMI.content>
+		<UML:Model name="EA Model" xmi.id="MX_EAID_1B3D62A5_4C01_4ca8_8317_5AF038AF57F7">
+			<UML:Namespace.ownedElement>
+				<UML:Class name="FlyweightFactory" xmi.id="EAID_3AC63257_D2C9_4361_8BA4_F272CCF8395F" visibility="public" namespace="EAPK_1B3D62A5_4C01_4ca8_8317_5AF038AF57F7" isRoot="false" isLeaf="false" isAbstract="false" isActive="false">
+					<UML:ModelElement.taggedValue>
+						<UML:TaggedValue tag="documentation" value="This class (a) creates and manages flyweight objects, and (b) ensures that flyweights are shared properly."/>
+						<UML:TaggedValue tag="isSpecification" value="false"/>
+						<UML:TaggedValue tag="ea_stype" value="Class"/>
+						<UML:TaggedValue tag="ea_ntype" value="0"/>
+						<UML:TaggedValue tag="version" value="1.0"/>
+						<UML:TaggedValue tag="package" value="EAPK_1B3D62A5_4C01_4ca8_8317_5AF038AF57F7"/>
+						<UML:TaggedValue tag="date_created" value="2003-09-06 23:09:36"/>
+						<UML:TaggedValue tag="date_modified" value="2005-02-07 15:59:14"/>
+						<UML:TaggedValue tag="gentype" value="C#"/>
+						<UML:TaggedValue tag="header1" value="using System.Collections;"/>
+						<UML:TaggedValue tag="tagged" value="0"/>
+						<UML:TaggedValue tag="package_name" value="Flyweight"/>
+						<UML:TaggedValue tag="phase" value="1.0"/>
+						<UML:TaggedValue tag="complexity" value="1"/>
+						<UML:TaggedValue tag="status" value="Proposed"/>
+						<UML:TaggedValue tag="style" value="BackColor=-1;BorderColor=-1;BorderWidth=-1;FontColor=-1;VSwimLanes=0;HSwimLanes=0;BorderStyle=0;"/>
+					</UML:ModelElement.taggedValue>
+					<UML:Classifier.feature>
+						<UML:Attribute name="flyweights" changeable="none" visibility="private" ownerScope="instance" targetScope="instance">
+							<UML:Attribute.initialValue>
+								<UML:Expression body="new Hashtable()"/>
+							</UML:Attribute.initialValue>
+							<UML:StructuralFeature.type>
+								<UML:Classifier xmi.idref="eaxmiid0"/>
+							</UML:StructuralFeature.type>
+							<UML:ModelElement.taggedValue>
+								<UML:TaggedValue tag="type" value="Hashtable"/>
+								<UML:TaggedValue tag="derived" value="0"/>
+								<UML:TaggedValue tag="containment" value="Not Specified"/>
+								<UML:TaggedValue tag="ordered" value="0"/>
+								<UML:TaggedValue tag="collection" value="false"/>
+								<UML:TaggedValue tag="position" value="0"/>
+								<UML:TaggedValue tag="lowerBound" value="1"/>
+								<UML:TaggedValue tag="upperBound" value="1"/>
+								<UML:TaggedValue tag="duplicates" value="0"/>
+								<UML:TaggedValue tag="ea_guid" value="{8613B735-DEB1-441f-A57B-AC5495F7EEBE}"/>
+								<UML:TaggedValue tag="styleex" value="volatile=0;"/>
+							</UML:ModelElement.taggedValue>
+						</UML:Attribute>
+						<UML:Operation name="GetFlyweight" visibility="public" ownerScope="instance" isQuery="false" concurrency="sequential">
+							<UML:ModelElement.taggedValue>
+								<UML:TaggedValue tag="type" value="Flyweight"/>
+								<UML:TaggedValue tag="const" value="false"/>
+								<UML:TaggedValue tag="code" value="return (Flyweight)flyweights[ key ];"/>
+								<UML:TaggedValue tag="synchronised" value="0"/>
+								<UML:TaggedValue tag="concurrency" value="Sequential"/>
+								<UML:TaggedValue tag="position" value="0"/>
+								<UML:TaggedValue tag="returnarray" value="0"/>
+								<UML:TaggedValue tag="pure" value="0"/>
+								<UML:TaggedValue tag="ea_guid" value="{CE74E427-58E7-4c03-8201-B7DC7ABFA1E2}"/>
+								<UML:TaggedValue tag="styleex" value="ShowBeh=0;"/>
+							</UML:ModelElement.taggedValue>
+							<UML:BehavioralFeature.parameter>
+								<UML:Parameter kind="return" visibility="public">
+									<UML:Parameter.type>
+										<UML:Classifier xmi.idref="EAID_8AE52DDA_9EEA_416a_AA40_E722F8D17D48"/>
+									</UML:Parameter.type>
+									<UML:ModelElement.taggedValue>
+										<UML:TaggedValue tag="pos" value="0"/>
+										<UML:TaggedValue tag="type" value="Flyweight"/>
+										<UML:TaggedValue tag="const" value="0"/>
+										<UML:TaggedValue tag="classifier" value="EAID_8AE52DDA_9EEA_416a_AA40_E722F8D17D48"/>
+										<UML:TaggedValue tag="ea_guid" value="{RETURNID-58E7-4c03-8201-B7DC7ABFA1E2}"/>
+									</UML:ModelElement.taggedValue>
+									<UML:Parameter.defaultValue>
+										<UML:Expression/>
+									</UML:Parameter.defaultValue>
+								</UML:Parameter>
+								<UML:Parameter name="key" kind="in" visibility="public">
+									<UML:Parameter.type>
+										<UML:Classifier xmi.idref="eaxmiid1"/>
+									</UML:Parameter.type>
+									<UML:ModelElement.taggedValue>
+										<UML:TaggedValue tag="pos" value="0"/>
+										<UML:TaggedValue tag="type" value="object"/>
+										<UML:TaggedValue tag="const" value="0"/>
+										<UML:TaggedValue tag="ea_guid" value="{4D08E2F7-3072-4622-B775-6EDE0617A07A}"/>
+									</UML:ModelElement.taggedValue>
+									<UML:Parameter.defaultValue>
+										<UML:Expression/>
+									</UML:Parameter.defaultValue>
+								</UML:Parameter>
+							</UML:BehavioralFeature.parameter>
+						</UML:Operation>
+					</UML:Classifier.feature>
+				</UML:Class>
+				<UML:Association xmi.id="EAID_E1650D92_EDCC_452a_A2CB_E94684D17C93" visibility="public" isRoot="false" isLeaf="false" isAbstract="false">
+					<UML:ModelElement.taggedValue>
+						<UML:TaggedValue tag="style" value="1"/>
+						<UML:TaggedValue tag="ea_type" value="Association"/>
+						<UML:TaggedValue tag="direction" value="Source -&gt; Destination"/>
+						<UML:TaggedValue tag="linemode" value="1"/>
+						<UML:TaggedValue tag="linecolor" value="0"/>
+						<UML:TaggedValue tag="linewidth" value="0"/>
+						<UML:TaggedValue tag="seqno" value="0"/>
+						<UML:TaggedValue tag="headStyle" value="0"/>
+						<UML:TaggedValue tag="lineStyle" value="0"/>
+						<UML:TaggedValue tag="privatedata5" value="EX=0;EY=0;EDGE=2;"/>
+						<UML:TaggedValue tag="virtualInheritance" value="0"/>
+						<UML:TaggedValue tag="lt" value="-flyweight"/>
+						<UML:TaggedValue tag="rb" value="1..*"/>
+					</UML:ModelElement.taggedValue>
+					<UML:Association.connection>
+						<UML:AssociationEnd visibility="private" aggregation="shared" isOrdered="false" isNavigable="false" type="EAID_3AC63257_D2C9_4361_8BA4_F272CCF8395F">
+							<UML:ModelElement.taggedValue>
+								<UML:TaggedValue tag="containment" value="Unspecified"/>
+							</UML:ModelElement.taggedValue>
+						</UML:AssociationEnd>
+						<UML:AssociationEnd visibility="private" multiplicity="1..*" name="flyweights" aggregation="none" isOrdered="false" isNavigable="true" type="EAID_8AE52DDA_9EEA_416a_AA40_E722F8D17D48">
+							<UML:ModelElement.taggedValue>
+								<UML:TaggedValue tag="containment" value="Unspecified"/>
+							</UML:ModelElement.taggedValue>
+						</UML:AssociationEnd>
+					</UML:Association.connection>
+				</UML:Association>
+				<UML:Class name="Flyweight" xmi.id="EAID_8AE52DDA_9EEA_416a_AA40_E722F8D17D48" visibility="public" namespace="EAPK_1B3D62A5_4C01_4ca8_8317_5AF038AF57F7" isRoot="false" isLeaf="false" isAbstract="true" isActive="false">
+					<UML:ModelElement.taggedValue>
+						<UML:TaggedValue tag="documentation" value="This class declares an interface through which flyweights can receive and act on extrinsic state."/>
+						<UML:TaggedValue tag="isSpecification" value="false"/>
+						<UML:TaggedValue tag="ea_stype" value="Class"/>
+						<UML:TaggedValue tag="ea_ntype" value="0"/>
+						<UML:TaggedValue tag="version" value="1.0"/>
+						<UML:TaggedValue tag="package" value="EAPK_1B3D62A5_4C01_4ca8_8317_5AF038AF57F7"/>
+						<UML:TaggedValue tag="date_created" value="2003-09-06 23:12:10"/>
+						<UML:TaggedValue tag="date_modified" value="2005-02-07 16:04:46"/>
+						<UML:TaggedValue tag="gentype" value="C#"/>
+						<UML:TaggedValue tag="tagged" value="0"/>
+						<UML:TaggedValue tag="package_name" value="Flyweight"/>
+						<UML:TaggedValue tag="phase" value="1.0"/>
+						<UML:TaggedValue tag="complexity" value="1"/>
+						<UML:TaggedValue tag="status" value="Proposed"/>
+						<UML:TaggedValue tag="style" value="BackColor=-1;BorderColor=-1;BorderWidth=-1;FontColor=-1;VSwimLanes=0;HSwimLanes=0;BorderStyle=0;"/>
+					</UML:ModelElement.taggedValue>
+					<UML:Classifier.feature>
+						<UML:Operation name="Operation" visibility="public" ownerScope="instance" isQuery="false" concurrency="sequential">
+							<UML:ModelElement.taggedValue>
+								<UML:TaggedValue tag="type" value="void"/>
+								<UML:TaggedValue tag="const" value="false"/>
+								<UML:TaggedValue tag="isAbstract" value="1"/>
+								<UML:TaggedValue tag="synchronised" value="0"/>
+								<UML:TaggedValue tag="concurrency" value="Sequential"/>
+								<UML:TaggedValue tag="position" value="0"/>
+								<UML:TaggedValue tag="returnarray" value="0"/>
+								<UML:TaggedValue tag="pure" value="0"/>
+								<UML:TaggedValue tag="ea_guid" value="{F9791EEF-5CCE-4791-9708-68A3A9F57876}"/>
+							</UML:ModelElement.taggedValue>
+							<UML:BehavioralFeature.parameter>
+								<UML:Parameter kind="return" visibility="public">
+									<UML:Parameter.type>
+										<UML:Classifier xmi.idref="eaxmiid2"/>
+									</UML:Parameter.type>
+									<UML:ModelElement.taggedValue>
+										<UML:TaggedValue tag="pos" value="0"/>
+										<UML:TaggedValue tag="type" value="void"/>
+										<UML:TaggedValue tag="const" value="0"/>
+										<UML:TaggedValue tag="ea_guid" value="{RETURNID-5CCE-4791-9708-68A3A9F57876}"/>
+									</UML:ModelElement.taggedValue>
+									<UML:Parameter.defaultValue>
+										<UML:Expression/>
+									</UML:Parameter.defaultValue>
+								</UML:Parameter>
+								<UML:Parameter name="extrinsicState" kind="in" visibility="public">
+									<UML:Parameter.type>
+										<UML:Classifier xmi.idref="eaxmiid1"/>
+									</UML:Parameter.type>
+									<UML:ModelElement.taggedValue>
+										<UML:TaggedValue tag="pos" value="0"/>
+										<UML:TaggedValue tag="type" value="object"/>
+										<UML:TaggedValue tag="const" value="0"/>
+										<UML:TaggedValue tag="ea_guid" value="{FAC7D8EB-CA7F-4206-BAFB-D4108ED4A988}"/>
+									</UML:ModelElement.taggedValue>
+									<UML:Parameter.defaultValue>
+										<UML:Expression/>
+									</UML:Parameter.defaultValue>
+								</UML:Parameter>
+							</UML:BehavioralFeature.parameter>
+						</UML:Operation>
+					</UML:Classifier.feature>
+				</UML:Class>
+				<UML:Generalization subtype="EAID_4378BB3D_9567_46fa_9249_75912D3523CF" supertype="EAID_8AE52DDA_9EEA_416a_AA40_E722F8D17D48" xmi.id="EAID_A32CDDA9_06F4_45da_BC91_B17EBC0000C7" visibility="public">
+					<UML:ModelElement.taggedValue>
+						<UML:TaggedValue tag="style" value="3"/>
+						<UML:TaggedValue tag="ea_type" value="Generalization"/>
+						<UML:TaggedValue tag="direction" value="Source -&gt; Destination"/>
+						<UML:TaggedValue tag="linemode" value="3"/>
+						<UML:TaggedValue tag="linecolor" value="0"/>
+						<UML:TaggedValue tag="linewidth" value="0"/>
+						<UML:TaggedValue tag="seqno" value="0"/>
+						<UML:TaggedValue tag="subtype" value="Tree"/>
+						<UML:TaggedValue tag="headStyle" value="0"/>
+						<UML:TaggedValue tag="lineStyle" value="0"/>
+						<UML:TaggedValue tag="src_visibility" value="Public"/>
+						<UML:TaggedValue tag="src_aggregation" value="0"/>
+						<UML:TaggedValue tag="src_isOrdered" value="false"/>
+						<UML:TaggedValue tag="src_isNavigable" value="false"/>
+						<UML:TaggedValue tag="dst_visibility" value="Public"/>
+						<UML:TaggedValue tag="dst_aggregation" value="0"/>
+						<UML:TaggedValue tag="dst_isOrdered" value="false"/>
+						<UML:TaggedValue tag="dst_isNavigable" value="false"/>
+						<UML:TaggedValue tag="$ea_xref_property" value="$XREFPROP=$XID={6756F4D4-D021-435a-8E40-4E57456994AD}$XID;$NAM=CustomProperties$NAM;$TYP=connector property$TYP;$VIS=Public$VIS;$DES=@PROP=@NAME=isSubstitutable@ENDNAME;@TYPE=boolean@ENDTYPE;@VALU=@ENDVALU;@PRMT=@ENDPRMT;@ENDPROP;$DES;$CLT={A32CDDA9-06F4-45da-BC91-B17EBC0000C7}$CLT;$SUP=&lt;none&gt;$SUP;$ENDXREF;"/>
+						<UML:TaggedValue tag="privatedata5" value="SX=0;SY=0;EDGE=1;"/>
+					</UML:ModelElement.taggedValue>
+				</UML:Generalization>
+				<UML:Generalization subtype="EAID_26F7C362_9960_4458_83C0_1891B7356443" supertype="EAID_8AE52DDA_9EEA_416a_AA40_E722F8D17D48" xmi.id="EAID_DE6C4EA7_84CF_4883_9F14_C4CEA18E0C9E" visibility="public">
+					<UML:ModelElement.taggedValue>
+						<UML:TaggedValue tag="style" value="3"/>
+						<UML:TaggedValue tag="ea_type" value="Generalization"/>
+						<UML:TaggedValue tag="direction" value="Source -&gt; Destination"/>
+						<UML:TaggedValue tag="linemode" value="3"/>
+						<UML:TaggedValue tag="linecolor" value="0"/>
+						<UML:TaggedValue tag="linewidth" value="0"/>
+						<UML:TaggedValue tag="seqno" value="0"/>
+						<UML:TaggedValue tag="subtype" value="Tree"/>
+						<UML:TaggedValue tag="headStyle" value="0"/>
+						<UML:TaggedValue tag="lineStyle" value="0"/>
+						<UML:TaggedValue tag="src_visibility" value="Public"/>
+						<UML:TaggedValue tag="src_aggregation" value="0"/>
+						<UML:TaggedValue tag="src_isOrdered" value="false"/>
+						<UML:TaggedValue tag="src_isNavigable" value="false"/>
+						<UML:TaggedValue tag="dst_visibility" value="Public"/>
+						<UML:TaggedValue tag="dst_aggregation" value="0"/>
+						<UML:TaggedValue tag="dst_isOrdered" value="false"/>
+						<UML:TaggedValue tag="dst_isNavigable" value="false"/>
+						<UML:TaggedValue tag="$ea_xref_property" value="$XREFPROP=$XID={D67BB66D-CF2D-4e78-A83C-639740EC7A47}$XID;$NAM=CustomProperties$NAM;$TYP=connector property$TYP;$VIS=Public$VIS;$DES=@PROP=@NAME=isSubstitutable@ENDNAME;@TYPE=boolean@ENDTYPE;@VALU=@ENDVALU;@PRMT=@ENDPRMT;@ENDPROP;$DES;$CLT={DE6C4EA7-84CF-4883-9F14-C4CEA18E0C9E}$CLT;$SUP=&lt;none&gt;$SUP;$ENDXREF;"/>
+						<UML:TaggedValue tag="privatedata5" value="SX=0;SY=0;EDGE=1;"/>
+					</UML:ModelElement.taggedValue>
+				</UML:Generalization>
+				<UML:Class name="ConcreteFlyweight" xmi.id="EAID_4378BB3D_9567_46fa_9249_75912D3523CF" visibility="public" namespace="EAPK_1B3D62A5_4C01_4ca8_8317_5AF038AF57F7" isRoot="false" isLeaf="false" isAbstract="false" isActive="false">
+					<UML:ModelElement.taggedValue>
+						<UML:TaggedValue tag="documentation" value="This class implements the Flyweight interface and adds storage for intrinsic state, if any."/>
+						<UML:TaggedValue tag="isSpecification" value="false"/>
+						<UML:TaggedValue tag="ea_stype" value="Class"/>
+						<UML:TaggedValue tag="ea_ntype" value="0"/>
+						<UML:TaggedValue tag="version" value="1.0"/>
+						<UML:TaggedValue tag="package" value="EAPK_1B3D62A5_4C01_4ca8_8317_5AF038AF57F7"/>
+						<UML:TaggedValue tag="date_created" value="2003-09-06 23:16:31"/>
+						<UML:TaggedValue tag="date_modified" value="2005-02-07 16:25:22"/>
+						<UML:TaggedValue tag="gentype" value="C#"/>
+						<UML:TaggedValue tag="tagged" value="0"/>
+						<UML:TaggedValue tag="package_name" value="Flyweight"/>
+						<UML:TaggedValue tag="phase" value="1.0"/>
+						<UML:TaggedValue tag="complexity" value="1"/>
+						<UML:TaggedValue tag="status" value="Proposed"/>
+						<UML:TaggedValue tag="style" value="BackColor=-1;BorderColor=-1;BorderWidth=-1;FontColor=-1;VSwimLanes=0;HSwimLanes=0;BorderStyle=0;"/>
+					</UML:ModelElement.taggedValue>
+					<UML:Classifier.feature>
+						<UML:Operation name="Operation" visibility="public" ownerScope="instance" isQuery="false" concurrency="sequential">
+							<UML:ModelElement.taggedValue>
+								<UML:TaggedValue tag="type" value="void"/>
+								<UML:TaggedValue tag="const" value="false"/>
+								<UML:TaggedValue tag="synchronised" value="0"/>
+								<UML:TaggedValue tag="concurrency" value="Sequential"/>
+								<UML:TaggedValue tag="position" value="0"/>
+								<UML:TaggedValue tag="returnarray" value="0"/>
+								<UML:TaggedValue tag="pure" value="0"/>
+								<UML:TaggedValue tag="ea_guid" value="{7BC0A7CD-A9D5-4f3f-987B-081F93D19F9B}"/>
+								<UML:TaggedValue tag="override" value="true" xmi.id="EAID_DAD9B775_920F_4ec9_9760_11EBA3E3B137"/>
+							</UML:ModelElement.taggedValue>
+							<UML:BehavioralFeature.parameter>
+								<UML:Parameter kind="return" visibility="public">
+									<UML:Parameter.type>
+										<UML:Classifier xmi.idref="eaxmiid2"/>
+									</UML:Parameter.type>
+									<UML:ModelElement.taggedValue>
+										<UML:TaggedValue tag="pos" value="0"/>
+										<UML:TaggedValue tag="type" value="void"/>
+										<UML:TaggedValue tag="const" value="0"/>
+										<UML:TaggedValue tag="ea_guid" value="{RETURNID-A9D5-4f3f-987B-081F93D19F9B}"/>
+									</UML:ModelElement.taggedValue>
+									<UML:Parameter.defaultValue>
+										<UML:Expression/>
+									</UML:Parameter.defaultValue>
+								</UML:Parameter>
+								<UML:Parameter name="extrinsicState" kind="in" visibility="public">
+									<UML:Parameter.type>
+										<UML:Classifier xmi.idref="eaxmiid1"/>
+									</UML:Parameter.type>
+									<UML:ModelElement.taggedValue>
+										<UML:TaggedValue tag="pos" value="0"/>
+										<UML:TaggedValue tag="type" value="object"/>
+										<UML:TaggedValue tag="const" value="0"/>
+										<UML:TaggedValue tag="ea_guid" value="{7FD45646-4B6F-4020-BF0D-940BDC019482}"/>
+									</UML:ModelElement.taggedValue>
+									<UML:Parameter.defaultValue>
+										<UML:Expression/>
+									</UML:Parameter.defaultValue>
+								</UML:Parameter>
+							</UML:BehavioralFeature.parameter>
+						</UML:Operation>
+					</UML:Classifier.feature>
+				</UML:Class>
+				<UML:Class name="UnsharedConcreteFlyweight" xmi.id="EAID_26F7C362_9960_4458_83C0_1891B7356443" visibility="public" namespace="EAPK_1B3D62A5_4C01_4ca8_8317_5AF038AF57F7" isRoot="false" isLeaf="false" isAbstract="false" isActive="false">
+					<UML:ModelElement.taggedValue>
+						<UML:TaggedValue tag="documentation" value="Not all Flyweight subclasses need to be shared. The Flyweight interface enables sharing; it doesn't enforce it."/>
+						<UML:TaggedValue tag="isSpecification" value="false"/>
+						<UML:TaggedValue tag="ea_stype" value="Class"/>
+						<UML:TaggedValue tag="ea_ntype" value="0"/>
+						<UML:TaggedValue tag="version" value="1.0"/>
+						<UML:TaggedValue tag="package" value="EAPK_1B3D62A5_4C01_4ca8_8317_5AF038AF57F7"/>
+						<UML:TaggedValue tag="date_created" value="2003-09-06 23:16:50"/>
+						<UML:TaggedValue tag="date_modified" value="2005-02-07 16:25:22"/>
+						<UML:TaggedValue tag="gentype" value="C#"/>
+						<UML:TaggedValue tag="tagged" value="0"/>
+						<UML:TaggedValue tag="package_name" value="Flyweight"/>
+						<UML:TaggedValue tag="phase" value="1.0"/>
+						<UML:TaggedValue tag="complexity" value="1"/>
+						<UML:TaggedValue tag="status" value="Proposed"/>
+						<UML:TaggedValue tag="style" value="BackColor=-1;BorderColor=-1;BorderWidth=-1;FontColor=-1;VSwimLanes=0;HSwimLanes=0;BorderStyle=0;"/>
+					</UML:ModelElement.taggedValue>
+					<UML:Classifier.feature>
+						<UML:Operation name="Operation" visibility="public" ownerScope="instance" isQuery="false" concurrency="sequential">
+							<UML:ModelElement.taggedValue>
+								<UML:TaggedValue tag="type" value="void"/>
+								<UML:TaggedValue tag="const" value="false"/>
+								<UML:TaggedValue tag="synchronised" value="0"/>
+								<UML:TaggedValue tag="concurrency" value="Sequential"/>
+								<UML:TaggedValue tag="position" value="0"/>
+								<UML:TaggedValue tag="returnarray" value="0"/>
+								<UML:TaggedValue tag="pure" value="0"/>
+								<UML:TaggedValue tag="ea_guid" value="{6E613DF8-B65B-429a-B1B3-1FBBDA0FBEF7}"/>
+								<UML:TaggedValue tag="override" value="true" xmi.id="EAID_7D08997A_EE8B_4801_8B09_FACF12CF00A7"/>
+							</UML:ModelElement.taggedValue>
+							<UML:BehavioralFeature.parameter>
+								<UML:Parameter kind="return" visibility="public">
+									<UML:Parameter.type>
+										<UML:Classifier xmi.idref="eaxmiid2"/>
+									</UML:Parameter.type>
+									<UML:ModelElement.taggedValue>
+										<UML:TaggedValue tag="pos" value="0"/>
+										<UML:TaggedValue tag="type" value="void"/>
+										<UML:TaggedValue tag="const" value="0"/>
+										<UML:TaggedValue tag="ea_guid" value="{RETURNID-B65B-429a-B1B3-1FBBDA0FBEF7}"/>
+									</UML:ModelElement.taggedValue>
+									<UML:Parameter.defaultValue>
+										<UML:Expression/>
+									</UML:Parameter.defaultValue>
+								</UML:Parameter>
+								<UML:Parameter name="extrinsicState" kind="in" visibility="public">
+									<UML:Parameter.type>
+										<UML:Classifier xmi.idref="eaxmiid1"/>
+									</UML:Parameter.type>
+									<UML:ModelElement.taggedValue>
+										<UML:TaggedValue tag="pos" value="0"/>
+										<UML:TaggedValue tag="type" value="object"/>
+										<UML:TaggedValue tag="const" value="0"/>
+										<UML:TaggedValue tag="ea_guid" value="{542410E6-5662-4e72-A078-5D745F8BB202}"/>
+									</UML:ModelElement.taggedValue>
+									<UML:Parameter.defaultValue>
+										<UML:Expression/>
+									</UML:Parameter.defaultValue>
+								</UML:Parameter>
+							</UML:BehavioralFeature.parameter>
+						</UML:Operation>
+					</UML:Classifier.feature>
+				</UML:Class>
+			</UML:Namespace.ownedElement>
+		</UML:Model>
+		<UML:Diagram name="Flyweight" xmi.id="EAID_699980A3_1415_473b_A593_B161BF4287BF" diagramType="ClassDiagram" owner="EAPK_699980A3_1415_473b_A593_B161BF4287BF" toolName="Enterprise Architect 2.5">
+			<UML:ModelElement.taggedValue>
+				<UML:TaggedValue tag="documentation" value="This pattern uses sharing to support large numbers of fine-grained objects efficiently."/>
+				<UML:TaggedValue tag="version" value="1.0"/>
+				<UML:TaggedValue tag="created_date" value="2004-12-14 13:32:00"/>
+				<UML:TaggedValue tag="modified_date" value="2005-02-07 16:25:22"/>
+				<UML:TaggedValue tag="package" value="EAPK_1B3D62A5_4C01_4ca8_8317_5AF038AF57F7"/>
+				<UML:TaggedValue tag="type" value="Logical"/>
+				<UML:TaggedValue tag="swimlanes" value="locked=false;orientation=0;width=0;inbar=false;names=false;color=0;bold=false;fcol=0;;cls=0;"/>
+				<UML:TaggedValue tag="EAStyle" value="ShowPrivate=1;ShowProtected=1;ShowPublic=1;HideRelationships=0;Locked=0;Border=1;HighlightForeign=1;PackageContents=1;SequenceNotes=0;ScalePrintImage=0;PPgs.cx=0;PPgs.cy=0;DocSize.cx=780;DocSize.cy=1138;ShowDetails=0;Orientation=P;Zoom=100;ShowTags=0;OpParams=1;ShowIcons=1;CollabNums=0;HideProps=0;ShowReqs=0;ShowCons=0;PaperSize=9;HideParents=0;UseAlias=0;HideAtts=0;HideOps=0;HideStereo=0;HideElemStereo=0;ShowTests=0;ShowMaint=0;"/>
+				<UML:TaggedValue tag="styleex" value="ExcludeRTF=0;DocAll=0;HideQuals=0;AttPkg=1;ShowTests=0;ShowMaint=0;SuppressFOC=0;TDurLow=0;TDurHigh=100;TDurUnit=;TDurHide=0;"/>
+			</UML:ModelElement.taggedValue>
+			<UML:Diagram.element>
+				<UML:DiagramElement geometry="Left=490;Top=241;Right=636;Bottom=316;imgL=415;imgT=198;imgR=561;imgB=273;" subject="EAID_26F7C362_9960_4458_83C0_1891B7356443" seqno="1" style="DUID=C67AD25D;LBL=;"/>
+				<UML:DiagramElement geometry="Left=287;Top=241;Right=433;Bottom=316;imgL=212;imgT=198;imgR=358;imgB=273;" subject="EAID_4378BB3D_9567_46fa_9249_75912D3523CF" seqno="2" style="DUID=60DE5DEA;LBL=;"/>
+				<UML:DiagramElement geometry="Left=390;Top=64;Right=527;Bottom=134;imgL=315;imgT=21;imgR=452;imgB=91;" subject="EAID_8AE52DDA_9EEA_416a_AA40_E722F8D17D48" seqno="3" style="DUID=C5568ADB;LBL=;"/>
+				<UML:DiagramElement geometry="Left=85;Top=53;Right=300;Bottom=144;imgL=10;imgT=10;imgR=225;imgB=101;" subject="EAID_3AC63257_D2C9_4361_8BA4_F272CCF8395F" seqno="4" style="DUID=2CD61695;LBL=;"/>
+				<UML:DiagramElement geometry="EX=0;EY=0;EDGE=2;$LLB=;LLT=;LMT=;LMB=;LRT=CX=59:CY=15:OX=0:OY=0:HDN=0:BLD=0:ITA=0:UND=0:CLR=-1:ALN=0:DIR=0:ROT=0;LRB=CX=26:CY=15:OX=0:OY=0:HDN=0:BLD=0:ITA=0:UND=0:CLR=-1:ALN=0:DIR=0:ROT=0;Path=;" subject="EAID_E1650D92_EDCC_452a_A2CB_E94684D17C93" style="Mode=1;EOID=C5568ADB;SOID=2CD61695;Hidden=0;"/>
+				<UML:DiagramElement geometry="SX=0;SY=0;EDGE=1;EX=13;EY=0;$LLB=;LLT=;LMT=;LMB=;LRT=;LRB=;Path=360:-184$458:-184$;" subject="EAID_A32CDDA9_06F4_45da_BC91_B17EBC0000C7" style="Mode=3;EOID=C5568ADB;SOID=60DE5DEA;Hidden=0;"/>
+				<UML:DiagramElement geometry="SX=0;SY=0;EDGE=1;$LLB=;LLT=;LMT=;LMB=;LRT=;LRB=;Path=563:-184$458:-184$;" subject="EAID_DE6C4EA7_84CF_4883_9F14_C4CEA18E0C9E" style="Mode=3;EOID=C5568ADB;SOID=C67AD25D;Hidden=0;"/>
+			</UML:Diagram.element>
+		</UML:Diagram>
+	</XMI.content>
+	<XMI.difference/>
+	<XMI.extensions xmi.extender="Enterprise Architect 2.5">
+		<EAStub xmi.id="EAID_3AC63257_D2C9_4361_8BA4_F272CCF8395F" name="FlyweightFactory" UMLType="Class"/>
+		<EAStub xmi.id="EAID_8AE52DDA_9EEA_416a_AA40_E722F8D17D48" name="Flyweight" UMLType="Class"/>
+		<EAStub xmi.id="EAID_4378BB3D_9567_46fa_9249_75912D3523CF" name="ConcreteFlyweight" UMLType="Class"/>
+		<EAStub xmi.id="EAID_26F7C362_9960_4458_83C0_1891B7356443" name="UnsharedConcreteFlyweight" UMLType="Class"/>
+		<UMLPattern name="Flyweight" category="GoF Structural Patterns (C#)" version="1.0" notes="This pattern uses sharing to support large numbers of fine-grained objects efficiently.">
+			<UMLPattern.PromptList>
+				<Element name="UnsharedConcreteFlyweight:Class" guid="EAID_26F7C362_9960_4458_83C0_1891B7356443" id="877" prompt="yes" link="yes" classifier="no" type="no">
+					<Comment comment="Not all Flyweight subclasses need to be shared. The Flyweight interface enables sharing; it doesn't enforce it.">
+						<![CDATA[Not all Flyweight subclasses need to be shared. The Flyweight interface enables sharing; it doesn't enforce it.]]>
+					</Comment>
+				</Element>
+				<Element name="ConcreteFlyweight:Class" guid="EAID_4378BB3D_9567_46fa_9249_75912D3523CF" id="876" prompt="yes" link="yes" classifier="no" type="no">
+					<Comment comment="This class implements the Flyweight interface and adds storage for intrinsic state, if any.">
+						<![CDATA[This class implements the Flyweight interface and adds storage for intrinsic state, if any.]]>
+					</Comment>
+				</Element>
+				<Element name="Flyweight:Class" guid="EAID_8AE52DDA_9EEA_416a_AA40_E722F8D17D48" id="875" prompt="yes" link="yes" classifier="no" type="no">
+					<Comment comment="This class declares an interface through which flyweights can receive and act on extrinsic state.">
+						<![CDATA[This class declares an interface through which flyweights can receive and act on extrinsic state.]]>
+					</Comment>
+				</Element>
+				<Element name="FlyweightFactory:Class" guid="EAID_3AC63257_D2C9_4361_8BA4_F272CCF8395F" id="874" prompt="yes" link="yes" classifier="no" type="no">
+					<Comment comment="This class (a) creates and manages flyweight objects, and (b) ensures that flyweights are shared properly.">
+						<![CDATA[This class (a) creates and manages flyweight objects, and (b) ensures that flyweights are shared properly.]]>
+					</Comment>
+				</Element>
+			</UMLPattern.PromptList>
+			<UMLPattern.PreviewImage xmlns:dt="urn:schemas-microsoft-com:datatypes" dt:dt="bin.base64" cx="16059" cy="8014">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 OgAgACAASABhAHMAaAB0AGEAYgBsAGUAIAA9ACAAbgBlAHcAIABIAGEAcwBoAHQAYQBiAGwA ZQAoACkAAwAAAAMAAAAFAAAABwAAAAYAAAADAAAABgAAAAYAAAADAAAABAAAAAMAAAADAAAA AwAAAAcAAAAGAAAABAAAAAYAAAADAAAABgAAAAYAAAADAAAABgAAAAMAAAAGAAAAAwAAAAYA AAAGAAAABwAAAAMAAAAHAAAABgAAAAQAAAAGAAAAAwAAAAYAAAAGAAAAAwAAAAYAAAADAAAA AwAAABgAAAAMAAAAAAAAABsAAAAQAAAAVQAAAJb///82AAAAEAAAACsBAACW////GAAAAAwA AAAAQEAAVAAAAFgAAAAPAAAAQwAAABgAAABPAAAAAQAAAAAA4UEAkOLBWgAAAJL///8CAAAA TAAAAAAAAAAAAAAAAAAAAP//////////UAAAACsAIAAGAAAAAwAAAFQAAAAMAQAAIAAAAEMA AAC3AAAATwAAAAEAAAAAAOFBAJDiwWsAAACS////IAAAAEwAAAAAAAAAAAAAAAAAAAD///// /////4wAAABHAGUAdABGAGwAeQB3AGUAaQBnAGgAdAAoAG8AYgBqAGUAYwB0ACkAIAA6ACAA RgBsAHkAdwBlAGkAZwBoAHQACAAAAAYAAAADAAAABgAAAAMAAAAFAAAABwAAAAYAAAADAAAA BgAAAAYAAAADAAAAAwAAAAYAAAAGAAAAAwAAAAYAAAAFAAAAAwAAAAMAAAADAAAAAwAAAAMA AAAGAAAAAwAAAAUAAAAHAAAABgAAAAMAAAAGAAAABgAAAAMAAAAYAAAADAAAAAAAAAAnAAAA GAAAAAQAAAAAAAAAwL/AAAAAAAAlAAAADAAAAAQAAAAmAAAAHAAAAAYAAAAAAAAAAQAAAAAA AADAv8AAJQAAAAwAAAAGAAAAKwAAABgAAACJAQAAvf///xECAAB4////JQAAAAwAAAACAAAA KAAAAAwAAAAEAAAAJQAAAAwAAAADAAAAKAAAAAwAAAAGAAAAKwAAABgAAACGAQAAwP///w4C AAB7////UgAAAHABAAAGAAAA9v///wAAAAAAAAAAAAAAALwCAAABAAABAAAAAEEAUgBJAEEA TAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA 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</UMLPattern.PreviewImage>
+		</UMLPattern>
+	</XMI.extensions>
+</XMI>

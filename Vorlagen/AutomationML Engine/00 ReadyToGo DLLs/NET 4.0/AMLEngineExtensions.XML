@@ -1,0 +1,3483 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>AMLEngineExtensions</name>
+    </assembly>
+    <members>
+        <member name="T:AMLEngineExtensions.ActionExtensions">
+            <summary>
+            Helper class containing methods for the enumeration of element collections of CAEXObjects
+            and calling actions on each child element
+            </summary>
+        </member>
+        <member name="M:AMLEngineExtensions.ActionExtensions.FirstOrDefaultFromMany``1(System.Collections.Generic.IEnumerable{``0},System.Func{``0,System.Collections.Generic.IEnumerable{``0}},System.Predicate{``0})">
+            <summary>
+            Enumerate and call predicate on each Object in the Tree (this method performs a
+            recursive descent ) until the predicate is true, then it returns with the found element .
+            </summary>
+            <typeparam name="T">CAEX-Object-Type</typeparam>
+            <param name="source">The source.</param>
+            <param name="childrenSelector">The children selector.</param>
+            <param name="condition">The condition.</param>
+            <returns>The first CAEX-Object found, for which the test predicate gives true.</returns>
+        </member>
+        <member name="M:AMLEngineExtensions.ActionExtensions.ForEachCAEXBasicObject``1(System.Collections.Generic.IEnumerable{``0},System.Action{``0})">
+            <summary>
+            Enumerate and call action on each CAEXBasicObject in the source collection
+            </summary>
+            <typeparam name="T"></typeparam>
+            <param name="source">Enumerable source collection</param>
+            <param name="action">Action Delegate</param>
+        </member>
+        <member name="M:AMLEngineExtensions.ActionExtensions.ForEachCAEXBasicObject``1(System.Collections.Generic.IEnumerable{``0},System.Action{``0},System.Predicate{``0})">
+            <summary>
+            Enumerate and call action on each CAEXBasicObject in the source collection for which a
+            given predicate is true
+            </summary>
+            <typeparam name="T"></typeparam>
+            <param name="source">Enumerable source collection</param>
+            <param name="action">Action Delegate</param>
+            <param name="condition">The condition.</param>
+        </member>
+        <member name="M:AMLEngineExtensions.ActionExtensions.ForEachExternalInterface(CAEX_ClassModel.SystemUnitClassType,System.Action{CAEX_ClassModel.InterfaceClassType})">
+            <summary>
+            perform an action on each External Interface in the systemunitClass
+            </summary>
+            <param name="systemUnitClass">the systemUnitClass</param>
+            <param name="action">the action</param>
+        </member>
+        <member name="M:AMLEngineExtensions.ActionExtensions.ForEachInstanceHierarchy(CAEX_ClassModel.CAEXFileType,System.Action{CAEX_ClassModel.InstanceHierarchyType})">
+            <summary>
+            perform an action on each InstanceHierarchy in the CaexFile
+            </summary>
+            <param name="caexFile">the caexFile</param>
+            <param name="action">the action</param>
+        </member>
+        <member name="M:AMLEngineExtensions.ActionExtensions.ForEachInterfaceClass(CAEX_ClassModel.InterfaceFamilyType,System.Action{CAEX_ClassModel.InterfaceFamilyType})">
+            <summary>
+            perform an action on each child-interfaceClass in the interfaceClass
+            </summary>
+            <param name="interfaceClass">the interfaceClass</param>
+            <param name="action">the action</param>
+        </member>
+        <member name="M:AMLEngineExtensions.ActionExtensions.ForEachInterfaceClassLib(CAEX_ClassModel.CAEXFileType,System.Action{CAEX_ClassModel.InterfaceClassLibType})">
+            <summary>
+            perform an action on each InterfaceClassLib in the CaexFile
+            </summary>
+            <param name="caexFile">the caexFile</param>
+            <param name="action">the action</param>
+        </member>
+        <member name="M:AMLEngineExtensions.ActionExtensions.ForEachInternalElement(CAEX_ClassModel.SystemUnitClassType,System.Action{CAEX_ClassModel.InternalElementType})">
+            <summary>
+            perform an action on each InternalElement Child in the systemunitClass
+            </summary>
+            <param name="systemUnitClass">the systemUnitClass</param>
+            <param name="action">the action</param>
+        </member>
+        <member name="M:AMLEngineExtensions.ActionExtensions.ForEachRequiredRoleClass(CAEX_ClassModel.InternalElementType,System.Action{CAEX_ClassModel.RoleRequirementsType})">
+            <summary>
+            perform an action on each RoleRequirement in the internalElement
+            </summary>
+            <param name="internalElement">the internalElement</param>
+            <param name="action">the action</param>
+        </member>
+        <member name="M:AMLEngineExtensions.ActionExtensions.ForEachRoleClass(CAEX_ClassModel.RoleFamilyType,System.Action{CAEX_ClassModel.RoleFamilyType})">
+            <summary>
+            perform an action on each RoleClass-Child in the RoleClass
+            </summary>
+            <param name="roleClass">the RoleClass</param>
+            <param name="action">the action</param>
+        </member>
+        <member name="M:AMLEngineExtensions.ActionExtensions.ForEachRoleClassLib(CAEX_ClassModel.CAEXFileType,System.Action{CAEX_ClassModel.RoleClassLibType})">
+            <summary>
+            perform an action on each RoleClassLib in the CaexFile
+            </summary>
+            <param name="caexFile">the caexFile</param>
+            <param name="action">the action</param>
+        </member>
+        <member name="M:AMLEngineExtensions.ActionExtensions.ForEachSupportedRoleClass(CAEX_ClassModel.SystemUnitClassType,System.Action{CAEX_ClassModel.SupportedRoleClassType})">
+            <summary>
+            perform an action on each supported RoleClass in the systemUnitClass
+            </summary>
+            <param name="systemUnitClass">the systemUnitClass</param>
+            <param name="action">the action</param>
+        </member>
+        <member name="M:AMLEngineExtensions.ActionExtensions.ForEachSystemUnitClass(CAEX_ClassModel.SystemUnitFamilyType,System.Action{CAEX_ClassModel.SystemUnitFamilyType})">
+            <summary>
+            perform an action on each SystemUnitClass - Child in the systemUnitClass
+            </summary>
+            <param name="systemUnitClass">the systemUnitClass</param>
+            <param name="action">the action</param>
+        </member>
+        <member name="M:AMLEngineExtensions.ActionExtensions.ForEachSystemUnitClassLib(CAEX_ClassModel.CAEXFileType,System.Action{CAEX_ClassModel.SystemUnitClassLibType})">
+            <summary>
+            perform an action on each SystemUnitClassLib in the CaexFile
+            </summary>
+            <param name="caexFile">the CaexFile</param>
+            <param name="action">the action</param>
+        </member>
+        <member name="T:AMLEngineExtensions.ChangeMode">
+            <summary>
+            Enumeration of the ChangeMode
+            </summary>
+        </member>
+        <member name="F:AMLEngineExtensions.ChangeMode.Empty">
+            <summary>
+            no ChangeMode is set
+            </summary>
+        </member>
+        <member name="F:AMLEngineExtensions.ChangeMode.State">
+            <summary>
+            State means the CAEXObject has not changed
+            </summary>
+        </member>
+        <member name="F:AMLEngineExtensions.ChangeMode.Create">
+            <summary>
+            Create means that CAEXObject is new
+            </summary>
+        </member>
+        <member name="F:AMLEngineExtensions.ChangeMode.Delete">
+            <summary>
+            Delete means this CAEX object has been deleted in the source tool
+            </summary>
+        </member>
+        <member name="F:AMLEngineExtensions.ChangeMode.Change">
+            <summary>
+            Change means this CAEX object has changed
+            </summary>
+        </member>
+        <member name="T:AMLEngineExtensions.BasicExtensions">
+            <summary>
+            Helper class containing useful methods for handling aml documents
+            </summary>
+        </member>
+        <member name="M:AMLEngineExtensions.BasicExtensions.AddInstance(CAEX_ClassModel.InternalElementType,CAEX_ClassModel.CAEXObject)">
+            <summary>
+            Inserts a new class instance to the parentInternalElement. If there are existing
+            instances of the same Type, the Element is inserted after the last Element of that Type.
+            Before Insertion, the Uniqueness of the Name among the siblings of that Type is checked.
+            </summary>
+            <param name="parentInternalElement">
+            The Parent-InternalElement
+            </param>
+            <param name="newInstanceObject">
+            The instance of a class to be inserted at the parentInternalElement. The instance can be
+            of type InternalElementType or InterfaceClassType
+            </param>
+            <returns>
+            True if insertion was successful, else false (name is not unique or wrong type of newInstanceObject)
+            </returns>
+        </member>
+        <member name="M:AMLEngineExtensions.BasicExtensions.AddInternalElement(CAEX_ClassModel.InstanceHierarchyType,CAEX_ClassModel.CAEXObject)">
+            <summary>
+            Add an internalElement to the parentInstanceHierarchy. If there are existing
+            internalElements, the Element is inserted after the last Child. Before Insertion, the
+            Uniqueness of the Name among the children is checked.
+            </summary>
+            <param name="instanceHierarchy">
+            the InstanceHierarchy
+            </param>
+            <param name="internalElement">
+            The internalElement to be inserted at the parentInternalElement.
+            </param>
+            <returns>
+            True if insertion was successful, else false (name is not unique or wrong type of internalElement)
+            </returns>
+        </member>
+        <member name="M:AMLEngineExtensions.BasicExtensions.AddNewInternalElement(CAEX_ClassModel.SystemUnitClassType,System.String)">
+            <summary>
+            Creates a new InternalElement and inserts it after the last InternalElement of the
+            parent if the elementName is unique among the childs. The ChangeMode is set to the Value 'Create'
+            </summary>
+            <param name="parentInternalElement">
+            Parent of the new InternalElement
+            </param>
+            <param name="elementName">
+            Name of the new InternalElement
+            </param>
+            <returns>
+            the new InternalElement or null, if the elementName is not unique
+            </returns>
+        </member>
+        <member name="M:AMLEngineExtensions.BasicExtensions.AddNewInternalElement(CAEX_ClassModel.InstanceHierarchyType,System.String)">
+            <summary>
+            Creates a new InternalElement and inserts it after the last InternalElement of the
+            parent InstanceHierarchy if the elementName is unique among the childs. The ChangeMode
+            is set to the Value 'Create'
+            </summary>
+            <param name="parentInstanceHierarchy">
+            Parent InstanceHierarchy of the new InternalElement
+            </param>
+            <param name="elementName">
+            Name of the new InternalElement
+            </param>
+            <returns>
+            the new InternalElement or null, if the elementName is not unique
+            </returns>
+        </member>
+        <member name="M:AMLEngineExtensions.BasicExtensions.All(CAEX_ClassModel.IObjectWithAttributes)">
+            <summary>
+            Returns a flat list of all attributes of an object, nested attributes inclusive.
+            </summary>
+            <param name="obj">
+            an object with attributes
+            </param>
+            <returns>
+            List&lt;AttributeType&gt;.
+            </returns>
+        </member>
+        <member name="M:AMLEngineExtensions.BasicExtensions.CAEXPath(CAEX_ClassModel.CAEXBasicObject)">
+            <summary>
+            Get the path to this in the object tree. For all objects, it returns the XML full Node
+            Path except for Interface instances, then it returns GUID:InterfaceName.
+            </summary>
+            <param name="obj">
+            this
+            </param>
+            <returns>
+            For classes, it returns the XML full Node Path. For Interface instances, it returns GUID:InterfaceName.
+            </returns>
+        </member>
+        <member name="M:AMLEngineExtensions.BasicExtensions.ClearMetaInformation(CAEX_ClassModel.CAEXFileType)">
+            <summary>
+            Removes all "Writer Header" specific meta information out of this CAEX file.
+            </summary>
+            <param name="myCAEXFile">
+            the CAEXFile
+            </param>
+        </member>
+        <member name="M:AMLEngineExtensions.BasicExtensions.Clone_Save``1(CAEX_ClassModel.CAEXObject)">
+            <summary>
+            Clones a CAEX Object.
+            </summary>
+            <typeparam name="T">
+            Type of Object
+            </typeparam>
+            <param name="obj">
+            The object who will be cloned
+            </param>
+            <returns>
+            The clone object
+            </returns>
+        </member>
+        <member name="M:AMLEngineExtensions.BasicExtensions.DeleteMetaInformation(CAEX_ClassModel.CAEXFileType,System.String)">
+            <summary>
+            This function deletes any existing meta information corresponding to the writerID.
+            </summary>
+            <param name="myCAEXFile">
+            this CAEX file
+            </param>
+            <param name="writerID">
+            Writer ID
+            </param>
+            <returns>
+            true if delete succeeded, false if writerID has not been found
+            </returns>
+        </member>
+        <member name="M:AMLEngineExtensions.BasicExtensions.GetAllFullRolePathNamesForRequiredRoles(CAEX_ClassModel.InternalElementType)">
+            <summary>
+            Gets all full role path names of the required roles for the given internal element.
+            </summary>
+            <param name="IE">
+            internal element
+            </param>
+            <returns>
+            IEnumerable&lt;System.String&gt;.
+            </returns>
+        </member>
+        <member name="M:AMLEngineExtensions.BasicExtensions.GetAllFullRolePathNamesForSupportedRoles(CAEX_ClassModel.InternalElementType)">
+            <summary>
+            Gets all full role path names of the supported roles for the given internal element.
+            </summary>
+            <param name="IE">
+            internal element
+            </param>
+            <returns>
+            IEnumerable&lt;System.String&gt;.
+            </returns>
+        </member>
+        <member name="M:AMLEngineExtensions.BasicExtensions.GetAllRoleNamesForRequiredRoles(CAEX_ClassModel.InternalElementType)">
+            <summary>
+            Gets all role names of the required roles for the given internal element.
+            </summary>
+            <param name="IE">
+            internal element
+            </param>
+            <returns>
+            IEnumerable&lt;System.String&gt;.
+            </returns>
+        </member>
+        <member name="M:AMLEngineExtensions.BasicExtensions.GetAllRoleNamesForSupportedRoles(CAEX_ClassModel.InternalElementType)">
+            <summary>
+            Gets all role names of the supported roles for the given internal element.
+            </summary>
+            <param name="IE">
+            internal element
+            </param>
+            <returns>
+            IEnumerable&lt;System.String&gt;.
+            </returns>
+        </member>
+        <member name="M:AMLEngineExtensions.BasicExtensions.GetAttribute(CAEX_ClassModel.IObjectWithAttributes,System.String)">
+            <summary>
+            Finds an attribute with a given name.
+            </summary>
+            <param name="objWithAttr">
+            object with list of atributes
+            </param>
+            <param name="attName">
+            attribute name
+            </param>
+            <returns>
+            attribute, null if not successful
+            </returns>
+        </member>
+        <member name="M:AMLEngineExtensions.BasicExtensions.GetAttribute(CAEX_ClassModel.MemberElement_Attribute,System.String)">
+            <summary>
+            Finds an attribute with a given name.
+            </summary>
+            <param name="attrList">
+            list of atributes
+            </param>
+            <param name="attName">
+            attribute name
+            </param>
+            <returns>
+            attribute, null if not successful
+            </returns>
+        </member>
+        <member name="M:AMLEngineExtensions.BasicExtensions.GetAttributeValue(CAEX_ClassModel.IObjectWithAttributes,System.String)">
+            <summary>
+            Returns an attribute value of a given attribute name.
+            </summary>
+            <param name="objWithAttr">
+            Object with attributes
+            </param>
+            <param name="attName">
+            name of attribute
+            </param>
+            <returns>
+            attribute value, "" if attribute does not exist
+            </returns>
+        </member>
+        <member name="M:AMLEngineExtensions.BasicExtensions.GetAutomationMLVersion(CAEX_ClassModel.CAEXFileType)">
+            <summary>
+            Returns the AutomationML Version of CAEX-File. This string is automatically be set by
+            the AutomationML engine while creating a new CAEX document.
+            </summary>
+            <param name="caexFile">
+            the CAEXFile
+            </param>
+            <returns>
+            the AutomationML version
+            </returns>
+        </member>
+        <member name="M:AMLEngineExtensions.BasicExtensions.GetChangeMode(CAEX_ClassModel.CAEXBasicObject)">
+            <summary>
+            Returns the change mode out of the given CAEXBasicObject.
+            </summary>
+            <param name="obj">
+            Object
+            </param>
+            <returns>
+            ChangeMode
+            </returns>
+        </member>
+        <member name="M:AMLEngineExtensions.BasicExtensions.GetClassName(CAEX_ClassModel.InternalElementType)">
+            <summary>
+            Returns the class name of the given InternalElement.
+            </summary>
+            <param name="IE">
+            internal element
+            </param>
+            <returns>
+            name of the referenced SystemUnitClass without path information, or an empty string if
+            not available
+            </returns>
+        </member>
+        <member name="M:AMLEngineExtensions.BasicExtensions.GetClassName(CAEX_ClassModel.InterfaceClassType)">
+            <summary>
+            Returns the class name of the given external interface.
+            </summary>
+            <param name="IC">
+            internal element
+            </param>
+            <returns>
+            name of the referenced InterfaceClass without path information, or an empty string if
+            not available
+            </returns>
+        </member>
+        <member name="M:AMLEngineExtensions.BasicExtensions.GetFullClassName(CAEX_ClassModel.InternalElementType)">
+            <summary>
+            Returns the class name of the given InternalElement.
+            </summary>
+            <param name="IE">
+            internal element
+            </param>
+            <returns>
+            name of the referenced SystemUnitClass with path information, or an empty string if not available
+            </returns>
+        </member>
+        <member name="M:AMLEngineExtensions.BasicExtensions.GetFullClassName(CAEX_ClassModel.InterfaceClassType)">
+            <summary> Returns the full class name of the given external interface. <param
+            name="IC">internal element</param> <returns>name of the referenced InterfaceClass with
+            path information, or an empty string if not available</returns>
+            </summary>
+        </member>
+        <member name="M:AMLEngineExtensions.BasicExtensions.GetMetaInformation(CAEX_ClassModel.CAEXFileType)">
+            <summary>
+            This methods returns an Enumeration of all "WriterHeader" meta information out of an
+            existing AutomationML file.
+            </summary>
+            <param name="myCAEXFile">
+            the CAEX file
+            </param>
+            <returns>
+            Enumerable with element containing all meta information, or null if no meta information
+            is existing
+            </returns>
+        </member>
+        <member name="M:AMLEngineExtensions.BasicExtensions.GetMetaInformation(CAEX_ClassModel.CAEXFileType,System.String)">
+            <summary>
+            This function returns the MetaInformation corresponding to the writerID, otherwise null.
+            </summary>
+            <param name="myCAEXFile">
+            this CAEX file
+            </param>
+            <param name="writerID">
+            the writerID
+            </param>
+            <returns>
+            This function returns the MetaInformation corresponding to the writerID, otherwise null.
+            </returns>
+        </member>
+        <member name="M:AMLEngineExtensions.BasicExtensions.GetMetaObjectInformation(CAEX_ClassModel.CAEXObject)">
+            <summary>
+            this methods returns the meta information out of an existing AutomationML file for an
+            AutomationML Object
+            </summary>
+            <param name="caexObject">
+            the CAEX Object
+            </param>
+            <returns>
+            an enumerable of all meta information, or null if no meta information is existing
+            </returns>
+            <seealso cref="M:AMLEngineExtensions.BasicExtensions.SetMetaObjectInformation(CAEX_ClassModel.CAEXObject,AMLEngineExtensions.MetaObjectInformation)">
+            </seealso>
+            <seealso cref="M:AMLEngineExtensions.BasicExtensions.SetMetaObjectInformation(CAEX_ClassModel.CAEXObject,System.String,System.String,System.String)">
+            </seealso>
+        </member>
+        <member name="M:AMLEngineExtensions.BasicExtensions.GetMetaObjectInformation(CAEX_ClassModel.CAEXObject,System.String)">
+            <summary> this methods returns the meta information out of an existing AutomationML file
+            for an AutomationML Object and a specific Writer-ID </summary> <param
+            name="caexObject">the CAEX object</param> <param name="writerID">the Writer ID to look
+            for</param> <returns>an enumerable MetaObjectInformation containing all meta
+            information, or null if no meta information exists</returns> <seealso
+            cref="M:AMLEngineExtensions.BasicExtensions.SetMetaObjectInformation(CAEX_ClassModel.CAEXObject,AMLEngineExtensions.MetaObjectInformation)"></seealso>
+            <seealso cref="M:AMLEngineExtensions.BasicExtensions.SetMetaObjectInformation(CAEX_ClassModel.CAEXObject,System.String,System.String,System.String)"></seealso>
+            
+        </member>
+        <member name="M:AMLEngineExtensions.BasicExtensions.GetParent(CAEX_ClassModel.CAEXBasicObject)">
+            <summary>
+            Enables every CAEXBasicObject to get its parent object as a CAEX_ClassModel class. You
+            must cast the result in your own code.
+            </summary>
+            <param name="obj">
+            This object's parent will be returned
+            </param>
+            <returns>
+            The parent AML object (regarding to the AML-XML hierarchie)
+            </returns>
+            <exception cref="T:System.ArgumentNullException">
+            node
+            </exception>
+            <exception cref="T:System.Xml.XmlException">
+            The object has no parent
+            </exception>
+        </member>
+        <member name="M:AMLEngineExtensions.BasicExtensions.GetRefBaseClassPath(CAEX_ClassModel.RoleClassType)">
+            <summary>
+            Get the ClassPath of a RoleClass (Inheritance Relation)
+            </summary>
+            <param name="roleClass">
+            Role Class
+            </param>
+            <returns>
+            name of the referenced Class wit path information, or an empty string if not available
+            </returns>
+        </member>
+        <member name="M:AMLEngineExtensions.BasicExtensions.GetRefBaseClassPath(CAEX_ClassModel.SystemUnitClassType)">
+            <summary>
+            Get the ClassPath of a SystemUnitClassType (Inheritance Relation)
+            </summary>
+            <param name="suc">
+            SystemUnit Class
+            </param>
+            <returns>
+            name of the referenced Class wit path information, or an empty string if not available
+            </returns>
+        </member>
+        <member name="M:AMLEngineExtensions.BasicExtensions.GetRefBaseClassPath(CAEX_ClassModel.InterfaceClassType)">
+            <summary>
+            Get the RefBaseClassPath of the given external interface.
+            </summary>
+            <param name="IC">
+            Interface Class
+            </param>
+            <returns>
+            name of the referenced InterfaceClass wit path information, or an empty string if not available
+            </returns>
+        </member>
+        <member name="M:AMLEngineExtensions.BasicExtensions.GetRefBaseSystemUnitPath(CAEX_ClassModel.InternalElementType)">
+            <summary>
+            Returns the path of the referenced SystemUnitClass with path information, or an empty
+            string if not available.
+            </summary>
+            <param name="IE">
+            internal element
+            </param>
+            <returns>
+            returns the path of the referenced SystemUnitClass with path information, or an empty
+            string if not available
+            </returns>
+        </member>
+        <member name="M:AMLEngineExtensions.BasicExtensions.GetRoleName(CAEX_ClassModel.InternalElementType,System.String@,System.String@)">
+            <summary>
+            Gets the role name of the given internal element.
+            </summary>
+            <param name="IE">
+            internal element
+            </param>
+            <param name="RefBaseRoleClassPath">
+            role path (out)
+            </param>
+            <param name="RoleName">
+            role name (out)
+            </param>
+        </member>
+        <member name="M:AMLEngineExtensions.BasicExtensions.HasColladaInterface(CAEX_ClassModel.SystemUnitClassType)">
+            <summary>
+            Determines whether the specified systemUnitClass has a collada interface.
+            </summary>
+            <param name="suc">
+            The suc.
+            </param>
+            <returns>
+            <c>true</c> if [has collada representation interface] [the specified suc]; otherwise, <c>false</c>.
+            </returns>
+        </member>
+        <member name="M:AMLEngineExtensions.BasicExtensions.HasRoleReference(CAEX_ClassModel.InternalElementType,System.String)">
+            <summary>
+            Checks, if a role reference is present in the RoleRequirements or the
+            SupportedRoleClasses of the given internal element.
+            </summary>
+            <param name="IE">
+            internal element
+            </param>
+            <param name="RefBaseRoleClassPath">
+            role path (out)
+            </param>
+            <returns>
+            <c>true</c> if [has role reference] [the specified ie]; otherwise, <c>false</c>.
+            </returns>
+        </member>
+        <member name="M:AMLEngineExtensions.BasicExtensions.RoleReference(CAEX_ClassModel.InternalElementType,System.String)">
+            <summary>
+            returns the role reference if it is present in the RoleRequirements or the
+            SupportedRoleClasses of the given internal element.
+            </summary>
+            <param name="IE">
+            internal element
+            </param>
+            <param name="RefBaseRoleClassPath">
+            role path (out)
+            </param>
+            <returns>
+            <c>true</c> if [has role reference] [the specified ie]; otherwise, <c>false</c>.
+            </returns>
+        </member>
+        <member name="M:AMLEngineExtensions.BasicExtensions.HasRoleReference(CAEX_ClassModel.SystemUnitClassType,System.String)">
+            <summary>
+            Checks, if a role reference is present in the
+            SupportedRoleClasses of the given systemUnitClass.
+            </summary>
+            <param name="Suc">
+            system unit class
+            </param>
+            <param name="RefBaseRoleClassPath">
+            role path (out)
+            </param>
+            <returns>
+            <c>true</c> if [has role reference] [the specified ie]; otherwise, <c>false</c>.
+            </returns>
+        </member>
+        <member name="M:AMLEngineExtensions.BasicExtensions.HasRoleReference(CAEX_ClassModel.SystemUnitClassType,CAEX_ClassModel.RoleClassType)">
+            <summary>
+            Checks, if a role reference to the RoleClass is present in the
+            SupportedRoleClasses of the given systemUnitClass.
+            </summary>
+            <param name="Suc">
+            system unit class
+            </param>
+            <param name="RoleClass">
+            role
+            </param>
+            <returns>
+            <c>true</c> if [has role reference] [the specified ie]; otherwise, <c>false</c>.
+            </returns>
+        </member>
+        <member name="M:AMLEngineExtensions.BasicExtensions.Name(CAEX_ClassModel.CAEXBasicObject)">
+            <summary>
+            Get the Name of the specified object.
+            </summary>
+            <param name="obj">
+            The object.
+            </param>
+            <returns>
+            System.String.
+            </returns>
+        </member>
+        <member name="M:AMLEngineExtensions.BasicExtensions.Remove(Altova.Xml.TypeBase)">
+            <summary>
+            Deletes the object from the AML document.
+            </summary>
+            <param name="obj">
+            The object itself will be removed from the document
+            </param>
+        </member>
+        <member name="M:AMLEngineExtensions.BasicExtensions.RemoveSubElements``1(CAEX_ClassModel.CAEXObject)">
+            <summary>
+            Removes all InternalElement and ExternalInterface Elements from a SystemUnit Class.
+            </summary>
+            <typeparam name="T">
+            Type of Object
+            </typeparam>
+            <param name="obj">
+            The object whose subElements will be removed
+            </param>
+            <returns>
+            The object whose subElements have been removed
+            </returns>
+        </member>
+        <member name="M:AMLEngineExtensions.BasicExtensions.Replace``1(CAEX_ClassModel.CAEXObject,CAEX_ClassModel.CAEXObject)">
+            <summary>
+            Replaces a CaexObject by another CaexObject
+            </summary>
+            <typeparam name="T">
+            Type of Object to be replaced
+            </typeparam>
+            <param name="obj">
+            The object that will be replaced
+            </param>
+            <param name="newObj">
+            The object that will replace the old object
+            </param>
+            <returns>
+            the new replacement object
+            </returns>
+        </member>
+        <member name="M:AMLEngineExtensions.BasicExtensions.ReplaceMetaInformation(CAEX_ClassModel.CAEXFileType,System.String,AMLEngineExtensions.MetaInformation)">
+            <summary>
+            This function replaces any existing meta information corresponding to the identical
+            oldWriterID with the new meta information defined in the newMetainformation
+            </summary>
+            <param name="myCAEXFile">
+            My caex file.
+            </param>
+            <param name="oldWriterID">
+            writerID of the old meta information
+            </param>
+            <param name="newMetainformation">
+            substitute for the old version of meta information
+            </param>
+            <returns>
+            true if succeded, false if meta information about the oldWriterID is not found
+            </returns>
+        </member>
+        <member name="M:AMLEngineExtensions.BasicExtensions.SetAttributeValue(CAEX_ClassModel.IObjectWithAttributes,System.String,System.String)">
+            <summary>
+            Sets an attribute value (creates attribute if it does not exist) as child of the parent
+            object parameter.
+            </summary>
+            <param name="objWithAttr">
+            parent object
+            </param>
+            <param name="attName">
+            attribute name
+            </param>
+            <param name="attValue">
+            attribute value
+            </param>
+            <returns>
+            attribute
+            </returns>
+        </member>
+        <member name="M:AMLEngineExtensions.BasicExtensions.SetAttributeValue(CAEX_ClassModel.IObjectWithAttributes,System.String,System.String,System.String,System.String)">
+            <summary>
+            Sets an attribute value (creates attribute if it does not exist).
+            </summary>
+            <param name="objWithAttr">
+            parent object
+            </param>
+            <param name="attName">
+            attribute name
+            </param>
+            <param name="attValue">
+            attribute value
+            </param>
+            <param name="attUnit">
+            attribute unit
+            </param>
+            <param name="attAttributeDataType">
+            attribute data type
+            </param>
+            <returns>
+            attribute
+            </returns>
+        </member>
+        <member name="M:AMLEngineExtensions.BasicExtensions.SetAttributeValue(CAEX_ClassModel.IObjectWithAttributes,System.String,System.String,System.String,System.String,System.String,System.String)">
+            <summary>
+            Sets an attribute value (creates attribute if it does not exist).
+            </summary>
+            <param name="objWithAttr">
+            parent object
+            </param>
+            <param name="attName">
+            attribute name
+            </param>
+            <param name="attValue">
+            attribute value
+            </param>
+            <param name="defaultValue">
+            attribute defaultValue
+            </param>
+            <param name="description">
+            attribute description
+            </param>
+            <param name="attUnit">
+            attribute unit
+            </param>
+            <param name="attAttributeDataType">
+            attribute data type
+            </param>
+            <returns>
+            attribute
+            </returns>
+        </member>
+        <member name="M:AMLEngineExtensions.BasicExtensions.SetAutomationMLVersion(CAEX_ClassModel.CAEXFileType,System.String)">
+            <summary>
+            Allows setting the AutomationML Version of CAEX-File. The version string is
+            automatically be set by the AutomationML engine while creating a new CAEX document.
+            </summary>
+            <param name="caexFile">
+            the CAEXFile
+            </param>
+            <param name="newAutomationMLVersion">
+            the new AutomationML version
+            </param>
+            <returns>
+            true if succeeded, false in case of problems
+            </returns>
+        </member>
+        <member name="M:AMLEngineExtensions.BasicExtensions.SetChangeMode(CAEX_ClassModel.CAEXBasicObject,AMLEngineExtensions.ChangeMode)">
+            <summary>
+            Sets or removes the change mode of the given CAEXBasicObject.
+            </summary>
+            <param name="obj">
+            the CAEXBasicObject
+            </param>
+            <param name="cm">
+            the ChangeMode
+            </param>
+            <returns>
+            ChangeMode
+            </returns>
+        </member>
+        <member name="M:AMLEngineExtensions.BasicExtensions.SetMetaInformation(CAEX_ClassModel.CAEXFileType,System.String,System.String,System.String,System.String,System.String,System.String,System.String,System.String,System.String)">
+            <summary>
+            This function sets the meta information required from AutomationML standard. If meta
+            information about the same writerID already exists, this meta information is replaced.
+            These information comprise source information about the AutomationML file.
+            </summary>
+            <param name="myCAEXFile">
+            the CAEXFile
+            </param>
+            <param name="writerName">
+            the name of the writing tool
+            </param>
+            <param name="writerID">
+            an ID of the writing tool
+            </param>
+            <param name="writerVendor">
+            the tool vendors name
+            </param>
+            <param name="writerVendorURL">
+            the tools vendors URL
+            </param>
+            <param name="writerVersion">
+            the version of the writing tool
+            </param>
+            <param name="writerRelease">
+            the release number of the writing tool
+            </param>
+            <param name="LastWritingDateTime">
+            the date of the last writing time
+            </param>
+            <param name="writerProjectTitle">
+            the title of the written project
+            </param>
+            <param name="writerProjectID">
+            an ID of the written project
+            </param>
+        </member>
+        <member name="M:AMLEngineExtensions.BasicExtensions.SetMetaInformation(CAEX_ClassModel.CAEXFileType,AMLEngineExtensions.MetaInformation)">
+            <summary>
+            This method is a short version of the setMetaInformation. Metadata with identical
+            WriterID is replaced.
+            </summary>
+            <param name="myCAEXFile">
+            the CAEXFile
+            </param>
+            <param name="m">
+            the struct MetaInformation
+            </param>
+        </member>
+        <member name="M:AMLEngineExtensions.BasicExtensions.SetMetaInformationStandardAutomationMLLibrary(CAEX_ClassModel.CAEXFileType)">
+            <summary>
+            This method labels this CAEX file as a standard AutomationML library coming from the
+            AutomationML e.V. It removes all other meta information and should only be used from
+            authorized persons in agreement with the AutomationML e.V.
+            </summary>
+            <param name="myCAEXFile">
+            the CAEXFile
+            </param>
+        </member>
+        <member name="M:AMLEngineExtensions.BasicExtensions.SetMetaObjectInformation(CAEX_ClassModel.CAEXObject,AMLEngineExtensions.MetaObjectInformation)">
+            <summary>
+            this method is a short version of the setMetaInformation for any caex object
+            </summary>
+            <param name="myCAEXObject">
+            the CAEXObject
+            </param>
+            <param name="m">
+            the struct MetaObjectInformation
+            </param>
+            <seealso cref="M:AMLEngineExtensions.BasicExtensions.GetMetaObjectInformation(CAEX_ClassModel.CAEXObject)">
+            </seealso>
+            <seealso cref="M:AMLEngineExtensions.BasicExtensions.GetMetaObjectInformation(CAEX_ClassModel.CAEXObject,System.String)">
+            </seealso>
+        </member>
+        <member name="M:AMLEngineExtensions.BasicExtensions.SetMetaObjectInformation(CAEX_ClassModel.CAEXObject,System.String,System.String,System.String)">
+            <summary>
+            this function sets the meta information to store tool specific object-IDs
+            </summary>
+            <param name="caexObject">
+            the CAEXObject
+            </param>
+            <param name="writerID">
+            an ID of the writing tool
+            </param>
+            <param name="writerProjectID">
+            an ID of the writing project
+            </param>
+            <param name="writerObjectID">
+            an ID of the object
+            </param>
+            <seealso cref="M:AMLEngineExtensions.BasicExtensions.GetMetaObjectInformation(CAEX_ClassModel.CAEXObject)">
+            </seealso>
+            <seealso cref="M:AMLEngineExtensions.BasicExtensions.GetMetaObjectInformation(CAEX_ClassModel.CAEXObject,System.String)">
+            </seealso>
+        </member>
+        <member name="M:AMLEngineExtensions.BasicExtensions.SetRole(CAEX_ClassModel.InternalElementType,System.String)">
+            <summary>
+            Sets the role class path of the provided InternalElement.
+            </summary>
+            <param name="IE">
+            internal element
+            </param>
+            <param name="RefBaseRoleClassPath">
+            role path (out)
+            </param>
+        </member>
+        <member name="M:AMLEngineExtensions.BasicExtensions.ChangeModeToString(AMLEngineExtensions.ChangeMode)">
+            <summary>
+            Changes the mode to string.
+            </summary>
+            <param name="changeMode">
+            The change mode.
+            </param>
+            <returns>
+            System.String.
+            </returns>
+            <exception cref="T:System.ArgumentOutOfRangeException">
+            changeMode
+            </exception>
+        </member>
+        <member name="M:AMLEngineExtensions.BasicExtensions.StringToChangeMode(System.String)">
+            <summary>
+            Strings to change mode.
+            </summary>
+            <param name="changeMode">
+            The change mode.
+            </param>
+            <returns>
+            ChangeMode.
+            </returns>
+            <exception cref="T:System.ArgumentOutOfRangeException">
+            changeMode
+            </exception>
+        </member>
+        <member name="T:AMLEngineExtensions.MetaInformation">
+            <summary>
+            Struct for modeling meta information as defined in the AutomationML standard
+            </summary>
+        </member>
+        <member name="P:AMLEngineExtensions.MetaInformation.LastWritingDateTime">
+            <summary>
+            time stamp of the AutomationML export
+            </summary>
+            <value>
+            The last writing date time.
+            </value>
+        </member>
+        <member name="P:AMLEngineExtensions.MetaInformation.WriterID">
+            <summary>
+            the ID of the writer tool, maybe identical to the tools name if it is not subject of change
+            </summary>
+            <value>
+            The writer identifier.
+            </value>
+        </member>
+        <member name="P:AMLEngineExtensions.MetaInformation.WriterName">
+            <summary>
+            the name of the writer tool (e.g. CoDeSys)
+            </summary>
+            <value>
+            The name of the writer.
+            </value>
+        </member>
+        <member name="P:AMLEngineExtensions.MetaInformation.WriterProjectID">
+            <summary>
+            ID of the project that contains the source engineering data
+            </summary>
+            <value>
+            The writer project identifier.
+            </value>
+        </member>
+        <member name="P:AMLEngineExtensions.MetaInformation.WriterProjectTitle">
+            <summary>
+            name of the project that contains the source engineering data
+            </summary>
+            <value>
+            The writer project title.
+            </value>
+        </member>
+        <member name="P:AMLEngineExtensions.MetaInformation.WriterRelease">
+            <summary>
+            release information about the writer tool, e.g. "beta12"
+            </summary>
+            <value>
+            The writer release.
+            </value>
+        </member>
+        <member name="P:AMLEngineExtensions.MetaInformation.WriterVendor">
+            <summary>
+            the vendor of the writer tool, e.g. "3S"
+            </summary>
+            <value>
+            The writer vendor.
+            </value>
+        </member>
+        <member name="P:AMLEngineExtensions.MetaInformation.WriterVendorURL">
+            <summary>
+            the web URL of the vendor - helps to get in contact to the vendor
+            </summary>
+            <value>
+            The writer vendor URL.
+            </value>
+        </member>
+        <member name="P:AMLEngineExtensions.MetaInformation.WriterVersion">
+            <summary>
+            version of the writer tool, e.g. "3.4"
+            </summary>
+            <value>
+            The writer version.
+            </value>
+        </member>
+        <member name="T:AMLEngineExtensions.MetaObjectInformation">
+            <summary>
+            MetaInformation which could be added to any CAEXObject, which holds information about a
+            Writer and a Project. This Information should match with a WriterHeader assigned to the CAEXFileType-Node
+            </summary>
+            <para>
+            Methods:
+            <seealso cref="M:AMLEngineExtensions.BasicExtensions.SetMetaObjectInformation(CAEX_ClassModel.CAEXObject,AMLEngineExtensions.MetaObjectInformation)">SetMetaObjectInformation</seealso><seealso cref="M:AMLEngineExtensions.BasicExtensions.GetMetaObjectInformation(CAEX_ClassModel.CAEXObject)">GetMetaObjectInformation</seealso><seealso cref="M:AMLEngineExtensions.BasicExtensions.GetMetaObjectInformation(CAEX_ClassModel.CAEXObject,System.String)">GetMetaObjectInformation
+            (related to Writer)</seealso>
+            </para>
+        </member>
+        <member name="P:AMLEngineExtensions.MetaObjectInformation.WriterID">
+            <summary>
+            Writer specific ID - This ID should match with the Writer-ID found in the
+            MetaInformation of the CAEXFile
+            </summary>
+            <value>
+            The writer identifier.
+            </value>
+        </member>
+        <member name="P:AMLEngineExtensions.MetaObjectInformation.WriterObjectID">
+            <summary>
+            Writer specific Object-ID - This ID is a writer specific identifier for the object
+            </summary>
+            <value>
+            The writer object identifier.
+            </value>
+        </member>
+        <member name="P:AMLEngineExtensions.MetaObjectInformation.WriterProjectID">
+            <summary>
+            Writer specific ProjectID - This ID should match with the WriterProject-ID found in the
+            MetaInformation of the CAEXFile
+            </summary>
+            <value>
+            The writer project identifier.
+            </value>
+        </member>
+        <member name="T:AMLEngineExtensions.ExternalizationExtensions">
+            <summary>
+            Extensions of the AMLEngine related to files as loading, saving, splitting, merging
+            </summary>
+        </member>
+        <member name="F:AMLEngineExtensions.ExternalizationExtensions.absoluteAliasInScopeRegex">
+            <summary>
+            This pattern is used by the merge methods to expand the aliases into fully qualified
+            (and normalized) paths.
+            </summary>
+        </member>
+        <member name="F:AMLEngineExtensions.ExternalizationExtensions.absoluteAliasNotInScopeRegex">
+            <summary>
+            This pattern is used by the merge methods to expand the aliases into fully qualified
+            (and normalized) paths but keeps the alias inside of the reference.
+            </summary>
+        </member>
+        <member name="F:AMLEngineExtensions.ExternalizationExtensions.aliasRegex">
+            <summary>
+            regex to split a reference into alias and rest
+            </summary>
+        </member>
+        <member name="F:AMLEngineExtensions.ExternalizationExtensions.cutPoints">
+            <summary>
+            The cut points
+            </summary>
+        </member>
+        <member name="M:AMLEngineExtensions.ExternalizationExtensions.AllReferencedPaths(System.String,System.Collections.Generic.List{System.String}@)">
+            <summary>
+            get all paths from all external references and the referenced documents
+            </summary>
+            <param name="rootPath">a string with a root path</param>
+            <param name="MergeComments">List of merge results and comments.</param>
+            <returns>an Enmeration with all reference pathes</returns>
+        </member>
+        <member name="M:AMLEngineExtensions.ExternalizationExtensions.CopyAttributesFrom(CAEX_ClassModel.InternalElementType,CAEX_ClassModel.InternalElementType,System.Boolean)">
+            <summary>
+            copies all attribute of a given InternalElement to the calling InternalElement including
+            childs to another object
+            </summary>
+            <param name="newIE">the target InternalElement</param>
+            <param name="oldIE">the source InternalElement</param>
+            <param name="includingValues">true if the copy process should include the attrite values, not recommended for classes</param>
+            <returns>nothing</returns>
+        </member>
+        <member name="M:AMLEngineExtensions.ExternalizationExtensions.CopyAttributesFrom(CAEX_ClassModel.RoleClassType,CAEX_ClassModel.RoleClassType,System.Boolean)">
+            <summary>
+            copies all attribute and nested attributes of a given RoleClass to the calling RoleClass
+            to another object
+            </summary>
+            <param name="newRole">the target Role</param>
+            <param name="oldRole">the source Role</param>
+            <param name="includingValues">true if the copy process should include the attrite values, not recommended for classes</param>
+            <returns>nothing</returns>
+        </member>
+        <member name="M:AMLEngineExtensions.ExternalizationExtensions.CopyAttributesFrom(CAEX_ClassModel.SystemUnitClassType,CAEX_ClassModel.SystemUnitClassType,System.Boolean)">
+            <summary>
+            copies all attribute including nested attributes of a given SystemUnitClass to the
+            calling SystemUnitClass to another object
+            </summary>
+            <param name="newSUC">the target SystemUnitClass</param>
+            <param name="oldSUC">the source SystemUnitClass</param>
+            <param name="includingValues">true if the copy process should include the attrite values, not recommended for classes</param>
+            <returns>nothing</returns>
+        </member>
+        <member name="M:AMLEngineExtensions.ExternalizationExtensions.CopyAttributesFrom(CAEX_ClassModel.InterfaceClassType,CAEX_ClassModel.InterfaceClassType,System.Boolean)">
+            <summary>
+            copies all attribute and nested attributes of a given InterfaceClass to the calling
+            InterfaceClass to another object
+            </summary>
+            <param name="newInterfaceClassType">the target InterfaceClassType</param>
+            <param name="oldInterfaceClassType">the source InterfaceClassType</param>
+            <param name="includingValues">true if the copy process should include the attrite values, not recommended for classes</param>
+            <returns>nothing</returns>
+        </member>
+        <member name="M:AMLEngineExtensions.ExternalizationExtensions.CopyDataFromInternalElement(CAEX_ClassModel.InternalElementType,CAEX_ClassModel.InternalElementType,System.Boolean,System.Boolean)">
+            <summary>
+            This function copies all attributes, the role class reference, SUC class reference and
+            description from the sourc InternalElement of a given InternalElement to the calling InternalElement
+            </summary>
+            <param name="newIE">the target InternalElement</param>
+            <param name="oldIE">the source InternalElement</param>
+            <param name="includingValues">true if the copy process should include the attrite values, not recommended for classes</param>
+            <param name="includingID">true if the copy process should include the ID's, not recommended for instances</param>
+            <returns>nothing</returns>
+        </member>
+        <member name="M:AMLEngineExtensions.ExternalizationExtensions.DisposeCutPoints(CAEX_ClassModel.CAEXDocument)">
+            <summary>
+            Free internal data structures.
+            </summary>
+            <param name="doc">the CAEX document</param>
+        </member>
+        <member name="M:AMLEngineExtensions.ExternalizationExtensions.GetAllInternalElementIDs(CAEX_ClassModel.SystemUnitClassType)">
+            <summary>
+            Returns a list of all internal element IDs from all child internal elements (recursive)
+            </summary>
+            <param name="systemUnitClass">Root IE</param>
+            <returns>List of all IDs (as strings)</returns>
+        </member>
+        <member name="M:AMLEngineExtensions.ExternalizationExtensions.GetAllInternalElements(CAEX_ClassModel.CAEXFileType)">
+            <summary>
+            Returns an Enumerable of all internal elements in a CAEXFile from all Instance
+            Hierarchies and all SystemUnitClass Libraries
+            </summary>
+            <param name="caexFile">Caex File</param>
+            <returns>List of all IEs</returns>
+        </member>
+        <member name="M:AMLEngineExtensions.ExternalizationExtensions.GetAllInternalElements(CAEX_ClassModel.SystemUnitClassLibType)">
+            <summary>
+            Returns an Enumerable of all internal elements in a SystemUnit ClassLib
+            </summary>
+            <param name="sucLibrary">The suc library.</param>
+            <returns>IEnumerable&lt;InternalElementType&gt;.</returns>
+        </member>
+        <member name="M:AMLEngineExtensions.ExternalizationExtensions.GetAllInternalElements(CAEX_ClassModel.InstanceHierarchyType)">
+            <summary>
+            Returns an Enumerable of all internal elements in an Instance Hierarchy
+            </summary>
+            <param name="instanceHierarchy">The instance hierarchy.</param>
+            <returns>IEnumerable&lt;InternalElementType&gt;.</returns>
+        </member>
+        <member name="M:AMLEngineExtensions.ExternalizationExtensions.GetAllInternalElements(CAEX_ClassModel.SystemUnitClassType)">
+            <summary>
+            Returns an Enumerable of all internal elements below a given system Unit Class element (recursive)
+            </summary>
+            <param name="systemUnitClass">Root IE</param>
+            <returns>List of all IEs</returns>
+        </member>
+        <member name="M:AMLEngineExtensions.ExternalizationExtensions.GetAllInternalLinks(CAEX_ClassModel.SystemUnitClassType)">
+            <summary>
+            Get all internal links from an internal element and all child internal elements (recursive)
+            </summary>
+            <param name="systemUnitClass">Root IE to start</param>
+            <returns>List of all internal links found</returns>
+        </member>
+        <member name="M:AMLEngineExtensions.ExternalizationExtensions.GetFileNamePath(CAEX_ClassModel.CAEXDocument)">
+            <summary>
+            Retrieves the file name including full path out of the CAEX document.
+            </summary>
+            <param name="doc">a CAEXDocument</param>
+            <returns>the file name including full path of the CAEX document</returns>
+        </member>
+        <member name="M:AMLEngineExtensions.ExternalizationExtensions.GetIDFromReference(System.String)">
+            <summary>
+            Get the ID part of a reference attribute.
+            </summary>
+            <param name="reference">the reference,e.g. "part@{123-123-123-123}:MyInterface"</param>
+            <returns>The id or an empty string</returns>
+        </member>
+        <member name="M:AMLEngineExtensions.ExternalizationExtensions.Import_ExternalInterface(CAEX_ClassModel.InternalElementType,CAEX_ClassModel.InterfaceClassType)">
+            <summary>
+            Importing an ExternalInterface from another document context. Unlike method
+            Insert_ExternalInterface(..) ExternalInterfaces that are coming from other files can be inserted.
+            </summary>
+            <param name="ie">The InternalElementType (this) to import to.</param>
+            <param name="interfaceElem">The Interface to import.</param>
+            <returns>InterfaceClassType.</returns>
+        </member>
+        <member name="M:AMLEngineExtensions.ExternalizationExtensions.Import_ExternalReference(CAEX_ClassModel.CAEXFileType,CAEX_ClassModel.ExternalReferenceType)">
+            <summary>
+            Importing an InstanceHierarchy from another document context. Unlike method
+            Insert_InstanceHierarchy(..) InstanceHierarchies that are coming from other files can be inserted.
+            </summary>
+            <param name="file">The CAEXFile (this) to import to.</param>
+            <param name="extRef">The InstanceHierarchy to import.</param>
+        </member>
+        <member name="M:AMLEngineExtensions.ExternalizationExtensions.Import_InstanceHierarchy(CAEX_ClassModel.CAEXFileType,CAEX_ClassModel.InstanceHierarchyType)">
+            <summary>
+            Importing an InternalElement from another document context. Unlike method
+            Insert_InternalElement(..) InternalElements that are coming from other files can be inserted.
+            </summary>
+            <param name="file">The CAEXFile (this) to import to.</param>
+            <param name="instHier">The InternalElement to import.</param>
+        </member>
+        <member name="M:AMLEngineExtensions.ExternalizationExtensions.Import_InternalElement(CAEX_ClassModel.InstanceHierarchyType,CAEX_ClassModel.InternalElementType)">
+            <summary>
+            Importing an InternalElement from another document context. Unlike method
+            Insert_InternalElement(..) InternalElements that are coming from other files can be inserted.
+            </summary>
+            <param name="instHier">The InstanceHierarchyType (this) to import to.</param>
+            <param name="intElem">The InternalElement to import.</param>
+            <returns>InternalElementType.</returns>
+        </member>
+        <member name="M:AMLEngineExtensions.ExternalizationExtensions.Import_InternalElement(CAEX_ClassModel.InternalElementType,CAEX_ClassModel.InternalElementType,System.Boolean)">
+            <summary>
+            Importing an InternalElement from another document context. Unlike method
+            Insert_InternalElement(..) InternalElements that are coming from other files can be inserted.
+            </summary>
+            <param name="ie">The InternalElementeType (this) to import to.</param>
+            <param name="intElem">The InternalElement to import.</param>
+            <param name="asFirst">if set to <c>true</c> [as first].</param>
+            <returns>InternalElementType.</returns>
+        </member>
+        <member name="M:AMLEngineExtensions.ExternalizationExtensions.Insert_ExternalReference(CAEX_ClassModel.CAEXFileType,CAEX_ClassModel.ExternalReferenceType)">
+            <summary>
+            Insert an existing InstanceHierarchy.
+            </summary>
+            <param name="file">The CAEXFile (this) to import to.</param>
+            <param name="extRef">The ExternalReference to insert</param>
+        </member>
+        <member name="M:AMLEngineExtensions.ExternalizationExtensions.Insert_InstanceHierarchy(CAEX_ClassModel.CAEXFileType,CAEX_ClassModel.InstanceHierarchyType)">
+            <summary>
+            Insert an existing InstanceHierarchy.
+            </summary>
+            <param name="file">The CAEXFile (this) to import to.</param>
+            <param name="instHier">The InstanceHierarchy to insert</param>
+        </member>
+        <member name="M:AMLEngineExtensions.ExternalizationExtensions.MakeExternalReferencesRelative(CAEX_ClassModel.CAEXDocument)">
+            <summary>
+            makes all absolute pathes of external reference relative
+            </summary>
+            <param name="doc">the CAEXDocument</param>
+            <exception cref="T:System.ArgumentException">Unable to get the documents path</exception>
+        </member>
+        <member name="M:AMLEngineExtensions.ExternalizationExtensions.MakeExternalReferencesRelative(CAEX_ClassModel.CAEXDocument,System.String)">
+            <summary>
+            makes all absolute pathes of external reference relative
+            </summary>
+            <param name="doc">the CAEXDocument</param>
+            <param name="docPath">the document path</param>
+            <exception cref="T:System.ArgumentException">Unable to get the documents path</exception>
+        </member>
+        <member name="M:AMLEngineExtensions.ExternalizationExtensions.Merge(System.String,System.Collections.Generic.IEnumerable{System.String},System.Collections.Generic.List{System.String}@)">
+            <summary>
+            Merge an aml document with a set of other documents. Resolves mirror objects, imports
+            libraries and cleans up the external references
+            </summary>
+            <param name="rootDocPath">The root document as the target for the merge</param>
+            <param name="amlFilePathsToMerge">The absolute file paths to the parts to merge into the root document</param>
+            <param name="MergeComments">List of merge results and comments.</param>
+            <returns>True if there was something to merge.</returns>
+        </member>
+        <member name="M:AMLEngineExtensions.ExternalizationExtensions.Merge(CAEX_ClassModel.CAEXDocument,System.Collections.Generic.List{System.String}@)">
+            <summary>
+            Tries to get the absolute path of an CAEX doc and than merges all referenced AMLs into
+            one. The path is examined by looking at
+            1. The xml document properties
+            2. The CAEXFile - FileName attribute
+            </summary>
+            <param name="doc">a CAEXDocument</param>
+            <param name="MergeComments">List of merge results and comments.</param>
+            <returns>True if there was something to merge, false if not.</returns>
+            <exception cref="T:System.ArgumentException">Can not get absolute file name</exception>
+        </member>
+        <member name="M:AMLEngineExtensions.ExternalizationExtensions.MergeAll(System.String,System.Collections.Generic.List{System.String}@)">
+            <summary>
+            Takes one aml document, resolves the external references, merges them into one and makes
+            it self sufficient.
+            </summary>
+            <param name="rootDocPath">a string with a root doc path</param>
+            <param name="MergeComments">List of merge results and comments.</param>
+            <returns>True if there was something to merge.</returns>
+        </member>
+        <member name="M:AMLEngineExtensions.ExternalizationExtensions.MergeAll(CAEX_ClassModel.CAEXDocument,System.String,System.Collections.Generic.List{System.String}@)">
+            <summary>
+            Takes one aml document, resolves the external references, merges them into one and makes
+            it self sufficient.
+            </summary>
+            <param name="doc">the CAEXDocument</param>
+            <param name="rootDocPath">a string with a root doc path</param>
+            <param name="MergeComments">List of merge results and comments.</param>
+            <returns>True if there was something to merge.</returns>
+        </member>
+        <member name="M:AMLEngineExtensions.ExternalizationExtensions.RemoveSplitPoint(CAEX_ClassModel.CAEXObject)">
+            <summary>
+            Remove a split point defined for this object.
+            </summary>
+            <param name="cObj">(this) The CAEXObject where a split point should be removed.</param>
+            <returns>True if not an error.</returns>
+        </member>
+        <member name="M:AMLEngineExtensions.ExternalizationExtensions.SaveSplitModelParts(CAEX_ClassModel.CAEXDocument,System.String,System.Boolean,System.Boolean)">
+            <summary>
+            Split a model at defined split points, insert the appropriate ExternalReferences and
+            proxy objects, save each of the parts split off and the remainder separately to file,
+            and re-merge the parts split off for further processing as a whole, removing unneeded
+            ExternalReferences again. Returns true if no error occurs.
+            </summary>
+            <param name="doc">(this) The document to split into parts.</param>
+            <param name="filePath">The path where to store the remainder after splitting off at defined split points.</param>
+            <param name="saveLibraries">If true, libraries that have split points defined will be split off and saved, too.</param>
+            <param name="prettyPrint">If true, indent the XML output.</param>
+            <returns>True if not an error.</returns>
+        </member>
+        <member name="M:AMLEngineExtensions.ExternalizationExtensions.SaveSplitModelParts(CAEX_ClassModel.CAEXDocument,System.String,System.Boolean,System.Boolean,System.Collections.Generic.List{System.String})">
+            <summary>
+            Split a model at defined split points, insert the appropriate ExternalReferences and
+            proxy objects, save each of the parts split off and the remainder separately to file,
+            and re-merge the parts split off for further processing as a whole, removing unneeded
+            ExternalReferences again.
+            </summary>
+            <param name="doc">(this) The document to split into parts.</param>
+            <param name="filePath">The path where to store the remainder after splitting off at defined split points.</param>
+            <param name="saveLibraries">If true, libraries that have split points defined will be split off and saved, too.</param>
+            <param name="prettyPrint">If true, indent the XML output.</param>
+            <param name="otherAMLFilesToCheckForConsistencies">Stringlist of other CAEX files that shall be included into the merge procedure.</param>
+            <returns>True iff not an error.</returns>
+        </member>
+        <member name="M:AMLEngineExtensions.ExternalizationExtensions.SetSplitPoint(CAEX_ClassModel.InternalElementType,System.String,System.String)">
+            <summary>
+            Record a split point for this object. Will be split off and written to file only by SaveSplitModelParts().
+            </summary>
+            <param name="IE">(this) The InternalElement defining the split point.</param>
+            <param name="filePath">The path where to store the objects at and below the split point.</param>
+            <param name="alias">The alias to use for references into the part split off.</param>
+            <returns>True if not an error.</returns>
+        </member>
+        <member name="M:AMLEngineExtensions.ExternalizationExtensions.SetSplitPoint(CAEX_ClassModel.InstanceHierarchyType,System.String,System.String)">
+            <summary>
+            Record a split point for this object. Returns true if succeeded. Only allowed for
+            objects of type InstanceHierarchy, InternalElement, SystemUnitClassLib,
+            InterfaceClassLib, RoleClassLib. Will be split off and written to file only by SaveSplitModelParts().
+            </summary>
+            <param name="IH">(this) The InstanceHierarchy defining the split point.</param>
+            <param name="filePath">The path where to store the objects at and below the split point.</param>
+            <param name="alias">The alias to use for references into the part split off.</param>
+            <returns>True if not an error.</returns>
+        </member>
+        <member name="M:AMLEngineExtensions.ExternalizationExtensions.SetSplitPoint(CAEX_ClassModel.SystemUnitClassLibType,System.String,System.String)">
+            <summary>
+            Record a split point for this object. Returns true if succeeded. Only allowed for
+            objects of type InstanceHierarchy, InternalElement, SystemUnitClassLib,
+            InterfaceClassLib, RoleClassLib. Will be split off and written to file only by SaveSplitModelParts().
+            </summary>
+            <param name="SUCL">(this) The SystemUnitClassLib defining the split point.</param>
+            <param name="filePath">The path where to store the objects at and below the split point.</param>
+            <param name="alias">The alias to use for references into the part split off.</param>
+            <returns>True if not an error.</returns>
+        </member>
+        <member name="M:AMLEngineExtensions.ExternalizationExtensions.SetSplitPoint(CAEX_ClassModel.InterfaceClassLibType,System.String,System.String)">
+            <summary>
+            Record a split point for this object. Returns true if succeeded. Only allowed for
+            objects of type InstanceHierarchy, InternalElement, SystemUnitClassLib,
+            InterfaceClassLib, RoleClassLib. Will be split off and written to file only by SaveSplitModelParts().
+            </summary>
+            <param name="IFCL">(this) The InterfaceClassLib defining the split point.</param>
+            <param name="filePath">The path where to store the objects at and below the split point.</param>
+            <param name="alias">The alias to use for references into the part split off.</param>
+            <returns>True if not an error.</returns>
+        </member>
+        <member name="M:AMLEngineExtensions.ExternalizationExtensions.SetSplitPoint(CAEX_ClassModel.RoleClassLibType,System.String,System.String)">
+            <summary>
+            Record a split point for this object. Returns true if succeeded. Only allowed for
+            objects of type InstanceHierarchy, InternalElement, SystemUnitClassLib,
+            InterfaceClassLib, RoleClassLib. Will be split off and written to file only by SaveSplitModelParts().
+            </summary>
+            <param name="RCLT">(this) The RoleClassLib defining the split point.</param>
+            <param name="filePath">The path where to store the objects at and below the split point.</param>
+            <param name="alias">The alias to use for references into the part split off.</param>
+            <returns>True if not an error.</returns>
+        </member>
+        <member name="M:AMLEngineExtensions.ExternalizationExtensions.SetSplitPointIfPossible(CAEX_ClassModel.CAEXObject,System.String,System.String)">
+            <summary>
+            Record a split point for this object. Returns true if succeeded. Only allowed for
+            objects of type InstanceHierarchy, InternalElement, SystemUnitClassLib,
+            InterfaceClassLib, RoleClassLib. Will be split off and written to file only by SaveSplitModelParts().
+            </summary>
+            <param name="cObj">(this) The CAEXObject defining the split point.</param>
+            <param name="filePath">The path where to store the objects at and below the split point.</param>
+            <param name="alias">The alias to use for references into the part split off.</param>
+            <returns>True if not an error.</returns>
+        </member>
+        <member name="M:AMLEngineExtensions.ExternalizationExtensions.AllReferencedPaths(System.String,System.Collections.Generic.HashSet{System.String},System.Collections.Generic.List{System.String}@)">
+            <summary>
+            Gets all referenced paths from the external references of the caex document
+            </summary>
+            <param name="docPath">The document path.</param>
+            <param name="paths">The paths.</param>
+            <param name="MergeComments">The merge comments.</param>
+        </member>
+        <member name="M:AMLEngineExtensions.ExternalizationExtensions.DeepCopyAttributes(CAEX_ClassModel.AttributeType,CAEX_ClassModel.IObjectWithAttributes,System.Boolean)">
+            <summary>
+            performs a copy of attrites and nested attributes
+            </summary>
+            <param name="oldAttr">object containing the source attributes</param>
+            <param name="newAtt">target object</param>
+            <param name="includingValues">if true, values are included into copy procedure, not recommended for classes</param>
+        </member>
+        <member name="M:AMLEngineExtensions.ExternalizationExtensions.getAliasFromReference(System.String)">
+            <summary>
+            Get the alias from an aml reference string. Returns "" if no alias is present.
+            </summary>
+            <param name="reference">The reference to parse</param>
+            <returns>The alias</returns>
+            <example>
+            string alias=getAliasFromReference("myAlias@{1234-12312-1231}:Interface");
+            -- &gt; alias== "myAlias"
+            </example>
+        </member>
+        <member name="M:AMLEngineExtensions.ExternalizationExtensions.getEverythingWithoutAliasFromReference(System.String)">
+            <summary>
+            parse an aml reference string and return everything except the alias and the '@' sign
+            </summary>
+            <param name="reference">an aml reference string</param>
+            <returns>a processed reference</returns>
+        </member>
+        <member name="M:AMLEngineExtensions.ExternalizationExtensions.handleInternalLinkFromThirdAML(AMLEngineExtensions.ExternalizationExtensions.DocWithPath,System.Collections.Generic.List{AMLEngineExtensions.ExternalizationExtensions.DocWithPath},AMLEngineExtensions.ExternalizationExtensions.DocWithPath,AMLEngineExtensions.ExternalizationExtensions.OneReferenceSide)">
+            <summary>
+            Handle one reference inside an external aml file
+            </summary>
+            <param name="origDoc">Remaining document of the original</param>
+            <param name="createdDocs">Documents created in this split-action</param>
+            <param name="doc">The external document</param>
+            <param name="linkRef">The reference to adjust</param>
+        </member>
+        <member name="M:AMLEngineExtensions.ExternalizationExtensions.handleInternalLinkInsideSplit(AMLEngineExtensions.ExternalizationExtensions.DocWithPath,System.Collections.Generic.List{AMLEngineExtensions.ExternalizationExtensions.DocWithPath},AMLEngineExtensions.ExternalizationExtensions.DocWithPath,AMLEngineExtensions.ExternalizationExtensions.OneReferenceSide)">
+            <summary>
+            Handle one reference inside an splitted ("externalized") aml file
+            </summary>
+            <param name="origDoc">Remaining document of the original</param>
+            <param name="createdDocs">Documents created in this split-action</param>
+            <param name="doc">The splitted document</param>
+            <param name="linkRef">The reference to adjust</param>
+        </member>
+        <member name="M:AMLEngineExtensions.ExternalizationExtensions.handleInternalLinkReferenceInOrig(AMLEngineExtensions.ExternalizationExtensions.DocWithPath,AMLEngineExtensions.ExternalizationExtensions.OneReferenceSide,System.Collections.Generic.List{AMLEngineExtensions.ExternalizationExtensions.DocWithPath})">
+            <summary>
+            Handle one reference inside the remaining aml file
+            </summary>
+            <param name="origDoc">Remaining document of the original</param>
+            <param name="linkRef">The reference to adjust</param>
+            <param name="createdDocs">Documents created in this split-action</param>
+        </member>
+        <member name="M:AMLEngineExtensions.ExternalizationExtensions.handleRefInCreated(AMLEngineExtensions.ExternalizationExtensions.DocWithPath,AMLEngineExtensions.ExternalizationExtensions.DocWithPath,System.Collections.Generic.List{AMLEngineExtensions.ExternalizationExtensions.DocWithPath},AMLEngineExtensions.ExternalizationExtensions.RefHolderWrapper)">
+            <summary>
+            repairs a reference in a document that has been created during a split
+            </summary>
+            <param name="origDoc">a DocWithPath object containing the CAEXDocument</param>
+            <param name="thisDoc">a DocWithPath object containing this CAEXDocument</param>
+            <param name="createdDocs">a List of DocWithPath objects</param>
+            <param name="ie">a RefHolderWrapper object</param>
+        </member>
+        <member name="M:AMLEngineExtensions.ExternalizationExtensions.handleRefInOrig(AMLEngineExtensions.ExternalizationExtensions.DocWithPath,System.Collections.Generic.List{AMLEngineExtensions.ExternalizationExtensions.DocWithPath},AMLEngineExtensions.ExternalizationExtensions.RefHolderWrapper)">
+            <summary>
+            Handle a reference in the original document, so that it references the correct file
+            </summary>
+            <param name="origDoc">object containing the CAEXDocument</param>
+            <param name="createdDocs">object containing the new created CAEXDocument</param>
+            <param name="ie">a RefHolderWrapper object</param>
+        </member>
+        <member name="M:AMLEngineExtensions.ExternalizationExtensions.IntegrateIFC(CAEX_ClassModel.InterfaceFamilyType,CAEX_ClassModel.InterfaceClassLibType)">
+            <summary>
+            Integrates the ifc.
+            </summary>
+            <param name="ifcToIntegrate">The ifc to integrate.</param>
+            <param name="listToIntegrateInto">The list to integrate into.</param>
+        </member>
+        <member name="M:AMLEngineExtensions.ExternalizationExtensions.IntegrateIFC(CAEX_ClassModel.InterfaceFamilyType,CAEX_ClassModel.InterfaceFamilyType)">
+            <summary>
+            Integrates the ifc.
+            </summary>
+            <param name="ifcToIntegrate">The ifc to integrate.</param>
+            <param name="listToIntegrateInto">The list to integrate into.</param>
+        </member>
+        <member name="M:AMLEngineExtensions.ExternalizationExtensions.IntegrateRC(CAEX_ClassModel.RoleFamilyType,CAEX_ClassModel.RoleClassLibType)">
+            <summary>
+            Integrates the rc.
+            </summary>
+            <param name="rcToIntegrate">The rc to integrate.</param>
+            <param name="listToIntegrateInto">The list to integrate into.</param>
+        </member>
+        <member name="M:AMLEngineExtensions.ExternalizationExtensions.IntegrateRC(CAEX_ClassModel.RoleFamilyType,CAEX_ClassModel.RoleFamilyType)">
+            <summary>
+            Integrates the rc.
+            </summary>
+            <param name="rcToIntegrate">The rc to integrate.</param>
+            <param name="listToIntegrateInto">The list to integrate into.</param>
+        </member>
+        <member name="M:AMLEngineExtensions.ExternalizationExtensions.IntegrateSUC(CAEX_ClassModel.SystemUnitFamilyType,CAEX_ClassModel.SystemUnitClassLibType)">
+            <summary>
+            Integrates the suc.
+            </summary>
+            <param name="sucToIntegrate">The suc to integrate.</param>
+            <param name="listToIntegrateInto">The list to integrate into.</param>
+        </member>
+        <member name="M:AMLEngineExtensions.ExternalizationExtensions.IntegrateSUC(CAEX_ClassModel.SystemUnitFamilyType,CAEX_ClassModel.SystemUnitFamilyType)">
+            <summary>
+            Integrates the suc.
+            </summary>
+            <param name="sucToIntegrate">The suc to integrate.</param>
+            <param name="listToIntegrateInto">The list to integrate into.</param>
+        </member>
+        <member name="M:AMLEngineExtensions.ExternalizationExtensions.IsChildOfXmlNodeName(CAEX_ClassModel.CAEXBasicObject,System.String)">
+            <summary>
+            Determines whether [is child of XML node name] [the specified object].
+            </summary>
+            <param name="obj">The object.</param>
+            <param name="parentNodeNameTest">The parent node name test.</param>
+            <returns><c>true</c> if [is child of XML node name] [the specified object]; otherwise, <c>false</c>.</returns>
+        </member>
+        <member name="M:AMLEngineExtensions.ExternalizationExtensions.isReferenceWithAlias(System.String)">
+            <summary>
+            Returns true if an aml reference string contains an alias. (return reference.Contains("@");)
+            </summary>
+            <param name="reference">Reference to check</param>
+            <returns>True if an alias is found</returns>
+        </member>
+        <member name="M:AMLEngineExtensions.ExternalizationExtensions.makeRelativeFilePath(System.String,System.String)">
+            <summary>
+            creates a relative file path by subtracting a base directory from an absolute path
+            </summary>
+            <param name="filePath">a string with a file path</param>
+            <param name="newBase">a string representing the base</param>
+            <returns>a string with a relative path</returns>
+        </member>
+        <member name="M:AMLEngineExtensions.ExternalizationExtensions.Merge(CAEX_ClassModel.CAEXDocument,System.String,System.Collections.Generic.IEnumerable{System.String},System.Boolean,System.Collections.Generic.List{System.String}@)">
+            <summary>
+            Merge an aml document with a set of other documents. Resolves mirror objects, imports
+            libraries and cleans up the external references
+            </summary>
+            <param name="rootCaexDoc">The root document as the target for the merge</param>
+            <param name="rootDocPath">The root document path as the target for the merge</param>
+            <param name="amlFilePathsToMerge">The absolute file paths to the parts to merge into the root document</param>
+            <param name="saveResult">if true, the merge result doc is saved in the given path</param>
+            <param name="MergeComments">List of merge results and comments.</param>
+            <returns>True if there was something to merge.</returns>
+        </member>
+        <member name="M:AMLEngineExtensions.ExternalizationExtensions.MergeIFCL(CAEX_ClassModel.CAEXDocument,CAEX_ClassModel.InterfaceClassLibType)">
+            <summary>
+            Merges the ifcl.
+            </summary>
+            <param name="doc">The document.</param>
+            <param name="ifcl">The ifcl.</param>
+        </member>
+        <member name="M:AMLEngineExtensions.ExternalizationExtensions.MergeRCL(CAEX_ClassModel.CAEXDocument,CAEX_ClassModel.RoleClassLibType)">
+            <summary>
+            Merges the RCL.
+            </summary>
+            <param name="doc">The document.</param>
+            <param name="rcl">The RCL.</param>
+        </member>
+        <member name="M:AMLEngineExtensions.ExternalizationExtensions.MergeSCL(CAEX_ClassModel.CAEXDocument,CAEX_ClassModel.SystemUnitClassLibType)">
+            <summary>
+            Merges the SCL.
+            </summary>
+            <param name="doc">The document.</param>
+            <param name="sucl">The sucl.</param>
+        </member>
+        <member name="M:AMLEngineExtensions.ExternalizationExtensions.normalizeFilePath(System.String)">
+            <summary>
+            Normalizes a file path, so it is comparable
+            </summary>
+            <param name="absolutePath">a string containing an absolute path</param>
+            <returns>a string with a normalized file path</returns>
+        </member>
+        <member name="M:AMLEngineExtensions.ExternalizationExtensions.normalizeFilePath(System.String,System.String)">
+            <summary>
+            Normalizes a file path and resolves relative paths
+            </summary>
+            <param name="baseDirectoryPath">a string with the base directory path</param>
+            <param name="relativePath">a string with a relative path</param>
+            <returns>a normalized file path string</returns>
+        </member>
+        <member name="M:AMLEngineExtensions.ExternalizationExtensions.RepairLinksInFiles(CAEX_ClassModel.CAEXDocument,System.String,System.Collections.Generic.List{AMLEngineExtensions.ExternalizationExtensions.DocWithPath},System.Boolean,System.Collections.Generic.List{System.String})">
+            <summary>
+            Repairs the InternalLinks in the remaining document, the splitted parts (the resulting
+            documents) and referenced documents.
+            </summary>
+            <param name="remainingDoc">The source document - the splitted parts</param>
+            <param name="remainingDocPath">The path of the remaining doc</param>
+            <param name="createdDocs">List of all created documents</param>
+            <param name="prettyPrint">make it look nice?</param>
+            <param name="externalDocsToCheckConsistencies">List of external documents to adjust links that point in the original document</param>
+        </member>
+        <member name="M:AMLEngineExtensions.ExternalizationExtensions.ResolveAliases(AMLEngineExtensions.ExternalizationExtensions.DocWithPath,System.Collections.Generic.IEnumerable{System.String})">
+            <summary>
+            Replaces all references containing aliases with fully qualified references (internal syntax)
+            </summary>
+            <param name="doc">a DocWithPath object</param>
+            <param name="amlFilePathsToMerge">an Enumeration of string with CAEX file pathes that should be merged</param>
+        </member>
+        <member name="M:AMLEngineExtensions.ExternalizationExtensions.SplitModel(CAEX_ClassModel.CAEXDocument,AMLEngineExtensions.ExternalizationExtensions.SplitPoint[],System.Boolean,System.Boolean,System.Collections.Generic.List{AMLEngineExtensions.ExternalizationExtensions.DocWithPath}@)">
+            <summary>
+            Store subtrees in files as indicated in the cut points.
+            </summary>
+            <param name="doc">The root object containing the subtrees to save.</param>
+            <param name="cutPoints">The cut points indicating the subtrees to save in files.</param>
+            <param name="saveLibraries">if false, libraries are removed.</param>
+            <param name="prettyPrint">Use indentation in the output if true.</param>
+            <param name="createdDocs">List of created documents including pathes.</param>
+            <returns>CAEXObject[].</returns>
+        </member>
+        <member name="M:AMLEngineExtensions.ExternalizationExtensions.SplitModel(CAEX_ClassModel.CAEXObject,CAEX_ClassModel.CAEXDocument,System.String,System.Boolean,System.String,AMLEngineExtensions.ExternalizationExtensions.DocWithPath@)">
+            <summary>
+            Split off a subtree and store in a file.
+            </summary>
+            <param name="cutObject">The object (this) at which to split off a subtree.</param>
+            <param name="doc">The root object where to add an ExternalReference for the split off subtree.</param>
+            <param name="path">The path the file where to store the subtree split off.</param>
+            <param name="prettyPrint">Use indentation in the output if true.</param>
+            <param name="alias">The alias to use in the ExternalReference and the remaining part.</param>
+            <param name="createdAML">Returns a touple with the splitted CAEX document and the path it was saved to</param>
+            <returns>CAEXObject.</returns>
+        </member>
+        <member name="M:AMLEngineExtensions.ExternalizationExtensions.UpdateExternalReferences(CAEX_ClassModel.CAEXFileType,CAEX_ClassModel.CAEXFileType)">
+            <summary>
+            Update ExternalReferences to include only those actually needed. Target may be the same
+            as source.
+            </summary>
+            <param name="targetDoc">Where to update ExternalReferences</param>
+            <param name="sourceDoc">Where to take ExternalReferences from for a given alias</param>
+        </member>
+        <member name="T:AMLEngineExtensions.ExternalizationExtensions.RefHolderWrapper">
+            <summary>
+            Interface to generalize the access to CAEX elements holding a reference
+            </summary>
+        </member>
+        <member name="M:AMLEngineExtensions.ExternalizationExtensions.RefHolderWrapper.InDoc(CAEX_ClassModel.CAEXFileType)">
+            <summary>
+            Is the target element referenced by Value present in the given doc???? In the check
+            we ignore the alias (makes sense ;-) )
+            </summary>
+            <param name="f">a CAEXFile</param>
+            <returns>a boolean value</returns>
+        </member>
+        <member name="P:AMLEngineExtensions.ExternalizationExtensions.RefHolderWrapper.Value">
+            <summary>
+            The reference string. With read and write access. It needs to provide a write-thru
+            into the xml
+            </summary>
+            <value>The value.</value>
+        </member>
+        <member name="T:AMLEngineExtensions.ExternalizationExtensions.CutPointComparer">
+            <summary>
+            Class CutPointComparer.
+            </summary>
+        </member>
+        <member name="M:AMLEngineExtensions.ExternalizationExtensions.CutPointComparer.Equals(AMLEngineExtensions.ExternalizationExtensions.SplitPoint,AMLEngineExtensions.ExternalizationExtensions.SplitPoint)">
+            <summary>
+            Determines whether the specified objects are equal.
+            </summary>
+            <param name="x">The first object of type T to compare.</param>
+            <param name="y">The second object of type T to compare.</param>
+            <returns>true if the specified objects are equal; otherwise, false.</returns>
+        </member>
+        <member name="M:AMLEngineExtensions.ExternalizationExtensions.CutPointComparer.GetHashCode(AMLEngineExtensions.ExternalizationExtensions.SplitPoint)">
+            <summary>
+            Returns a hash code for this instance.
+            </summary>
+            <param name="obj">The <see cref="T:System.Object"></see> for which a hash code is to be returned.</param>
+            <returns>A hash code for this instance, suitable for use in hashing algorithms and data
+            structures like a hash table.</returns>
+        </member>
+        <member name="T:AMLEngineExtensions.ExternalizationExtensions.DocWithPath">
+            <summary>
+            Helper class for the adjustment of internal links and other reference stuff. Works with
+            lazy evaluation, only the path is mandatory.
+            </summary>
+        </member>
+        <member name="F:AMLEngineExtensions.ExternalizationExtensions.DocWithPath.Alias">
+            <summary>
+            The alias used in at least one aml file. We try to reuse it.
+            </summary>
+        </member>
+        <member name="F:AMLEngineExtensions.ExternalizationExtensions.DocWithPath.Path">
+            <summary>
+            Path of the document
+            </summary>
+        </member>
+        <member name="F:AMLEngineExtensions.ExternalizationExtensions.DocWithPath.WasChanged">
+            <summary>
+            The was changed
+            </summary>
+        </member>
+        <member name="F:AMLEngineExtensions.ExternalizationExtensions.DocWithPath.aliasToPathMap">
+            <summary>
+            The alias to path map
+            </summary>
+        </member>
+        <member name="F:AMLEngineExtensions.ExternalizationExtensions.DocWithPath.allInternalElements">
+            <summary>
+            All internal elements
+            </summary>
+        </member>
+        <member name="F:AMLEngineExtensions.ExternalizationExtensions.DocWithPath.allReferences">
+            <summary>
+            All references
+            </summary>
+        </member>
+        <member name="F:AMLEngineExtensions.ExternalizationExtensions.DocWithPath.doc">
+            <summary>
+            The loaded CAEX document, or null if not loaded yet
+            </summary>
+        </member>
+        <member name="F:AMLEngineExtensions.ExternalizationExtensions.DocWithPath.internalElementIDs">
+            <summary>
+            The internal element i ds
+            </summary>
+        </member>
+        <member name="F:AMLEngineExtensions.ExternalizationExtensions.DocWithPath.internalLinks">
+            <summary>
+            The internal links
+            </summary>
+        </member>
+        <member name="F:AMLEngineExtensions.ExternalizationExtensions.DocWithPath.pathToAliasMap">
+            <summary>
+            The path to alias map
+            </summary>
+        </member>
+        <member name="M:AMLEngineExtensions.ExternalizationExtensions.DocWithPath.AddReference(System.String,System.String)">
+            <summary>
+            Adds an ExternalReference to the CAEXFile. It tries to use the alias, but may use
+            another one, since it is already used or the file is referenced with another alias.
+            </summary>
+            <param name="alias">The alias for the new reference</param>
+            <param name="path">The path for the reference</param>
+            <returns>The used alias</returns>
+        </member>
+        <member name="M:AMLEngineExtensions.ExternalizationExtensions.DocWithPath.ClearCache">
+            <summary>
+            Clears all caches for lazy "re"evaluation
+            </summary>
+        </member>
+        <member name="M:AMLEngineExtensions.ExternalizationExtensions.DocWithPath.RemoveAllExternalReferences">
+            <summary>
+            removes all external references from the document
+            </summary>
+        </member>
+        <member name="M:AMLEngineExtensions.ExternalizationExtensions.DocWithPath.Save(System.Boolean)">
+            <summary>
+            Saves the specified pretty print.
+            </summary>
+            <param name="prettyPrint">if set to <c>true</c> [pretty print].</param>
+        </member>
+        <member name="M:AMLEngineExtensions.ExternalizationExtensions.DocWithPath.createReferenceMaps">
+            <summary>
+            Creates the reference maps.
+            </summary>
+        </member>
+        <member name="M:AMLEngineExtensions.ExternalizationExtensions.DocWithPath.GetAllInternalElementIDs(System.Collections.Generic.List{CAEX_ClassModel.InternalElementType})">
+            <summary>
+            Gets all internal element i ds.
+            </summary>
+            <param name="AllInternalElements">All internal elements.</param>
+            <returns>IEnumerable&lt;System.String&gt;.</returns>
+        </member>
+        <member name="M:AMLEngineExtensions.ExternalizationExtensions.DocWithPath.GetAllInternalLinks(System.Collections.Generic.List{CAEX_ClassModel.InternalElementType})">
+            <summary>
+            Gets all internal links.
+            </summary>
+            <param name="AllInternalElements">All internal elements.</param>
+            <returns>IEnumerable&lt;InternalLinkType&gt;.</returns>
+        </member>
+        <member name="P:AMLEngineExtensions.ExternalizationExtensions.DocWithPath.AliasToPathMap">
+            <summary>
+            Gets the alias to path map.
+            </summary>
+            <value>The alias to path map.</value>
+        </member>
+        <member name="P:AMLEngineExtensions.ExternalizationExtensions.DocWithPath.AllInternalElements">
+            <summary>
+            Gets all internal elements.
+            </summary>
+            <value>All internal elements.</value>
+        </member>
+        <member name="P:AMLEngineExtensions.ExternalizationExtensions.DocWithPath.AllReferences">
+            <summary>
+            All Reference holder elements, we wrap them to get a common interface
+            </summary>
+            <value>All references.</value>
+        </member>
+        <member name="P:AMLEngineExtensions.ExternalizationExtensions.DocWithPath.Doc">
+            <summary>
+            The document content as an lazy loaded CAEXDocument
+            </summary>
+            <value>The document.</value>
+        </member>
+        <member name="P:AMLEngineExtensions.ExternalizationExtensions.DocWithPath.InternalElementIDs">
+            <summary>
+            All internal element IDs of this document, lazy loaded, cached, hashed
+            </summary>
+            <value>The internal element i ds.</value>
+        </member>
+        <member name="P:AMLEngineExtensions.ExternalizationExtensions.DocWithPath.InternalLinks">
+            <summary>
+            All internal-Links of this document, lazy loaded, cached
+            </summary>
+            <value>The internal links.</value>
+        </member>
+        <member name="P:AMLEngineExtensions.ExternalizationExtensions.DocWithPath.PathToAliasMap">
+            <summary>
+            path to alias map. Path must be absolute and normalized
+            </summary>
+            <value>The path to alias map.</value>
+        </member>
+        <member name="T:AMLEngineExtensions.ExternalizationExtensions.LibRef">
+            <summary>
+            Class LibRef.
+            </summary>
+        </member>
+        <member name="T:AMLEngineExtensions.ExternalizationExtensions.SplitPoint">
+            <summary>
+            Class SplitPoint.
+            </summary>
+        </member>
+        <member name="F:AMLEngineExtensions.ExternalizationExtensions.SplitPoint.alias">
+            <summary>
+            The alias
+            </summary>
+        </member>
+        <member name="F:AMLEngineExtensions.ExternalizationExtensions.SplitPoint.cutObjectPath">
+            <summary>
+            The cut object path
+            </summary>
+        </member>
+        <member name="F:AMLEngineExtensions.ExternalizationExtensions.SplitPoint.filePath">
+            <summary>
+            The file path
+            </summary>
+        </member>
+        <member name="F:AMLEngineExtensions.ExternalizationExtensions.LibRef.refObjectPath">
+            <summary>
+            The reference object path
+            </summary>
+        </member>
+        <member name="T:AMLEngineExtensions.ExternalizationExtensions.LibRefComparer">
+            <summary>
+            Class LibRefComparer.
+            </summary>
+        </member>
+        <member name="M:AMLEngineExtensions.ExternalizationExtensions.LibRefComparer.Equals(AMLEngineExtensions.ExternalizationExtensions.LibRef,AMLEngineExtensions.ExternalizationExtensions.LibRef)">
+            <summary>
+            Determines whether the specified objects are equal.
+            </summary>
+            <param name="x">The first object of type T to compare.</param>
+            <param name="y">The second object of type T to compare.</param>
+            <returns>true if the specified objects are equal; otherwise, false.</returns>
+        </member>
+        <member name="M:AMLEngineExtensions.ExternalizationExtensions.LibRefComparer.GetHashCode(AMLEngineExtensions.ExternalizationExtensions.LibRef)">
+            <summary>
+            Returns a hash code for this instance.
+            </summary>
+            <param name="obj">The <see cref="T:System.Object"></see> for which a hash code is to be returned.</param>
+            <returns>A hash code for this instance, suitable for use in hashing algorithms and data
+            structures like a hash table.</returns>
+        </member>
+        <member name="T:AMLEngineExtensions.ExternalizationExtensions.OneReferenceSide">
+            <summary>
+            Generalize CAEX object "InternalLinkType" to handle it as an element holding a reference. Works with both,, RefPartnerSideA and RefPartnerSideB.
+            Details:
+            <see>RefHolderWrapper</see>
+            </summary>
+        </member>
+        <member name="F:AMLEngineExtensions.ExternalizationExtensions.OneReferenceSide.sideA">
+            <summary>
+            The side a
+            </summary>
+        </member>
+        <member name="F:AMLEngineExtensions.ExternalizationExtensions.OneReferenceSide.sideB">
+            <summary>
+            The side b
+            </summary>
+        </member>
+        <member name="M:AMLEngineExtensions.ExternalizationExtensions.OneReferenceSide.#ctor(CAEX_ClassModel.InternalLinkType.MemberAttribute_RefPartnerSideA)">
+            <summary>
+            Initializes a new instance of the <see cref="T:AMLEngineExtensions.ExternalizationExtensions.OneReferenceSide"/> class.
+            </summary>
+            <param name="a">A.</param>
+        </member>
+        <member name="M:AMLEngineExtensions.ExternalizationExtensions.OneReferenceSide.#ctor(CAEX_ClassModel.InternalLinkType.MemberAttribute_RefPartnerSideB)">
+            <summary>
+            Initializes a new instance of the <see cref="T:AMLEngineExtensions.ExternalizationExtensions.OneReferenceSide"/> class.
+            </summary>
+            <param name="b">The b.</param>
+        </member>
+        <member name="M:AMLEngineExtensions.ExternalizationExtensions.OneReferenceSide.InDoc(CAEX_ClassModel.CAEXFileType)">
+            <summary>
+            Is the target element referenced by Value present in the given doc???? In the check
+            we ignore the alias (makes sense ;-) )
+            </summary>
+            <param name="f">a CAEXFile</param>
+            <returns>a boolean value</returns>
+        </member>
+        <member name="P:AMLEngineExtensions.ExternalizationExtensions.OneReferenceSide.Value">
+            <summary>
+            The reference string. With read and write access. It needs to provide a write-thru
+            into the xml
+            </summary>
+            <value>The value.</value>
+        </member>
+        <member name="T:AMLEngineExtensions.ExternalizationExtensions.RefBaseClassPathHolderWrapper">
+            <summary>
+            Wrapper for several elements that can have a RefBaseClassPath to generalize the access
+            to "my@Reference"
+            </summary>
+        </member>
+        <member name="F:AMLEngineExtensions.ExternalizationExtensions.RefBaseClassPathHolderWrapper.b">
+            <summary>
+            The b
+            </summary>
+        </member>
+        <member name="F:AMLEngineExtensions.ExternalizationExtensions.RefBaseClassPathHolderWrapper.c">
+            <summary>
+            The c
+            </summary>
+        </member>
+        <member name="F:AMLEngineExtensions.ExternalizationExtensions.RefBaseClassPathHolderWrapper.d">
+            <summary>
+            The d
+            </summary>
+        </member>
+        <member name="F:AMLEngineExtensions.ExternalizationExtensions.RefBaseClassPathHolderWrapper.e">
+            <summary>
+            The e
+            </summary>
+        </member>
+        <member name="F:AMLEngineExtensions.ExternalizationExtensions.RefBaseClassPathHolderWrapper.f">
+            <summary>
+            The f
+            </summary>
+        </member>
+        <member name="F:AMLEngineExtensions.ExternalizationExtensions.RefBaseClassPathHolderWrapper.g">
+            <summary>
+            The g
+            </summary>
+        </member>
+        <member name="M:AMLEngineExtensions.ExternalizationExtensions.RefBaseClassPathHolderWrapper.#ctor(CAEX_ClassModel.SystemUnitFamilyType)">
+            <summary>
+            Initializes a new instance of the <see cref="T:AMLEngineExtensions.ExternalizationExtensions.RefBaseClassPathHolderWrapper"/> class.
+            </summary>
+            <param name="a">A.</param>
+        </member>
+        <member name="M:AMLEngineExtensions.ExternalizationExtensions.RefBaseClassPathHolderWrapper.#ctor(CAEX_ClassModel.RoleClassType)">
+            <summary>
+            Initializes a new instance of the <see cref="T:AMLEngineExtensions.ExternalizationExtensions.RefBaseClassPathHolderWrapper"/> class.
+            </summary>
+            <param name="a">A.</param>
+        </member>
+        <member name="M:AMLEngineExtensions.ExternalizationExtensions.RefBaseClassPathHolderWrapper.#ctor(CAEX_ClassModel.RoleFamilyType)">
+            <summary>
+            Initializes a new instance of the <see cref="T:AMLEngineExtensions.ExternalizationExtensions.RefBaseClassPathHolderWrapper"/> class.
+            </summary>
+            <param name="a">A.</param>
+        </member>
+        <member name="M:AMLEngineExtensions.ExternalizationExtensions.RefBaseClassPathHolderWrapper.#ctor(CAEX_ClassModel.InterfaceClassType)">
+            <summary>
+            Initializes a new instance of the <see cref="T:AMLEngineExtensions.ExternalizationExtensions.RefBaseClassPathHolderWrapper"/> class.
+            </summary>
+            <param name="a">A.</param>
+        </member>
+        <member name="M:AMLEngineExtensions.ExternalizationExtensions.RefBaseClassPathHolderWrapper.#ctor(CAEX_ClassModel.InterfaceFamilyType)">
+            <summary>
+            Initializes a new instance of the <see cref="T:AMLEngineExtensions.ExternalizationExtensions.RefBaseClassPathHolderWrapper"/> class.
+            </summary>
+            <param name="a">A.</param>
+        </member>
+        <member name="M:AMLEngineExtensions.ExternalizationExtensions.RefBaseClassPathHolderWrapper.#ctor(CAEX_ClassModel.ExternalInterfaceType)">
+            <summary>
+            Initializes a new instance of the <see cref="T:AMLEngineExtensions.ExternalizationExtensions.RefBaseClassPathHolderWrapper"/> class.
+            </summary>
+            <param name="a">A.</param>
+        </member>
+        <member name="M:AMLEngineExtensions.ExternalizationExtensions.RefBaseClassPathHolderWrapper.InDoc(CAEX_ClassModel.CAEXFileType)">
+            <summary>
+            Is the target element referenced by Value present in the given doc???? In the check
+            we ignore the alias (makes sense ;-) )
+            </summary>
+            <param name="f">a CAEXFile</param>
+            <returns>a boolean value</returns>
+        </member>
+        <member name="P:AMLEngineExtensions.ExternalizationExtensions.RefBaseClassPathHolderWrapper.Value">
+            <summary>
+            The reference string. With read and write access. It needs to provide a write-thru into the xml
+            </summary>
+            <value>The value.</value>
+        </member>
+        <member name="T:AMLEngineExtensions.ExternalizationExtensions.RefBaseRoleClassPathForRoleReq">
+            <summary>
+            Class RefBaseRoleClassPathForRoleReq.
+            </summary>
+        </member>
+        <member name="F:AMLEngineExtensions.ExternalizationExtensions.RefBaseRoleClassPathForRoleReq.obj">
+            <summary>
+            The object
+            </summary>
+        </member>
+        <member name="M:AMLEngineExtensions.ExternalizationExtensions.RefBaseRoleClassPathForRoleReq.#ctor(CAEX_ClassModel.RoleRequirementsType)">
+            <summary>
+            Initializes a new instance of the <see cref="T:AMLEngineExtensions.ExternalizationExtensions.RefBaseRoleClassPathForRoleReq"/> class.
+            </summary>
+            <param name="toWrap">To wrap.</param>
+        </member>
+        <member name="M:AMLEngineExtensions.ExternalizationExtensions.RefBaseRoleClassPathForRoleReq.InDoc(CAEX_ClassModel.CAEXFileType)">
+            <summary>
+            Is the target element referenced by Value present in the given doc???? In the check
+            we ignore the alias (makes sense ;-) )
+            </summary>
+            <param name="f">a CAEXFile</param>
+            <returns>a boolean value</returns>
+        </member>
+        <member name="P:AMLEngineExtensions.ExternalizationExtensions.RefBaseRoleClassPathForRoleReq.Value">
+            <summary>
+            The reference string. With read and write access. It needs to provide a write-thru
+            into the xml
+            </summary>
+            <value>The value.</value>
+        </member>
+        <member name="T:AMLEngineExtensions.ExternalizationExtensions.RefBaseSystemUnitPathForIE">
+            <summary>
+            Wrapper for &lt;InternalElement RefBaseSystemUnitPath="my@Reference" /&gt; to generalize
+            the access to "my@Reference"
+            </summary>
+        </member>
+        <member name="F:AMLEngineExtensions.ExternalizationExtensions.RefBaseSystemUnitPathForIE.obj">
+            <summary>
+            The object
+            </summary>
+        </member>
+        <member name="M:AMLEngineExtensions.ExternalizationExtensions.RefBaseSystemUnitPathForIE.#ctor(CAEX_ClassModel.InternalElementType)">
+            <summary>
+            Initializes a new instance of the <see cref="T:AMLEngineExtensions.ExternalizationExtensions.RefBaseSystemUnitPathForIE"/> class.
+            </summary>
+            <param name="toWrap">To wrap.</param>
+        </member>
+        <member name="M:AMLEngineExtensions.ExternalizationExtensions.RefBaseSystemUnitPathForIE.InDoc(CAEX_ClassModel.CAEXFileType)">
+            <summary>
+            Is the target of the mirror is present? if not, look for the library path
+            </summary>
+            <param name="f">the CAEXFile</param>
+            <returns>a boolean value</returns>
+        </member>
+        <member name="P:AMLEngineExtensions.ExternalizationExtensions.RefBaseSystemUnitPathForIE.Element">
+            <summary>
+            Gets the element.
+            </summary>
+            <value>The element.</value>
+        </member>
+        <member name="P:AMLEngineExtensions.ExternalizationExtensions.RefBaseSystemUnitPathForIE.Value">
+            <summary>
+            The reference string. With read and write access. It needs to provide a write-thru
+            into the xml
+            </summary>
+            <value>The value.</value>
+        </member>
+        <member name="T:AMLEngineExtensions.ExternalizationExtensions.RefRoleClassPathForSupportedRoleClass">
+            <summary>
+            Wrapper for &lt;SupportedRoleClass RefRoleClassPath="my@Reference" /&gt; to generalize
+            the access to "my@Reference"
+            </summary>
+        </member>
+        <member name="F:AMLEngineExtensions.ExternalizationExtensions.RefRoleClassPathForSupportedRoleClass.obj">
+            <summary>
+            The object
+            </summary>
+        </member>
+        <member name="M:AMLEngineExtensions.ExternalizationExtensions.RefRoleClassPathForSupportedRoleClass.#ctor(CAEX_ClassModel.SupportedRoleClassType)">
+            <summary>
+            Initializes a new instance of the
+            <see cref="T:AMLEngineExtensions.ExternalizationExtensions.RefRoleClassPathForSupportedRoleClass"/> class.
+            </summary>
+            <param name="toWrap">To wrap.</param>
+        </member>
+        <member name="M:AMLEngineExtensions.ExternalizationExtensions.RefRoleClassPathForSupportedRoleClass.InDoc(CAEX_ClassModel.CAEXFileType)">
+            <summary>
+            Is the target element referenced by Value present in the given doc???? In the check
+            we ignore the alias (makes sense ;-) )
+            </summary>
+            <param name="f">a CAEXFile</param>
+            <returns>a boolean value</returns>
+        </member>
+        <member name="P:AMLEngineExtensions.ExternalizationExtensions.RefRoleClassPathForSupportedRoleClass.Value">
+            <summary>
+            The reference string. With read and write access. It needs to provide a write-thru
+            into the xml
+            </summary>
+            <value>The value.</value>
+        </member>
+        <member name="T:AMLEngineExtensions.MappingExtension">
+            <summary>
+            Specific Extensions for Mappings
+            </summary>
+        </member>
+        <member name="F:AMLEngineExtensions.MappingExtension.AutomationMLPropertySetRoleClassReference">
+            <summary>
+            the Reference for the standard PropertySet RoleClass in AutomationML
+            </summary>
+        </member>
+        <member name="M:AMLEngineExtensions.MappingExtension.FindCaexObjectByName(System.Collections.IEnumerable,System.String)">
+            <summary>
+            Find a Caex-Object by Name in the provided Collection of CAEXObjects
+            </summary>
+            <param name="caexObjectCollection">The caex object collection.</param>
+            <param name="name">The name.</param>
+            <returns>The System.Boolean.</returns>
+            <exception cref="T:System.ArgumentException">Value of input parameter name should not be null or empty</exception>
+        </member>
+        <member name="M:AMLEngineExtensions.MappingExtension.GetAllInternalElementsDeep(CAEX_ClassModel.SystemUnitClassType)">
+            <summary>
+            Gets all Internal Elements of a SystemUnitClass and its SubElements
+            </summary>
+            <param name="systemUnitClass">the system Unit Class, which is scanned deep for all Internal Elements</param>
+            <returns>The System.Collections.Generic.IEnumerable`1[T - &gt; CAEX_ClassModel.InternalElementType].</returns>
+        </member>
+        <member name="M:AMLEngineExtensions.MappingExtension.GetAllPropertySetElementsDeep(CAEX_ClassModel.SystemUnitClassType)">
+            <summary>
+            Get all InternalElements of the SystemUnitClass, which are PropertySets, regardless of
+            there nesting level
+            </summary>
+            <param name="systemUnitClass">a SystemUnitClass</param>
+            <returns>Enumerator for the PropertySets of the SystemUnitClass</returns>
+        </member>
+        <member name="M:AMLEngineExtensions.MappingExtension.GetOwnAndDerivedAttributes(CAEX_ClassModel.IObjectWithAttributes)">
+            <summary>
+            Get all Attributes of the CAEXObjects, including all own and derived attributes
+            </summary>
+            <param name="objectWithAttributes">a CaexObject which implements the IObjectWithAttributes Interface</param>
+            <returns>Enumerator for the all Attributes of the SystemUnitClass (own and derived)</returns>
+        </member>
+        <member name="M:AMLEngineExtensions.MappingExtension.HasMappingToSystemUnitAttribute(CAEX_ClassModel.InternalElementType,CAEX_ClassModel.AttributeType)">
+            <summary>
+            An InternalElement is searched for a MappingObject, which has an AttributeNameMapping
+            with a SystemUnitAttributeName, which is equal to the name of the input attribute
+            </summary>
+            <param name="internalElement">the InternalElement which is searched for a mappingObject</param>
+            <param name="attribute">the input Attribute for which a matching AttributeNameMapping is searched</param>
+            <returns>true, if a matching AttributeNameMapping is found</returns>
+            <exception cref="T:System.ArgumentNullException">attribute</exception>
+            <exception cref="T:System.ArgumentException">attribute input parameter has no value for name</exception>
+        </member>
+        <member name="M:AMLEngineExtensions.MappingExtension.InternalElementDirectlyMappsToSystemUnitClass(CAEX_ClassModel.InternalElementType,CAEX_ClassModel.SystemUnitClassType)">
+            <summary>
+            Test, if an InternalElements RoleRequirement ist directly supported from any
+            SupportedRole of the SystemUnitClass
+            </summary>
+            <param name="internalElement">The InternalElement which should be mapped on a SystemUnitClass</param>
+            <param name="systemUnitClass">The SystemUnitClass, which is tested as a Mapping Candidate</param>
+            <returns>The System.Boolean.</returns>
+            <exception cref="T:System.ArgumentNullException">systemUnitClass</exception>
+        </member>
+        <member name="M:AMLEngineExtensions.MappingExtension.InternalElementMappsToSystemUnitClassWithAncestorRole(CAEX_ClassModel.InternalElementType,CAEX_ClassModel.SystemUnitClassType,CAEX_ClassModel.SupportedRoleClassType@)">
+            <summary>
+            Test, if an InternalElements RoleRequirement is supported from any SupportedRole of the
+            SystemUnitClass and the SupportedRole is an Ancestor of the Required Role. The returned
+            result is the Ancestor Generation of the Supported Role (-1=no Ancestor, 0=Identical,
+            1=Parent, 2=GrandParent, ...)
+            </summary>
+            <param name="internalElement">The InternalElement which should be mapped on a SystemUnitClass</param>
+            <param name="systemUnitClass">The SystemUnitClass, which is tested as a Mapping Candidate</param>
+            <param name="supportedRole">The SupportedRole of the SystemUnitClass, which is the nearest generation to the
+            required role</param>
+            <returns>Ancestor Generation</returns>
+            <exception cref="T:System.ArgumentNullException">systemUnitClass</exception>
+        </member>
+        <member name="M:AMLEngineExtensions.MappingExtension.IsPropertySetElement(CAEX_ClassModel.InternalElementType)">
+            <summary>
+            An InternalElement is checked, whether its required role is derived from the
+            AutomationML PropertySet RoleClass. This RoleClass is identified via its Path which
+            should be <see cref="F:AMLEngineExtensions.MappingExtension.AutomationMLPropertySetRoleClassReference"/>
+            </summary>
+            <param name="internalElement">An Internal Element</param>
+            <returns>true, if the Internal Elements required Role is derived from the AutomationML
+            BaseRoleClass "PropertySet"; false otherwise</returns>
+        </member>
+        <member name="M:AMLEngineExtensions.MappingExtension.IsPropertySetRoleClass(CAEX_ClassModel.RoleFamilyType)">
+            <summary>
+            This Methods tests. if a role class is derived from the AutomationMLBaseRoleClass - PropertySet.
+            </summary>
+            <param name="roleClass">Testcandidate role Class</param>
+            <returns>true, if it is a PropertySet</returns>
+        </member>
+        <member name="M:AMLEngineExtensions.MappingExtension.PropertySetAttributeMapping(CAEX_ClassModel.SystemUnitClassType,CAEX_ClassModel.AttributeType)">
+            <summary>
+            This Extension Methods performs a search on the systemUnitClass and its elements for any
+            InternalElement with an assigned PropertySet and an assigned MappingObject and
+            AttributeNameMapping, which has a SystemUnitAttributeName, which maps to the Name of the
+            input attribute. It returns the InternalElement Object, if it is found, otherwise the
+            result is null
+            </summary>
+            <param name="systemUnitClass">The SystemUnitClass to which the input attribute belongs to</param>
+            <param name="attribute">The input attribute for which an attribute Name Mapping is searched</param>
+            <returns>The InternalElement which has the matching AttributeNameMapping for the input attribute
+            or null if not found</returns>
+            <exception cref="T:System.ArgumentNullException">attribute</exception>
+            <exception cref="T:System.ArgumentException">attribute input parameter has no value for name</exception>
+        </member>
+        <member name="M:AMLEngineExtensions.MappingExtension.RoleRequirementIsSupportedBySystemUnitClass(CAEX_ClassModel.RoleRequirementsType,CAEX_ClassModel.SystemUnitClassType)">
+            <summary>
+            Test, if RoleRequirement ist directly supported from any SupportedRole of the SystemUnitClass
+            </summary>
+            <param name="roleRequirement">The RoleRequirement to Test</param>
+            <param name="systemUnitClass">The SystemUnitClass, which supported RoleClasses are Tested</param>
+            <returns>The System.Boolean.</returns>
+            <exception cref="T:System.ArgumentNullException">systemUnitClass</exception>
+        </member>
+        <member name="T:AMLEngineExtensions.NavigationExtensions">
+            <summary>
+            Navigation related extensions of the AMLEngine
+            </summary>
+        </member>
+        <member name="M:AMLEngineExtensions.NavigationExtensions.CAEXType(System.Xml.XmlNode)">
+            <summary>
+            get CAEXType for an XML node
+            </summary>
+            <param name="node">
+            The node.
+            </param>
+            <returns>
+            Type
+            </returns>
+        </member>
+        <member name="M:AMLEngineExtensions.NavigationExtensions.CreateCAEXWrapper``1(System.Xml.XmlNode)">
+            <summary>
+            Creates a CAEX_ClassModel object from an XmlNode when the correct target data type is provided.
+            </summary>
+            <typeparam name="T">
+            The CAEX_ClassModel class of the expected result
+            </typeparam>
+            <param name="node">
+            The node.
+            </param>
+            <returns>
+            The parent AML object (regarding to the AML-XML hierarchie)
+            </returns>
+            <exception cref="T:System.ArgumentException">
+            Don't know how to wrap XML node of type + node.Name;node or Argument type, +
+            typeof(T).FullName + , is not same as type of XML node, + caexTypes[node.Name];node or
+            </exception>
+            <exception cref="T:System.ArgumentNullException">
+            node
+            </exception>
+        </member>
+        <member name="M:AMLEngineExtensions.NavigationExtensions.CreateCAEXWrapper(System.Xml.XmlNode)">
+            <summary>
+            creates CAEX object out of an XML node
+            </summary>
+            <param name="node">
+            The node.
+            </param>
+            <returns>
+            CAEXBasicObject
+            </returns>
+            <exception cref="T:System.ArgumentException">
+            Don't know how to wrap XML node of type + caexTypes[node.Name];node or
+            </exception>
+            <exception cref="T:System.ArgumentNullException">
+            node
+            </exception>
+        </member>
+        <member name="M:AMLEngineExtensions.NavigationExtensions.FindByID``1(CAEX_ClassModel.CAEXBasicObject,System.String)">
+            <summary>
+            Searches an object starting from the given CAEXBasicObject that has the given ID, the
+            expected type must be given in angle brackets.
+            </summary>
+            <typeparam name="T">
+            The target type
+            </typeparam>
+            <param name="obj">
+            The parent object. Only children of this object are considered
+            </param>
+            <param name="guid">
+            The ID to search for
+            </param>
+            <returns>
+            The found object from type T or null if none is found
+            </returns>
+        </member>
+        <member name="M:AMLEngineExtensions.NavigationExtensions.FindByID(CAEX_ClassModel.CAEXBasicObject,System.String)">
+            <summary>
+            Searches an object starting from the given CAEXBasicObject that has the given ID, the
+            expected type must be casted in the source code. This search bases on XPath and is slow.
+            </summary>
+            <param name="obj">
+            The parent object. Only children of this object are considered
+            </param>
+            <param name="guid">
+            The ID to search for
+            </param>
+            <returns>
+            The found object from type T or null if none is found
+            </returns>
+        </member>
+        <member name="M:AMLEngineExtensions.NavigationExtensions.FindByXPath``1(CAEX_ClassModel.CAEXFileType,System.String)">
+            <summary>
+            Searches an object in the whole document that has the given Path. The search bases on
+            XPath and is slow. For speed optimization, use FindFastByPath instead. If your CAEX file
+            has changed, update the hash tables before using this function using
+            updateCAEXObjectHashLists before.
+            </summary>
+            <typeparam name="T">
+            The target type
+            </typeparam>
+            <param name="caexFile">
+            The root of the AML file
+            </param>
+            <param name="path">
+            The absolute path to an object
+            </param>
+            <returns>
+            The object if found, null if not
+            </returns>
+        </member>
+        <member name="M:AMLEngineExtensions.NavigationExtensions.FindByXPath(CAEX_ClassModel.CAEXFileType,System.String)">
+            <summary>
+            Searches a CAEXBasicObject from the given path.
+            The search bases on XPath and is slow. For speed optimization, use FindFastByPath instead.
+            If your CAEX file has changed, update the hash tables before using this function using updateCAEXObjectHashLists before.
+            </summary>
+            <param name="caexFile">The root of the AML file</param>
+            <param name="path">The absolute path to an object</param>
+            <returns>The object if found, null if not</returns>
+        </member>
+        <member name="M:AMLEngineExtensions.NavigationExtensions.FindByXPath``1(CAEX_ClassModel.CAEXBasicObject,System.String)">
+            <summary>
+            Searches a CAEXBasicObject from the given xPath, the type must be given in angle
+            brackets. The search bases on XPath and is slow. For speed optimization, use
+            FindFastByPath instead. If your CAEX file has changed, update the hash tables before
+            using this function using updateCAEXObjectHashLists before.
+            </summary>
+            <typeparam name="T">
+            The target type
+            </typeparam>
+            <param name="obj">
+            The root of the AML subtree to search
+            </param>
+            <param name="xPath">
+            The search path, e.g. "unit/PLC/signal/interface
+            </param>
+            <returns>
+            The object if found, null if not
+            </returns>
+        </member>
+        <member name="M:AMLEngineExtensions.NavigationExtensions.FindByXPath(CAEX_ClassModel.CAEXBasicObject,System.String)">
+            <summary>
+            Searches a CAEXBasicObject from the given xPath, you must cast the returned
+            CAEXBasicObject into the type you expect. The search bases on XPath and is slow. For
+            speed optimization, use FindFastByPath instead. If your CAEX file has changed, update
+            the hash tables before using this function using updateCAEXObjectHashLists before.
+            </summary>
+            <param name="obj">
+            The root of the AML subtree to search
+            </param>
+            <param name="xPath">
+            The search path
+            </param>
+            <returns>
+            The object if found, null if not
+            </returns>
+        </member>
+        <member name="M:AMLEngineExtensions.NavigationExtensions.FindFastByPath(CAEX_ClassModel.CAEXObject,CAEX_ClassModel.CAEXFileType,System.String)">
+            <summary>
+            Performs a document wide fast search and returns a CAEXObject given by its ID. It is
+            fast due to hash table support. If your CAEX file has changed, update the hash tables
+            before using this function using updateCAEXObjectHashLists before.
+            </summary>
+            <param name="cObj">
+            the parent CAEXObject calling the method, not the parent object of the search
+            </param>
+            <param name="myCAEXFile">
+            the CAEX file
+            </param>
+            <param name="Path">
+            the path ob the object which is subject of the search
+            </param>
+            <returns>
+            the found CAEXObject or null if not found
+            </returns>
+        </member>
+        <member name="M:AMLEngineExtensions.NavigationExtensions.FindFastByPath(CAEX_ClassModel.CAEXFileType,CAEX_ClassModel.CAEXObject,System.String)">
+            <summary>
+            Performs a document wide fast search and returns a CAEXObject given by its ID. It is
+            fast due to hash table support. If your CAEX file has changed, update the hash tables
+            before using this function using updateCAEXObjectHashLists before.
+            </summary>
+            <param name="myCAEXFile">
+            the CAEX file
+            </param>
+            <param name="cObj">
+            the parent CAEXObject calling the method, not the parent object of the search
+            </param>
+            <param name="Path">
+            the path ob the object which is subject of the search
+            </param>
+            <returns>
+            the found CAEXObject or null if not found
+            </returns>
+        </member>
+        <member name="M:AMLEngineExtensions.NavigationExtensions.GetAllLibraryClasses(CAEX_ClassModel.CAEXObject,System.Collections.Generic.List{CAEX_ClassModel.CAEXObject})">
+            <summary>
+            Get all library classes withing a given Library object or CAEX-Class Object
+            </summary>
+            <param name="obj">
+            the member element CAEXObject, either SystemUnitClassLib, RoleClassLib or InterfaceClassLib
+            </param>
+            <param name="ClassesList">
+            the list of classes to be returned.
+            </param>
+        </member>
+        <member name="M:AMLEngineExtensions.NavigationExtensions.GetAllParentInternalElements(CAEX_ClassModel.CAEXObject)">
+            <summary>
+            Gets all parents in correct order from root parent element to obj excluding the element itself.
+            </summary>
+            <param name="obj">
+            The object to get the parents from.
+            </param>
+            <returns>
+            Sorted list from root to element with parents in between.
+            </returns>
+        </member>
+        <member name="M:AMLEngineExtensions.NavigationExtensions.GetAncestors``1(CAEX_ClassModel.CAEXBasicObject)">
+            <summary>
+            Gets all Ancestors in the Hierarchy of the specified Caex-Object, which are of Type T
+            </summary>
+            <typeparam name="T">
+            Ancestor Type
+            </typeparam>
+            <param name="obj">
+            The object.
+            </param>
+            <returns>
+            IEnumerable&lt;T&gt;.
+            </returns>
+        </member>
+        <member name="M:AMLEngineExtensions.NavigationExtensions.GetClassLibrary``1(CAEX_ClassModel.CAEXBasicObject)">
+            <summary>
+            Enables every CAEXBasicObject, to get its class Library. You must specify the type of
+            the ClassLibrary-Type that you expect.
+            </summary>
+            <typeparam name="T">
+            The ClassLibrary-Type of the expected Library
+            </typeparam>
+            <param name="obj">
+            This object's Library will be returned
+            </param>
+            <returns>
+            The ClassLibrary which contains the object
+            </returns>
+            <exception cref="T:System.ArgumentNullException">
+            node
+            </exception>
+            <exception cref="T:System.ArgumentException">
+            The object is not attached to an XmlNode
+            </exception>
+            <exception cref="T:System.Xml.XmlException">
+            The object has no parent
+            </exception>
+        </member>
+        <member name="M:AMLEngineExtensions.NavigationExtensions.GetInternalElementsAndExternalInterfaces(CAEX_ClassModel.CAEXObject,System.Collections.Generic.List{CAEX_ClassModel.CAEXObject})">
+            <summary>
+            Get all internal elements and interfaces of the given CAEXObject as flat list
+            </summary>
+            <param name="obj">
+            the member element CAEXObject, either internal element or external interface
+            </param>
+            <param name="IesAndIfs">
+            the list to be returned.
+            </param>
+        </member>
+        <member name="M:AMLEngineExtensions.NavigationExtensions.GetLibraryOfCaexObject(CAEX_ClassModel.CAEXBasicObject)">
+            <summary>
+            Gets the library of any caex object.
+            </summary>
+            <param name="obj">
+            The object.
+            </param>
+            <returns>
+            The Library CAEX Object, which contains the object.
+            </returns>
+        </member>
+        <member name="M:AMLEngineExtensions.NavigationExtensions.GetParent``1(CAEX_ClassModel.CAEXBasicObject)">
+            <summary>
+            Enables every CAEXBasicObject to get its parent object as a CAEX_ClassModel class. You
+            must specify the type of the CAEX_ClassModel type that you exspect.
+            </summary>
+            <typeparam name="T">
+            The CAEX_ClassModel class of the expected parent
+            </typeparam>
+            <param name="obj">
+            This object's parent will be returned
+            </param>
+            <returns>
+            The parent AML object (regarding to the AML-XML hierarchie)
+            </returns>
+            <exception cref="T:System.ArgumentNullException">
+            node
+            </exception>
+            <exception cref="T:System.ArgumentException">
+            The object is not attached to an XmlNode
+            </exception>
+            <exception cref="T:System.Xml.XmlException">
+            The object has no parent
+            </exception>
+        </member>
+        <member name="M:AMLEngineExtensions.NavigationExtensions.GetParentNodeName(CAEX_ClassModel.CAEXBasicObject)">
+            <summary>
+            Returns the AML node name of the parent
+            </summary>
+            <param name="obj">
+            The child AML object
+            </param>
+            <returns>
+            The AML node name or an empty string in case of an error
+            </returns>
+        </member>
+        <member name="M:AMLEngineExtensions.NavigationExtensions.OwnerDocument(Altova.Xml.TypeBase)">
+            <summary>
+            returns a CAEXDocument of an XML node
+            </summary>
+            <param name="elem">
+            XML element
+            </param>
+            <returns>
+            CAEXDocument
+            </returns>
+        </member>
+        <member name="M:AMLEngineExtensions.NavigationExtensions.PostorderTraversal``1(System.Collections.Generic.IEnumerable{``0},System.Func{``0,System.Collections.Generic.IEnumerable{``0}})">
+            <summary>
+            Non Recursive Function for Postorder Traversal of an Element Tree
+            </summary>
+            <typeparam name="TSource">
+            Type of the CAEXObject
+            </typeparam>
+            <param name="source">
+            The collection to Traverse
+            </param>
+            <param name="childSelector">
+            Function to select children
+            </param>
+            <returns>
+            the nodes of the tree in postorder sequence
+            </returns>
+            <example>
+            This sample shows how to call the Method to parse an Instance Hierachy
+            <code>
+             foreach
+            (InternalElementType element in
+            InstanceHierchy.InternalElement.Cast&lt;InternalElementType&gt;().PostorderTraversal
+            (element =&gt; element.InternalElement.Cast&lt;InternalElementType&gt;())) { Do Something }
+            </code>
+            </example>
+        </member>
+        <member name="M:AMLEngineExtensions.NavigationExtensions.PreorderTraversal``1(System.Collections.Generic.IEnumerable{``0},System.Func{``0,System.Collections.Generic.IEnumerable{``0}})">
+            <summary>
+            Non Recursive Function for Preorder Traversal of an Element Tree.
+            </summary>
+            <typeparam name="TSource">
+            Type of the CAEXObject
+            </typeparam>
+            <param name="source">
+            The collection to Traverse
+            </param>
+            <param name="childSelector">
+            Function to select children
+            </param>
+            <returns>
+            the nodes of the tree in Preorder sequence
+            </returns>
+            <example>
+            This sample shows how to call the Method to parse an Instance Hierachy
+            <code>
+             foreach
+            (InternalElementType element in
+            InstanceHierchy.InternalElement.Cast&lt;InternalElementType&gt;().PreorderTraversal
+            (element =&gt; element.InternalElement.Cast&lt;InternalElementType&gt;())) { // Do
+            Something }
+            </code>
+            </example>
+        </member>
+        <member name="M:AMLEngineExtensions.NavigationExtensions.CreateAllCAEXObjectWrapper(CAEX_ClassModel.CAEXFileType)">
+            <summary>
+            Creates all caex object wrapper.
+            </summary>
+            <param name="caex">
+            The caex.
+            </param>
+            <returns>
+            IEnumerable&lt;CAEXBasicObject&gt;.
+            </returns>
+        </member>
+        <member name="M:AMLEngineExtensions.NavigationExtensions.CreateAllCAEXObjectWrapper(System.Xml.XmlNode)">
+            <summary>
+            Creates all caex object wrapper.
+            </summary>
+            <param name="node">
+            The node.
+            </param>
+            <returns>
+            IEnumerable&lt;CAEXBasicObject&gt;.
+            </returns>
+        </member>
+        <member name="T:AMLEngineExtensions.SpecificExtensions">
+            <summary>
+            Specific extensions of the AMLEngine
+            </summary>
+        </member>
+        <member name="M:AMLEngineExtensions.SpecificExtensions.All(CAEX_ClassModel.CAEXFileType.MemberElement_RoleClassLib)">
+            <summary>
+            provides the CAEXDocument.RoleClassLib as IEnumerable
+            </summary>
+            <param name="obj">the member element RoleClassLib, e.g. CAEXDocument.RoleClassLib</param>
+            <returns>the IENumerable</returns>
+        </member>
+        <member name="M:AMLEngineExtensions.SpecificExtensions.All(CAEX_ClassModel.CAEXFileType.MemberElement_SystemUnitClassLib)">
+            <summary>
+            provides the CAEXDocument.SystemUnitClassLib as IEnumerable
+            </summary>
+            <param name="obj">the member element SystemUnitClassLib, e.g. CAEXDocument.RoleClassLib</param>
+            <returns>the IENumerable</returns>
+        </member>
+        <member name="M:AMLEngineExtensions.SpecificExtensions.All(CAEX_ClassModel.CAEXFileType.MemberElement_InterfaceClassLib)">
+            <summary>
+            provides the CAEXDocument.InterfaceClassLib as IEnumerable
+            </summary>
+            <param name="obj">the member element InterfaceClassLib, e.g. CAEXDocument.InterfaceClassLib</param>
+            <returns>the IENumerable</returns>
+        </member>
+        <member name="M:AMLEngineExtensions.SpecificExtensions.All(CAEX_ClassModel.CAEXFileType.MemberElement_ExternalReference)">
+            <summary>
+            provides the CAEXDocument.ExternalReference as IEnumerable
+            </summary>
+            <param name="obj">the member element ExternalReference, e.g. CAEXDocument.ExternalReference</param>
+            <returns>the IENumerable</returns>
+        </member>
+        <member name="M:AMLEngineExtensions.SpecificExtensions.AppendCorrect(CAEX_ClassModel.CAEXFileType.MemberElement_InstanceHierarchy)">
+            <summary>
+            Append done right.... takes care of the position in the aml file
+            </summary>
+            <param name="instanceHierarchy">Same access facade as for the old Append()</param>
+            <returns>the new instance hierarchie</returns>
+        </member>
+        <member name="M:AMLEngineExtensions.SpecificExtensions.GetAuthorName(CAEX_ClassModel.RevisionType)">
+            <summary>
+            returns the AuthorName of the current Revision object
+            </summary>
+            <param name="revision">the Revision object</param>
+            <returns>the AuthorName value</returns>
+        </member>
+        <member name="M:AMLEngineExtensions.SpecificExtensions.GetComment(CAEX_ClassModel.RevisionType)">
+            <summary>
+            returns the Comment of the current Revision object
+            </summary>
+            <param name="revision">the Revision object</param>
+            <returns>the Comment value</returns>
+        </member>
+        <member name="M:AMLEngineExtensions.SpecificExtensions.GetNewVersion(CAEX_ClassModel.RevisionType)">
+            <summary>
+            returns the NewVersion of the current Revision object
+            </summary>
+            <param name="revision">the Revision object</param>
+            <returns>the NewVersion value</returns>
+        </member>
+        <member name="M:AMLEngineExtensions.SpecificExtensions.GetOldVersion(CAEX_ClassModel.RevisionType)">
+            <summary>
+            returns the OldVersion of the current Revision object
+            </summary>
+            <param name="revision">the Revision object</param>
+            <returns>the OldVersion value</returns>
+        </member>
+        <member name="M:AMLEngineExtensions.SpecificExtensions.GetRevisionDate(CAEX_ClassModel.RevisionType)">
+            <summary>
+            returns the RevisionDate of the current Revision object
+            </summary>
+            <param name="revision">the Revision object</param>
+            <returns>the RevisionDate value</returns>
+            <exception cref="T:System.ArgumentException">The mandatory element RevisionDate is missing</exception>
+        </member>
+        <member name="M:AMLEngineExtensions.SpecificExtensions.GetValue(CAEX_ClassModel.RevisionType.MemberElement_OldVersion)">
+            <summary>
+            returns the OldVersion.value of the provided revision object
+            </summary>
+            <param name="obj">the OldVersion object</param>
+            <returns>the value of the old version, "" if not found</returns>
+        </member>
+        <member name="M:AMLEngineExtensions.SpecificExtensions.GetValue(CAEX_ClassModel.RevisionType.MemberElement_NewVersion)">
+            <summary>
+            returns the NewVersion.value of the provided revision object
+            </summary>
+            <param name="obj">the NewVersion object</param>
+            <returns>the value of the new version, "" if not found</returns>
+        </member>
+        <member name="M:AMLEngineExtensions.SpecificExtensions.GetValue(CAEX_ClassModel.RevisionType.MemberElement_Comment)">
+            <summary>
+            returns the Comment of the provided revision object
+            </summary>
+            <param name="obj">the Comment object</param>
+            <returns>the value of the comment, "" if not found</returns>
+        </member>
+        <member name="M:AMLEngineExtensions.SpecificExtensions.New_Revision(CAEX_ClassModel.CAEXBasicObject,System.DateTime,System.String)">
+            <summary>
+            Creates a new Revision object including dataTime and AuthorName
+            </summary>
+            <param name="obj">a CAEXBasicObject</param>
+            <param name="dateTime">the Revision date and time</param>
+            <param name="authorName">the authors name</param>
+            <returns>nothing</returns>
+        </member>
+        <member name="M:AMLEngineExtensions.SpecificExtensions.SetAuthorName(CAEX_ClassModel.RevisionType,System.String)">
+            <summary>
+            Sets the AuthorName of the current Revision object
+            </summary>
+            <param name="revision">the Revision object</param>
+            <param name="s">the AuthorName string</param>
+            <returns>nothing</returns>
+        </member>
+        <member name="M:AMLEngineExtensions.SpecificExtensions.SetComment(CAEX_ClassModel.RevisionType,System.String)">
+            <summary>
+            Sets the Comment of the current Revision object
+            </summary>
+            <param name="revision">the Revision object</param>
+            <param name="s">the Comment string</param>
+            <returns>nothing</returns>
+        </member>
+        <member name="M:AMLEngineExtensions.SpecificExtensions.SetDescription(CAEX_ClassModel.CAEXObject,System.String)">
+            <summary>
+            This method sets a description. If no description exists, it is created.
+            </summary>
+            <param name="cObj">the CAEX object</param>
+            <param name="description">the description</param>
+        </member>
+        <member name="M:AMLEngineExtensions.SpecificExtensions.SetNewVersion(CAEX_ClassModel.RevisionType,System.String)">
+            <summary>
+            Sets the NewVersion of the current Revision object
+            </summary>
+            <param name="revision">the Revision object</param>
+            <param name="s">the NewVersion string</param>
+            <returns>nothing</returns>
+        </member>
+        <member name="M:AMLEngineExtensions.SpecificExtensions.SetOldVersion(CAEX_ClassModel.RevisionType,System.String)">
+            <summary>
+            Sets the OldVersion of the current Revision object
+            </summary>
+            <param name="revision">the Revision object</param>
+            <param name="s">the OldVersion string</param>
+            <returns>the OldVersion value</returns>
+        </member>
+        <member name="M:AMLEngineExtensions.SpecificExtensions.SetRevisionDate(CAEX_ClassModel.RevisionType,System.DateTime)">
+            <summary>
+            Sets the RevisionDate of the current Revision object
+            </summary>
+            <param name="revision">the Revision object</param>
+            <param name="revDate">the RevisionDate of type DateTime</param>
+            <returns>nothing</returns>
+        </member>
+        <member name="M:AMLEngineExtensions.SpecificExtensions.SetValue(CAEX_ClassModel.RevisionType.MemberElement_OldVersion,System.String)">
+            <summary>
+            sets the OldVersion.value of the provided revision object
+            </summary>
+            <param name="obj">the OldVersion object</param>
+            <param name="value">the desired OldVersion value</param>
+            <returns>nothing</returns>
+        </member>
+        <member name="M:AMLEngineExtensions.SpecificExtensions.SetValue(CAEX_ClassModel.RevisionType.MemberElement_NewVersion,System.String)">
+            <summary>
+            sets the NewVersion.value of the provided revision object
+            </summary>
+            <param name="obj">the NewVersion object</param>
+            <param name="value">the NewVersion value</param>
+            <returns>nothing</returns>
+        </member>
+        <member name="M:AMLEngineExtensions.SpecificExtensions.SetValue(CAEX_ClassModel.RevisionType.MemberElement_Comment,System.String)">
+            <summary>
+            sets the Comment of the provided revision object
+            </summary>
+            <param name="obj">the Comment object</param>
+            <param name="value">the Comment value</param>
+            <returns>nothing</returns>
+        </member>
+        <member name="T:AMLEngineExtensions.AutomationMLBaseRoleClassLib">
+            <summary>
+            Class AutomationMLBaseRoleClassLib.
+            </summary>
+        </member>
+        <member name="F:AMLEngineExtensions.AutomationMLBaseRoleClassLib.AutomationMLBaseRole">
+            <summary>
+            The AutomationML base role
+            </summary>
+        </member>
+        <member name="F:AMLEngineExtensions.AutomationMLBaseRoleClassLib.Facet">
+            <summary>
+            The facet
+            </summary>
+        </member>
+        <member name="F:AMLEngineExtensions.AutomationMLBaseRoleClassLib.Group">
+            <summary>
+            The group
+            </summary>
+        </member>
+        <member name="F:AMLEngineExtensions.AutomationMLBaseRoleClassLib.Port">
+            <summary>
+            The port
+            </summary>
+        </member>
+        <member name="F:AMLEngineExtensions.AutomationMLBaseRoleClassLib.Process">
+            <summary>
+            The process
+            </summary>
+        </member>
+        <member name="F:AMLEngineExtensions.AutomationMLBaseRoleClassLib.ProcessStructure">
+            <summary>
+            The process structure
+            </summary>
+        </member>
+        <member name="F:AMLEngineExtensions.AutomationMLBaseRoleClassLib.Product">
+            <summary>
+            The product
+            </summary>
+        </member>
+        <member name="F:AMLEngineExtensions.AutomationMLBaseRoleClassLib.ProductStructure">
+            <summary>
+            The product structure
+            </summary>
+        </member>
+        <member name="F:AMLEngineExtensions.AutomationMLBaseRoleClassLib.PropertySet">
+            <summary>
+            The property set
+            </summary>
+        </member>
+        <member name="F:AMLEngineExtensions.AutomationMLBaseRoleClassLib.Resource">
+            <summary>
+            The resource
+            </summary>
+        </member>
+        <member name="F:AMLEngineExtensions.AutomationMLBaseRoleClassLib.ResourceStructure">
+            <summary>
+            The resource structure
+            </summary>
+        </member>
+        <member name="F:AMLEngineExtensions.AutomationMLBaseRoleClassLib.Structure">
+            <summary>
+            The structure
+            </summary>
+        </member>
+        <member name="M:AMLEngineExtensions.AutomationMLBaseRoleClassLib.IsAutomationMLBaseRole(CAEX_ClassModel.IObjectWithRoleReference)">
+            <summary>
+            Determines whether [is AutomationML base role] [the specified used role].
+            </summary>
+            <param name="usedRole">The used role.</param>
+            <returns><c>true</c> if [is AutomationML base role] [the specified used role]; otherwise, <c>false</c>.</returns>
+        </member>
+        <member name="M:AMLEngineExtensions.AutomationMLBaseRoleClassLib.IsFacet(CAEX_ClassModel.IObjectWithRoleReference)">
+            <summary>
+            Determines whether the specified used role is facet.
+            </summary>
+            <param name="usedRole">The used role.</param>
+            <returns><c>true</c> if the specified used role is facet; otherwise, <c>false</c>.</returns>
+        </member>
+        <member name="M:AMLEngineExtensions.AutomationMLBaseRoleClassLib.IsGroup(CAEX_ClassModel.IObjectWithRoleReference)">
+            <summary>
+            Determines whether the specified used role is group.
+            </summary>
+            <param name="usedRole">The used role.</param>
+            <returns><c>true</c> if the specified used role is group; otherwise, <c>false</c>.</returns>
+        </member>
+        <member name="M:AMLEngineExtensions.AutomationMLBaseRoleClassLib.IsPort(CAEX_ClassModel.IObjectWithRoleReference)">
+            <summary>
+            Determines whether the specified used role is port.
+            </summary>
+            <param name="usedRole">The used role.</param>
+            <returns><c>true</c> if the specified used role is port; otherwise, <c>false</c>.</returns>
+        </member>
+        <member name="M:AMLEngineExtensions.AutomationMLBaseRoleClassLib.IsProcess(CAEX_ClassModel.IObjectWithRoleReference)">
+            <summary>
+            Determines whether the specified used role is process.
+            </summary>
+            <param name="usedRole">The used role.</param>
+            <returns><c>true</c> if the specified used role is process; otherwise, <c>false</c>.</returns>
+        </member>
+        <member name="M:AMLEngineExtensions.AutomationMLBaseRoleClassLib.IsProcessStructure(CAEX_ClassModel.IObjectWithRoleReference)">
+            <summary>
+            Determines whether [is process structure] [the specified used role].
+            </summary>
+            <param name="usedRole">The used role.</param>
+            <returns><c>true</c> if [is process structure] [the specified used role]; otherwise, <c>false</c>.</returns>
+        </member>
+        <member name="M:AMLEngineExtensions.AutomationMLBaseRoleClassLib.IsProduct(CAEX_ClassModel.IObjectWithRoleReference)">
+            <summary>
+            Determines whether the specified used role is product.
+            </summary>
+            <param name="usedRole">The used role.</param>
+            <returns><c>true</c> if the specified used role is product; otherwise, <c>false</c>.</returns>
+        </member>
+        <member name="M:AMLEngineExtensions.AutomationMLBaseRoleClassLib.IsProductStructure(CAEX_ClassModel.IObjectWithRoleReference)">
+            <summary>
+            Determines whether [is product structure] [the specified used role].
+            </summary>
+            <param name="usedRole">The used role.</param>
+            <returns><c>true</c> if [is product structure] [the specified used role]; otherwise, <c>false</c>.</returns>
+        </member>
+        <member name="M:AMLEngineExtensions.AutomationMLBaseRoleClassLib.IsPropertySet(CAEX_ClassModel.IObjectWithRoleReference)">
+            <summary>
+            Determines whether [is property set] [the specified used role].
+            </summary>
+            <param name="usedRole">The used role.</param>
+            <returns><c>true</c> if [is property set] [the specified used role]; otherwise, <c>false</c>.</returns>
+        </member>
+        <member name="M:AMLEngineExtensions.AutomationMLBaseRoleClassLib.IsResource(CAEX_ClassModel.IObjectWithRoleReference)">
+            <summary>
+            Determines whether the specified used role is resource.
+            </summary>
+            <param name="usedRole">The used role.</param>
+            <returns><c>true</c> if the specified used role is resource; otherwise, <c>false</c>.</returns>
+        </member>
+        <member name="M:AMLEngineExtensions.AutomationMLBaseRoleClassLib.IsResourceStructure(CAEX_ClassModel.IObjectWithRoleReference)">
+            <summary>
+            Determines whether [is resource structure] [the specified used role].
+            </summary>
+            <param name="usedRole">The used role.</param>
+            <returns><c>true</c> if [is resource structure] [the specified used role]; otherwise, <c>false</c>.</returns>
+        </member>
+        <member name="M:AMLEngineExtensions.AutomationMLBaseRoleClassLib.IsStructure(CAEX_ClassModel.IObjectWithRoleReference)">
+            <summary>
+            Determines whether the specified used role is structure.
+            </summary>
+            <param name="usedRole">The used role.</param>
+            <returns><c>true</c> if the specified used role is structure; otherwise, <c>false</c>.</returns>
+        </member>
+        <member name="M:AMLEngineExtensions.AutomationMLBaseRoleClassLib.MakeAutomationMLBaseRole(CAEX_ClassModel.IObjectWithRoleReference)">
+            <summary>
+            Makes the AutomationML base role.
+            </summary>
+            <param name="usedRole">The used role.</param>
+        </member>
+        <member name="M:AMLEngineExtensions.AutomationMLBaseRoleClassLib.MakeFacet(CAEX_ClassModel.IObjectWithRoleReference)">
+            <summary>
+            Makes the facet.
+            </summary>
+            <param name="usedRole">The used role.</param>
+        </member>
+        <member name="M:AMLEngineExtensions.AutomationMLBaseRoleClassLib.MakeGroup(CAEX_ClassModel.IObjectWithRoleReference)">
+            <summary>
+            Makes the group.
+            </summary>
+            <param name="usedRole">The used role.</param>
+        </member>
+        <member name="M:AMLEngineExtensions.AutomationMLBaseRoleClassLib.MakePort(CAEX_ClassModel.IObjectWithRoleReference)">
+            <summary>
+            Makes the port.
+            </summary>
+            <param name="usedRole">The used role.</param>
+        </member>
+        <member name="M:AMLEngineExtensions.AutomationMLBaseRoleClassLib.MakeProcess(CAEX_ClassModel.IObjectWithRoleReference)">
+            <summary>
+            Makes the process.
+            </summary>
+            <param name="usedRole">The used role.</param>
+        </member>
+        <member name="M:AMLEngineExtensions.AutomationMLBaseRoleClassLib.MakeProcessStructure(CAEX_ClassModel.IObjectWithRoleReference)">
+            <summary>
+            Makes the process structure.
+            </summary>
+            <param name="usedRole">The used role.</param>
+        </member>
+        <member name="M:AMLEngineExtensions.AutomationMLBaseRoleClassLib.MakeProduct(CAEX_ClassModel.IObjectWithRoleReference)">
+            <summary>
+            Makes the product.
+            </summary>
+            <param name="usedRole">The used role.</param>
+        </member>
+        <member name="M:AMLEngineExtensions.AutomationMLBaseRoleClassLib.MakeProductStructure(CAEX_ClassModel.IObjectWithRoleReference)">
+            <summary>
+            Makes the product structure.
+            </summary>
+            <param name="usedRole">The used role.</param>
+        </member>
+        <member name="M:AMLEngineExtensions.AutomationMLBaseRoleClassLib.MakePropertySet(CAEX_ClassModel.IObjectWithRoleReference)">
+            <summary>
+            Makes the property set.
+            </summary>
+            <param name="usedRole">The used role.</param>
+        </member>
+        <member name="M:AMLEngineExtensions.AutomationMLBaseRoleClassLib.MakeResource(CAEX_ClassModel.IObjectWithRoleReference)">
+            <summary>
+            Makes the resource.
+            </summary>
+            <param name="usedRole">The used role.</param>
+        </member>
+        <member name="M:AMLEngineExtensions.AutomationMLBaseRoleClassLib.MakeResourceStructure(CAEX_ClassModel.IObjectWithRoleReference)">
+            <summary>
+            Makes the resource structure.
+            </summary>
+            <param name="usedRole">The used role.</param>
+        </member>
+        <member name="M:AMLEngineExtensions.AutomationMLBaseRoleClassLib.MakeStructure(CAEX_ClassModel.IObjectWithRoleReference)">
+            <summary>
+            Makes the structure.
+            </summary>
+            <param name="usedRole">The used role.</param>
+        </member>
+        <member name="T:AMLEngineExtensions.AutomationMLInterfaceClassLib">
+            <summary>
+            Class AutomationMLInterfaceClassLib.
+            </summary>
+        </member>
+        <member name="F:AMLEngineExtensions.AutomationMLInterfaceClassLib.AutomationMLBaseInterface">
+            <summary>
+            The AutomationML base interface
+            </summary>
+        </member>
+        <member name="F:AMLEngineExtensions.AutomationMLInterfaceClassLib.COLLADAInterface">
+            <summary>
+            The collada interface
+            </summary>
+        </member>
+        <member name="F:AMLEngineExtensions.AutomationMLInterfaceClassLib.Communication">
+            <summary>
+            The communication
+            </summary>
+        </member>
+        <member name="F:AMLEngineExtensions.AutomationMLInterfaceClassLib.ExternalDataConnector">
+            <summary>
+            The external data connector
+            </summary>
+        </member>
+        <member name="F:AMLEngineExtensions.AutomationMLInterfaceClassLib.InterlockingConnector">
+            <summary>
+            The interlocking connector
+            </summary>
+        </member>
+        <member name="F:AMLEngineExtensions.AutomationMLInterfaceClassLib.Order">
+            <summary>
+            The order
+            </summary>
+        </member>
+        <member name="F:AMLEngineExtensions.AutomationMLInterfaceClassLib.PLCopenXMLInterface">
+            <summary>
+            The pl copen XML interface
+            </summary>
+        </member>
+        <member name="F:AMLEngineExtensions.AutomationMLInterfaceClassLib.PortConnector">
+            <summary>
+            The port connector
+            </summary>
+        </member>
+        <member name="F:AMLEngineExtensions.AutomationMLInterfaceClassLib.PPRConnector">
+            <summary>
+            The PPR connector
+            </summary>
+        </member>
+        <member name="F:AMLEngineExtensions.AutomationMLInterfaceClassLib.SignalInterface">
+            <summary>
+            The signal interface
+            </summary>
+        </member>
+        <member name="M:AMLEngineExtensions.AutomationMLInterfaceClassLib.IsAutomationMLBaseInterface(CAEX_ClassModel.InterfaceClassType)">
+            <summary>
+            Determines whether [is AutomationML base interface] [the specified interface class].
+            </summary>
+            <param name="interfaceClass">The interface class.</param>
+            <returns><c>true</c> if [is AutomationML base interface] [the specified interface class];
+            otherwise, <c>false</c>.</returns>
+        </member>
+        <member name="M:AMLEngineExtensions.AutomationMLInterfaceClassLib.IsCOLLADAInterface(CAEX_ClassModel.InterfaceClassType)">
+            <summary>
+            Determines whether [is collada interface] [the specified interface class].
+            </summary>
+            <param name="interfaceClass">The interface class.</param>
+            <returns><c>true</c> if [is collada interface] [the specified interface class]; otherwise, <c>false</c>.</returns>
+        </member>
+        <member name="M:AMLEngineExtensions.AutomationMLInterfaceClassLib.IsCommunicationInterface(CAEX_ClassModel.InterfaceClassType)">
+            <summary>
+            Determines whether [is communication interface] [the specified interface class].
+            </summary>
+            <param name="interfaceClass">The interface class.</param>
+            <returns><c>true</c> if [is communication interface] [the specified interface class]; otherwise, <c>false</c>.</returns>
+        </member>
+        <member name="M:AMLEngineExtensions.AutomationMLInterfaceClassLib.IsExternalDataConnector(CAEX_ClassModel.InterfaceClassType)">
+            <summary>
+            Determines whether [is external data connector] [the specified interface class].
+            </summary>
+            <param name="interfaceClass">The interface class.</param>
+            <returns><c>true</c> if [is external data connector] [the specified interface class]; otherwise, <c>false</c>.</returns>
+        </member>
+        <member name="M:AMLEngineExtensions.AutomationMLInterfaceClassLib.IsInterlockingConnector(CAEX_ClassModel.InterfaceClassType)">
+            <summary>
+            Determines whether [is interlocking connector] [the specified interface class].
+            </summary>
+            <param name="interfaceClass">The interface class.</param>
+            <returns><c>true</c> if [is interlocking connector] [the specified interface class]; otherwise, <c>false</c>.</returns>
+        </member>
+        <member name="M:AMLEngineExtensions.AutomationMLInterfaceClassLib.IsOrderInterface(CAEX_ClassModel.InterfaceClassType)">
+            <summary>
+            Determines whether [is order interface] [the specified interface class].
+            </summary>
+            <param name="interfaceClass">The interface class.</param>
+            <returns><c>true</c> if [is order interface] [the specified interface class]; otherwise, <c>false</c>.</returns>
+        </member>
+        <member name="M:AMLEngineExtensions.AutomationMLInterfaceClassLib.IsPLCopenXMLInterface(CAEX_ClassModel.InterfaceClassType)">
+            <summary>
+            Determines whether [is pl copen XML interface] [the specified interface class].
+            </summary>
+            <param name="interfaceClass">The interface class.</param>
+            <returns><c>true</c> if [is pl copen XML interface] [the specified interface class]; otherwise, <c>false</c>.</returns>
+        </member>
+        <member name="M:AMLEngineExtensions.AutomationMLInterfaceClassLib.IsPortConnector(CAEX_ClassModel.InterfaceClassType)">
+            <summary>
+            Determines whether [is port connector] [the specified interface class].
+            </summary>
+            <param name="interfaceClass">The interface class.</param>
+            <returns><c>true</c> if [is port connector] [the specified interface class]; otherwise, <c>false</c>.</returns>
+        </member>
+        <member name="M:AMLEngineExtensions.AutomationMLInterfaceClassLib.IsPPRConnector(CAEX_ClassModel.InterfaceClassType)">
+            <summary>
+            Determines whether [is PPR connector] [the specified interface class].
+            </summary>
+            <param name="interfaceClass">The interface class.</param>
+            <returns><c>true</c> if [is PPR connector] [the specified interface class]; otherwise, <c>false</c>.</returns>
+        </member>
+        <member name="M:AMLEngineExtensions.AutomationMLInterfaceClassLib.IsSignalInterface(CAEX_ClassModel.InterfaceClassType)">
+            <summary>
+            Determines whether [is signal interface] [the specified interface class].
+            </summary>
+            <param name="interfaceClass">The interface class.</param>
+            <returns><c>true</c> if [is signal interface] [the specified interface class]; otherwise, <c>false</c>.</returns>
+        </member>
+        <member name="M:AMLEngineExtensions.AutomationMLInterfaceClassLib.MakeAutomationMLBaseInterface(CAEX_ClassModel.InterfaceClassType)">
+            <summary>
+            Makes the AutomationML base interface.
+            </summary>
+            <param name="interfaceClass">The interface class.</param>
+        </member>
+        <member name="M:AMLEngineExtensions.AutomationMLInterfaceClassLib.MakeCOLLADAInterface(CAEX_ClassModel.InterfaceClassType)">
+            <summary>
+            Makes the collada interface.
+            </summary>
+            <param name="interfaceClass">The interface class.</param>
+        </member>
+        <member name="M:AMLEngineExtensions.AutomationMLInterfaceClassLib.MakeCommunicationInterface(CAEX_ClassModel.InterfaceClassType)">
+            <summary>
+            Makes the communication interface.
+            </summary>
+            <param name="interfaceClass">The interface class.</param>
+        </member>
+        <member name="M:AMLEngineExtensions.AutomationMLInterfaceClassLib.MakeExternalDataConnector(CAEX_ClassModel.InterfaceClassType)">
+            <summary>
+            Makes the external data connector.
+            </summary>
+            <param name="interfaceClass">The interface class.</param>
+        </member>
+        <member name="M:AMLEngineExtensions.AutomationMLInterfaceClassLib.MakeInterlockingConnector(CAEX_ClassModel.InterfaceClassType)">
+            <summary>
+            Makes the interlocking connector.
+            </summary>
+            <param name="interfaceClass">The interface class.</param>
+        </member>
+        <member name="M:AMLEngineExtensions.AutomationMLInterfaceClassLib.MakeOrderInterface(CAEX_ClassModel.InterfaceClassType)">
+            <summary>
+            Makes the order interface.
+            </summary>
+            <param name="interfaceClass">The interface class.</param>
+        </member>
+        <member name="M:AMLEngineExtensions.AutomationMLInterfaceClassLib.MakePLCopenXMLInterface(CAEX_ClassModel.InterfaceClassType)">
+            <summary>
+            Makes the PLCopen XML interface.
+            </summary>
+            <param name="interfaceClass">The interface class.</param>
+        </member>
+        <member name="M:AMLEngineExtensions.AutomationMLInterfaceClassLib.MakePortConnector(CAEX_ClassModel.InterfaceClassType)">
+            <summary>
+            Makes the port connector.
+            </summary>
+            <param name="interfaceClass">The interface class.</param>
+        </member>
+        <member name="M:AMLEngineExtensions.AutomationMLInterfaceClassLib.MakePPRConnector(CAEX_ClassModel.InterfaceClassType)">
+            <summary>
+            Makes the PPR connector.
+            </summary>
+            <param name="interfaceClass">The interface class.</param>
+        </member>
+        <member name="M:AMLEngineExtensions.AutomationMLInterfaceClassLib.MakeSignalInterface(CAEX_ClassModel.InterfaceClassType)">
+            <summary>
+            Makes the signal interface.
+            </summary>
+            <param name="interfaceClass">The interface class.</param>
+        </member>
+        <member name="T:AMLEngineExtensions.AutomationMLClipboard">
+            <summary>
+            Class AutomationMLClipboard.
+            </summary>
+        </member>
+        <member name="M:AMLEngineExtensions.AutomationMLClipboard.CopyToClipboard(CAEX_ClassModel.CAEXBasicObject)">
+            <summary>
+            Copies to clipboard.
+            </summary>
+            <param name="caex">The caex.</param>
+        </member>
+        <member name="M:AMLEngineExtensions.AutomationMLClipboard.PasteFromClipboard">
+            <summary>
+            Pastes from clipboard.
+            </summary>
+            <returns>CAEXBasicObject.</returns>
+        </member>
+        <member name="T:AMLEngineExtensions.CaexObjectComparerResult">
+            <summary>
+            Comparing Result Enumeration
+            </summary>
+        </member>
+        <member name="F:AMLEngineExtensions.CaexObjectComparerResult.IsEqual">
+            <summary>
+            The is equal
+            </summary>
+        </member>
+        <member name="F:AMLEngineExtensions.CaexObjectComparerResult.PathDiff">
+            <summary>
+            The path difference
+            </summary>
+        </member>
+        <member name="F:AMLEngineExtensions.CaexObjectComparerResult.InterfaceClassDiff">
+            <summary>
+            The interface class difference
+            </summary>
+        </member>
+        <member name="F:AMLEngineExtensions.CaexObjectComparerResult.AttributeDiff">
+            <summary>
+            The attribute difference
+            </summary>
+        </member>
+        <member name="F:AMLEngineExtensions.CaexObjectComparerResult.AttributeDataTypeDiff">
+            <summary>
+            The attribute data type difference
+            </summary>
+        </member>
+        <member name="F:AMLEngineExtensions.CaexObjectComparerResult.AttributeUnitDiff">
+            <summary>
+            The attribute unit difference
+            </summary>
+        </member>
+        <member name="F:AMLEngineExtensions.CaexObjectComparerResult.AttributeCountDiff">
+            <summary>
+            The attribute count difference
+            </summary>
+        </member>
+        <member name="F:AMLEngineExtensions.CaexObjectComparerResult.RoleClassDiff">
+            <summary>
+            The role class difference
+            </summary>
+        </member>
+        <member name="F:AMLEngineExtensions.CaexObjectComparerResult.InterfaceCountDiff">
+            <summary>
+            The interface count difference
+            </summary>
+        </member>
+        <member name="F:AMLEngineExtensions.CaexObjectComparerResult.InternalElementDiff">
+            <summary>
+            The internal element difference
+            </summary>
+        </member>
+        <member name="F:AMLEngineExtensions.CaexObjectComparerResult.InternalElementCountDiff">
+            <summary>
+            The internal element count difference
+            </summary>
+        </member>
+        <member name="F:AMLEngineExtensions.CaexObjectComparerResult.AttributeValueDiff">
+            <summary>
+            The attribute value difference
+            </summary>
+        </member>
+        <member name="T:AMLEngineExtensions.CaexObjectComparer">
+            <summary>
+            Caex Comparer Extension Methods and Result Dictionary
+            </summary>
+        </member>
+        <member name="F:AMLEngineExtensions.CaexObjectComparer.CaexComparedObjects">
+            <summary>
+            Dictionary for Comparing Results
+            </summary>
+        </member>
+        <member name="M:AMLEngineExtensions.CaexObjectComparer.AttributeEquals(CAEX_ClassModel.AttributeType,CAEX_ClassModel.AttributeType,System.Boolean)">
+            <summary>
+            Compare two Attribute Types (CAEXPath, AttributeDataType, AttributeUnit, AttributeValue, Nested Attributes)
+            </summary>
+            <param name="attribute">The Original Attribute Type</param>
+            <param name="compareWith">Object for Comparison with Original</param>
+            <param name="UseDictionary">true, if the Result should be saved in a dictionary for later evaluation</param>
+            <returns>CaexObjectComparerResult.</returns>
+        </member>
+        <member name="M:AMLEngineExtensions.CaexObjectComparer.AttributesEquals(CAEX_ClassModel.CAEXObject,CAEX_ClassModel.CAEXObject,System.Boolean)">
+            <summary>
+            Compare all Attributes of two Objects with Attributes
+            </summary>
+            <param name="withAttribute">Original object with attributes</param>
+            <param name="compareWith">Object for Comparison with Original</param>
+            <param name="UseDictionary">true, if the Result should be saved in a dictionary for later evaluation</param>
+            <returns>CaexObjectComparerResult.</returns>
+        </member>
+        <member name="M:AMLEngineExtensions.CaexObjectComparer.CaexEquals(CAEX_ClassModel.CAEXObject,CAEX_ClassModel.CAEXObject,System.Boolean)">
+            <summary>
+            Compare the CAEXPath of two CaexBasicObjects.
+            </summary>
+            <param name="caexBasicObj">Original</param>
+            <param name="compareWith">Object for Comparison with Original</param>
+            <param name="UseDictionary">true, if the Result should be saved in a dictionary for later evaluation</param>
+            <returns>Comparer Result</returns>
+        </member>
+        <member name="M:AMLEngineExtensions.CaexObjectComparer.CaexObjectComparerResultString(AMLEngineExtensions.CaexObjectComparerResult)">
+            <summary>
+            Caexes the object comparer result string.
+            </summary>
+            <param name="result">The result.</param>
+            <returns>System.String.</returns>
+        </member>
+        <member name="M:AMLEngineExtensions.CaexObjectComparer.DifferentAttributeTypes">
+            <summary>
+            Get all AttributeType - Tuples and the Compare-Result from the Compare Result-Dictionary with an AttributeDiff-Flag
+            </summary>
+            <returns>Enumerable with different CAEX-Elements of AttributeType, contained in the ComparerResult-Dictionary</returns>
+        </member>
+        <member name="M:AMLEngineExtensions.CaexObjectComparer.DifferentInterfaceClassTypes">
+            <summary>
+            Get all InterfaceClassType - Tuples and the Compare-Result from the Compare Result-Dictionary with an InterfaceClassDiff-Flag
+            </summary>
+            <returns>IEnumerable&lt;Tuple&lt;InterfaceClassType, InterfaceClassType, CaexObjectComparerResult&gt;&gt;.</returns>
+        </member>
+        <member name="M:AMLEngineExtensions.CaexObjectComparer.DifferentRoleClassTypes">
+            <summary>
+            Get all RoleClassType - Tuples and the Compare-Result from the Compare Result-Dictionary with a RoleClassDiff-Flag
+            </summary>
+            <returns>IEnumerable&lt;Tuple&lt;RoleClassType, RoleClassType, CaexObjectComparerResult&gt;&gt;.</returns>
+        </member>
+        <member name="M:AMLEngineExtensions.CaexObjectComparer.InterfaceEquals(CAEX_ClassModel.InterfaceClassType,CAEX_ClassModel.InterfaceClassType,System.Boolean)">
+            <summary>
+            Comparing Interfaces (Attributes and CAEXPath)
+            </summary>
+            <param name="interfaceClass">Original Interface Class</param>
+            <param name="compareWith">Object for Comparison with Original</param>
+            <param name="UseDictionary">true, if the Result should be saved in a dictionary for later evaluation</param>
+            <returns>CaexObjectComparerResult.</returns>
+        </member>
+        <member name="M:AMLEngineExtensions.CaexObjectComparer.InternalElementEquals(CAEX_ClassModel.InternalElementType,CAEX_ClassModel.InternalElementType,System.Boolean)">
+            <summary>
+            Compare the the Attribute- and Interface-Definitions of two InternalElement Objects
+            </summary>
+            <param name="internalElement">The Original Internal Element</param>
+            <param name="compareWith">Object for Comparison with Original</param>
+            <param name="UseDictionary">true, if the Result should be saved in a dictionary for later evaluation</param>
+            <returns>CaexObjectComparerResult.</returns>
+        </member>
+        <member name="M:AMLEngineExtensions.CaexObjectComparer.ResetComparerResult">
+            <summary>
+            Reset the Result - Dictionary of the Comparer
+            </summary>
+        </member>
+        <member name="M:AMLEngineExtensions.CaexObjectComparer.RoleClassEquals(CAEX_ClassModel.RoleFamilyType,CAEX_ClassModel.RoleFamilyType,System.Boolean)">
+            <summary>
+            Compare the CAEXPath(), the Attribute- and Interface-Definitions of two RoleClass Objects
+            </summary>
+            <param name="roleClass">Original RoleClass Object</param>
+            <param name="compareWith">Object for Comparison with Original</param>
+            <param name="UseDictionary">true, if the Result should be saved in a dictionary for later evaluation</param>
+            <returns>CaexObjectComparerResult.</returns>
+        </member>
+        <member name="M:AMLEngineExtensions.CaexObjectComparer.BeginCompare(CAEX_ClassModel.CAEXObject,CAEX_ClassModel.CAEXObject)">
+            <summary>
+            Start Comparing a tuple and add it to the Dictionary
+            </summary>
+            <param name="caexBasicObj">The caex basic object.</param>
+            <param name="compareWith">The compare with.</param>
+            <returns>Tuple&lt;CAEXBasicObject, CAEXBasicObject&gt;.</returns>
+        </member>
+        <member name="M:AMLEngineExtensions.CaexObjectComparer.FindFirstCaexObjectByName``1(System.Collections.Generic.IEnumerable{``0},System.String)">
+            <summary>
+            Finds the first name of the caex object by.
+            </summary>
+            <typeparam name="T"></typeparam>
+            <param name="collection">The collection.</param>
+            <param name="name">The name.</param>
+            <returns>T.</returns>
+        </member>
+        <member name="T:AMLEngineExtensions.ConsistencyCheckExtensions">
+            <summary>
+            Consistency check related extensions of the AMLEngine
+            </summary>
+        </member>
+        <member name="M:AMLEngineExtensions.ConsistencyCheckExtensions.CheckFastMultipleIDs(CAEX_ClassModel.CAEXDocument,System.Collections.Generic.Dictionary{System.String,CAEX_ClassModel.CAEXBasicObject}@,System.Boolean)">
+            <summary>
+            Performs a document wide validation check across all object instances
+            - missing vendor specific meta information
+            - missing or wrong schema location
+            - wrong schema name
+            - double IDs
+            - missing IDs
+            - double names
+            - warning if forbidden characters are used which are @ : and /
+            - checks existence of all external files Validates this CAEX document against missing or
+            double ID's, missing vendor specific meta information, wrong schema name, wrong schema
+            location Works very fast based on Hash Tables instead of XPath.
+            </summary>
+            <param name="myDoc">CAEX document to be checked</param>
+            <param name="IDAndNameErrorList">list of error information</param>
+            <param name="autoRepair">true if errors are automatically fixed if possible</param>
+            <returns>number of ID related errors</returns>
+            <reamrks>
+            Since Version 3.0 the Validation Methods are an integral part of the
+            <see cref="T:CAEX_ClassModel.CAEXDocument"/>. Validation and Repair Options are avaliable with
+            <see cref="M:CAEX_ClassModel.CAEXDocument.ValidateAll"/> and <see cref="M:CAEX_ClassModel.CAEXDocument.Repair(CAEX_ClassModel.Validation.ValidationElement,CAEX_ClassModel.Validation.RepairTypeEnum)"/>. This
+            Method is provided for downward compatibility.
+            </reamrks>
+            <remarks>The Validation of Version, Schema and Writer Header is now done in the Validation Method
+            itself. The Implementation has been moved to the Validation Namespace <see cref="N:CAEX_ClassModel.Validation"/>.</remarks>
+        </member>
+        <member name="M:AMLEngineExtensions.ConsistencyCheckExtensions.CheckFastReferenceConsistency(CAEX_ClassModel.CAEXDocument,System.Collections.Generic.Dictionary{System.String,CAEX_ClassModel.CAEXBasicObject}@)">
+            <summary>
+            Performs a document wide reference related consistency check across all Hierarchies and Libraries
+            - checks existence of all references
+            - checks existence of all external files
+            - checks validity of all internal links
+            - only works within the current CAEX document, does not perform a merge
+            - works very fast based on Hash Tables instead of XPath
+            </summary>
+            <param name="myDoc">the CAEX document</param>
+            <param name="referenceErrorList">a list of objects which caused errors while validation</param>
+            <returns>the number of errors found during validation</returns>
+            <reamrks>
+            Since Version 3.0 the Validation Methods are an integral part of the
+            <see cref="T:CAEX_ClassModel.CAEXDocument"/>. Validation and Repair Options are avaliable with
+            <see cref="M:CAEX_ClassModel.CAEXDocument.ValidateReferences"/> and <see cref="M:CAEX_ClassModel.CAEXDocument.Repair(CAEX_ClassModel.Validation.ValidationElement,CAEX_ClassModel.Validation.RepairTypeEnum)"/>.
+            This Method is provided for downward compatibility.
+            </reamrks>
+        </member>
+        <member name="M:AMLEngineExtensions.ConsistencyCheckExtensions.AddErrorToIDErrorList(System.Collections.Generic.Dictionary{System.String,CAEX_ClassModel.CAEXBasicObject},System.String,CAEX_ClassModel.CAEXBasicObject)">
+            <summary>
+            Adds error messages to the IDErrorList in the format "[error number] errormessage"
+            </summary>
+            <param name="IDErrorList">The identifier error list.</param>
+            <param name="newErrorEntry">The new error entry.</param>
+            <param name="obj">The object.</param>
+        </member>
+        <member name="M:AMLEngineExtensions.ConsistencyCheckExtensions.NameIsUnique``1(System.Collections.Generic.IEnumerable{``0},CAEX_ClassModel.CAEXObject)">
+            <summary>
+            Check if a CAEXObject has an assigned name which is not null or empty and if there is no
+            other object in a list of CAEXObjects with an identical name.
+            </summary>
+            <typeparam name="T"></typeparam>
+            <param name="caexObjects">The caex objects.</param>
+            <param name="caexObject">The caex object.</param>
+            <returns><c>true</c> if name is unique, <c>false</c> otherwise.</returns>
+        </member>
+        <member name="M:AMLEngineExtensions.ConsistencyCheckExtensions.RepairCAEXDoc(CAEX_ClassModel.CAEXDocument,System.Collections.Generic.Dictionary{System.String,CAEX_ClassModel.CAEXBasicObject}@)">
+            <summary>
+            Repairs this CAEX document against missing or double ID's, missing vendor specific meta
+            information, wrong schema name, wrong schema location
+            </summary>
+            <param name="myDoc">the CAEXDocument</param>
+            <param name="repairList">a list of repair comments</param>
+            <returns>number of ID related errors</returns>
+            <reamrks>
+            Since Version 3.0 the Validation Methods are an integral part of the
+            <see cref="T:CAEX_ClassModel.CAEXDocument"/>. Validation and Repair Options are avaliable with
+            <see cref="M:CAEX_ClassModel.CAEXDocument.ValidateAll"/> and <see cref="M:CAEX_ClassModel.CAEXDocument.Repair(CAEX_ClassModel.Validation.ValidationElement,CAEX_ClassModel.Validation.RepairTypeEnum)"/>. This
+            Method is provided for downward compatibility.
+            </reamrks>
+        </member>
+    </members>
+</doc>

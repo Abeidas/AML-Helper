@@ -1,0 +1,136 @@
+﻿    <UserControl x:Class="AMLHelper.Controller.CaexTreeView"
+             xmlns:view="clr-namespace:AMLHelper.View"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+                 xmlns:local="clr-namespace:AMLHelper.ElementExtraction"
+                 xmlns:nonloc="clr-namespace:AMLHelper.Model"
+             mc:Ignorable="d" 
+             d:DesignHeight="300" d:DesignWidth="140">
+    <UserControl.DataContext>
+        <nonloc:TreeViewModel/>
+    </UserControl.DataContext>
+    <UserControl.Resources>
+        <Image x:Key="CloseNoHoverImg" x:Shared="false" Source="/AMLHelper;component/Properties/Close_No_Hover.png"/>
+        <Image x:Key="CloseImg" x:Shared="false" Source="/AMLHelper;component/Properties/Close.png"/>
+        <ContextMenu x:Key="TreeViewItemContextmenu">
+            <MenuItem Header="In neuem Tab öffnen" Click="OpenInNewTabClick">
+                <MenuItem.Icon>
+                    <Image Source="/AMLHelper;component/Properties/Open_In_New_Tab.png" Width="16" Height="16"/>
+                </MenuItem.Icon>
+            </MenuItem>
+            <MenuItem Header="In aktuellem Tab öffnen" Click="OpenInCurrentTabClick">
+                <MenuItem.Icon>
+                    <Image Source="/AMLHelper;component/Properties/Open_In_Current_Tab.png" Width="16" Height="16"/>
+                </MenuItem.Icon>
+            </MenuItem>
+            <MenuItem Header="Dieses Element löschen" Click="RemoveElementClick">
+                <MenuItem.Icon>
+                    <Image Source="/AMLHelper;component/Properties/Close.png" Width="16" Height="16"/>
+                </MenuItem.Icon>
+            </MenuItem>
+        </ContextMenu>
+    </UserControl.Resources>
+    <UserControl.ContextMenu>
+        <ContextMenu>
+            <MenuItem x:Name="NewInstanceHierachy" Header="Neue Instanzhierarchie anlegen" Click="AddEmptyHierarchy" InputGestureText="Strg+T" IsEnabled="False">
+                <MenuItem.Icon>
+                    <Image Source="/AMLHelper;component/Properties/Add.png" Width="16" Height="16"/>
+                </MenuItem.Icon>
+            </MenuItem>
+            <MenuItem x:Name="RestoreTab" Header="Geschlossenen Tab wiederherstellen" Click="RestoreLastTab" IsEnabled="{Binding Path=hasDeletedTabs}">
+                <MenuItem.Icon>
+                    <Image Source="/AMLHelper;component/Properties/Restore.png" Width="16" Height="16"/>
+                </MenuItem.Icon>
+            </MenuItem>
+            <MenuItem x:Name="DeleteAllTabs" Header="Alle Elemente löschen" Click="RemoveAllElementsClick" IsEnabled="False" >
+                <MenuItem.Icon>
+                    <Image Source="/AMLHelper;component/Properties/Close_ALL.png" Width="16" Height="16"/>
+                </MenuItem.Icon>
+            </MenuItem>
+        </ContextMenu>
+    </UserControl.ContextMenu>
+    <Border>
+        <Grid>
+            <Grid.RowDefinitions>
+                <RowDefinition Height="Auto"/>
+                <RowDefinition Height="*"/>
+            </Grid.RowDefinitions>
+            <Border Grid.Row="0" BorderThickness="1" BorderBrush="{DynamicResource {x:Static SystemColors.ActiveBorderBrushKey}}">
+                <Grid>
+                    <Grid.Resources>
+                        <Style TargetType="Button">
+                            <Setter Property="Content" Value="{StaticResource CloseNoHoverImg}"/>
+                            <Setter Property="Template">
+                                <Setter.Value>
+                                    <ControlTemplate TargetType="{x:Type Button}">
+                                        <Border Background="{TemplateBinding Background}">
+                                            <ContentPresenter HorizontalAlignment="Center" VerticalAlignment="Center"/>
+                                        </Border>
+                                    </ControlTemplate>
+                                </Setter.Value>
+                            </Setter>
+                            <Style.Triggers>
+                                <Trigger Property="IsMouseOver" Value="True">
+                                    <Setter Property="Content" Value="{StaticResource CloseImg}"/>
+                                    <Setter Property="BorderBrush" Value="White"/>
+                                </Trigger>
+                            </Style.Triggers>
+                        </Style>
+                    </Grid.Resources>
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="*"/>
+                        <ColumnDefinition Width="Auto"/>
+                    </Grid.ColumnDefinitions>
+                    <TextBox Grid.Column="0" Name="TextBox"
+                     Text="Suche..." PreviewMouseDown="textBox_PreviewMouseDown"
+                     LostFocus="textBox_LostFocus"
+                     IsEnabled="True"
+                     TextChanged="textBox_TextChanged" BorderBrush="{x:Null}" Grid.ColumnSpan="2" />
+
+                    <Button x:Name="CleanSearchboxButton" Grid.Column="1" 
+                                Height="16" 
+                                Width="16"
+                                Margin="0,0,2,0"
+                                PreviewMouseDown="CleanSearchTextBox" 
+                                Background="Transparent"
+                                BorderBrush="Transparent" Panel.ZIndex="10" Visibility="Hidden" ToolTip="Löscht die Eingabe in der Suchbox"/>
+
+                </Grid>
+            </Border>
+
+
+            <view:Resultview x:Name="Resultview" Grid.Row="1" Visibility="Hidden" Panel.ZIndex="100"/>
+
+            <Border Grid.Row="1" BorderThickness="1" BorderBrush="{DynamicResource {x:Static SystemColors.ActiveBorderBrushKey}}" Grid.ColumnSpan="2">
+                <ScrollViewer VerticalScrollBarVisibility="Auto" HorizontalScrollBarVisibility="Auto">                    
+                    <TreeView ItemsSource="{Binding Path=TreeList}" Name="Tree" BorderBrush="{x:Null}">
+                        <TreeView.ItemContainerStyle>
+                            <Style TargetType="{x:Type TreeViewItem}">
+                                <Style.Resources>
+                                    <SolidColorBrush x:Key="HoverBrush" Opacity=".05" Color="{DynamicResource {x:Static SystemColors.HotTrackColorKey}}"/>
+                                </Style.Resources>
+                                <Style.Triggers>
+                                    <Trigger Property="IsMouseOver" Value="True">
+                                        <Setter Property="Background" Value="{DynamicResource HoverBrush}"/>
+                                    </Trigger>
+                                </Style.Triggers>
+                                <EventSetter Event="MouseDoubleClick" Handler="DoubleClickOnElement"/>
+                                <EventSetter Event="MouseDown" Handler="WheelOnElement"/>
+                                <Setter Property="HorizontalAlignment" Value="Left"/>
+                                <Setter Property="ContextMenu" Value="{StaticResource TreeViewItemContextmenu}"/>
+                            </Style>
+                        </TreeView.ItemContainerStyle>
+                        <TreeView.ItemTemplate>
+                            <HierarchicalDataTemplate ItemsSource="{Binding Path=ChildElements}" DataType="{x:Type local:CAEXElement}">
+                                <TextBlock Text="{Binding Path=Name}"/>
+                            </HierarchicalDataTemplate>
+                        </TreeView.ItemTemplate>
+                    </TreeView>
+                </ScrollViewer>
+            </Border>
+
+        </Grid>
+    </Border>
+</UserControl>

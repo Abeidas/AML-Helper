@@ -1,0 +1,270 @@
+<?xml version="1.0"  encoding="windows-1252"?>
+<XMI xmi.version="1.1" xmlns:UML="omg.org/UML1.3" timestamp="2005-02-11 15:43:41">
+	<XMI.header>
+		<XMI.documentation>
+			<XMI.exporter>Enterprise Architect</XMI.exporter>
+			<XMI.exporterVersion>2.5</XMI.exporterVersion>
+		</XMI.documentation>
+	</XMI.header>
+	<XMI.content>
+		<UML:Model name="EA Model" xmi.id="MX_EAID_F02D1706_AC66_46e8_B045_CBCBB917932C">
+			<UML:Namespace.ownedElement>
+				<UML:Class name="AbstractClass" xmi.id="EAID_A0F71511_9335_4582_BEAA_11C4C10AC0B3" visibility="public" namespace="EAPK_F02D1706_AC66_46e8_B045_CBCBB917932C" isRoot="false" isLeaf="false" isAbstract="true" isActive="false">
+					<UML:ModelElement.taggedValue>
+						<UML:TaggedValue tag="documentation" value="This class (a) defines abstract primitive operations that concrete subclasses define to implement steps of an algorithm, and (b) implements a template method defining the skeleton of an algorithm."/>
+						<UML:TaggedValue tag="isSpecification" value="false"/>
+						<UML:TaggedValue tag="ea_stype" value="Class"/>
+						<UML:TaggedValue tag="ea_ntype" value="0"/>
+						<UML:TaggedValue tag="version" value="1.0"/>
+						<UML:TaggedValue tag="package" value="EAPK_F02D1706_AC66_46e8_B045_CBCBB917932C"/>
+						<UML:TaggedValue tag="date_created" value="2003-09-07 11:46:39"/>
+						<UML:TaggedValue tag="date_modified" value="2005-02-09 11:55:47"/>
+						<UML:TaggedValue tag="gentype" value="&lt;none&gt;"/>
+						<UML:TaggedValue tag="tagged" value="0"/>
+						<UML:TaggedValue tag="package_name" value="Template Method"/>
+						<UML:TaggedValue tag="phase" value="1.0"/>
+						<UML:TaggedValue tag="complexity" value="1"/>
+						<UML:TaggedValue tag="status" value="Proposed"/>
+						<UML:TaggedValue tag="style" value="BackColor=-1;BorderColor=-1;BorderWidth=-1;FontColor=-1;VSwimLanes=0;HSwimLanes=0;BorderStyle=0;"/>
+					</UML:ModelElement.taggedValue>
+					<UML:Classifier.feature>
+						<UML:Operation name="TemplateMethod" visibility="public" ownerScope="instance" isQuery="false" concurrency="sequential">
+							<UML:ModelElement.taggedValue>
+								<UML:TaggedValue tag="type" value="void"/>
+								<UML:TaggedValue tag="const" value="false"/>
+								<UML:TaggedValue tag="behaviour" value="// do something
+
+PrimitiveOperation1();
+
+// do something
+
+PrimitiveOperation2();
+
+// do something"/>
+								<UML:TaggedValue tag="synchronised" value="0"/>
+								<UML:TaggedValue tag="concurrency" value="Sequential"/>
+								<UML:TaggedValue tag="position" value="0"/>
+								<UML:TaggedValue tag="returnarray" value="0"/>
+								<UML:TaggedValue tag="pure" value="0"/>
+								<UML:TaggedValue tag="ea_guid" value="{A0038E79-FF40-467a-9A9A-F69FED7B8310}"/>
+								<UML:TaggedValue tag="styleex" value="ShowBeh=0;"/>
+							</UML:ModelElement.taggedValue>
+							<UML:BehavioralFeature.parameter>
+								<UML:Parameter kind="return" visibility="public">
+									<UML:Parameter.type>
+										<UML:Classifier xmi.idref="eaxmiid0"/>
+									</UML:Parameter.type>
+									<UML:ModelElement.taggedValue>
+										<UML:TaggedValue tag="pos" value="0"/>
+										<UML:TaggedValue tag="type" value="void"/>
+										<UML:TaggedValue tag="const" value="0"/>
+										<UML:TaggedValue tag="ea_guid" value="{RETURNID-FF40-467a-9A9A-F69FED7B8310}"/>
+									</UML:ModelElement.taggedValue>
+									<UML:Parameter.defaultValue>
+										<UML:Expression/>
+									</UML:Parameter.defaultValue>
+								</UML:Parameter>
+							</UML:BehavioralFeature.parameter>
+						</UML:Operation>
+						<UML:Operation name="PrimitiveOperation1" visibility="public" ownerScope="instance" isQuery="false" concurrency="sequential">
+							<UML:ModelElement.taggedValue>
+								<UML:TaggedValue tag="type" value="void"/>
+								<UML:TaggedValue tag="const" value="false"/>
+								<UML:TaggedValue tag="isAbstract" value="1"/>
+								<UML:TaggedValue tag="synchronised" value="0"/>
+								<UML:TaggedValue tag="concurrency" value="Sequential"/>
+								<UML:TaggedValue tag="position" value="1"/>
+								<UML:TaggedValue tag="returnarray" value="0"/>
+								<UML:TaggedValue tag="pure" value="0"/>
+								<UML:TaggedValue tag="ea_guid" value="{58F22B42-967F-4e77-A7AC-D42E148273C3}"/>
+							</UML:ModelElement.taggedValue>
+							<UML:BehavioralFeature.parameter>
+								<UML:Parameter kind="return" visibility="public">
+									<UML:Parameter.type>
+										<UML:Classifier xmi.idref="eaxmiid0"/>
+									</UML:Parameter.type>
+									<UML:ModelElement.taggedValue>
+										<UML:TaggedValue tag="pos" value="0"/>
+										<UML:TaggedValue tag="type" value="void"/>
+										<UML:TaggedValue tag="const" value="0"/>
+										<UML:TaggedValue tag="ea_guid" value="{RETURNID-967F-4e77-A7AC-D42E148273C3}"/>
+									</UML:ModelElement.taggedValue>
+									<UML:Parameter.defaultValue>
+										<UML:Expression/>
+									</UML:Parameter.defaultValue>
+								</UML:Parameter>
+							</UML:BehavioralFeature.parameter>
+						</UML:Operation>
+						<UML:Operation name="PrimitiveOperation2" visibility="public" ownerScope="instance" isQuery="false" concurrency="sequential">
+							<UML:ModelElement.taggedValue>
+								<UML:TaggedValue tag="type" value="void"/>
+								<UML:TaggedValue tag="const" value="false"/>
+								<UML:TaggedValue tag="isAbstract" value="1"/>
+								<UML:TaggedValue tag="synchronised" value="0"/>
+								<UML:TaggedValue tag="concurrency" value="Sequential"/>
+								<UML:TaggedValue tag="position" value="2"/>
+								<UML:TaggedValue tag="returnarray" value="0"/>
+								<UML:TaggedValue tag="pure" value="0"/>
+								<UML:TaggedValue tag="ea_guid" value="{70A282B8-4FE0-4ae3-9D99-EE6C0C82DD1F}"/>
+							</UML:ModelElement.taggedValue>
+							<UML:BehavioralFeature.parameter>
+								<UML:Parameter kind="return" visibility="public">
+									<UML:Parameter.type>
+										<UML:Classifier xmi.idref="eaxmiid0"/>
+									</UML:Parameter.type>
+									<UML:ModelElement.taggedValue>
+										<UML:TaggedValue tag="pos" value="0"/>
+										<UML:TaggedValue tag="type" value="void"/>
+										<UML:TaggedValue tag="const" value="0"/>
+										<UML:TaggedValue tag="ea_guid" value="{RETURNID-4FE0-4ae3-9D99-EE6C0C82DD1F}"/>
+									</UML:ModelElement.taggedValue>
+									<UML:Parameter.defaultValue>
+										<UML:Expression/>
+									</UML:Parameter.defaultValue>
+								</UML:Parameter>
+							</UML:BehavioralFeature.parameter>
+						</UML:Operation>
+					</UML:Classifier.feature>
+				</UML:Class>
+				<UML:Generalization subtype="EAID_5241B683_0373_4482_8155_5927047C4766" supertype="EAID_A0F71511_9335_4582_BEAA_11C4C10AC0B3" xmi.id="EAID_91277CF4_E837_44c7_936D_AF09E5AEAFAA" visibility="public">
+					<UML:ModelElement.taggedValue>
+						<UML:TaggedValue tag="style" value="2"/>
+						<UML:TaggedValue tag="ea_type" value="Generalization"/>
+						<UML:TaggedValue tag="direction" value="Source -&gt; Destination"/>
+						<UML:TaggedValue tag="linemode" value="2"/>
+						<UML:TaggedValue tag="linecolor" value="0"/>
+						<UML:TaggedValue tag="linewidth" value="0"/>
+						<UML:TaggedValue tag="seqno" value="0"/>
+						<UML:TaggedValue tag="headStyle" value="0"/>
+						<UML:TaggedValue tag="lineStyle" value="0"/>
+						<UML:TaggedValue tag="src_visibility" value="Public"/>
+						<UML:TaggedValue tag="src_aggregation" value="0"/>
+						<UML:TaggedValue tag="src_isOrdered" value="false"/>
+						<UML:TaggedValue tag="src_isNavigable" value="false"/>
+						<UML:TaggedValue tag="dst_visibility" value="Public"/>
+						<UML:TaggedValue tag="dst_aggregation" value="0"/>
+						<UML:TaggedValue tag="dst_isOrdered" value="false"/>
+						<UML:TaggedValue tag="dst_isNavigable" value="false"/>
+					</UML:ModelElement.taggedValue>
+				</UML:Generalization>
+				<UML:Class name="ConcreteClass" xmi.id="EAID_5241B683_0373_4482_8155_5927047C4766" visibility="public" namespace="EAPK_F02D1706_AC66_46e8_B045_CBCBB917932C" isRoot="false" isLeaf="false" isAbstract="false" isActive="false">
+					<UML:ModelElement.taggedValue>
+						<UML:TaggedValue tag="documentation" value="This class implements the primitive operations to carry out subclass-specific steps of the algorithm."/>
+						<UML:TaggedValue tag="isSpecification" value="false"/>
+						<UML:TaggedValue tag="ea_stype" value="Class"/>
+						<UML:TaggedValue tag="ea_ntype" value="0"/>
+						<UML:TaggedValue tag="version" value="1.0"/>
+						<UML:TaggedValue tag="package" value="EAPK_F02D1706_AC66_46e8_B045_CBCBB917932C"/>
+						<UML:TaggedValue tag="date_created" value="2003-09-07 11:50:04"/>
+						<UML:TaggedValue tag="date_modified" value="2005-02-09 11:55:48"/>
+						<UML:TaggedValue tag="gentype" value="&lt;none&gt;"/>
+						<UML:TaggedValue tag="tagged" value="0"/>
+						<UML:TaggedValue tag="package_name" value="Template Method"/>
+						<UML:TaggedValue tag="phase" value="1.0"/>
+						<UML:TaggedValue tag="complexity" value="1"/>
+						<UML:TaggedValue tag="status" value="Proposed"/>
+						<UML:TaggedValue tag="style" value="BackColor=-1;BorderColor=-1;BorderWidth=-1;FontColor=-1;VSwimLanes=0;HSwimLanes=0;BorderStyle=0;"/>
+					</UML:ModelElement.taggedValue>
+					<UML:Classifier.feature>
+						<UML:Operation name="PrimitiveOperation1" visibility="public" ownerScope="instance" isQuery="false" concurrency="sequential">
+							<UML:ModelElement.taggedValue>
+								<UML:TaggedValue tag="type" value="void"/>
+								<UML:TaggedValue tag="const" value="false"/>
+								<UML:TaggedValue tag="synchronised" value="0"/>
+								<UML:TaggedValue tag="concurrency" value="Sequential"/>
+								<UML:TaggedValue tag="position" value="1"/>
+								<UML:TaggedValue tag="returnarray" value="0"/>
+								<UML:TaggedValue tag="pure" value="0"/>
+								<UML:TaggedValue tag="ea_guid" value="{6CBC4FD4-DF22-4b2f-982B-405108861ADC}"/>
+								<UML:TaggedValue tag="override" value="true" xmi.id="EAID_AB048169_ACB5_4a36_AC25_FDB509AB8415"/>
+							</UML:ModelElement.taggedValue>
+							<UML:BehavioralFeature.parameter>
+								<UML:Parameter kind="return" visibility="public">
+									<UML:Parameter.type>
+										<UML:Classifier xmi.idref="eaxmiid0"/>
+									</UML:Parameter.type>
+									<UML:ModelElement.taggedValue>
+										<UML:TaggedValue tag="pos" value="0"/>
+										<UML:TaggedValue tag="type" value="void"/>
+										<UML:TaggedValue tag="const" value="0"/>
+										<UML:TaggedValue tag="ea_guid" value="{RETURNID-DF22-4b2f-982B-405108861ADC}"/>
+									</UML:ModelElement.taggedValue>
+									<UML:Parameter.defaultValue>
+										<UML:Expression/>
+									</UML:Parameter.defaultValue>
+								</UML:Parameter>
+							</UML:BehavioralFeature.parameter>
+						</UML:Operation>
+						<UML:Operation name="PrimitiveOperation2" visibility="public" ownerScope="instance" isQuery="false" concurrency="sequential">
+							<UML:ModelElement.taggedValue>
+								<UML:TaggedValue tag="type" value="void"/>
+								<UML:TaggedValue tag="const" value="false"/>
+								<UML:TaggedValue tag="synchronised" value="0"/>
+								<UML:TaggedValue tag="concurrency" value="Sequential"/>
+								<UML:TaggedValue tag="position" value="2"/>
+								<UML:TaggedValue tag="returnarray" value="0"/>
+								<UML:TaggedValue tag="pure" value="0"/>
+								<UML:TaggedValue tag="ea_guid" value="{FC03F4AE-30DA-42f4-A60C-AAFF9A12C5D5}"/>
+								<UML:TaggedValue tag="override" value="true" xmi.id="EAID_12C0D909_C60F_4bbe_AB14_05C850ED8DB0"/>
+							</UML:ModelElement.taggedValue>
+							<UML:BehavioralFeature.parameter>
+								<UML:Parameter kind="return" visibility="public">
+									<UML:Parameter.type>
+										<UML:Classifier xmi.idref="eaxmiid0"/>
+									</UML:Parameter.type>
+									<UML:ModelElement.taggedValue>
+										<UML:TaggedValue tag="pos" value="0"/>
+										<UML:TaggedValue tag="type" value="void"/>
+										<UML:TaggedValue tag="const" value="0"/>
+										<UML:TaggedValue tag="ea_guid" value="{RETURNID-30DA-42f4-A60C-AAFF9A12C5D5}"/>
+									</UML:ModelElement.taggedValue>
+									<UML:Parameter.defaultValue>
+										<UML:Expression/>
+									</UML:Parameter.defaultValue>
+								</UML:Parameter>
+							</UML:BehavioralFeature.parameter>
+						</UML:Operation>
+					</UML:Classifier.feature>
+				</UML:Class>
+			</UML:Namespace.ownedElement>
+		</UML:Model>
+		<UML:Diagram name="Template Method" xmi.id="EAID_C3578254_06A7_4e9f_A267_D96121ED504D" diagramType="ClassDiagram" owner="EAPK_C3578254_06A7_4e9f_A267_D96121ED504D" toolName="Enterprise Architect 2.5">
+			<UML:ModelElement.taggedValue>
+				<UML:TaggedValue tag="documentation" value="This pattern defines the skeleton of an algorithm in an operation, deferring some steps to subclasses. It lets subclasses redefine certain steps of an algorithm without changing the algorithm's structure."/>
+				<UML:TaggedValue tag="version" value="1.0"/>
+				<UML:TaggedValue tag="created_date" value="2004-12-14 13:32:33"/>
+				<UML:TaggedValue tag="modified_date" value="2005-01-31 16:04:47"/>
+				<UML:TaggedValue tag="package" value="EAPK_F02D1706_AC66_46e8_B045_CBCBB917932C"/>
+				<UML:TaggedValue tag="type" value="Logical"/>
+				<UML:TaggedValue tag="swimlanes" value="locked=false;orientation=0;width=0;inbar=false;names=false;color=0;bold=false;fcol=0;;cls=0;"/>
+				<UML:TaggedValue tag="EAStyle" value="ShowPrivate=1;ShowProtected=1;ShowPublic=1;HideRelationships=0;Locked=0;Border=1;HighlightForeign=1;PackageContents=1;SequenceNotes=0;ScalePrintImage=0;PPgs.cx=0;PPgs.cy=0;DocSize.cx=780;DocSize.cy=1138;ShowDetails=0;Orientation=P;Zoom=100;ShowTags=0;OpParams=1;ShowIcons=1;CollabNums=0;HideProps=0;ShowReqs=0;ShowCons=0;PaperSize=9;HideParents=0;UseAlias=0;HideAtts=0;HideOps=0;HideStereo=0;HideElemStereo=0;ShowTests=0;ShowMaint=0;"/>
+				<UML:TaggedValue tag="styleex" value="ExcludeRTF=0;DocAll=0;HideQuals=0;AttPkg=1;ShowTests=0;ShowMaint=0;SuppressFOC=0;TDurLow=0;TDurHigh=100;TDurUnit=;TDurHide=0;"/>
+			</UML:ModelElement.taggedValue>
+			<UML:Diagram.element>
+				<UML:DiagramElement geometry="Left=100;Top=238;Right=256;Bottom=330;imgL=10;imgT=174;imgR=166;imgB=266;" subject="EAID_5241B683_0373_4482_8155_5927047C4766" seqno="1" style="DUID=887E5B59;OpInh=1;LBL=;"/>
+				<UML:DiagramElement geometry="Left=101;Top=74;Right=255;Bottom=172;imgL=11;imgT=10;imgR=165;imgB=108;" subject="EAID_A0F71511_9335_4582_BEAA_11C4C10AC0B3" seqno="2" style="DUID=4FCD32EC;LBL=;"/>
+				<UML:DiagramElement geometry="EDGE=1;$LLB=;LLT=;LMT=;LMB=;LRT=;LRB=;Path=;" subject="EAID_91277CF4_E837_44c7_936D_AF09E5AEAFAA" style="Mode=2;EOID=4FCD32EC;SOID=887E5B59;Hidden=0;"/>
+			</UML:Diagram.element>
+		</UML:Diagram>
+	</XMI.content>
+	<XMI.difference/>
+	<XMI.extensions xmi.extender="Enterprise Architect 2.5">
+		<EAStub xmi.id="EAID_5241B683_0373_4482_8155_5927047C4766" name="ConcreteClass" UMLType="Class"/>
+		<EAStub xmi.id="EAID_A0F71511_9335_4582_BEAA_11C4C10AC0B3" name="AbstractClass" UMLType="Class"/>
+		<UMLPattern name="Template Method" category="GoF Behavioral Patterns" version="1.0" notes="This pattern defines the skeleton of an algorithm in an operation, deferring some steps to subclasses. It lets subclasses redefine certain steps of an algorithm without changing the algorithm's structure.">
+			<UMLPattern.PromptList>
+				<Element name="ConcreteClass:Class" guid="EAID_5241B683_0373_4482_8155_5927047C4766" id="625" prompt="yes" link="yes" classifier="no" type="no">
+					<Comment comment="This class implements the primitive operations to carry out subclass-specific steps of the algorithm.">
+						<![CDATA[This class implements the primitive operations to carry out subclass-specific steps of the algorithm.]]>
+					</Comment>
+				</Element>
+				<Element name="AbstractClass:Class" guid="EAID_A0F71511_9335_4582_BEAA_11C4C10AC0B3" id="624" prompt="yes" link="yes" classifier="no" type="no">
+					<Comment comment="This class (a) defines abstract primitive operations that concrete subclasses define to implement steps of an algorithm, and (b) implements a template method defining the skeleton of an algorithm.">
+						<![CDATA[This class (a) defines abstract primitive operations that concrete subclasses define to implement steps of an algorithm, and (b) implements a template method defining the skeleton of an algorithm.]]>
+					</Comment>
+				</Element>
+			</UMLPattern.PromptList>
+			<UMLPattern.PreviewImage xmlns:dt="urn:schemas-microsoft-com:datatypes" dt:dt="bin.base64" cx="4950" cy="7816">AQAAAGwAAAAKAAAACgAAAKgAAAAMAQAAAAAAAAAAAABWEwAAiB4AACBFTUYAAAEAuBQAAG0A AAAIAAAAAAAAAAAAAAAAAAAAAAUAAAAEAABoAQAAIgEAAAAAAAAAAAAAAAAAAEB+BQDQbAQA EQAAAAwAAAAIAAAACQAAABAAAAABAAAA/////woAAAAQAAAAWgAAAMD///9SAAAAcAEAAAEA AAD2////AAAAAAAAAAAAAAAAAAAAAAAAAAEAAAAAQQBSAEkAQQBMAAAAAAAAAAAAAAAAAAAA AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAkXwAAEAAHOcSAAAA AAAAAAAAhOcSAKznEgC3LJF88C8iAJju7gCM5xIAAAAAAI6ggHwAAEAAmO7uAIznEgCloIB8 +OcSANKPAAAAAAAAEAAAAAUAAAD85xIA/wAAAMDnEgClAtV3POgSAP8AAADY5xIAbHMOAQoA AAD1Gd1zAADqc0AAAAAFAAAAUOkSAAAAAABo5epzvOcSAFjpEgAX7+Zz/////7joEgCeJt1z BQAAAFDpEgBQ6RIABQAAAAAAEgA/Qt1zOKQeDjzoEgAFAAAAPOgSAFDpEgAXQt1zBQAAADzo EgAFAAAAAAEAAA5K3XM86BIAAAAAAFxK3XNkdgAIAAAAACUAAAAMAAAAAQAAACcAAAAYAAAA AgAAAAAAAAD88uMAAAAAACUAAAAMAAAAAgAAACYAAAAcAAAAAwAAAAAAAAABAAAAAAAAAAAA AAAlAAAADAAAAAMAAAASAAAADAAAAAEAAAAhAAAACAAAABgAAAAMAAAAAAAAACYAAAAcAAAA BAAAAAAAAAABAAAAAAAAAAAAAAAlAAAADAAAAAQAAAASAAAADAAAAAIAAAAZAAAADAAAAP// /wASAAAADAAAAAEAAAAZAAAADAAAAP///wAlAAAADAAAAAMAAAAiAAAADAAAAP////8oAAAA DAAAAAQAAAAnAAAAGAAAAAQAAAAAAAAAwL/AAAAAAAAlAAAADAAAAAQAAAAmAAAAHAAAAAUA AAAAAAAAAQAAAAAAAADAv8AAJQAAAAwAAAAFAAAAOQAAAAwAAAACAAAAKwAAABgAAABoAAAA s////wEBAABS////JQAAAAwAAAACAAAAKAAAAAwAAAAEAAAAJQAAAAwAAAADAAAAKAAAAAwA AAAFAAAAKwAAABgAAABlAAAAtv////4AAABV////UgAAAHABAAAFAAAA9v///wAAAAAAAAAA AAAAALwCAAABAAABAAAAAEEAUgBJAEEATAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAABIAAAAAAAAAAACE5xIArOcSALcskXzwLyIA mO7uAIznEgAAAAAAjqCAfAAAQACY7u4AjOcSAKWggHz45xIA0o8AAAAAAAAQAAAABQAAAPzn EgD/AAAAwOcSAKUC1Xc86BIA/wAAANjnEgBscw4BCgAAAPUZ3XMAAOpzQAAAAAAAAABQ6RIA AAAAAGjl6nO85xIAWOkSABfv5nP/////uOgSAJ4m3XMFAAAAUOkSAFDpEgAFAAAAAAASAD9C 3XMAAMJ3CAAAAP////886BIAEAAAAC6lw3egGsZ3mOkSAEPDwncEAAAAzsPCdwfEwnfwQB4O /////6AaxneAjmgBZHYACAAAAAAlAAAADAAAAAUAAABUAAAAnAAAADUAAAATAAAAegAAAB0A AAABAAAAAADhQQCQ4sGPAAAArf///w0AAABMAAAAAAAAAAAAAAAAAAAA//////////9oAAAA QQBiAHMAdAByAGEAYwB0AEMAbABhAHMAcwAAAAcAAAAGAAAABgAAAAMAAAAEAAAABgAAAAYA AAADAAAABwAAAAMAAAAGAAAABgAAAAYAAAAlAAAADAAAAAEAAAAbAAAAEAAAAGUAAACb//// NgAAABAAAAD+AAAAm////xgAAAAMAAAAAACAABgAAAAMAAAAAAAAABgAAAAMAAAAAEBAAFQA AABYAAAAEAAAAC0AAAAZAAAAOQAAAAEAAAAAAOFBAJDiwWoAAACT////AgAAAEwAAAAAAAAA AAAAAAAAAAD//////////1AAAAArACAABgAAAAMAAABUAAAA2AAAACEAAAAtAAAAlgAAADkA AAABAAAAAADhQQCQ4sF7AAAAk////xcAAABMAAAAAAAAAAAAAAAAAAAA//////////98AAAA VABlAG0AcABsAGEAdABlAE0AZQB0AGgAbwBkACgAKQAgADoAIAB2AG8AaQBkAAAABwAAAAYA AAAJAAAABgAAAAMAAAAGAAAAAwAAAAYAAAAJAAAABgAAAAMAAAAGAAAABgAAAAYAAAADAAAA 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 AAAAABAAAAAUAAAA</UMLPattern.PreviewImage>
+		</UMLPattern>
+	</XMI.extensions>
+</XMI>

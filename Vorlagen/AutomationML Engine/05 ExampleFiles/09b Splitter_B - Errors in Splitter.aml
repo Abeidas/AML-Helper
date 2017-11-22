@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Mit XMLSpy v2006 sp1 U bearbeitet (http://www.altova.com) von ABB User (ABB Forschungszentrum) -->
+<!-- Mit XMLSpy v2006 sp1 U bearbeitet (http://www.altova.com) von ABB User (ABB Forschungszentrum) -->
+<CAEXFile FileName="" SchemaVersion="2.15" xsi:noNamespaceSchemaLocation="CAEX_ClassModel_V2.15.xsd" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+	<AdditionalInformation AutomationMLVersion="2.0"/>
+	<ExternalReference Path="09a Test ExternalReferences - Errors in Splitter_notexists.aml" Alias="orig"/>
+	<ExternalReference Path="/Lib/09c Splitter_ICL - Errors in Splitter.aml" Alias="part2"/>
+	<InstanceHierarchy Name="part1">
+		<InternalElement Name="B" ID="{1cc21261-c47c-4f1b-b4e5-19d2bbffb0cc}" RefBaseSystemUnitPath="orig@MySUC/TB">
+			<Attribute Name="Durchmesser" AttributeDataType="xs:string">
+				<Value>20</Value>
+			</Attribute>
+			<ExternalInterface Name="newTI2" RefBaseClassPath="part2@ICL/TI2" ID="{778683bc-2bfd-454e-99dd-aeef62c94e16}"/>
+			<InternalElement Name="C" ID="{340836b6-24d7-4cf9-9fd4-7d0797688dd4}" RefBaseSystemUnitPath="orig@MySUC/TB/TC">
+				<ExternalInterface Name="newTI3" RefBaseClassPath="part2@ICL/TI2/TI3" ID="{ab9d1d0c-5c5a-4305-8b6d-d10236f6ac4a}"/>
+				<RoleRequirements RefBaseRoleClassPath="orig@RCL/RB/RC"/>
+			</InternalElement>
+			<InternalLink Name="new link" RefPartnerSideA="{1cc21261-c47c-4f1b-b4e5-19d2bbffb0cc}:newTI2" RefPartnerSideB="{340836b6-24d7-4cf9-9fd4-7d0797688dd4}:newTI3"/>
+			<RoleRequirements RefBaseRoleClassPath="orig@RCL/RB"/>
+		</InternalElement>
+	</InstanceHierarchy>
+</CAEXFile>

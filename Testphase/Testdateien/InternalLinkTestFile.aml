@@ -1,0 +1,556 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<CAEXFile xsi:noNamespaceSchemaLocation="CAEX_ClassModel_V2.15.xsd" SchemaVersion="2.15" FileName="InternalLinkTestFile.aml" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+	<AdditionalInformation AutomationMLVersion="2.0" />
+	<AdditionalInformation>
+		<WriterHeader>
+			<WriterName>CAEXEditor</WriterName>
+			<WriterID>CAEXEditor20130613</WriterID>
+			<WriterVendor>Fraunhofer IOSB</WriterVendor>
+			<WriterVendorURL>www.mes.fraunhofer.de</WriterVendorURL>
+			<WriterVersion>2.2.12</WriterVersion>
+			<WriterRelease></WriterRelease>
+			<LastWritingDateTime>2014-05-14T22:51:00.4500622+02:00</LastWritingDateTime>
+			<WriterProjectTitle></WriterProjectTitle>
+			<WriterProjectID></WriterProjectID>
+		</WriterHeader>
+	</AdditionalInformation>
+	<InstanceHierarchy Name="InstanceHierarchy1">
+		<Version>1.0.0</Version>
+		<InternalElement Name="InstanceOfWaschmodul" RefBaseSystemUnitPath="MOC_Danner_Dolphin_SUC/Modul/Waschmodul" ID="312d4593-8078-4efa-b4f9-80a27166777e">
+			<Attribute Name="Signatur" AttributeDataType="xs:string" />
+			<Attribute Name="CodeMeterID" AttributeDataType="xs:string" />
+			<Attribute Name="Frame" AttributeDataType="xs:string">
+				<Attribute Name="x">
+					<Value>-10550</Value>
+				</Attribute>
+				<Attribute Name="y">
+					<Value>3550</Value>
+				</Attribute>
+				<Attribute Name="z">
+					<Value>0</Value>
+				</Attribute>
+				<Attribute Name="rx">
+					<Value>0</Value>
+				</Attribute>
+				<Attribute Name="ry">
+					<Value>0</Value>
+				</Attribute>
+				<Attribute Name="rz">
+					<Value>0</Value>
+				</Attribute>
+			</Attribute>
+			<ExternalInterface Name="NachfolgerModulInterface" ID="faf2d67a-60ea-4d80-982e-e25427c7af0b" RefBaseClassPath="AutomationMLInterfaceClassLib/AutomationMLBaseInterface/Order">
+				<Attribute Name="Direction" AttributeDataType="xs:string">
+					<Value>Out</Value>
+				</Attribute>
+			</ExternalInterface>
+			<ExternalInterface Name="VorgängerModulInterface" ID="fbc1943e-a9c7-4d7e-a0ee-00d06796af75" RefBaseClassPath="AutomationMLInterfaceClassLib/AutomationMLBaseInterface/Order">
+				<Attribute Name="Direction" AttributeDataType="xs:string">
+					<Value>In</Value>
+				</Attribute>
+			</ExternalInterface>
+			<ExternalInterface Name="SecurePnWInterface" ID="c6ca0dda-3cc4-412c-8872-7ffd4c15900c" RefBaseClassPath="SecurePnWInterfaceLib/SecurePnWModulInterface" />
+			<InternalElement Name="Prozessbeschreibung" ID="2f9bd384-7fc2-4b2a-9622-7d5de6120efc">
+				<Attribute Name="Verarbeitungszeit" />
+				<Attribute Name="Temperatur des Reinigungsmediums" AttributeDataType="xs:double">
+					<Constraint Name="NewAttributeConstraintOrdinalRequirement">
+						<OrdinalScaledType>
+							<RequiredMaxValue>200</RequiredMaxValue>
+							<RequiredValue />
+							<RequiredMinValue>50</RequiredMinValue>
+						</OrdinalScaledType>
+					</Constraint>
+				</Attribute>
+				<Attribute Name="Konzentration des Reinigungsmediums" AttributeDataType="xs:double" />
+				<SupportedRoleClass RefRoleClassPath="SecurePnWRoleLib/Fähigkeit/Ölabscheider" />
+				<SupportedRoleClass RefRoleClassPath="SecurePnWRoleLib/Fähigkeit/AutomatischeFüllstandsregelung" />
+				<SupportedRoleClass RefRoleClassPath="SecurePnWRoleLib/Fähigkeit/Vorschub" />
+				<SupportedRoleClass RefRoleClassPath="SecurePnWRoleLib/Fähigkeit/Waschen" />
+			</InternalElement>
+			<InternalElement Name="Steuerung" ID="a7c69ab9-a891-47d5-8a02-53fc3c1c7bd4">
+				<RoleRequirements RefBaseRoleClassPath="AutomationMLCSRoleClassLib/ControlEquipment/Controller/PLC" />
+			</InternalElement>
+			<InternalElement Name="VisuFacet" ID="96766650-368a-4fd8-a085-66cc4278b542">
+				<RoleRequirements RefBaseRoleClassPath="AutomationMLExtendedRoleClassLib/PLCFacet" />
+			</InternalElement>
+			<SupportedRoleClass RefRoleClassPath="AutomationMLExtendedRoleClassLib/Unit" />
+			<SupportedRoleClass RefRoleClassPath="SecurePnWRoleLib/Fähigkeit/Ölabscheider" />
+			<SupportedRoleClass RefRoleClassPath="SecurePnWRoleLib/Fähigkeit/AutomatischeFüllstandsregelung" />
+			<SupportedRoleClass RefRoleClassPath="SecurePnWRoleLib/Fähigkeit/Vorschub" />
+			<SupportedRoleClass RefRoleClassPath="SecurePnWRoleLib/Fähigkeit/Waschen" />
+			<InternalLink Name="InstanceOfWaschmodul:InstanceOfTrocknungsmodul_Kombi265" RefPartnerSideA="312d4593-8078-4efa-b4f9-80a27166777e:NachfolgerModulInterface" RefPartnerSideB="8cb59450-d7f0-48a3-b7fb-dcd0abd38c34:VorgängerModulInterface" />
+		</InternalElement>
+		<InternalElement Name="InstanceOfTrocknungsmodul_Kombi" RefBaseSystemUnitPath="MOC_Danner_Dolphin_SUC/Modul/Trocknungsmodul_Kombi" ID="8cb59450-d7f0-48a3-b7fb-dcd0abd38c34">
+			<Attribute Name="Signatur" AttributeDataType="xs:string" />
+			<Attribute Name="CodeMeterID" AttributeDataType="xs:string" />
+			<Attribute Name="Frame" AttributeDataType="xs:string">
+				<Attribute Name="x">
+					<Value>-10550</Value>
+				</Attribute>
+				<Attribute Name="y">
+					<Value>3550</Value>
+				</Attribute>
+				<Attribute Name="z">
+					<Value>0</Value>
+				</Attribute>
+				<Attribute Name="rx">
+					<Value>0</Value>
+				</Attribute>
+				<Attribute Name="ry">
+					<Value>0</Value>
+				</Attribute>
+				<Attribute Name="rz">
+					<Value>0</Value>
+				</Attribute>
+			</Attribute>
+			<ExternalInterface Name="NachfolgerModulInterface" ID="feebfcca-9587-4e63-8f1c-c4e318e24438" RefBaseClassPath="AutomationMLInterfaceClassLib/AutomationMLBaseInterface/Order">
+				<Attribute Name="Direction" AttributeDataType="xs:string">
+					<Value>Out</Value>
+				</Attribute>
+			</ExternalInterface>
+			<ExternalInterface Name="VorgängerModulInterface" ID="a124a8b6-1012-4e72-84ef-9b1e53e60baa" RefBaseClassPath="AutomationMLInterfaceClassLib/AutomationMLBaseInterface/Order">
+				<Attribute Name="Direction" AttributeDataType="xs:string">
+					<Value>In</Value>
+				</Attribute>
+			</ExternalInterface>
+			<ExternalInterface Name="SecurePnWInterface" ID="1e995191-4930-49c6-88d2-c3a0dec4400b" RefBaseClassPath="SecurePnWInterfaceLib/SecurePnWModulInterface" />
+			<InternalElement Name="Prozessbeschreibung" ID="6efdf8ff-7483-466b-a1af-ba7b335e1323">
+				<Attribute Name="Verarbeitungszeit" />
+				<Attribute Name="Vakuumdruck" />
+				<Attribute Name="Trocknungstemperatur" AttributeDataType="xs:double" />
+				<SupportedRoleClass RefRoleClassPath="SecurePnWRoleLib/Fähigkeit/Vorschub" />
+				<SupportedRoleClass RefRoleClassPath="SecurePnWRoleLib/Fähigkeit/Trocknen/KombiTrocknen" />
+				<SupportedRoleClass RefRoleClassPath="SecurePnWRoleLib/Fähigkeit/Trocknen/HeissluftTrocknen" />
+				<SupportedRoleClass RefRoleClassPath="SecurePnWRoleLib/Fähigkeit/Trocknen/VakuumTrocknen" />
+			</InternalElement>
+			<InternalElement Name="Steuerung" ID="5ca920eb-72f8-4579-b5e3-cc880648b681">
+				<RoleRequirements RefBaseRoleClassPath="AutomationMLCSRoleClassLib/ControlEquipment/Controller/PLC" />
+			</InternalElement>
+			<InternalElement Name="VisuFacet" ID="8a7c435a-0f26-48a8-bbd5-b4d6965c37c5">
+				<RoleRequirements RefBaseRoleClassPath="AutomationMLExtendedRoleClassLib/PLCFacet" />
+			</InternalElement>
+			<SupportedRoleClass RefRoleClassPath="AutomationMLExtendedRoleClassLib/Unit" />
+			<SupportedRoleClass RefRoleClassPath="SecurePnWRoleLib/Fähigkeit/Vorschub" />
+			<SupportedRoleClass RefRoleClassPath="SecurePnWRoleLib/Fähigkeit/Trocknen/KombiTrocknen" />
+			<SupportedRoleClass RefRoleClassPath="SecurePnWRoleLib/Fähigkeit/Trocknen/HeissluftTrocknen" />
+			<SupportedRoleClass RefRoleClassPath="SecurePnWRoleLib/Fähigkeit/Trocknen/VakuumTrocknen" />
+			<InternalLink Name="InstanceOfTrocknungsmodul_Kombi:InstanceOfSpülmodul265" RefPartnerSideA="8cb59450-d7f0-48a3-b7fb-dcd0abd38c34:NachfolgerModulInterface" RefPartnerSideB="8b1ca7b7-1986-477f-9a3a-37e476728d21:VorgängerModulInterface" />
+		</InternalElement>
+		<InternalElement Name="InstanceOfTrocknungsmodul_Kombi" RefBaseSystemUnitPath="MOC_Danner_Dolphin_SUC/Modul/Trocknungsmodul_Kombi" ID="7030974e-1f73-44b6-b3e4-9a217bfb6a8f">
+			<Attribute Name="Signatur" AttributeDataType="xs:string" />
+			<Attribute Name="CodeMeterID" AttributeDataType="xs:string" />
+			<Attribute Name="Frame" AttributeDataType="xs:string">
+				<Attribute Name="x">
+					<Value>-10550</Value>
+				</Attribute>
+				<Attribute Name="y">
+					<Value>3550</Value>
+				</Attribute>
+				<Attribute Name="z">
+					<Value>0</Value>
+				</Attribute>
+				<Attribute Name="rx">
+					<Value>0</Value>
+				</Attribute>
+				<Attribute Name="ry">
+					<Value>0</Value>
+				</Attribute>
+				<Attribute Name="rz">
+					<Value>0</Value>
+				</Attribute>
+			</Attribute>
+			<ExternalInterface Name="NachfolgerModulInterface" ID="4a024142-7aa1-43c3-bd8a-e4ec32024c18" RefBaseClassPath="AutomationMLInterfaceClassLib/AutomationMLBaseInterface/Order">
+				<Attribute Name="Direction" AttributeDataType="xs:string">
+					<Value>Out</Value>
+				</Attribute>
+			</ExternalInterface>
+			<ExternalInterface Name="VorgängerModulInterface" ID="e187deb0-4f44-41be-9654-4043e3a34ee0" RefBaseClassPath="AutomationMLInterfaceClassLib/AutomationMLBaseInterface/Order">
+				<Attribute Name="Direction" AttributeDataType="xs:string">
+					<Value>In</Value>
+				</Attribute>
+			</ExternalInterface>
+			<ExternalInterface Name="SecurePnWInterface" ID="63dc29c2-14c9-4e33-a6ea-5c4d80d8b861" RefBaseClassPath="SecurePnWInterfaceLib/SecurePnWModulInterface" />
+			<InternalElement Name="Prozessbeschreibung" ID="e4f66cda-3f53-4974-ada5-0196c63d8b97">
+				<Attribute Name="Verarbeitungszeit" />
+				<Attribute Name="Vakuumdruck" />
+				<Attribute Name="Trocknungstemperatur" AttributeDataType="xs:double" />
+				<SupportedRoleClass RefRoleClassPath="SecurePnWRoleLib/Fähigkeit/Vorschub" />
+				<SupportedRoleClass RefRoleClassPath="SecurePnWRoleLib/Fähigkeit/Trocknen/KombiTrocknen" />
+				<SupportedRoleClass RefRoleClassPath="SecurePnWRoleLib/Fähigkeit/Trocknen/HeissluftTrocknen" />
+				<SupportedRoleClass RefRoleClassPath="SecurePnWRoleLib/Fähigkeit/Trocknen/VakuumTrocknen" />
+			</InternalElement>
+			<InternalElement Name="Steuerung" ID="43d5697b-3757-4721-a603-77519a24feb2">
+				<RoleRequirements RefBaseRoleClassPath="AutomationMLCSRoleClassLib/ControlEquipment/Controller/PLC" />
+			</InternalElement>
+			<InternalElement Name="VisuFacet" ID="f87430d9-6aec-42d1-b269-a2cc253ea681">
+				<RoleRequirements RefBaseRoleClassPath="AutomationMLExtendedRoleClassLib/PLCFacet" />
+			</InternalElement>
+			<SupportedRoleClass RefRoleClassPath="AutomationMLExtendedRoleClassLib/Unit" />
+			<SupportedRoleClass RefRoleClassPath="SecurePnWRoleLib/Fähigkeit/Vorschub" />
+			<SupportedRoleClass RefRoleClassPath="SecurePnWRoleLib/Fähigkeit/Trocknen/KombiTrocknen" />
+			<SupportedRoleClass RefRoleClassPath="SecurePnWRoleLib/Fähigkeit/Trocknen/HeissluftTrocknen" />
+			<SupportedRoleClass RefRoleClassPath="SecurePnWRoleLib/Fähigkeit/Trocknen/VakuumTrocknen" />
+		</InternalElement>
+		<InternalElement Name="InstanceOfSpülmodul" RefBaseSystemUnitPath="MOC_Danner_Dolphin_SUC/Modul/Spülmodul" ID="8b1ca7b7-1986-477f-9a3a-37e476728d21">
+			<Attribute Name="Signatur" AttributeDataType="xs:string" />
+			<Attribute Name="CodeMeterID" AttributeDataType="xs:string" />
+			<Attribute Name="Frame" AttributeDataType="xs:string">
+				<Attribute Name="x">
+					<Value>-10550</Value>
+				</Attribute>
+				<Attribute Name="y">
+					<Value>3550</Value>
+				</Attribute>
+				<Attribute Name="z">
+					<Value>0</Value>
+				</Attribute>
+				<Attribute Name="rx">
+					<Value>0</Value>
+				</Attribute>
+				<Attribute Name="ry">
+					<Value>0</Value>
+				</Attribute>
+				<Attribute Name="rz">
+					<Value>0</Value>
+				</Attribute>
+			</Attribute>
+			<ExternalInterface Name="NachfolgerModulInterface" ID="acb39d88-4e6f-45be-abab-730f0de86ab3" RefBaseClassPath="AutomationMLInterfaceClassLib/AutomationMLBaseInterface/Order">
+				<Attribute Name="Direction" AttributeDataType="xs:string">
+					<Value>Out</Value>
+				</Attribute>
+			</ExternalInterface>
+			<ExternalInterface Name="VorgängerModulInterface" ID="d6e748fb-7314-4858-b7ad-272addd6b1cd" RefBaseClassPath="AutomationMLInterfaceClassLib/AutomationMLBaseInterface/Order">
+				<Attribute Name="Direction" AttributeDataType="xs:string">
+					<Value>In</Value>
+				</Attribute>
+			</ExternalInterface>
+			<ExternalInterface Name="SecurePnWInterface" ID="07bdb170-17a3-4ac8-8065-14f86594a73b" RefBaseClassPath="SecurePnWInterfaceLib/SecurePnWModulInterface" />
+			<InternalElement Name="Prozessbeschreibung" ID="2e7eec59-cefd-44eb-b6a6-30956070e6c9">
+				<Attribute Name="Verarbeitungszeit" />
+				<SupportedRoleClass RefRoleClassPath="SecurePnWRoleLib/Fähigkeit/AutomatischeFüllstandsregelung" />
+				<SupportedRoleClass RefRoleClassPath="SecurePnWRoleLib/Fähigkeit/Vorschub" />
+				<SupportedRoleClass RefRoleClassPath="SecurePnWRoleLib/Fähigkeit/Spülen" />
+			</InternalElement>
+			<InternalElement Name="Steuerung" ID="38d47156-2bbf-42f7-a5e4-e309c6272ea1">
+				<RoleRequirements RefBaseRoleClassPath="AutomationMLCSRoleClassLib/ControlEquipment/Controller/PLC" />
+			</InternalElement>
+			<InternalElement Name="VisuFacet" ID="7ffca0bf-7714-4493-a350-25d73cf4fdb0">
+				<RoleRequirements RefBaseRoleClassPath="AutomationMLExtendedRoleClassLib/PLCFacet" />
+			</InternalElement>
+			<SupportedRoleClass RefRoleClassPath="AutomationMLExtendedRoleClassLib/Unit" />
+			<SupportedRoleClass RefRoleClassPath="SecurePnWRoleLib/Fähigkeit/AutomatischeFüllstandsregelung" />
+			<SupportedRoleClass RefRoleClassPath="SecurePnWRoleLib/Fähigkeit/Vorschub" />
+			<SupportedRoleClass RefRoleClassPath="SecurePnWRoleLib/Fähigkeit/Spülen" />
+			<InternalLink Name="InstanceOfSpülmodul:InstanceOfTrocknungsmodul_Kombi265" RefPartnerSideA="8b1ca7b7-1986-477f-9a3a-37e476728d21:NachfolgerModulInterface" RefPartnerSideB="7030974e-1f73-44b6-b3e4-9a217bfb6a8f:VorgängerModulInterface" />
+		</InternalElement>
+	</InstanceHierarchy>
+	<InterfaceClassLib Name="AutomationMLInterfaceClassLib">
+		<Description>Standard Automation Markup Language Interface Class Library</Description>
+		<Version>2.2.0</Version>
+		<InterfaceClass Name="AutomationMLBaseInterface">
+			<InterfaceClass Name="Order" RefBaseClassPath="AutomationMLBaseInterface">
+				<Attribute Name="Direction" AttributeDataType="xs:string" />
+			</InterfaceClass>
+			<InterfaceClass Name="PortConnector" RefBaseClassPath="AutomationMLBaseInterface" />
+			<InterfaceClass Name="InterlockingConnector" RefBaseClassPath="AutomationMLBaseInterface" />
+			<InterfaceClass Name="PPRConnector" RefBaseClassPath="AutomationMLBaseInterface" />
+			<InterfaceClass Name="ExternalDataConnector" RefBaseClassPath="AutomationMLBaseInterface">
+				<Attribute Name="refURI" AttributeDataType="xs:anyURI" />
+				<InterfaceClass Name="COLLADAInterface" RefBaseClassPath="ExternalDataConnector" />
+				<InterfaceClass Name="PLCopenXMLInterface" RefBaseClassPath="ExternalDataConnector" />
+			</InterfaceClass>
+			<InterfaceClass Name="Communication" RefBaseClassPath="AutomationMLBaseInterface">
+				<InterfaceClass Name="SignalInterface" RefBaseClassPath="Communication" />
+			</InterfaceClass>
+		</InterfaceClass>
+	</InterfaceClassLib>
+	<InterfaceClassLib Name="SecurePnWInterfaceLib">
+		<Version>0.1</Version>
+		<InterfaceClass Name="SecurePnWModulInterface" RefBaseClassPath="AutomationMLInterfaceClassLib/AutomationMLBaseInterface">
+			<Version>0.1</Version>
+		</InterfaceClass>
+		<InterfaceClass Name="SecurePnWMedienUebergabe" RefBaseClassPath="AutomationMLInterfaceClassLib/AutomationMLBaseInterface" />
+		<InterfaceClass Name="SecurePnWKabelSchaltschrank" RefBaseClassPath="AutomationMLInterfaceClassLib/AutomationMLBaseInterface" />
+		<InterfaceClass Name="SecurePnWMechanischeSchnittstelle" RefBaseClassPath="AutomationMLInterfaceClassLib/AutomationMLBaseInterface" />
+		<InterfaceClass Name="SecurePnWElektrischeSchnittstelle" RefBaseClassPath="AutomationMLInterfaceClassLib/AutomationMLBaseInterface" />
+		<InterfaceClass Name="SecurePnWCANOpenInterface" RefBaseClassPath="AutomationMLInterfaceClassLib/AutomationMLBaseInterface/Communication/SignalInterface">
+			<Attribute Name="CanOpenMaster" AttributeDataType="xs:boolean">
+				<DefaultValue>True</DefaultValue>
+				<Value>True</Value>
+			</Attribute>
+			<Attribute Name="CanOpenOffset" />
+			<Attribute Name="CANOpenBaudrate" />
+			<Attribute Name="CANOpenNodeID" AttributeDataType="xs:unsignedInt">
+				<Description>1-127</Description>
+			</Attribute>
+		</InterfaceClass>
+		<InterfaceClass Name="SecurePnWWLAN" RefBaseClassPath="AutomationMLInterfaceClassLib/AutomationMLBaseInterface/Communication" />
+		<InterfaceClass Name="SecurePnWProfinetInterface" RefBaseClassPath="AutomationMLInterfaceClassLib/AutomationMLBaseInterface/Communication/SignalInterface">
+			<Attribute Name="ProfinetAttribut1" AttributeDataType="xs:string">
+				<Description>muss noch definiert werden, was benötigt wird</Description>
+			</Attribute>
+		</InterfaceClass>
+		<InterfaceClass Name="SecurePnWDruckluftInterface" RefBaseClassPath="AutomationMLInterfaceClassLib/AutomationMLBaseInterface" />
+	</InterfaceClassLib>
+	<InterfaceClassLib Name="AutomationMLInterfaceClassLibLogics">
+		<Description>Standard Automation Markup Language Interface Class Library -  adapted to logic (part 4)</Description>
+		<Version>1.0</Version>
+		<InterfaceClass Name="LogicInterface" RefBaseClassPath="AutomationMLInterfaceClassLib/AutomationMLBaseInterface/ExternalDataConnector/PLCopenXMLInterface" />
+		<InterfaceClass Name="VariableInterface" RefBaseClassPath="AutomationMLInterfaceClassLib/AutomationMLBaseInterface/ExternalDataConnector/PLCopenXMLInterface">
+			<InterfaceClass Name="InterlockingVariableInterface" RefBaseClassPath="AutomationMLInterfaceClassLibLogics/VariableInterface">
+				<Attribute Name="SafeConditionEquals" AttributeDataType="xs:boolean">
+					<DefaultValue>true</DefaultValue>
+				</Attribute>
+			</InterfaceClass>
+		</InterfaceClass>
+	</InterfaceClassLib>
+	<RoleClassLib Name="AutomationMLBaseRoleClassLib">
+		<Description>Automation Markup Language base role class library</Description>
+		<Version>2.2.0</Version>
+		<RoleClass Name="AutomationMLBaseRole">
+			<RoleClass Name="Group" RefBaseClassPath="AutomationMLBaseRole">
+				<Attribute Name="AssociatedFacet" AttributeDataType="xs:string" />
+			</RoleClass>
+			<RoleClass Name="Facet" RefBaseClassPath="AutomationMLBaseRole" />
+			<RoleClass Name="Port" RefBaseClassPath="AutomationMLBaseRole">
+				<Attribute Name="Direction" AttributeDataType="xs:string" />
+				<Attribute Name="Cardinality">
+					<Attribute Name="MinOccur" AttributeDataType="xs:unsignedInt" />
+					<Attribute Name="MaxOccur" AttributeDataType="xs:unsignedInt" />
+				</Attribute>
+				<Attribute Name="Category" AttributeDataType="xs:string" />
+				<ExternalInterface Name="ConnectionPoint" ID="9942bd9c-c19d-44e4-a197-11b9edf264e7" RefBaseClassPath="AutomationMLInterfaceClassLib/AutomationMLBaseInterface/PortConnector" />
+			</RoleClass>
+			<RoleClass Name="Resource" RefBaseClassPath="AutomationMLBaseRole" />
+			<RoleClass Name="Product" RefBaseClassPath="AutomationMLBaseRole" />
+			<RoleClass Name="Process" RefBaseClassPath="AutomationMLBaseRole" />
+			<RoleClass Name="Structure" RefBaseClassPath="AutomationMLBaseRole">
+				<RoleClass Name="ProductStructure" RefBaseClassPath="Structure" />
+				<RoleClass Name="ProcessStructure" RefBaseClassPath="Structure" />
+				<RoleClass Name="ResourceStructure" RefBaseClassPath="Structure" />
+			</RoleClass>
+			<RoleClass Name="PropertySet" RefBaseClassPath="AutomationMLBaseRole" />
+		</RoleClass>
+	</RoleClassLib>
+	<RoleClassLib Name="AutomationMLCSRoleClassLib">
+		<Description>Automation Markup Language Control Industry Role Class Library</Description>
+		<Version>2.3.0</Version>
+		<RoleClass Name="ControlEquipment" RefBaseClassPath="AutomationMLBaseRoleClassLib/AutomationMLBaseRole/Resource">
+			<RoleClass Name="Communication" RefBaseClassPath="ControlEquipment" />
+			<RoleClass Name="ControlHardware" RefBaseClassPath="ControlEquipment">
+				<RoleClass Name="PC" RefBaseClassPath="ControlHardware" />
+				<RoleClass Name="IPC" RefBaseClassPath="ControlHardware" />
+				<RoleClass Name="EmbeddedDevice" RefBaseClassPath="ControlHardware" />
+				<RoleClass Name="Handheld" RefBaseClassPath="ControlHardware" />
+			</RoleClass>
+			<RoleClass Name="Sensor" RefBaseClassPath="ControlEquipment" />
+			<RoleClass Name="Actuator" RefBaseClassPath="ControlEquipment" />
+			<RoleClass Name="Controller" RefBaseClassPath="ControlEquipment">
+				<RoleClass Name="PLC" RefBaseClassPath="Controller" />
+				<RoleClass Name="NC" RefBaseClassPath="Controller" />
+				<RoleClass Name="RC" RefBaseClassPath="Controller" />
+				<RoleClass Name="PAC" RefBaseClassPath="Controller" />
+			</RoleClass>
+		</RoleClass>
+	</RoleClassLib>
+	<RoleClassLib Name="AutomationMLDMIRoleClassLib">
+		<Description>Automation Markup Language  Discrete Manufacturing Industry Role Class Library</Description>
+		<Version>2.4.0</Version>
+		<RoleClass Name="DiscManufacturingEquipment" RefBaseClassPath="AutomationMLBaseRoleClassLib/AutomationMLBaseRole/Resource">
+			<RoleClass Name="Transport" RefBaseClassPath="DiscManufacturingEquipment" />
+			<RoleClass Name="Storage" RefBaseClassPath="DiscManufacturingEquipment" />
+			<RoleClass Name="Fixture" RefBaseClassPath="DiscManufacturingEquipment" />
+			<RoleClass Name="Gate" RefBaseClassPath="DiscManufacturingEquipment" />
+			<RoleClass Name="Robot" RefBaseClassPath="DiscManufacturingEquipment" />
+			<RoleClass Name="Tool" RefBaseClassPath="DiscManufacturingEquipment" />
+			<RoleClass Name="Carrier" RefBaseClassPath="DiscManufacturingEquipment" />
+			<RoleClass Name="Machine" RefBaseClassPath="DiscManufacturingEquipment" />
+			<RoleClass Name="StaticObject" RefBaseClassPath="DiscManufacturingEquipment" />
+		</RoleClass>
+	</RoleClassLib>
+	<RoleClassLib Name="AutomationMLExtendedRoleClassLib">
+		<Version>2.7.0</Version>
+		<RoleClass Name="PLCFacet" RefBaseClassPath="AutomationMLBaseRoleClassLib/AutomationMLBaseRole/Facet" />
+		<RoleClass Name="HMIFacet" RefBaseClassPath="AutomationMLBaseRoleClassLib/AutomationMLBaseRole/Facet" />
+		<RoleClass Name="Enterprise" RefBaseClassPath="AutomationMLBaseRoleClassLib/AutomationMLBaseRole/Structure/ResourceStructure" />
+		<RoleClass Name="Site" RefBaseClassPath="AutomationMLBaseRoleClassLib/AutomationMLBaseRole/Structure/ResourceStructure" />
+		<RoleClass Name="Area" RefBaseClassPath="AutomationMLBaseRoleClassLib/AutomationMLBaseRole/Structure/ResourceStructure" />
+		<RoleClass Name="ProductionLine" RefBaseClassPath="AutomationMLBaseRoleClassLib/AutomationMLBaseRole/Structure/ResourceStructure" />
+		<RoleClass Name="WorkCell" RefBaseClassPath="AutomationMLBaseRoleClassLib/AutomationMLBaseRole/Structure/ResourceStructure" />
+		<RoleClass Name="ProcessCell" RefBaseClassPath="AutomationMLBaseRoleClassLib/AutomationMLBaseRole/Structure/ResourceStructure" />
+		<RoleClass Name="Unit" RefBaseClassPath="AutomationMLBaseRoleClassLib/AutomationMLBaseRole/Structure/ResourceStructure" />
+		<RoleClass Name="ProductionUnit" RefBaseClassPath="AutomationMLBaseRoleClassLib/AutomationMLBaseRole/Structure/ResourceStructure" />
+		<RoleClass Name="StorageZone" RefBaseClassPath="AutomationMLBaseRoleClassLib/AutomationMLBaseRole/Structure/ResourceStructure" />
+		<RoleClass Name="StorageUnit" RefBaseClassPath="AutomationMLBaseRoleClassLib/AutomationMLBaseRole/Structure/ResourceStructure" />
+		<RoleClass Name="Turntable" RefBaseClassPath="AutomationMLDMIRoleClassLib/DiscManufacturingEquipment/Transport" />
+		<RoleClass Name="Conveyor" RefBaseClassPath="AutomationMLDMIRoleClassLib/DiscManufacturingEquipment/Transport">
+			<RoleClass Name="BeltConveyor" RefBaseClassPath="Conveyor" />
+			<RoleClass Name="RollConveyor" RefBaseClassPath="Conveyor" />
+			<RoleClass Name="ChainConveyor" RefBaseClassPath="Conveyor" />
+			<RoleClass Name="PalletConveyor" RefBaseClassPath="Conveyor" />
+			<RoleClass Name="OverheadConveyor" RefBaseClassPath="Conveyor" />
+		</RoleClass>
+		<RoleClass Name="LiftingTable" RefBaseClassPath="AutomationMLDMIRoleClassLib/DiscManufacturingEquipment/Transport" />
+		<RoleClass Name="AGV" RefBaseClassPath="AutomationMLDMIRoleClassLib/DiscManufacturingEquipment/Transport" />
+		<RoleClass Name="Transposer" RefBaseClassPath="AutomationMLDMIRoleClassLib/DiscManufacturingEquipment/Transport" />
+		<RoleClass Name="CarrierHandlingSystem" RefBaseClassPath="AutomationMLDMIRoleClassLib/DiscManufacturingEquipment/Transport" />
+		<RoleClass Name="BodyStore" RefBaseClassPath="AutomationMLDMIRoleClassLib/DiscManufacturingEquipment/Storage" />
+		<RoleClass Name="Lift" RefBaseClassPath="AutomationMLDMIRoleClassLib/DiscManufacturingEquipment/Transport" />
+		<RoleClass Name="Rollerbed" RefBaseClassPath="AutomationMLDMIRoleClassLib/DiscManufacturingEquipment/Transport" />
+		<RoleClass Name="StationaryTool" RefBaseClassPath="AutomationMLDMIRoleClassLib/DiscManufacturingEquipment/Tool" />
+		<RoleClass Name="MovableTool" RefBaseClassPath="AutomationMLDMIRoleClassLib/DiscManufacturingEquipment/Tool" />
+		<RoleClass Name="ControlCabinet" RefBaseClassPath="AutomationMLCSRoleClassLib/ControlEquipment" />
+		<RoleClass Name="IODevice" RefBaseClassPath="AutomationMLCSRoleClassLib/ControlEquipment" />
+		<RoleClass Name="HMI" RefBaseClassPath="AutomationMLCSRoleClassLib/ControlEquipment">
+			<RoleClass Name="WarningEquipment" RefBaseClassPath="AutomationMLExtendedRoleClassLib/HMI" />
+		</RoleClass>
+		<RoleClass Name="ActuatingDrive" RefBaseClassPath="AutomationMLCSRoleClassLib/ControlEquipment/Actuator" />
+		<RoleClass Name="MotionController" RefBaseClassPath="AutomationMLCSRoleClassLib/ControlEquipment" />
+		<RoleClass Name="Panel" RefBaseClassPath="AutomationMLCSRoleClassLib/ControlEquipment/ControlHardware" />
+		<RoleClass Name="MeasuringEquipment" RefBaseClassPath="AutomationMLBaseRoleClassLib/AutomationMLBaseRole/Resource" />
+		<RoleClass Name="Clamp" RefBaseClassPath="AutomationMLDMIRoleClassLib/DiscManufacturingEquipment/Fixture" />
+		<RoleClass Name="ProcessController" RefBaseClassPath="AutomationMLCSRoleClassLib/ControlEquipment/Controller" />
+		<RoleClass Name="Loader" RefBaseClassPath="AutomationMLDMIRoleClassLib/DiscManufacturingEquipment/Storage" />
+		<RoleClass Name="Unloader" RefBaseClassPath="AutomationMLDMIRoleClassLib/DiscManufacturingEquipment/Storage" />
+	</RoleClassLib>
+	<RoleClassLib Name="SecurePnWRoleLib">
+		<Version>0.1</Version>
+		<RoleClass Name="Fähigkeit" RefBaseClassPath="AutomationMLBaseRoleClassLib/AutomationMLBaseRole/Process">
+			<RoleClass Name="Waschen" RefBaseClassPath="Fähigkeit">
+				<Attribute Name="Temperatur des Reinigungsmediums" AttributeDataType="xs:double" />
+				<Attribute Name="Konzentration des Reinigungsmediums" AttributeDataType="xs:double" />
+				<RoleClass Name="WaschenMitUltraschall" RefBaseClassPath="SecurePnWRoleLib/Fähigkeit/Waschen" />
+				<RoleClass Name="WaschenMitUltraschallMitZweiFrequenzen" RefBaseClassPath="SecurePnWRoleLib/Fähigkeit/Waschen" />
+			</RoleClass>
+			<RoleClass Name="Ölabscheider" RefBaseClassPath="SecurePnWRoleLib/Fähigkeit" />
+			<RoleClass Name="Spülen" RefBaseClassPath="Fähigkeit">
+				<RoleClass Name="SpülenMitUltraschall" RefBaseClassPath="SecurePnWRoleLib/Fähigkeit/Spülen" />
+				<RoleClass Name="SpülenMitUltraschallMitZweiFrequenzen" RefBaseClassPath="SecurePnWRoleLib/Fähigkeit/Spülen" />
+			</RoleClass>
+			<RoleClass Name="Trocknen" RefBaseClassPath="Fähigkeit">
+				<Attribute Name="Trocknungstemperatur" AttributeDataType="xs:double" />
+				<RoleClass Name="VakuumTrocknen" RefBaseClassPath="Trocknen">
+					<Attribute Name="Vakuumdruck" />
+				</RoleClass>
+				<RoleClass Name="HeissluftTrocknen" RefBaseClassPath="SecurePnWRoleLib/Fähigkeit/Trocknen" />
+				<RoleClass Name="KombiTrocknen" RefBaseClassPath="SecurePnWRoleLib/Fähigkeit/Trocknen" />
+			</RoleClass>
+			<RoleClass Name="Vorschub" RefBaseClassPath="SecurePnWRoleLib/Fähigkeit" />
+			<RoleClass Name="Bereitstellung" RefBaseClassPath="SecurePnWRoleLib/Fähigkeit" />
+			<RoleClass Name="Laden" RefBaseClassPath="SecurePnWRoleLib/Fähigkeit" />
+			<RoleClass Name="Bevorratung" RefBaseClassPath="SecurePnWRoleLib/Fähigkeit" />
+			<RoleClass Name="Messen" RefBaseClassPath="SecurePnWRoleLib/Fähigkeit" />
+			<RoleClass Name="Reinigung" RefBaseClassPath="SecurePnWRoleLib/Fähigkeit" />
+			<RoleClass Name="Bohrerbruchkontrolle" RefBaseClassPath="SecurePnWRoleLib/Fähigkeit" />
+			<RoleClass Name="Greifen" RefBaseClassPath="SecurePnWRoleLib/Fähigkeit">
+				<Description>Kann noch ausdetailliert werden für Arten der Objekte</Description>
+			</RoleClass>
+			<RoleClass Name="Schütteln" RefBaseClassPath="SecurePnWRoleLib/Fähigkeit" />
+			<RoleClass Name="Erhitzen" RefBaseClassPath="SecurePnWRoleLib/Fähigkeit" />
+			<RoleClass Name="Wiegen" RefBaseClassPath="SecurePnWRoleLib/Fähigkeit" />
+			<RoleClass Name="Abfüllen" RefBaseClassPath="SecurePnWRoleLib/Fähigkeit" />
+			<RoleClass Name="AutomatischeFüllstandsregelung" RefBaseClassPath="SecurePnWRoleLib/Fähigkeit" />
+		</RoleClass>
+	</RoleClassLib>
+	<SystemUnitClassLib Name="MOC_Danner_Dolphin_SUC">
+		<Version>0.1</Version>
+		<SystemUnitClass Name="Modul">
+			<Attribute Name="Signatur" AttributeDataType="xs:string" />
+			<Attribute Name="CodeMeterID" AttributeDataType="xs:string" />
+			<Attribute Name="Frame" AttributeDataType="xs:string">
+				<Attribute Name="x">
+					<Value>-10550</Value>
+				</Attribute>
+				<Attribute Name="y">
+					<Value>3550</Value>
+				</Attribute>
+				<Attribute Name="z">
+					<Value>0</Value>
+				</Attribute>
+				<Attribute Name="rx">
+					<Value>0</Value>
+				</Attribute>
+				<Attribute Name="ry">
+					<Value>0</Value>
+				</Attribute>
+				<Attribute Name="rz">
+					<Value>0</Value>
+				</Attribute>
+			</Attribute>
+			<ExternalInterface Name="SecurePnWInterface" ID="1bc99bc4-afc5-4f2a-849b-baf0c695ae43" RefBaseClassPath="SecurePnWInterfaceLib/SecurePnWModulInterface" />
+			<ExternalInterface Name="VorgängerModulInterface" ID="e80bdbc1-b6ee-453d-8181-29f24dde9543" RefBaseClassPath="AutomationMLInterfaceClassLib/AutomationMLBaseInterface/Order">
+				<Attribute Name="Direction" AttributeDataType="xs:string">
+					<Value>In</Value>
+				</Attribute>
+			</ExternalInterface>
+			<ExternalInterface Name="NachfolgerModulInterface" ID="3072761e-37fe-45e3-b1d1-b661d6437bfc" RefBaseClassPath="AutomationMLInterfaceClassLib/AutomationMLBaseInterface/Order">
+				<Attribute Name="Direction" AttributeDataType="xs:string">
+					<Value>Out</Value>
+				</Attribute>
+			</ExternalInterface>
+			<InternalElement Name="Steuerung" ID="19531777-a3b0-4f52-9023-cbf44554d7bc">
+				<RoleRequirements RefBaseRoleClassPath="AutomationMLCSRoleClassLib/ControlEquipment/Controller/PLC" />
+			</InternalElement>
+			<InternalElement Name="VisuFacet" ID="a9d516ae-c545-4d4b-bd89-582fb431afa3">
+				<RoleRequirements RefBaseRoleClassPath="AutomationMLExtendedRoleClassLib/PLCFacet" />
+			</InternalElement>
+			<SupportedRoleClass RefRoleClassPath="AutomationMLExtendedRoleClassLib/Unit" />
+			<SystemUnitClass Name="Waschmodul" RefBaseClassPath="Modul">
+				<InternalElement Name="Prozessbeschreibung" ID="ec4c6b07-760d-4d5b-8566-3263d4e1b822">
+					<Attribute Name="Verarbeitungszeit" />
+					<Attribute Name="Temperatur des Reinigungsmediums" AttributeDataType="xs:double">
+						<Constraint Name="NewAttributeConstraintOrdinalRequirement">
+							<OrdinalScaledType>
+								<RequiredMaxValue>200</RequiredMaxValue>
+								<RequiredValue />
+								<RequiredMinValue>50</RequiredMinValue>
+							</OrdinalScaledType>
+						</Constraint>
+					</Attribute>
+					<Attribute Name="Konzentration des Reinigungsmediums" AttributeDataType="xs:double" />
+					<SupportedRoleClass RefRoleClassPath="SecurePnWRoleLib/Fähigkeit/Ölabscheider" />
+					<SupportedRoleClass RefRoleClassPath="SecurePnWRoleLib/Fähigkeit/AutomatischeFüllstandsregelung" />
+					<SupportedRoleClass RefRoleClassPath="SecurePnWRoleLib/Fähigkeit/Vorschub" />
+					<SupportedRoleClass RefRoleClassPath="SecurePnWRoleLib/Fähigkeit/Waschen" />
+				</InternalElement>
+			</SystemUnitClass>
+			<SystemUnitClass Name="Spülmodul" RefBaseClassPath="Modul">
+				<InternalElement Name="Prozessbeschreibung" ID="24c0e3e6-7ea6-4860-92a4-b49aaf3cada6">
+					<Attribute Name="Verarbeitungszeit" />
+					<SupportedRoleClass RefRoleClassPath="SecurePnWRoleLib/Fähigkeit/AutomatischeFüllstandsregelung" />
+					<SupportedRoleClass RefRoleClassPath="SecurePnWRoleLib/Fähigkeit/Vorschub" />
+					<SupportedRoleClass RefRoleClassPath="SecurePnWRoleLib/Fähigkeit/Spülen" />
+				</InternalElement>
+			</SystemUnitClass>
+			<SystemUnitClass Name="Trocknungsmodul_Vakuum" RefBaseClassPath="Modul">
+				<InternalElement Name="Prozessbeschreibung" ID="50c182a8-ce47-4a70-a4cb-6831b1a930d6">
+					<Attribute Name="Verarbeitungszeit" />
+					<Attribute Name="Vakuumdruck" />
+					<Attribute Name="Trocknungstemperatur" AttributeDataType="xs:double" />
+					<SupportedRoleClass RefRoleClassPath="SecurePnWRoleLib/Fähigkeit/Vorschub" />
+					<SupportedRoleClass RefRoleClassPath="SecurePnWRoleLib/Fähigkeit/Trocknen/VakuumTrocknen" />
+				</InternalElement>
+			</SystemUnitClass>
+			<SystemUnitClass Name="Trocknungsmodul_Kombi" RefBaseClassPath="Modul">
+				<InternalElement Name="Prozessbeschreibung" ID="76c1716f-05c0-44a8-8b53-44c3e9515801">
+					<Attribute Name="Verarbeitungszeit" />
+					<Attribute Name="Vakuumdruck" />
+					<Attribute Name="Trocknungstemperatur" AttributeDataType="xs:double" />
+					<SupportedRoleClass RefRoleClassPath="SecurePnWRoleLib/Fähigkeit/Vorschub" />
+					<SupportedRoleClass RefRoleClassPath="SecurePnWRoleLib/Fähigkeit/Trocknen/KombiTrocknen" />
+					<SupportedRoleClass RefRoleClassPath="SecurePnWRoleLib/Fähigkeit/Trocknen/HeissluftTrocknen" />
+					<SupportedRoleClass RefRoleClassPath="SecurePnWRoleLib/Fähigkeit/Trocknen/VakuumTrocknen" />
+				</InternalElement>
+			</SystemUnitClass>
+			<SystemUnitClass Name="Trocknungsmodul_Heissluft" RefBaseClassPath="Modul">
+				<InternalElement Name="Prozessbeschreibung" ID="529247de-ebdb-4a0d-9e30-19381b66b55f">
+					<Attribute Name="Verarbeitungszeit" />
+					<Attribute Name="Vakuumdruck" />
+					<Attribute Name="Trocknungstemperatur" AttributeDataType="xs:double" />
+					<SupportedRoleClass RefRoleClassPath="SecurePnWRoleLib/Fähigkeit/Vorschub" />
+					<SupportedRoleClass RefRoleClassPath="SecurePnWRoleLib/Fähigkeit/Trocknen/HeissluftTrocknen" />
+				</InternalElement>
+			</SystemUnitClass>
+		</SystemUnitClass>
+	</SystemUnitClassLib>
+</CAEXFile>

@@ -1,0 +1,108 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Mit XMLSpy v2006 sp1 U bearbeitet (http://www.altova.com) von ABB User (ABB Forschungszentrum) -->
+<CAEXFile FileName="xxx.aml" SchemaVersion="2.15" xsi:noNamespaceSchemaLocation="CAEX_ClassModel_V2.15.xsd" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+	<AdditionalInformation AutomationMLVersion="2.0"/>
+	<AdditionalInformation>
+		<WriterHeader>
+			<WriterName>ABB Demo Tool</WriterName>
+			<WriterID>ABB Demo Tool</WriterID>
+			<WriterVendor>ABB</WriterVendor>
+			<WriterVendorURL>www.ABB.com</WriterVendorURL>
+			<WriterVersion>1.0</WriterVersion>
+			<WriterRelease>1.0.0</WriterRelease>
+			<LastWritingDateTime>29.01.2012 18:15:00
+			</LastWritingDateTime>
+			<WriterProjectTitle>no project</WriterProjectTitle>
+			<WriterProjectID>not project
+			</WriterProjectID>
+		</WriterHeader>
+	</AdditionalInformation>
+	<ExternalReference Path="08b Splitter_B - Errors in Rumpf_NotExists.aml" Alias="part1"/>
+	<ExternalReference Path="08b Splitter_B - Errors in Rumpf.aml" Alias="part1"/>
+	<ExternalReference Path="Lib\08c Splitter_ICL - Errors in Rumpf.aml" Alias="Part2"/>
+	<ExternalReference Path="\Lib\08c Splitter_ICL - Errors in Rumpf.aml" Alias="Part3"/>
+	<InstanceHierarchy Name="TestFile for Splitting" ChangeMode="state">
+		<InternalElement Name="A" ID="{f9bceecd-d602-493b-a1ea-d6ae3018bbf5}" RefBaseSystemUnitPath="MySUC/TA">
+			<Attribute Name="Attr1" Unit="m" AttributeDataType="xs:string">
+				<Value>12</Value>
+			</Attribute>
+			<Attribute Name="Attr2" Unit="m" AttributeDataType="xs:string">
+				<Value>12</Value>
+				<Attribute Name="SubAtt2" Unit="m" AttributeDataType="xs:string">
+					<Value>12</Value>
+				</Attribute>
+			</Attribute>
+			<ExternalInterface Name="newTI1" RefBaseClassPath="part2@ICL/TI1" ID="{1fe18227-1627-408c-a311-70dc9e23ffd7}">
+				<Attribute Name="Attr3" Unit="m" AttributeDataType="xs:string">
+					<Value>12</Value>
+				</Attribute>
+				<Attribute Name="Attr4" Unit="m" AttributeDataType="xs:string">
+					<Value>12</Value>
+				</Attribute>
+			</ExternalInterface>
+			<InternalElement Name="B" ID="{1cc21261-c47c-4f1b-b4e5-19d2bbffb0cc}" RefBaseSystemUnitPath="part1@{1cc21261-c47c-4f1b-b4e5-19d2bbffb0cc}"/>
+			<InternalLink Name="new link" RefPartnerSideA="{f9bceecd-d602-493b-a1ea-d6ae3018bbf5}:newTI1" RefPartnerSideB="part1@{340836b6-24d7-4cf9-9fd4-7d0797688dd4}:newTI3"/>
+			<InternalLink Name="new link" RefPartnerSideA="{f9bceecd-d602-493b-a1ea-d6ae3018bbf5}:newTI1" RefPartnerSideB="part1@{1cc21261-c47c-4f1b-b4e5-19d2bbffb0cc}:newTI2"/>
+			<RoleRequirements RefBaseRoleClassPath="RCL/RA">
+				<Attribute Name="Attr5" Unit="m" AttributeDataType="xs:string">
+					<Value>12</Value>
+				</Attribute>
+				<Attribute Name="Attr6" Unit="m" AttributeDataType="xs:string">
+					<Value>12</Value>
+				</Attribute>
+			</RoleRequirements>
+		</InternalElement>
+		<InternalElement Name="D" ID="{5029c0de-66d2-42ee-be90-5af8262f9dbf}" RefBaseSystemUnitPath="MySUC/TA">
+			<InternalElement Name="E" ID="{eea4b308-73f7-4873-956a-74e7b244a8ea}" RefBaseSystemUnitPath="MySUC/TB">
+				<InternalElement Name="C" ID="asdf" RefBaseSystemUnitPath="part1@{340836b6-24d7-4cf9-9fd4-7d0797688dd4}"/>
+				<RoleRequirements RefBaseRoleClassPath="RCL/RB"/>
+			</InternalElement>
+			<RoleRequirements RefBaseRoleClassPath="RCL/RA"/>
+		</InternalElement>
+	</InstanceHierarchy>
+	<RoleClassLib Name="RCL">
+		<RoleClass Name="RA">
+			<Attribute Name="Attr13" Unit="m" AttributeDataType="xs:string">
+				<Value>12</Value>
+			</Attribute>
+			<Attribute Name="Attr14" Unit="m" AttributeDataType="xs:string">
+				<Value>12</Value>
+			</Attribute>
+		</RoleClass>
+		<RoleClass Name="RB">
+			<Attribute Name="Attr15" Unit="m" AttributeDataType="xs:string">
+				<Value>12</Value>
+			</Attribute>
+			<Attribute Name="Attr16" Unit="m" AttributeDataType="xs:string">
+				<Value>12</Value>
+			</Attribute>
+			<RoleClass Name="RC"/>
+		</RoleClass>
+	</RoleClassLib>
+	<SystemUnitClassLib Name="MySUC">
+		<SystemUnitClass Name="TA">
+			<Attribute Name="Attr17" Unit="m" AttributeDataType="xs:string">
+				<Value>12</Value>
+			</Attribute>
+			<Attribute Name="Attr18" Unit="m" AttributeDataType="xs:string">
+				<Value>12</Value>
+			</Attribute>
+		</SystemUnitClass>
+		<SystemUnitClass Name="TB">
+			<Attribute Name="Attr19" Unit="m" AttributeDataType="xs:string">
+				<Value>12</Value>
+			</Attribute>
+			<Attribute Name="Attr20" Unit="m" AttributeDataType="xs:string">
+				<Value>12</Value>
+			</Attribute>
+			<SystemUnitClass Name="TC">
+				<Attribute Name="Attr21" Unit="m" AttributeDataType="xs:string">
+					<Value>12</Value>
+				</Attribute>
+				<Attribute Name="Attr22" Unit="m" AttributeDataType="xs:string">
+					<Value>12</Value>
+				</Attribute>
+			</SystemUnitClass>
+		</SystemUnitClass>
+	</SystemUnitClassLib>
+</CAEXFile>

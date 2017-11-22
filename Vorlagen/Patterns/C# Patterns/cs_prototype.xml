@@ -1,0 +1,264 @@
+<?xml version="1.0"  encoding="windows-1252"?>
+<XMI xmi.version="1.1" xmlns:UML="omg.org/UML1.3" timestamp="2005-02-04 16:53:56">
+	<XMI.header>
+		<XMI.documentation>
+			<XMI.exporter>Enterprise Architect</XMI.exporter>
+			<XMI.exporterVersion>2.5</XMI.exporterVersion>
+		</XMI.documentation>
+	</XMI.header>
+	<XMI.content>
+		<UML:Model name="EA Model" xmi.id="MX_EAID_EFBA62D7_4F01_4eab_BE96_9716D693A9DA">
+			<UML:Namespace.ownedElement>
+				<UML:Class name="Prototype" xmi.id="EAID_54579549_C34D_424b_845F_3E0EEC1591C2" visibility="public" namespace="EAPK_EFBA62D7_4F01_4eab_BE96_9716D693A9DA" isRoot="false" isLeaf="false" isAbstract="true" isActive="false">
+					<UML:ModelElement.taggedValue>
+						<UML:TaggedValue tag="documentation" value="This class declares an interface for cloning itself."/>
+						<UML:TaggedValue tag="isSpecification" value="false"/>
+						<UML:TaggedValue tag="ea_stype" value="Class"/>
+						<UML:TaggedValue tag="ea_ntype" value="0"/>
+						<UML:TaggedValue tag="version" value="1.0"/>
+						<UML:TaggedValue tag="package" value="EAPK_EFBA62D7_4F01_4eab_BE96_9716D693A9DA"/>
+						<UML:TaggedValue tag="date_created" value="2003-09-06 21:44:09"/>
+						<UML:TaggedValue tag="date_modified" value="2005-02-01 15:50:10"/>
+						<UML:TaggedValue tag="gentype" value="C#"/>
+						<UML:TaggedValue tag="tagged" value="0"/>
+						<UML:TaggedValue tag="package_name" value="Prototype"/>
+						<UML:TaggedValue tag="phase" value="1.0"/>
+						<UML:TaggedValue tag="complexity" value="1"/>
+						<UML:TaggedValue tag="status" value="Proposed"/>
+						<UML:TaggedValue tag="style" value="BackColor=-1;BorderColor=-1;BorderWidth=-1;FontColor=-1;VSwimLanes=0;HSwimLanes=0;BorderStyle=0;"/>
+					</UML:ModelElement.taggedValue>
+					<UML:Classifier.feature>
+						<UML:Operation name="Clone" visibility="public" ownerScope="instance" isQuery="false" concurrency="sequential">
+							<UML:ModelElement.taggedValue>
+								<UML:TaggedValue tag="type" value="Prototype"/>
+								<UML:TaggedValue tag="const" value="false"/>
+								<UML:TaggedValue tag="isAbstract" value="1"/>
+								<UML:TaggedValue tag="synchronised" value="0"/>
+								<UML:TaggedValue tag="concurrency" value="Sequential"/>
+								<UML:TaggedValue tag="position" value="0"/>
+								<UML:TaggedValue tag="returnarray" value="0"/>
+								<UML:TaggedValue tag="pure" value="0"/>
+								<UML:TaggedValue tag="ea_guid" value="{042233D4-3236-4f04-A7CB-C2E84BB40128}"/>
+							</UML:ModelElement.taggedValue>
+							<UML:BehavioralFeature.parameter>
+								<UML:Parameter kind="return" visibility="public">
+									<UML:Parameter.type>
+										<UML:Classifier xmi.idref="EAID_54579549_C34D_424b_845F_3E0EEC1591C2"/>
+									</UML:Parameter.type>
+									<UML:ModelElement.taggedValue>
+										<UML:TaggedValue tag="pos" value="0"/>
+										<UML:TaggedValue tag="type" value="Prototype"/>
+										<UML:TaggedValue tag="const" value="0"/>
+										<UML:TaggedValue tag="classifier" value="EAID_54579549_C34D_424b_845F_3E0EEC1591C2"/>
+										<UML:TaggedValue tag="ea_guid" value="{RETURNID-3236-4f04-A7CB-C2E84BB40128}"/>
+									</UML:ModelElement.taggedValue>
+									<UML:Parameter.defaultValue>
+										<UML:Expression/>
+									</UML:Parameter.defaultValue>
+								</UML:Parameter>
+							</UML:BehavioralFeature.parameter>
+						</UML:Operation>
+					</UML:Classifier.feature>
+				</UML:Class>
+				<UML:Generalization subtype="EAID_59439B59_021E_4e8c_B9EC_E3B7F504D95D" supertype="EAID_54579549_C34D_424b_845F_3E0EEC1591C2" xmi.id="EAID_239A4604_DA7A_4160_A288_FDA8200A0584" visibility="public">
+					<UML:ModelElement.taggedValue>
+						<UML:TaggedValue tag="style" value="3"/>
+						<UML:TaggedValue tag="ea_type" value="Generalization"/>
+						<UML:TaggedValue tag="direction" value="Source -&gt; Destination"/>
+						<UML:TaggedValue tag="linemode" value="3"/>
+						<UML:TaggedValue tag="linecolor" value="0"/>
+						<UML:TaggedValue tag="linewidth" value="0"/>
+						<UML:TaggedValue tag="seqno" value="0"/>
+						<UML:TaggedValue tag="subtype" value="Tree"/>
+						<UML:TaggedValue tag="headStyle" value="0"/>
+						<UML:TaggedValue tag="lineStyle" value="0"/>
+						<UML:TaggedValue tag="src_visibility" value="Public"/>
+						<UML:TaggedValue tag="src_aggregation" value="0"/>
+						<UML:TaggedValue tag="src_isOrdered" value="false"/>
+						<UML:TaggedValue tag="src_isNavigable" value="false"/>
+						<UML:TaggedValue tag="dst_visibility" value="Public"/>
+						<UML:TaggedValue tag="dst_aggregation" value="0"/>
+						<UML:TaggedValue tag="dst_isOrdered" value="false"/>
+						<UML:TaggedValue tag="dst_isNavigable" value="false"/>
+						<UML:TaggedValue tag="privatedata5" value="SX=0;SY=0;"/>
+					</UML:ModelElement.taggedValue>
+				</UML:Generalization>
+				<UML:Generalization subtype="EAID_1FD404D2_18AF_4273_BA46_894249E5201E" supertype="EAID_54579549_C34D_424b_845F_3E0EEC1591C2" xmi.id="EAID_F1F4A273_B45B_471e_9B0F_D267B588AFCF" visibility="public">
+					<UML:ModelElement.taggedValue>
+						<UML:TaggedValue tag="style" value="3"/>
+						<UML:TaggedValue tag="ea_type" value="Generalization"/>
+						<UML:TaggedValue tag="direction" value="Source -&gt; Destination"/>
+						<UML:TaggedValue tag="linemode" value="3"/>
+						<UML:TaggedValue tag="linecolor" value="0"/>
+						<UML:TaggedValue tag="linewidth" value="0"/>
+						<UML:TaggedValue tag="seqno" value="0"/>
+						<UML:TaggedValue tag="subtype" value="Tree"/>
+						<UML:TaggedValue tag="headStyle" value="0"/>
+						<UML:TaggedValue tag="lineStyle" value="0"/>
+						<UML:TaggedValue tag="src_visibility" value="Public"/>
+						<UML:TaggedValue tag="src_aggregation" value="0"/>
+						<UML:TaggedValue tag="src_isOrdered" value="false"/>
+						<UML:TaggedValue tag="src_isNavigable" value="false"/>
+						<UML:TaggedValue tag="dst_visibility" value="Public"/>
+						<UML:TaggedValue tag="dst_aggregation" value="0"/>
+						<UML:TaggedValue tag="dst_isOrdered" value="false"/>
+						<UML:TaggedValue tag="dst_isNavigable" value="false"/>
+						<UML:TaggedValue tag="privatedata5" value="SX=0;SY=0;"/>
+					</UML:ModelElement.taggedValue>
+				</UML:Generalization>
+				<UML:Class name="ConcretePrototype1" xmi.id="EAID_59439B59_021E_4e8c_B9EC_E3B7F504D95D" visibility="public" namespace="EAPK_EFBA62D7_4F01_4eab_BE96_9716D693A9DA" isRoot="false" isLeaf="false" isAbstract="false" isActive="false">
+					<UML:ModelElement.taggedValue>
+						<UML:TaggedValue tag="documentation" value="This class implements an operation for cloning itself."/>
+						<UML:TaggedValue tag="isSpecification" value="false"/>
+						<UML:TaggedValue tag="ea_stype" value="Class"/>
+						<UML:TaggedValue tag="ea_ntype" value="0"/>
+						<UML:TaggedValue tag="version" value="1.0"/>
+						<UML:TaggedValue tag="package" value="EAPK_EFBA62D7_4F01_4eab_BE96_9716D693A9DA"/>
+						<UML:TaggedValue tag="date_created" value="2003-09-06 21:44:50"/>
+						<UML:TaggedValue tag="date_modified" value="2005-02-01 15:50:08"/>
+						<UML:TaggedValue tag="gentype" value="C#"/>
+						<UML:TaggedValue tag="tagged" value="0"/>
+						<UML:TaggedValue tag="package_name" value="Prototype"/>
+						<UML:TaggedValue tag="phase" value="1.0"/>
+						<UML:TaggedValue tag="complexity" value="1"/>
+						<UML:TaggedValue tag="status" value="Proposed"/>
+						<UML:TaggedValue tag="style" value="BackColor=-1;BorderColor=-1;BorderWidth=-1;FontColor=-1;VSwimLanes=0;HSwimLanes=0;BorderStyle=0;"/>
+					</UML:ModelElement.taggedValue>
+					<UML:Classifier.feature>
+						<UML:Operation name="Clone" visibility="public" ownerScope="instance" isQuery="false" concurrency="sequential">
+							<UML:ModelElement.taggedValue>
+								<UML:TaggedValue tag="type" value="Prototype"/>
+								<UML:TaggedValue tag="const" value="false"/>
+								<UML:TaggedValue tag="code" value="return (Prototype)this.MemberwiseClone();"/>
+								<UML:TaggedValue tag="synchronised" value="0"/>
+								<UML:TaggedValue tag="concurrency" value="Sequential"/>
+								<UML:TaggedValue tag="position" value="0"/>
+								<UML:TaggedValue tag="returnarray" value="0"/>
+								<UML:TaggedValue tag="pure" value="0"/>
+								<UML:TaggedValue tag="ea_guid" value="{B3F5048B-B295-47f7-AEEE-E17ACE7BB6EC}"/>
+								<UML:TaggedValue tag="styleex" value="ShowBeh=0;"/>
+								<UML:TaggedValue tag="override" value="true" xmi.id="EAID_D92D6B0B_2BFF_422b_AF7E_8AC17DF59F26"/>
+							</UML:ModelElement.taggedValue>
+							<UML:BehavioralFeature.parameter>
+								<UML:Parameter kind="return" visibility="public">
+									<UML:Parameter.type>
+										<UML:Classifier xmi.idref="EAID_54579549_C34D_424b_845F_3E0EEC1591C2"/>
+									</UML:Parameter.type>
+									<UML:ModelElement.taggedValue>
+										<UML:TaggedValue tag="pos" value="0"/>
+										<UML:TaggedValue tag="type" value="Prototype"/>
+										<UML:TaggedValue tag="const" value="0"/>
+										<UML:TaggedValue tag="classifier" value="EAID_54579549_C34D_424b_845F_3E0EEC1591C2"/>
+										<UML:TaggedValue tag="ea_guid" value="{RETURNID-B295-47f7-AEEE-E17ACE7BB6EC}"/>
+									</UML:ModelElement.taggedValue>
+									<UML:Parameter.defaultValue>
+										<UML:Expression/>
+									</UML:Parameter.defaultValue>
+								</UML:Parameter>
+							</UML:BehavioralFeature.parameter>
+						</UML:Operation>
+					</UML:Classifier.feature>
+				</UML:Class>
+				<UML:Class name="ConcretePrototype2" xmi.id="EAID_1FD404D2_18AF_4273_BA46_894249E5201E" visibility="public" namespace="EAPK_EFBA62D7_4F01_4eab_BE96_9716D693A9DA" isRoot="false" isLeaf="false" isAbstract="false" isActive="false">
+					<UML:ModelElement.taggedValue>
+						<UML:TaggedValue tag="documentation" value="This class implements an operation for cloning itself."/>
+						<UML:TaggedValue tag="isSpecification" value="false"/>
+						<UML:TaggedValue tag="ea_stype" value="Class"/>
+						<UML:TaggedValue tag="ea_ntype" value="0"/>
+						<UML:TaggedValue tag="version" value="1.0"/>
+						<UML:TaggedValue tag="package" value="EAPK_EFBA62D7_4F01_4eab_BE96_9716D693A9DA"/>
+						<UML:TaggedValue tag="date_created" value="2003-09-06 21:45:09"/>
+						<UML:TaggedValue tag="date_modified" value="2005-02-01 15:50:08"/>
+						<UML:TaggedValue tag="gentype" value="C#"/>
+						<UML:TaggedValue tag="tagged" value="0"/>
+						<UML:TaggedValue tag="package_name" value="Prototype"/>
+						<UML:TaggedValue tag="phase" value="1.0"/>
+						<UML:TaggedValue tag="complexity" value="1"/>
+						<UML:TaggedValue tag="status" value="Proposed"/>
+						<UML:TaggedValue tag="style" value="BackColor=-1;BorderColor=-1;BorderWidth=-1;FontColor=-1;VSwimLanes=0;HSwimLanes=0;BorderStyle=0;"/>
+					</UML:ModelElement.taggedValue>
+					<UML:Classifier.feature>
+						<UML:Operation name="Clone" visibility="public" ownerScope="instance" isQuery="false" concurrency="sequential">
+							<UML:ModelElement.taggedValue>
+								<UML:TaggedValue tag="type" value="Prototype"/>
+								<UML:TaggedValue tag="const" value="false"/>
+								<UML:TaggedValue tag="code" value="return (Prototype)this.MemberwiseClone();"/>
+								<UML:TaggedValue tag="synchronised" value="0"/>
+								<UML:TaggedValue tag="concurrency" value="Sequential"/>
+								<UML:TaggedValue tag="position" value="0"/>
+								<UML:TaggedValue tag="returnarray" value="0"/>
+								<UML:TaggedValue tag="pure" value="0"/>
+								<UML:TaggedValue tag="ea_guid" value="{C089DA22-D4C3-42f4-B3CB-A51A1335444B}"/>
+								<UML:TaggedValue tag="styleex" value="ShowBeh=0;"/>
+								<UML:TaggedValue tag="override" value="true" xmi.id="EAID_8D1CAFC8_4B77_420f_9ACA_4016B4987FC3"/>
+							</UML:ModelElement.taggedValue>
+							<UML:BehavioralFeature.parameter>
+								<UML:Parameter kind="return" visibility="public">
+									<UML:Parameter.type>
+										<UML:Classifier xmi.idref="EAID_54579549_C34D_424b_845F_3E0EEC1591C2"/>
+									</UML:Parameter.type>
+									<UML:ModelElement.taggedValue>
+										<UML:TaggedValue tag="pos" value="0"/>
+										<UML:TaggedValue tag="type" value="Prototype"/>
+										<UML:TaggedValue tag="const" value="0"/>
+										<UML:TaggedValue tag="classifier" value="EAID_54579549_C34D_424b_845F_3E0EEC1591C2"/>
+										<UML:TaggedValue tag="ea_guid" value="{RETURNID-D4C3-42f4-B3CB-A51A1335444B}"/>
+									</UML:ModelElement.taggedValue>
+									<UML:Parameter.defaultValue>
+										<UML:Expression/>
+									</UML:Parameter.defaultValue>
+								</UML:Parameter>
+							</UML:BehavioralFeature.parameter>
+						</UML:Operation>
+					</UML:Classifier.feature>
+				</UML:Class>
+			</UML:Namespace.ownedElement>
+		</UML:Model>
+		<UML:Diagram name="Prototype" xmi.id="EAID_B45AE122_9738_452b_AE2B_26E5C56AAE21" diagramType="ClassDiagram" owner="EAPK_B45AE122_9738_452b_AE2B_26E5C56AAE21" toolName="Enterprise Architect 2.5">
+			<UML:ModelElement.taggedValue>
+				<UML:TaggedValue tag="documentation" value="This pattern specifies the kinds of objects to create using a prototypical instance, and creates new objects by copying this prototype."/>
+				<UML:TaggedValue tag="version" value="1.0"/>
+				<UML:TaggedValue tag="created_date" value="2004-12-14 13:31:42"/>
+				<UML:TaggedValue tag="modified_date" value="2005-02-01 16:26:28"/>
+				<UML:TaggedValue tag="package" value="EAPK_EFBA62D7_4F01_4eab_BE96_9716D693A9DA"/>
+				<UML:TaggedValue tag="type" value="Logical"/>
+				<UML:TaggedValue tag="swimlanes" value="locked=false;orientation=0;width=0;inbar=false;names=false;color=0;bold=false;fcol=0;;cls=0;"/>
+				<UML:TaggedValue tag="EAStyle" value="ShowPrivate=1;ShowProtected=1;ShowPublic=1;HideRelationships=0;Locked=0;Border=1;HighlightForeign=1;PackageContents=1;SequenceNotes=0;ScalePrintImage=0;PPgs.cx=0;PPgs.cy=0;DocSize.cx=780;DocSize.cy=1138;ShowDetails=0;Orientation=P;Zoom=100;ShowTags=0;OpParams=1;ShowIcons=1;CollabNums=0;HideProps=0;ShowReqs=0;ShowCons=0;PaperSize=9;HideParents=0;UseAlias=0;HideAtts=0;HideOps=0;HideStereo=0;HideElemStereo=0;ShowTests=0;ShowMaint=0;"/>
+				<UML:TaggedValue tag="styleex" value="ExcludeRTF=0;DocAll=0;HideQuals=0;AttPkg=1;ShowTests=0;ShowMaint=0;SuppressFOC=0;TDurLow=0;TDurHigh=100;TDurUnit=;TDurHide=0;"/>
+			</UML:ModelElement.taggedValue>
+			<UML:Diagram.element>
+				<UML:DiagramElement geometry="Left=209;Top=180;Right=324;Bottom=259;imgL=157;imgT=151;imgR=272;imgB=230;" subject="EAID_1FD404D2_18AF_4273_BA46_894249E5201E" seqno="1" style="DUID=941C1B35;LBL=;"/>
+				<UML:DiagramElement geometry="Left=62;Top=180;Right=177;Bottom=259;imgL=10;imgT=151;imgR=125;imgB=230;" subject="EAID_59439B59_021E_4e8c_B9EC_E3B7F504D95D" seqno="2" style="DUID=2EF40268;LBL=;"/>
+				<UML:DiagramElement geometry="Left=134;Top=39;Right=249;Bottom=109;imgL=82;imgT=10;imgR=197;imgB=80;" subject="EAID_54579549_C34D_424b_845F_3E0EEC1591C2" seqno="3" style="DUID=821A1E93;LBL=;"/>
+				<UML:DiagramElement geometry="SX=0;SY=0;EDGE=1;$LLB=;LLT=;LMT=;LMB=;LRT=;LRB=;Path=119:-159$191:-159$;" subject="EAID_239A4604_DA7A_4160_A288_FDA8200A0584" style="Mode=3;EOID=821A1E93;SOID=2EF40268;Hidden=0;"/>
+				<UML:DiagramElement geometry="SX=0;SY=0;EDGE=1;$LLB=;LLT=;LMT=;LMB=;LRT=;LRB=;Path=266:-159$191:-159$;" subject="EAID_F1F4A273_B45B_471e_9B0F_D267B588AFCF" style="Mode=3;EOID=821A1E93;SOID=941C1B35;Hidden=0;"/>
+			</UML:Diagram.element>
+		</UML:Diagram>
+	</XMI.content>
+	<XMI.difference/>
+	<XMI.extensions xmi.extender="Enterprise Architect 2.5">
+		<EAStub xmi.id="EAID_59439B59_021E_4e8c_B9EC_E3B7F504D95D" name="ConcretePrototype1" UMLType="Class"/>
+		<EAStub xmi.id="EAID_54579549_C34D_424b_845F_3E0EEC1591C2" name="Prototype" UMLType="Class"/>
+		<EAStub xmi.id="EAID_1FD404D2_18AF_4273_BA46_894249E5201E" name="ConcretePrototype2" UMLType="Class"/>
+		<UMLPattern name="Prototype" category="GoF Creational Patterns (C#)" version="1.0" notes="This pattern specifies the kinds of objects to create using a prototypical instance, and creates new objects by copying this prototype.">
+			<UMLPattern.PromptList>
+				<Element name="ConcretePrototype2:Class" guid="EAID_1FD404D2_18AF_4273_BA46_894249E5201E" id="779" prompt="yes" link="yes" classifier="no" type="no">
+					<Comment comment="This class implements an operation for cloning itself.">
+						<![CDATA[This class implements an operation for cloning itself.]]>
+					</Comment>
+				</Element>
+				<Element name="ConcretePrototype1:Class" guid="EAID_59439B59_021E_4e8c_B9EC_E3B7F504D95D" id="778" prompt="yes" link="yes" classifier="no" type="no">
+					<Comment comment="This class implements an operation for cloning itself.">
+						<![CDATA[This class implements an operation for cloning itself.]]>
+					</Comment>
+				</Element>
+				<Element name="Prototype:Class" guid="EAID_54579549_C34D_424b_845F_3E0EEC1591C2" id="777" prompt="yes" link="yes" classifier="no" type="no">
+					<Comment comment="This class declares an interface for cloning itself.">
+						<![CDATA[This class declares an interface for cloning itself.]]>
+					</Comment>
+				</Element>
+			</UMLPattern.PromptList>
+			<UMLPattern.PreviewImage xmlns:dt="urn:schemas-microsoft-com:datatypes" dt:dt="bin.base64" cx="7931" cy="6796">AQAAAGwAAAAKAAAACgAAABIBAADoAAAAAAAAAAAAAAD7HgAAjBoAACBFTUYAAAEAXBIAAIQA AAAJAAAAAAAAAAAAAAAAAAAAAAUAAAAEAABoAQAAIgEAAAAAAAAAAAAAAAAAAEB+BQDQbAQA EQAAAAwAAAAIAAAACQAAABAAAAABAAAA/////woAAAAQAAAANAAAAOP///9SAAAAcAEAAAEA AAD2////AAAAAAAAAAAAAAAAAAAAAAAAAAEAAAAAQQBSAEkAQQBMAAAAAAAAAAAAAAAAAAAA AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAEgAY7pB8yGqSfP// //++apJ8rWiSfAAAWwJgAABAbQWRfAjrEgDY5hIAAAAAAKzeEgD4JyEQMHElEP/////43BIA 7ykhEB0AAAAAAAAAAQAAAFAAAACQKssJXNuVfAAAWwKs25V8CAAAAAAAWwIAAFsCkCrLCSTd AAARzZZ8AAASAAAAAADw3RIAGO6QfMhqknz/////vmqSfK1oknwAAFsCYAAAQG0FkXwI6xIA 2OYSAAAAAABE3RIAkdZCXwAAAQAI6xIAvNwSAAAAAACw3RIAGO6QfHAFkXxAAAAAQCnLCVzb lXyIKcsJrNuVfAAAAAAAAAAAAABbAkApywlkdgAIAAAAACUAAAAMAAAAAQAAACcAAAAYAAAA AgAAAAAAAAD88uMAAAAAACUAAAAMAAAAAgAAACYAAAAcAAAAAwAAAAAAAAABAAAAAAAAAAAA AAAlAAAADAAAAAMAAAASAAAADAAAAAEAAAAhAAAACAAAABgAAAAMAAAAAAAAACYAAAAcAAAA BAAAAAAAAAABAAAAAAAAAAAAAAAlAAAADAAAAAQAAAASAAAADAAAAAIAAAAZAAAADAAAAP// /wASAAAADAAAAAEAAAAZAAAADAAAAP///wASAAAADAAAAAIAAAAZAAAADAAAAP///wASAAAA DAAAAAEAAAAZAAAADAAAAP///wAlAAAADAAAAAMAAAAiAAAADAAAAP////8oAAAADAAAAAQA AAAnAAAAGAAAAAQAAAAAAAAAwL/AAAAAAAAlAAAADAAAAAQAAAAmAAAAHAAAAAUAAAAAAAAA AQAAAAAAAADAv8AAJQAAAAwAAAAFAAAAOQAAAAwAAAACAAAAKwAAABgAAACJAAAA1v////sA AACR////JQAAAAwAAAACAAAAKAAAAAwAAAAEAAAAJQAAAAwAAAADAAAAKAAAAAwAAAAFAAAA KwAAABgAAACGAAAA2f////gAAACU////UgAAAHABAAAFAAAA9v///wAAAAAAAAAAAAAAALwC AAABAAABAAAAAEEAUgBJAEEATAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA AAAAAAAAAAAAAAAAAAAAAAAAAAAAAJJ8AABbAmAAAEBtBZF8COsSANjmEgAwAAAAyFrECQAA AAAAAAAArNuVfAgAAAAAAFsCAAAAAgAAWwKU3BIAEc2WfODeEgAY7pB88AaRfP/////rBpF8 DN8gEAAAWwJgAABAMAAAAAjrEgDY5hIAAAAAAMDeEgAY3xIAXyshEAAAEgD4JyEQCOsSAOMt IRDwWsQJzQAAAAgAAAAI6xIA2OYSAAAAAAAsAAAAAAAAAFzbHADQWsQJxLUgEIBHJhAAABIA hCohEAkAAAB7KiEQCOsSANjmEgAAAAAA8FrECfgnIRB4byUQdOESAPgnIRAwcSUQ/////3jf EgDvKSEQZHYACAAAAAAlAAAADAAAAAUAAABUAAAAhAAAAHQAAAATAAAAowAAAB0AAAABAAAA AADhQQCQ4sGoAAAA0P///wkAAABMAAAAAAAAAAAAAAAAAAAA//////////9gAAAAUAByAG8A dABvAHQAeQBwAGUArboHAAAABAAAAAYAAAADAAAABgAAAAMAAAAGAAAABgAAAAYAAAAlAAAA DAAAAAEAAAAbAAAAEAAAAIYAAAC+////NgAAABAAAAD4AAAAvv///xgAAAAMAAAAiwAAABgA AAAMAAAAAAAAABgAAAAMAAAAAEBAAFQAAABYAAAAVwAAAC0AAABgAAAAOQAAAAEAAAAAAOFB AJDiwYsAAAC2////AgAAAEwAAAAAAAAAAAAAAAAAAAD//////////1AAAAArACAABgAAAAMA AABSAAAAcAEAAAQAAAD2////AAAAAAAAAAAAAAAAAAAAAAEAAAEAAAAAQQBSAEkAQQBMAAAA AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA knwAAFsCYAAAQG0FkXwI6xIA2OYSADAAAACoXbkJAAAAAAAAAACs25V8CAAAAAAAWwIAAAAC AABbApTcEgARzZZ84N4SABjukHzwBpF8/////+sGkXwM3yAQAABbAmAAAEAwAAAACOsSANjm EgAAAAAAwN4SABjfEgBfKyEQAAASAPgnIRAI6xIA4y0hENBduQnNAAAACAAAAAjrEgDY5hIA AAAAACwAAAAAAAAAW9scALBduQnEtSAQgEcmEAAAEgCEKiEQCQAAAHsqIRAI6xIA2OYSAAAA AADQXbkJ+CchEHhvJRB04RIA+CchEDBxJRD/////eN8SAO8pIRBkdgAIAAAAACUAAAAMAAAA BAAAAFQAAADAAAAAaAAAAC0AAADAAAAAOQAAAAEAAAAAAOFBAJDiwZwAAAC2////EwAAAEwA AAAAAAAAAAAAAAAAAAD//////////3QAAABDAGwAbwBuAGUAKAApACAAOgAgAFAAcgBvAHQA bwB0AHkAcABlAK26BwAAAAMAAAAGAAAABgAAAAYAAAADAAAAAwAAAAMAAAADAAAAAwAAAAcA AAADAAAABgAAAAMAAAAGAAAAAwAAAAUAAAAGAAAABgAAACUAAAAMAAAAAQAAACUAAAAMAAAA AQAAABgAAAAMAAAAAAAAACcAAAAYAAAABgAAAAAAAADAv8AAAAAAACUAAAAMAAAABgAAACYA AAAcAAAABwAAAAAAAAABAAAAAAAAAMC/wAAlAAAADAAAAAcAAAArAAAAGAAAAEEAAABJ//// swAAAPv+//8lAAAADAAAAAIAAAAoAAAADAAAAAYAAAAlAAAADAAAAAMAAAAoAAAADAAAAAcA AAArAAAAGAAAAD4AAABM////sAAAAP7+//9SAAAAcAEAAAcAAAD2////AAAAAAAAAAAAAAAA vAIAAAAAAAEAAAAAQQBSAEkAQQBMAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAknwAAFsCYAAAQG0FkXwI6xIA2OYSAAAAAACs3hIA AAAAAAAAAAD/////+NwSAO8pIRAdAAAAAABbApTcEgBQAAAA4N4SABjukHzwBpF8/////+sG kXwM3yAQAABbAmAAAEAwAAAACOsSANjmEgAAAAAA8N0SABjfEgBfKyEQAAASAPgnIRAI6xIA 4y0hEGB6ywnNAAAACAAAAAjrEgDY5hIAAAAAACwAAAAAAAAAWtscAEB6ywnEtSAQgEcmEAAA EgCEKiEQCQAAAHsqIRAI6xIA2OYSAAAAAABgessJAAAAAAAAWwJ04RIA+CchEDBxJRD///// eN8SAO8pIRBkdgAIAAAAACUAAAAMAAAABwAAAFQAAAC4AAAAEwAAAKAAAABzAAAAqwAAAAEA AAAAAOFBAJDiwUcAAABD////EgAAAEwAAAAAAAAAAAAAAAAAAAD//////////3AAAABDAG8A bgBjAHIAZQB0AGUAUAByAG8AdABvAHQAeQBwAGUAMQAHAAAABgAAAAYAAAAGAAAABAAAAAYA AAADAAAABgAAAAcAAAAEAAAABgAAAAMAAAAGAAAAAwAAAAUAAAAGAAAABgAAAAYAAAAlAAAA DAAAAAEAAAAbAAAAEAAAAD4AAAAx////NgAAABAAAACwAAAAMf///xgAAAAMAAAAiwAAABgA AAAMAAAAAAAAABgAAAAMAAAAAEBAAFQAAABYAAAADwAAALoAAAAYAAAAxgAAAAEAAAAAAOFB AJDiwUMAAAAp////AgAAAEwAAAAAAAAAAAAAAAAAAAD//////////1AAAAArACAABgAAAAMA AABUAAAAwAAAACAAAAC6AAAAeAAAAMYAAAABAAAAAADhQQCQ4sFUAAAAKf///xMAAABMAAAA AAAAAAAAAAAAAAAA//////////90AAAAQwBsAG8AbgBlACgAKQAgADoAIABQAHIAbwB0AG8A dAB5AHAAZQCtugcAAAADAAAABgAAAAYAAAAGAAAAAwAAAAMAAAADAAAAAwAAAAMAAAAHAAAA AwAAAAYAAAADAAAABgAAAAMAAAAFAAAABgAAAAYAAAAYAAAADAAAAAAAAAAnAAAAGAAAAAYA AAAAAAAAwL/AAAAAAAAlAAAADAAAAAYAAAAmAAAAHAAAAAgAAAAAAAAAAQAAAAAAAADAv8AA JQAAAAwAAAAIAAAAKwAAABgAAADUAAAASf///0YBAAD7/v//JQAAAAwAAAACAAAAKAAAAAwA AAAGAAAAJQAAAAwAAAADAAAAKAAAAAwAAAAIAAAAKwAAABgAAADRAAAATP///0MBAAD+/v// JQAAAAwAAAAHAAAAVAAAALgAAACmAAAAoAAAAAYBAACrAAAAAQAAAAAA4UEAkOLB2gAAAEP/ //8SAAAATAAAAAAAAAAAAAAAAAAAAP//////////cAAAAEMAbwBuAGMAcgBlAHQAZQBQAHIA bwB0AG8AdAB5AHAAZQAyAAcAAAAGAAAABgAAAAYAAAAEAAAABgAAAAMAAAAGAAAABwAAAAQA AAAGAAAAAwAAAAYAAAADAAAABQAAAAYAAAAGAAAABgAAACUAAAAMAAAAAQAAABsAAAAQAAAA 0QAAADH///82AAAAEAAAAEMBAAAx////GAAAAAwAAACLAAAAGAAAAAwAAAAAAAAAGAAAAAwA AAAAQEAAVAAAAFgAAACiAAAAugAAAKsAAADGAAAAAQAAAAAA4UEAkOLB1gAAACn///8CAAAA TAAAAAAAAAAAAAAAAAAAAP//////////UAAAACsAIAAGAAAAAwAAAFQAAADAAAAAswAAALoA AAALAQAAxgAAAAEAAAAAAOFBAJDiwecAAAAp////EwAAAEwAAAAAAAAAAAAAAAAAAAD///// /////3QAAABDAGwAbwBuAGUAKAApACAAOgAgAFAAcgBvAHQAbwB0AHkAcABlAK26BwAAAAMA AAAGAAAABgAAAAYAAAADAAAAAwAAAAMAAAADAAAAAwAAAAcAAAADAAAABgAAAAMAAAAGAAAA AwAAAAUAAAAGAAAABgAAABgAAAAMAAAAAAAAACYAAAAcAAAACAAAAAAAAAABAAAAAAAAAAAA AAAlAAAADAAAAAgAAAAbAAAAEAAAAHcAAABM////NgAAABAAAAB3AAAAYf///zYAAAAQAAAA vwAAAGH///82AAAAEAAAAL8AAACT////GwAAABAAAAC/AAAAk////1YAAAAoAAAAhgAAAFAA AACRAAAAXwAAAAMAAADFAIT/ugCE/78Ak/8SAAAADAAAAAIAAAAZAAAADAAAAP///wASAAAA DAAAAAEAAAAZAAAADAAAAP///wAlAAAADAAAAAMAAAAoAAAADAAAAAgAAAAmAAAAHAAAAAgA AAAAAAAAAQAAAAAAAAAAAAAAJQAAAAwAAAAIAAAAGwAAABAAAAAKAQAATP///zYAAAAQAAAA CgEAAGH///82AAAAEAAAAL8AAABh////NgAAABAAAAC/AAAAk////xsAAAAQAAAAvwAAAJP/ //9WAAAAKAAAAIYAAABQAAAAkQAAAF8AAAADAAAAxQCE/7oAhP+/AJP/EgAAAAwAAAACAAAA GQAAAAwAAAD///8AEgAAAAwAAAABAAAAGQAAAAwAAAD///8AJQAAAAwAAAADAAAAKAAAAAwA AAAIAAAAJQAAAAwAAAANAACAKAAAAAwAAAABAAAAKAAAAAwAAAAHAAAAJQAAAAwAAAAAAACA KAAAAAwAAAACAAAAJQAAAAwAAAAHAACAKAAAAAwAAAADAAAADgAAABQAAAAAAAAAEAAAABQA AAA=</UMLPattern.PreviewImage>
+		</UMLPattern>
+	</XMI.extensions>
+</XMI>

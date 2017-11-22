@@ -1,0 +1,278 @@
+<?xml version="1.0"  encoding="windows-1252"?>
+<XMI xmi.version="1.1" xmlns:UML="omg.org/UML1.3" timestamp="2005-02-04 16:53:04">
+	<XMI.header>
+		<XMI.documentation>
+			<XMI.exporter>Enterprise Architect</XMI.exporter>
+			<XMI.exporterVersion>2.5</XMI.exporterVersion>
+		</XMI.documentation>
+	</XMI.header>
+	<XMI.content>
+		<UML:Model name="EA Model" xmi.id="MX_EAID_67E713C9_938E_45c1_B8A1_C6500E489659">
+			<UML:Namespace.ownedElement>
+				<UML:Class name="Product" xmi.id="EAID_1DFDEC47_6B43_48a7_847A_079D26892A4F" visibility="public" namespace="EAPK_67E713C9_938E_45c1_B8A1_C6500E489659" isRoot="false" isLeaf="false" isAbstract="true" isActive="false">
+					<UML:ModelElement.taggedValue>
+						<UML:TaggedValue tag="documentation" value="This class defines the interface of objects the factory method creates."/>
+						<UML:TaggedValue tag="isSpecification" value="false"/>
+						<UML:TaggedValue tag="ea_stype" value="Class"/>
+						<UML:TaggedValue tag="ea_ntype" value="0"/>
+						<UML:TaggedValue tag="version" value="1.0"/>
+						<UML:TaggedValue tag="package" value="EAPK_67E713C9_938E_45c1_B8A1_C6500E489659"/>
+						<UML:TaggedValue tag="date_created" value="2003-09-06 21:27:51"/>
+						<UML:TaggedValue tag="date_modified" value="2005-02-01 15:50:10"/>
+						<UML:TaggedValue tag="gentype" value="C#"/>
+						<UML:TaggedValue tag="tagged" value="0"/>
+						<UML:TaggedValue tag="package_name" value="Factory Method"/>
+						<UML:TaggedValue tag="phase" value="1.0"/>
+						<UML:TaggedValue tag="complexity" value="1"/>
+						<UML:TaggedValue tag="status" value="Proposed"/>
+						<UML:TaggedValue tag="style" value="BackColor=-1;BorderColor=-1;BorderWidth=-1;FontColor=-1;VSwimLanes=0;HSwimLanes=0;BorderStyle=0;"/>
+					</UML:ModelElement.taggedValue>
+				</UML:Class>
+				<UML:Generalization subtype="EAID_59ABF373_856E_4176_BF58_B742992F0977" supertype="EAID_1DFDEC47_6B43_48a7_847A_079D26892A4F" xmi.id="EAID_11C13B79_9367_488f_BBE0_0A29D71A9EAB" visibility="public">
+					<UML:ModelElement.taggedValue>
+						<UML:TaggedValue tag="style" value="2"/>
+						<UML:TaggedValue tag="ea_type" value="Generalization"/>
+						<UML:TaggedValue tag="direction" value="Source -&gt; Destination"/>
+						<UML:TaggedValue tag="linemode" value="2"/>
+						<UML:TaggedValue tag="linecolor" value="0"/>
+						<UML:TaggedValue tag="linewidth" value="0"/>
+						<UML:TaggedValue tag="seqno" value="0"/>
+						<UML:TaggedValue tag="headStyle" value="0"/>
+						<UML:TaggedValue tag="lineStyle" value="0"/>
+						<UML:TaggedValue tag="src_visibility" value="Public"/>
+						<UML:TaggedValue tag="src_aggregation" value="0"/>
+						<UML:TaggedValue tag="src_isOrdered" value="false"/>
+						<UML:TaggedValue tag="src_isNavigable" value="false"/>
+						<UML:TaggedValue tag="dst_visibility" value="Public"/>
+						<UML:TaggedValue tag="dst_aggregation" value="0"/>
+						<UML:TaggedValue tag="dst_isOrdered" value="false"/>
+						<UML:TaggedValue tag="dst_isNavigable" value="false"/>
+					</UML:ModelElement.taggedValue>
+				</UML:Generalization>
+				<UML:Class name="ConcreteProduct" xmi.id="EAID_59ABF373_856E_4176_BF58_B742992F0977" visibility="public" namespace="EAPK_67E713C9_938E_45c1_B8A1_C6500E489659" isRoot="false" isLeaf="false" isAbstract="false" isActive="false">
+					<UML:ModelElement.taggedValue>
+						<UML:TaggedValue tag="documentation" value="This class implements the Product interface."/>
+						<UML:TaggedValue tag="isSpecification" value="false"/>
+						<UML:TaggedValue tag="ea_stype" value="Class"/>
+						<UML:TaggedValue tag="ea_ntype" value="0"/>
+						<UML:TaggedValue tag="version" value="1.0"/>
+						<UML:TaggedValue tag="package" value="EAPK_67E713C9_938E_45c1_B8A1_C6500E489659"/>
+						<UML:TaggedValue tag="date_created" value="2003-09-06 21:28:01"/>
+						<UML:TaggedValue tag="date_modified" value="2005-02-01 15:50:08"/>
+						<UML:TaggedValue tag="gentype" value="C#"/>
+						<UML:TaggedValue tag="tagged" value="0"/>
+						<UML:TaggedValue tag="package_name" value="Factory Method"/>
+						<UML:TaggedValue tag="phase" value="1.0"/>
+						<UML:TaggedValue tag="complexity" value="1"/>
+						<UML:TaggedValue tag="status" value="Proposed"/>
+						<UML:TaggedValue tag="style" value="BackColor=-1;BorderColor=-1;BorderWidth=-1;FontColor=-1;VSwimLanes=0;HSwimLanes=0;BorderStyle=0;"/>
+					</UML:ModelElement.taggedValue>
+				</UML:Class>
+				<UML:Dependency client="EAID_680FDDA0_68E2_426e_87ED_A52EAB6A46BB" supplier="EAID_59ABF373_856E_4176_BF58_B742992F0977" xmi.id="EAID_A0E4959A_674D_4386_BD69_6B21B9F6B297" visibility="public">
+					<UML:ModelElement.stereotype>
+						<UML:Stereotype name="instantiate"/>
+					</UML:ModelElement.stereotype>
+					<UML:ModelElement.taggedValue>
+						<UML:TaggedValue tag="style" value="3"/>
+						<UML:TaggedValue tag="ea_type" value="Dependency"/>
+						<UML:TaggedValue tag="direction" value="Source -&gt; Destination"/>
+						<UML:TaggedValue tag="linemode" value="3"/>
+						<UML:TaggedValue tag="linecolor" value="0"/>
+						<UML:TaggedValue tag="linewidth" value="0"/>
+						<UML:TaggedValue tag="seqno" value="0"/>
+						<UML:TaggedValue tag="stereotype" value="instantiate"/>
+						<UML:TaggedValue tag="headStyle" value="0"/>
+						<UML:TaggedValue tag="lineStyle" value="0"/>
+						<UML:TaggedValue tag="src_visibility" value="Public"/>
+						<UML:TaggedValue tag="src_aggregation" value="0"/>
+						<UML:TaggedValue tag="src_isOrdered" value="false"/>
+						<UML:TaggedValue tag="src_isNavigable" value="false"/>
+						<UML:TaggedValue tag="dst_visibility" value="Public"/>
+						<UML:TaggedValue tag="dst_aggregation" value="0"/>
+						<UML:TaggedValue tag="dst_isOrdered" value="false"/>
+						<UML:TaggedValue tag="dst_isNavigable" value="false"/>
+					</UML:ModelElement.taggedValue>
+				</UML:Dependency>
+				<UML:Class name="Creator" xmi.id="EAID_E51E9A4B_E1A9_4194_B1FC_315AF18F2436" visibility="public" namespace="EAPK_67E713C9_938E_45c1_B8A1_C6500E489659" isRoot="false" isLeaf="false" isAbstract="true" isActive="false">
+					<UML:ModelElement.taggedValue>
+						<UML:TaggedValue tag="documentation" value="This class (a) declares the factory method, which returns an object of type Product. Creator may also define a default implementation of the factory method that returns a default ConcreteProduct object, and (b) may call the factory method to create a Product object."/>
+						<UML:TaggedValue tag="isSpecification" value="false"/>
+						<UML:TaggedValue tag="ea_stype" value="Class"/>
+						<UML:TaggedValue tag="ea_ntype" value="0"/>
+						<UML:TaggedValue tag="version" value="1.0"/>
+						<UML:TaggedValue tag="package" value="EAPK_67E713C9_938E_45c1_B8A1_C6500E489659"/>
+						<UML:TaggedValue tag="date_created" value="2003-09-06 21:28:25"/>
+						<UML:TaggedValue tag="date_modified" value="2005-02-01 15:50:09"/>
+						<UML:TaggedValue tag="gentype" value="C#"/>
+						<UML:TaggedValue tag="tagged" value="0"/>
+						<UML:TaggedValue tag="package_name" value="Factory Method"/>
+						<UML:TaggedValue tag="phase" value="1.0"/>
+						<UML:TaggedValue tag="complexity" value="1"/>
+						<UML:TaggedValue tag="status" value="Proposed"/>
+						<UML:TaggedValue tag="style" value="BackColor=-1;BorderColor=-1;BorderWidth=-1;FontColor=-1;VSwimLanes=0;HSwimLanes=0;BorderStyle=0;"/>
+					</UML:ModelElement.taggedValue>
+					<UML:Classifier.feature>
+						<UML:Operation name="FactoryMethod" visibility="public" ownerScope="instance" isQuery="false" concurrency="sequential">
+							<UML:ModelElement.taggedValue>
+								<UML:TaggedValue tag="type" value="Product"/>
+								<UML:TaggedValue tag="const" value="false"/>
+								<UML:TaggedValue tag="isAbstract" value="1"/>
+								<UML:TaggedValue tag="synchronised" value="0"/>
+								<UML:TaggedValue tag="concurrency" value="Sequential"/>
+								<UML:TaggedValue tag="position" value="0"/>
+								<UML:TaggedValue tag="returnarray" value="0"/>
+								<UML:TaggedValue tag="pure" value="0"/>
+								<UML:TaggedValue tag="ea_guid" value="{133389D2-BF32-4973-A04F-F94EEF71A630}"/>
+							</UML:ModelElement.taggedValue>
+							<UML:BehavioralFeature.parameter>
+								<UML:Parameter kind="return" visibility="public">
+									<UML:Parameter.type>
+										<UML:Classifier xmi.idref="EAID_1DFDEC47_6B43_48a7_847A_079D26892A4F"/>
+									</UML:Parameter.type>
+									<UML:ModelElement.taggedValue>
+										<UML:TaggedValue tag="pos" value="0"/>
+										<UML:TaggedValue tag="type" value="Product"/>
+										<UML:TaggedValue tag="const" value="0"/>
+										<UML:TaggedValue tag="classifier" value="EAID_1DFDEC47_6B43_48a7_847A_079D26892A4F"/>
+										<UML:TaggedValue tag="ea_guid" value="{RETURNID-BF32-4973-A04F-F94EEF71A630}"/>
+									</UML:ModelElement.taggedValue>
+									<UML:Parameter.defaultValue>
+										<UML:Expression/>
+									</UML:Parameter.defaultValue>
+								</UML:Parameter>
+							</UML:BehavioralFeature.parameter>
+						</UML:Operation>
+					</UML:Classifier.feature>
+				</UML:Class>
+				<UML:Generalization subtype="EAID_680FDDA0_68E2_426e_87ED_A52EAB6A46BB" supertype="EAID_E51E9A4B_E1A9_4194_B1FC_315AF18F2436" xmi.id="EAID_BB285F57_3C50_40af_A2C3_A94FF7D3216E" visibility="public">
+					<UML:ModelElement.taggedValue>
+						<UML:TaggedValue tag="style" value="2"/>
+						<UML:TaggedValue tag="ea_type" value="Generalization"/>
+						<UML:TaggedValue tag="direction" value="Source -&gt; Destination"/>
+						<UML:TaggedValue tag="linemode" value="2"/>
+						<UML:TaggedValue tag="linecolor" value="0"/>
+						<UML:TaggedValue tag="linewidth" value="0"/>
+						<UML:TaggedValue tag="seqno" value="0"/>
+						<UML:TaggedValue tag="headStyle" value="0"/>
+						<UML:TaggedValue tag="lineStyle" value="0"/>
+						<UML:TaggedValue tag="src_visibility" value="Public"/>
+						<UML:TaggedValue tag="src_aggregation" value="0"/>
+						<UML:TaggedValue tag="src_isOrdered" value="false"/>
+						<UML:TaggedValue tag="src_isNavigable" value="false"/>
+						<UML:TaggedValue tag="dst_visibility" value="Public"/>
+						<UML:TaggedValue tag="dst_aggregation" value="0"/>
+						<UML:TaggedValue tag="dst_isOrdered" value="false"/>
+						<UML:TaggedValue tag="dst_isNavigable" value="false"/>
+					</UML:ModelElement.taggedValue>
+				</UML:Generalization>
+				<UML:Class name="ConcreteCreator" xmi.id="EAID_680FDDA0_68E2_426e_87ED_A52EAB6A46BB" visibility="public" namespace="EAPK_67E713C9_938E_45c1_B8A1_C6500E489659" isRoot="false" isLeaf="false" isAbstract="false" isActive="false">
+					<UML:ModelElement.taggedValue>
+						<UML:TaggedValue tag="documentation" value="This class overrides the factory method to return an instance of a ConcreteProduct."/>
+						<UML:TaggedValue tag="isSpecification" value="false"/>
+						<UML:TaggedValue tag="ea_stype" value="Class"/>
+						<UML:TaggedValue tag="ea_ntype" value="0"/>
+						<UML:TaggedValue tag="version" value="1.0"/>
+						<UML:TaggedValue tag="package" value="EAPK_67E713C9_938E_45c1_B8A1_C6500E489659"/>
+						<UML:TaggedValue tag="date_created" value="2003-09-06 21:30:09"/>
+						<UML:TaggedValue tag="date_modified" value="2005-02-03 11:36:28"/>
+						<UML:TaggedValue tag="gentype" value="C#"/>
+						<UML:TaggedValue tag="tagged" value="0"/>
+						<UML:TaggedValue tag="package_name" value="Factory Method"/>
+						<UML:TaggedValue tag="phase" value="1.0"/>
+						<UML:TaggedValue tag="complexity" value="1"/>
+						<UML:TaggedValue tag="status" value="Proposed"/>
+						<UML:TaggedValue tag="style" value="BackColor=-1;BorderColor=-1;BorderWidth=-1;FontColor=-1;VSwimLanes=0;HSwimLanes=0;BorderStyle=0;"/>
+					</UML:ModelElement.taggedValue>
+					<UML:Classifier.feature>
+						<UML:Operation name="FactoryMethod" visibility="public" ownerScope="instance" isQuery="false" concurrency="sequential">
+							<UML:ModelElement.taggedValue>
+								<UML:TaggedValue tag="type" value="Product"/>
+								<UML:TaggedValue tag="const" value="false"/>
+								<UML:TaggedValue tag="code" value="return new ConcreteProduct();"/>
+								<UML:TaggedValue tag="synchronised" value="0"/>
+								<UML:TaggedValue tag="concurrency" value="Sequential"/>
+								<UML:TaggedValue tag="position" value="0"/>
+								<UML:TaggedValue tag="returnarray" value="0"/>
+								<UML:TaggedValue tag="pure" value="0"/>
+								<UML:TaggedValue tag="ea_guid" value="{26E35B3A-4195-4964-988B-2B545DF3C288}"/>
+								<UML:TaggedValue tag="styleex" value="ShowBeh=0;"/>
+								<UML:TaggedValue tag="override" value="true" xmi.id="EAID_4A61EB39_3F9E_4945_A398_A0B5E6615C72"/>
+							</UML:ModelElement.taggedValue>
+							<UML:BehavioralFeature.parameter>
+								<UML:Parameter kind="return" visibility="public">
+									<UML:Parameter.type>
+										<UML:Classifier xmi.idref="EAID_1DFDEC47_6B43_48a7_847A_079D26892A4F"/>
+									</UML:Parameter.type>
+									<UML:ModelElement.taggedValue>
+										<UML:TaggedValue tag="pos" value="0"/>
+										<UML:TaggedValue tag="type" value="Product"/>
+										<UML:TaggedValue tag="const" value="0"/>
+										<UML:TaggedValue tag="classifier" value="EAID_1DFDEC47_6B43_48a7_847A_079D26892A4F"/>
+										<UML:TaggedValue tag="ea_guid" value="{RETURNID-4195-4964-988B-2B545DF3C288}"/>
+									</UML:ModelElement.taggedValue>
+									<UML:Parameter.defaultValue>
+										<UML:Expression/>
+									</UML:Parameter.defaultValue>
+								</UML:Parameter>
+							</UML:BehavioralFeature.parameter>
+						</UML:Operation>
+					</UML:Classifier.feature>
+				</UML:Class>
+			</UML:Namespace.ownedElement>
+		</UML:Model>
+		<UML:Diagram name="Factory Method" xmi.id="EAID_67BC42FF_EBFE_4516_BEEA_C112C45C9BD4" diagramType="ClassDiagram" owner="EAPK_67BC42FF_EBFE_4516_BEEA_C112C45C9BD4" toolName="Enterprise Architect 2.5">
+			<UML:ModelElement.taggedValue>
+				<UML:TaggedValue tag="documentation" value="This pattern defines an interface for creating an object, but lets subclasses decide which class to instantiate. It lets a class defer instantiation to subclasses."/>
+				<UML:TaggedValue tag="version" value="1.0"/>
+				<UML:TaggedValue tag="created_date" value="2004-12-14 13:31:39"/>
+				<UML:TaggedValue tag="modified_date" value="2005-02-03 11:36:27"/>
+				<UML:TaggedValue tag="package" value="EAPK_67E713C9_938E_45c1_B8A1_C6500E489659"/>
+				<UML:TaggedValue tag="type" value="Logical"/>
+				<UML:TaggedValue tag="swimlanes" value="locked=false;orientation=0;width=0;inbar=false;names=false;color=0;bold=false;fcol=0;;cls=0;"/>
+				<UML:TaggedValue tag="EAStyle" value="ShowPrivate=1;ShowProtected=1;ShowPublic=1;HideRelationships=0;Locked=0;Border=1;HighlightForeign=1;PackageContents=1;SequenceNotes=0;ScalePrintImage=0;PPgs.cx=0;PPgs.cy=0;DocSize.cx=780;DocSize.cy=1138;ShowDetails=0;Orientation=P;Zoom=100;ShowTags=0;OpParams=1;ShowIcons=1;CollabNums=0;HideProps=0;ShowReqs=0;ShowCons=0;PaperSize=9;HideParents=0;UseAlias=0;HideAtts=0;HideOps=0;HideStereo=0;HideElemStereo=0;ShowTests=0;ShowMaint=0;"/>
+				<UML:TaggedValue tag="styleex" value="ExcludeRTF=0;DocAll=0;HideQuals=0;AttPkg=1;ShowTests=0;ShowMaint=0;SuppressFOC=0;TDurLow=0;TDurHigh=100;TDurUnit=;TDurHide=0;"/>
+			</UML:ModelElement.taggedValue>
+			<UML:Diagram.element>
+				<UML:DiagramElement geometry="Left=244;Top=186;Right=392;Bottom=265;imgL=192;imgT=133;imgR=340;imgB=212;" subject="EAID_680FDDA0_68E2_426e_87ED_A52EAB6A46BB" seqno="1" style="DUID=94352A2C;LBL=;"/>
+				<UML:DiagramElement geometry="Left=243;Top=63;Right=390;Bottom=133;imgL=191;imgT=10;imgR=338;imgB=80;" subject="EAID_E51E9A4B_E1A9_4194_B1FC_315AF18F2436" seqno="2" style="DUID=7833676D;LBL=;"/>
+				<UML:DiagramElement geometry="Left=63;Top=191;Right=153;Bottom=261;imgL=11;imgT=138;imgR=101;imgB=208;" subject="EAID_59ABF373_856E_4176_BF58_B742992F0977" seqno="3" style="DUID=B7476DC9;LBL=;"/>
+				<UML:DiagramElement geometry="Left=62;Top=65;Right=152;Bottom=135;imgL=10;imgT=12;imgR=100;imgB=82;" subject="EAID_1DFDEC47_6B43_48a7_847A_079D26892A4F" seqno="4" style="DUID=0BBE828B;LBL=;"/>
+				<UML:DiagramElement geometry="EDGE=1;$LLB=;LLT=;LMT=;LMB=;LRT=;LRB=;Path=;" subject="EAID_11C13B79_9367_488f_BBE0_0A29D71A9EAB" style="Mode=2;EOID=0BBE828B;SOID=B7476DC9;Hidden=0;"/>
+				<UML:DiagramElement geometry="EDGE=4;$LLB=;LLT=;LMT=;LMB=CX=71:CY=15:OX=0:OY=0:HDN=0:BLD=0:ITA=0:UND=0:CLR=-1:ALN=0:DIR=0:ROT=0;LRT=;LRB=;Path=;" subject="EAID_A0E4959A_674D_4386_BD69_6B21B9F6B297" style="Mode=3;EOID=B7476DC9;SOID=94352A2C;Hidden=0;"/>
+				<UML:DiagramElement geometry="EDGE=1;$LLB=;LLT=;LMT=;LMB=;LRT=;LRB=;Path=;" subject="EAID_BB285F57_3C50_40af_A2C3_A94FF7D3216E" style="Mode=2;EOID=7833676D;SOID=94352A2C;Hidden=0;"/>
+			</UML:Diagram.element>
+		</UML:Diagram>
+	</XMI.content>
+	<XMI.difference/>
+	<XMI.extensions xmi.extender="Enterprise Architect 2.5">
+		<EAStub xmi.id="EAID_59ABF373_856E_4176_BF58_B742992F0977" name="ConcreteProduct" UMLType="Class"/>
+		<EAStub xmi.id="EAID_1DFDEC47_6B43_48a7_847A_079D26892A4F" name="Product" UMLType="Class"/>
+		<EAStub xmi.id="EAID_680FDDA0_68E2_426e_87ED_A52EAB6A46BB" name="ConcreteCreator" UMLType="Class"/>
+		<EAStub xmi.id="EAID_E51E9A4B_E1A9_4194_B1FC_315AF18F2436" name="Creator" UMLType="Class"/>
+		<UMLPattern name="Factory Method" category="GoF Creational Patterns (C#)" version="1.0" notes="This pattern defines an interface for creating an object, but lets subclasses decide which class to instantiate. It lets a class defer instantiation to subclasses.">
+			<UMLPattern.PromptList>
+				<Element name="ConcreteCreator:Class" guid="EAID_680FDDA0_68E2_426e_87ED_A52EAB6A46BB" id="776" prompt="yes" link="yes" classifier="no" type="no">
+					<Comment comment="This class overrides the factory method to return an instance of a ConcreteProduct.">
+						<![CDATA[This class overrides the factory method to return an instance of a ConcreteProduct.]]>
+					</Comment>
+				</Element>
+				<Element name="Creator:Class" guid="EAID_E51E9A4B_E1A9_4194_B1FC_315AF18F2436" id="775" prompt="yes" link="yes" classifier="no" type="no">
+					<Comment comment="This class (a) declares the factory method, which returns an object of type Product. Creator may also define a default implementation of the factory method that returns a default ConcreteProduct object, and (b) may call the factory method to create a Product object.">
+						<![CDATA[This class (a) declares the factory method, which returns an object of type Product. Creator may also define a default implementation of the factory method that returns a default ConcreteProduct object, and (b) may call the factory method to create a Product object.]]>
+					</Comment>
+				</Element>
+				<Element name="ConcreteProduct:Class" guid="EAID_59ABF373_856E_4176_BF58_B742992F0977" id="774" prompt="yes" link="yes" classifier="no" type="no">
+					<Comment comment="This class implements the Product interface.">
+						<![CDATA[This class implements the Product interface.]]>
+					</Comment>
+				</Element>
+				<Element name="Product:Class" guid="EAID_1DFDEC47_6B43_48a7_847A_079D26892A4F" id="773" prompt="yes" link="yes" classifier="no" type="no">
+					<Comment comment="This class defines the interface of objects the factory method creates.">
+						<![CDATA[This class defines the interface of objects the factory method creates.]]>
+					</Comment>
+				</Element>
+			</UMLPattern.PromptList>
+			<UMLPattern.PreviewImage xmlns:dt="urn:schemas-microsoft-com:datatypes" dt:dt="bin.base64" cx="9843" cy="6287">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 AAAIAAAAGwAAABAAAAD0AAAAH////zYAAAAQAAAA8QAAAB////8bAAAAEAAAAO4AAAAf//// NgAAABAAAADrAAAAH////xsAAAAQAAAA6AAAAB////82AAAAEAAAAOUAAAAf////GwAAABAA AADiAAAAH////zYAAAAQAAAA3wAAAB////8bAAAAEAAAANwAAAAf////NgAAABAAAADZAAAA H////xsAAAAQAAAA1gAAAB////82AAAAEAAAANMAAAAf////GwAAABAAAADQAAAAH////zYA AAAQAAAAzQAAAB////8bAAAAEAAAAMoAAAAf////NgAAABAAAADHAAAAH////xsAAAAQAAAA xAAAAB////82AAAAEAAAAMEAAAAf////GwAAABAAAAC+AAAAH////zYAAAAQAAAAuwAAAB// //8bAAAAEAAAALgAAAAf////NgAAABAAAAC1AAAAH////xsAAAAQAAAAsgAAAB////82AAAA EAAAAK8AAAAf////GwAAABAAAACsAAAAH////zYAAAAQAAAAqQAAAB////8bAAAAEAAAAKYA AAAf////NgAAABAAAACjAAAAH////xsAAAAQAAAAoAAAAB////82AAAAEAAAAJ0AAAAf//// GwAAABAAAACaAAAAH////zYAAAAQAAAAmQAAAB////8bAAAAEAAAAJkAAAAf////GwAAABAA AACZAAAAH////zYAAAAQAAAAqAAAACT///8bAAAAEAAAAJkAAAAf////NgAAABAAAACoAAAA Gv///xIAAAAMAAAAAgAAABkAAAAMAAAA////AFIAAABwAQAABAAAAPb///8AAAAAAAAAAAAA AAAAAAAAAAAAAQAAAABBAFIASQBBAEwAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAACSfAAAWwJgAABAbQWRfAjrEgDY5hIAAAAAAKze EgD4JyEQMHElEP/////43BIA7ykhEB0AAAAAAAAAAQAAAFAAAAAY7coJXNuVfAAAWwKs25V8 CAAAAAAAWwIAAFsCGO3KCSTdAAARzZZ8AAASAAAAAADw3RIAGO6QfMhqknwAAP//vmqSfK1o knwAAFsCYAAAQG0FkXwI6xIA2OYSAAAAAABE3RIAkdZCXwAAAQAI6xIAvNwSAAAAAACw3RIA AACQfHAFkXxAAAAA6F7MCVzblXwwX8wJrNuVfAAAAAAAAAAAAABbAuhezAlkdgAIAAAAANjm EgAAAAAAYlSoAWR2AAgAAAAAJQAAAAwAAAAEAAAAVAAAAJwAAAB1AAAArwAAALIAAAC7AAAA AQAAAAAA4UEAkOLBqQAAABz///8NAAAATAAAAAAAAAAAAAAAAAAAAP//////////aAAAAKsA aQBuAHMAdABhAG4AdABpAGEAdABlALsArboGAAAAAwAAAAYAAAAEAAAAAwAAAAYAAAAGAAAA AwAAAAMAAAAGAAAAAwAAAAYAAAAGAAAAJQAAAAwAAAABAAAAKAAAAAwAAAAEAAAAEgAAAAwA AAABAAAAGQAAAAwAAAD///8AJQAAAAwAAAADAAAAKAAAAAwAAAAIAAAAJgAAABwAAAAIAAAA AAAAAAEAAAAAAAAAAAAAACUAAAAMAAAACAAAABsAAAAQAAAAPQEAAEb///82AAAAEAAAAD0B AABh////NgAAABAAAAA9AQAAYf///zYAAAAQAAAAPQEAAHv///8bAAAAEAAAAD0BAAB7//// VgAAACgAAAAEAQAAUAAAAA8BAABfAAAAAwAAAEMBbP84AWz/PQF7/xIAAAAMAAAAAgAAABkA AAAMAAAA////ABIAAAAMAAAAAQAAABkAAAAMAAAA////ACUAAAAMAAAAAwAAACgAAAAMAAAA CAAAACUAAAAMAAAADQAAgCgAAAAMAAAAAQAAACgAAAAMAAAABgAAACUAAAAMAAAAAAAAgCgA AAAMAAAAAgAAACUAAAAMAAAABwAAgCgAAAAMAAAAAwAAAA4AAAAUAAAAAAAAABAAAAAUAAAA </UMLPattern.PreviewImage>
+		</UMLPattern>
+	</XMI.extensions>
+</XMI>

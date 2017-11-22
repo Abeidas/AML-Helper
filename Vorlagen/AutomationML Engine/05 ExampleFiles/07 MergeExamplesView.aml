@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="utf-8"?>
+<CAEXFile FileName="Root.aml" SchemaVersion="2.15" xsi:noNamespaceSchemaLocation="CAEX_ClassModel_V2.15.xsd" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+	<AdditionalInformation AutomationMLVersion="2.0" />
+	<AdditionalInformation>
+		<WriterHeader>
+			<WriterName>please provide WriterName</WriterName>
+			<WriterID>please provide WriterID</WriterID>
+			<WriterVendor>please provide Writer Vendor</WriterVendor>
+			<WriterVendorURL>please provide Writer Vendor URL</WriterVendorURL>
+			<WriterVersion>please provide Writer Version</WriterVersion>
+			<WriterRelease>please provide Writer Release</WriterRelease>
+			<LastWritingDateTime>
+			</LastWritingDateTime>
+			<WriterProjectTitle>please provide Writer Project Title</WriterProjectTitle>
+			<WriterProjectID>
+			</WriterProjectID>
+		</WriterHeader>
+	</AdditionalInformation>
+	<InstanceHierarchy Name="TestFile for Merging" ChangeMode="state">
+		<InternalElement Name="Root" ID="{rootxxxx-xxxx-xxxx-xxxx-xxxxxxxxxxxxx}" RefBaseSystemUnitPath="MySUC/TA">
+			<InternalElement Name="A" ID="{Axxxxxxx-xxxx-xxxx-xxxx-xxxxxxxxxxxxx}" RefBaseSystemUnitPath="MySUC/TA">
+				<InternalElement Name="PartAContent" ID="{PACxxxx-xxxx-xxxx-xxxx-xxxxxxxxxxxxx}" RefBaseSystemUnitPath="PartASUC/Content" />
+				<InternalElement Name="A1" ID="{A1xxxxxx-xxxx-xxxx-xxxx-xxxxxxxxxxxxx}" RefBaseSystemUnitPath="MySUC/TA" />
+				<InternalElement Name="A2" ID="{A2xxxxxx-xxxx-xxxx-xxxx-xxxxxxxxxxxxx}" RefBaseSystemUnitPath="MySUC/TA" />
+			</InternalElement>
+			<InternalElement Name="B" ID="{Bxxxxxxx-xxxx-xxxx-xxxx-xxxxxxxxxxxxx}" RefBaseSystemUnitPath="MySUC/TA">
+				<InternalElement Name="B1" ID="{B1xxxxxx-xxxx-xxxx-xxxx-xxxxxxxxxxxxx}" RefBaseSystemUnitPath="MySUC/TA" />
+			</InternalElement>
+		</InternalElement>
+		<InternalElement Name="B" ID="b712c534-4efe-4a5b-9fd0-a5db495931a8" RefBaseSystemUnitPath="{Bxxxxxxx-xxxx-xxxx-xxxx-xxxxxxxxxxxxx}" />
+	</InstanceHierarchy>
+	<InstanceHierarchy Name="Merged">
+		<InternalElement Name="BExt" ID="{BExtxxxx-xxxx-xxxx-xxxx-xxxxxxxxxxxxx}" RefBaseSystemUnitPath="MySUC/TA" />
+	</InstanceHierarchy>
+	<InterfaceClassLib Name="ICL">
+		<InterfaceClass Name="TI1" />
+		<InterfaceClass Name="TI2">
+			<InterfaceClass Name="TI3" />
+		</InterfaceClass>
+	</InterfaceClassLib>
+	<RoleClassLib Name="RCL">
+		<RoleClass Name="RA">
+		</RoleClass>
+		<RoleClass Name="RB">
+			<RoleClass Name="RC" />
+		</RoleClass>
+	</RoleClassLib>
+	<SystemUnitClassLib Name="MySUC">
+		<SystemUnitClass Name="TA" />
+		<SystemUnitClass Name="TB">
+			<SystemUnitClass Name="TC" />
+		</SystemUnitClass>
+	</SystemUnitClassLib>
+	<SystemUnitClassLib Name="PartASUC">
+		<SystemUnitClass Name="Content" />
+	</SystemUnitClassLib>
+</CAEXFile>

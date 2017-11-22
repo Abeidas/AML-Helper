@@ -1,0 +1,10 @@
+﻿<Window x:Class="AMLHelper.View.BusyBox"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+             mc:Ignorable="d" Width="256" Height="128" WindowStyle="None">
+    <Grid Margin="0,0,0,-1" Cursor="Wait">
+        <Label Content="Plugin lädt, bitte warten..." HorizontalAlignment="Center" VerticalAlignment="Center" />
+    </Grid>
+</Window>

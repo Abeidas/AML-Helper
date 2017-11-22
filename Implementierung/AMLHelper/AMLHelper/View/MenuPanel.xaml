@@ -1,0 +1,60 @@
+﻿<UserControl x:Class="AMLHelper.View.MenuPanel"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+             mc:Ignorable="d" 
+             d:DesignHeight="30" d:DesignWidth="800">
+    <Grid>
+        <Menu>
+            <MenuItem Header="Datei">
+                <MenuItem x:Name="openMenuItem" Header="Öffnen" InputGestureText="Strg+O">
+                    <MenuItem.Icon>
+                        <Image Source="/AMLHelper;component/Properties/Open.png" Width="16" Height="16"/>
+                    </MenuItem.Icon>
+                </MenuItem>
+                <MenuItem x:Name="saveMenuItem" Header="Speichern" InputGestureText="Strg+S" IsEnabled="False">
+                    <MenuItem.Icon>
+                        <Image Source="/AMLHelper;component/Properties/Restore.png" Width="16" Height="16"/>
+                    </MenuItem.Icon>
+                </MenuItem>
+                <MenuItem x:Name="saveAsMenuItem" Header="Speichern als..." InputGestureText="Strg+Shift+S" IsEnabled="False">
+                    <MenuItem.Icon>
+                        <Image Source="/AMLHelper;component/Properties/Restore.png" Width="16" Height="16"/>
+                    </MenuItem.Icon>
+                </MenuItem>
+                <Separator/>
+                <MenuItem x:Name="closeMenuItem" Header="Schließen" InputGestureText="Strg+Q">
+                    <MenuItem.Icon>
+                        <Image Source="/AMLHelper;component/Properties/Close.png" Width="16" Height="16"/>
+                    </MenuItem.Icon>
+                </MenuItem>
+            </MenuItem>
+            <MenuItem Header="Bearbeiten">
+                <MenuItem x:Name="newHierarchyItem" Header="Neue Instanzhierarchie anlegen" InputGestureText="Strg+T" IsEnabled="False">
+                    <MenuItem.Icon>
+                        <Image Source="/AMLHelper;component/Properties/Add.png" Width="16" Height="16"/>
+                    </MenuItem.Icon>
+                </MenuItem>
+                <MenuItem x:Name="restoreTab" Header="Geschlossenen Tab wiederherstellen" IsEnabled="{Binding Path=hasDeletedTabs}">
+                    <MenuItem.Icon>
+                        <Image Source="/AMLHelper;component/Properties/Restore.png" Width="16" Height="16"/>
+                    </MenuItem.Icon>
+                </MenuItem>
+                <!-- denkbar sind weitere, z.B. vor und zurück -->
+            </MenuItem>
+            <MenuItem Header="Hilfe">
+                <MenuItem x:Name="firstStepsMenuItem" Header="Erste Schritte">
+                    <MenuItem.Icon>
+                        <Image Source="/AMLHelper;component/Properties/About.png" Width="16" Height="16"/>
+                    </MenuItem.Icon>
+                </MenuItem>
+                <MenuItem x:Name="aboutMenuItem" Header="Über...">
+                    <MenuItem.Icon>
+                        <Image Source="/AMLHelper;component/Properties/About.png" Width="16" Height="16"/>
+                    </MenuItem.Icon>
+                </MenuItem>
+            </MenuItem>
+        </Menu>
+    </Grid>
+</UserControl>

@@ -1,0 +1,30 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<CAEXFile FileName="test.aml" SchemaVersion="2.15" xsi:noNamespaceSchemaLocation="CAEX_ClassModel_V2.15.xsd" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+	<AdditionalInformation AutomationMLVersion="2.0" />
+	<AdditionalInformation>
+		<WriterHeader>
+			<WriterName>AutomationML Editor</WriterName>
+			<WriterID>916578CA-FE0D-474E-A4FC-9E1719892369</WriterID>
+			<WriterVendor>AutomationML e.V.</WriterVendor>
+			<WriterVendorURL>www.AutomationML.org</WriterVendorURL>
+			<WriterVersion>4.1.6</WriterVersion>
+			<WriterRelease>4.1.6.0</WriterRelease>
+			<LastWritingDateTime>2016-03-13T00:38:23</LastWritingDateTime>
+			<WriterProjectTitle>unspecified</WriterProjectTitle>
+			<WriterProjectID>unspecified</WriterProjectID>
+		</WriterHeader>
+	</AdditionalInformation>
+		
+			<InternalElement Name="InternalElement1" ID="d5ec304a-537a-4377-9f4c-d90f769ba37f">
+				<RoleRequirements RefBaseRoleClassPath="" />
+			</InternalElement>
+			<InternalElement Name="InternalElement2" ID="f6c9d5de-4115-4f1e-b3b1-598adca58cfd" />
+			<InternalLink Name="InternalLink1">
+				<Revision>
+					<RevisionDate>2016-03-13T00:38:46.1665477</RevisionDate>
+					<AuthorName>Please enter your name</AuthorName>
+				</Revision>
+			</InternalLink>
+		</SystemUnitClass>
+
+</CAEXFile>
